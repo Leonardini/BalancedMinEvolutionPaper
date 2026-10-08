@@ -37,7 +37,7 @@ def secs(x):
 
 D1_INSTANCES = ("test_n5", "test_n6", "test_n7", "test_n8", "test_n9", "test_n10", "Primates12",
                 "M17", "M18", "20_euros2", "20_B-HA", "20_rosids", "21_nucleic", "25_proteic")
-# One run each, at seed 1, with the same ten workers and cap.
+# One run each, at seed 1, with the same ten workers and time limit.
 
 
 def _compact_runs(inst):
@@ -74,8 +74,8 @@ def d1_compact(opt):
                      spread([r["n_nodes"] for r in recs], lambda x: f"{x:.0f}"),
                      spread([r["seconds"] for r in recs], secs), root, final])
     return ("**Table D1. The compact solver** (Section 8.1): ten workers of one thread each, "
-            "3600 s cap; seeds 2 and 3 where seed 1 certified. Time in seconds. Gaps relative to $L^*$; the final "
-            "gap is given for runs stopped by the cap.\n\n"
+            "time limit 3600 s; seeds 2 and 3 where seed 1 certified. Time in seconds. Gaps relative to $L^*$; the final "
+            "gap is given for runs stopped by the time limit.\n\n"
             + table(["instance", "certified", "nodes", "time (s)", "root gap", "final gap"], rows))
 
 
@@ -245,7 +245,7 @@ def d8_distance_solver():
                      spread([float(r["final_gap_pct"]) for r in uncert], lambda x: f"{x:.3f}%")
                      if uncert else "–"])
     return ("**Table D8. The distance-indexed solver** (Section 8.6), configuration of "
-            "Section 7.1, 3600 s cap. Time in seconds. Last column: final gap of "
+            "Section 7.1, time limit 3600 s. Time in seconds. Last column: final gap of "
             "the runs that did not certify.\n\n"
             + table(["instance", "$n$", "certified", "time (s)", "nodes", "final gap"], rows))
 
@@ -280,7 +280,7 @@ def d9_cut_families(opt):
             "triples; then cumulatively generalized Kraft (GK), 2-K-split and circular order "
             "(2K, CO), and four-point (4pt); full is the configuration of Section 7.1, and "
             "full − CO the same without circular order. (a) and (b) are root LPs; the other rows "
-            "are full solves (3600 s cap, three seeds where the first certifies), of which we report the converged root bound. "
+            "are full solves (time limit 3600 s, three seeds where the first certifies), of which we report the converged root bound. "
             "On M18, the + GK run with seed 2 ended early, in each of three attempts, with an internal error of the "
             "solver after it rejected a heuristic solution; we report seeds 1 and 3 for that cell. Top: root gap to $L^*$ "
             "(%). Bottom: nodes to certification; \"non-tree\" marks runs that end at a matrix "
@@ -424,7 +424,7 @@ def e2_enumeration():
             "to $n=6,\\dots,12$ leaves (the first $n$, or three random subsets per $n$). "
             "Columns: crops, crops certified by each solver, smallest relative gap between the "
             "optimum and the best non-optimal tree, and false certificates (a certified tree "
-            "that is not optimal). Both solvers had a one-hour cap per crop.\n\n"
+            "that is not optimal). Both solvers had a time limit of one hour per crop.\n\n"
             + table(["instance", "crops", "distance-indexed", "compact", "runner-up gap",
                      "false certificates"], rows))
 
@@ -473,33 +473,32 @@ def e4_robustness():
             rows.append([name, inst, "yes" if S.certified(r) else f"no ({float(r['final_gap_pct']):.2f}%)",
                          secs(float(r["time"])), "same" if same else "DIFFERENT"])
     return ("**Table E4. The distance-indexed solver with one cut family switched off, or with "
-            "strict tolerances.** Seed 1, 3600 s cap. Strict tolerances: Gurobi's numerical "
+            "strict tolerances.** Seed 1, time limit 3600 s. Strict tolerances: Gurobi's numerical "
             "emphasis at its maximum (NumericFocus 3) and its feasibility, optimality and "
             "integrality tolerances at $10^{-9}$. Last column: the best tree found, compared "
             "with the tree of the full configuration (Table D8).\n\n"
             + table(["configuration", "instance", "certified", "time (s)", "tree"], rows))
 
 
-# The class of each table (Section 7.1): timed solves use 10 threads, bound experiments one.
-TIMED, BOUND = "Timed solves, 10 threads.", "Bound experiment, one thread."
-TIMED_BOTH = "Timed solves, ten cores."
+# The threads of each table (Section 7.1): runs that report a time use ten cores, the others one thread.
+TIMED, BOUND = "10 threads.", "One thread."
+TIMED_BOTH = "Ten cores."
 CLASS = {"D1": TIMED_BOTH, "D2": TIMED_BOTH, "D3": BOUND, "D4": BOUND, "D5": BOUND, "D6": BOUND,
          "D7": BOUND, "D8": TIMED,
-         "D9": "Timed solves (10 threads), except the two root-LP rows (bound experiment, one thread).",
+         "D9": "10 threads, except the two root-LP rows (one thread).",
          "D10": BOUND, "D11": BOUND, "D12": BOUND, "E1": BOUND,
-         "E2": "Bound experiment, one thread per crop; not comparable with the timed solves of "
-               "Tables D1 and D8.",
+         "E2": "One thread per crop; not comparable with the times of Tables D1 and D8.",
          "E3": BOUND, "E4": TIMED}
 
 
-def with_class(block):
-    """Insert the table's class right after its bold title."""
+def with_threads(block):
+    """Insert the table's thread count right after its bold title."""
     import re
     m = re.match(r"\*\*Table ([DE]\d+)\.[^*]*\*\*( \(Section [^)]*\))?[.,:;]?", block)
     if not m:
         return block
     if m.group(1) not in CLASS:
-        raise KeyError(f"no class for Table {m.group(1)}")
+        raise KeyError(f"no thread count for Table {m.group(1)}")
     head = block[:m.end()].rstrip(".,:;")
     rest = block[m.end():]
     sep = " " if head.endswith(".**") else ". "
@@ -517,7 +516,7 @@ def main():
              d1_compact(opt), d2_versus(opt), d3_facets(), d4_families(opt), d5_split_layer(),
              d6_cut_polytope(), d7_quartets(), d8_distance_solver(), d9_cut_families(opt), d10_lift(opt), d11_integrality(opt), d12_two_solvers(),
              e1_safe(), e2_enumeration(), e3_conditioning(), e4_robustness()]
-    out.write_text("\n\n".join(with_class(x) for x in parts) + "\n")
+    out.write_text("\n\n".join(with_threads(x) for x in parts) + "\n")
     print(f"wrote {out}")
 
 
