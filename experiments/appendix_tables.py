@@ -167,12 +167,12 @@ def d5_split_layer():
            table(["membership model", "quadrant", "nested/disjoint"], rows), ""]
     rows = []
     for rung in (False, True):
-        for cl in (None, "prop4", "extended"):
+        for cl in (None, "prop4"):
             for man in (False, True):
                 name = ("rung" if rung else "ladder") + (f"_{cl}" if cl else "") + ("_manifold" if man else "")
                 r = load(RES / "lp/lifted_ladder" / f"{name}.json")
                 rows.append(["yes" if rung else "no",
-                             {None: "none", "prop4": "Prop. 4", "extended": "Prop. 4 + $j+k>n$"}[cl],
+                             {None: "none", "prop4": "Prop. 4"}[cl],
                              "yes" if man else "no", PENDING if r is None else gap(r["ladder"]["gap"])])
     out += [table(["$\\tfrac34$-rung indicator", "cliques", "manifold", "root gap"], rows)]
     return "\n".join(out)
@@ -453,7 +453,7 @@ def e3_conditioning():
             "Gurobi's `KappaExact`, and in parentheses our own 2-norm value after Ruiz "
             "equilibration where the basis is small enough for a dense decomposition. "
             "\"Compact\" is the root LP of the compact model without the manifold constraint; "
-            "\"distance-indexed\" the static model of Catanzaro et al.\n\n"
+            "\"distance-indexed\" the static model of Catanzaro *et al.*\n\n"
             + "\n\n".join(out))
 
 

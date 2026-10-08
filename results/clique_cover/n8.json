@@ -1,0 +1,13 @@
+{
+ "n": 8,
+ "vertices": 119,
+ "edges": 5103,
+ "pair_classes": 8,
+ "proposition4_cliques": 129,
+ "pruned_cliques": 116,
+ "fractional_edge_clique_cover": "784/9",
+ "lower_bound": 88,
+ "maximal_cliques": 12160639,
+ "count_vectors": 591,
+ "seconds": 102.40328288078308
+}

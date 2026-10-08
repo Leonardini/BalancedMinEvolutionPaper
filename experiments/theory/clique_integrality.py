@@ -1,4 +1,4 @@
-"""Section 5.2: the clique relaxation over the cover of Proposition 4 is not integral.
+"""Section 5.1: the clique relaxation over the cover of Proposition 4 is not integral.
 
     python clique_integrality.py OUT.json [TRIALS] [SEED] [N_MAX]
 

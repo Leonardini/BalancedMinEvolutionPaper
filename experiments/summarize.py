@@ -1,6 +1,6 @@
 """Collect the results of the paper that are not in its appendix tables into one Markdown
 file, results/SUMMARY.md: the certified optima, the facets of P_6 (Section 4), the
-membership model (Section 5.1), the clique covers (Section 5.2), the enumeration behind
+membership model (Section 5.2), the clique covers (Section 5.1 and Appendix H), the enumeration behind
 Theorem 5 (Appendix C). The tables of Appendices D and E
 come from appendix_tables.py, which uses the helpers of this file.
 
@@ -343,7 +343,7 @@ def sec_conjecture1():
         rows.append((n, lam, tb, r["points"], r["distinct_split_systems"], r["tree_systems"],
                      r["non_tree_systems"]))
     return "\n".join([
-        "## Conjecture 1: integral points of the membership model (Section 5.1)", "",
+        "## Conjecture 1: integral points of the membership model (Section 5.2)", "",
         "Complete enumeration of the integral points of the membership model with "
         "symmetry breaking. \"Leaf-1 tie-break\" places leaf 1 outside every split of size "
         "n/2 (only matters for even n). An integral point is a full assignment of the "
@@ -354,14 +354,16 @@ def sec_conjecture1():
 
 def sec_clique():
     rows = []
-    for n in range(4, 8):
+    for n in range(4, 9):
         r = load(RES / "clique_cover" / f"n{n}.json")
-        rows.append((n, PENDING, "", "", "", "") if r is None else
+        rows.append((n, PENDING, "", "", "", "", "", "") if r is None else
                     (n, r["vertices"], r["edges"], r["maximal_cliques"],
-                     r["min_edge_clique_cover"], r["proposition4_cliques"]))
-    out = ["## Crossing graph: minimum edge clique cover (Section 5.2)", "",
+                     r["fractional_edge_clique_cover"], r.get("min_edge_clique_cover", "not computed"),
+                     r["pruned_cliques"], r["proposition4_cliques"]))
+    out = ["## Crossing graph: edge clique covers (Section 5.1 and Appendix H)", "",
            table(["n", "nontrivial bipartitions", "crossing pairs", "maximal cliques",
-                  "minimum edge clique cover", "cliques of Proposition 4"], rows), ""]
+                  "fractional minimum", "minimum edge clique cover", "subfamily of Appendix H",
+                  "cliques of Proposition 4"], rows), ""]
     r = load(RES / "clique_cover/integrality.json")
     if r is None:
         return "\n".join(out + ["Integrality: pending"])
@@ -369,7 +371,7 @@ def sec_clique():
     out += [f"Induced 5-cycle at n = {fc['n']}: consecutive pairs cross: "
             f"{fc['consecutive_cross']}; non-consecutive pairs compatible: "
             f"{fc['non_consecutive_compatible']}.", "",
-            f"LPs over the Proposition 4 clique inequalities with random objectives "
+            f"LPs over the clique inequalities of Proposition 4 with random objectives "
             f"(seed {r['seed']}):", "",
             table(["n", "splits", "cliques", "trials", "fractional optima",
                    "optima with every coordinate 1/2", "distinct fractional values (first few)"],

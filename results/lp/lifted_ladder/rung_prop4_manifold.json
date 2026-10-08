@@ -1,9 +1,9 @@
 {
- "instance": "/Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/external/catanzaro/upstream/instances/01-Primates12.txt",
+ "instance": "external/catanzaro/upstream/instances/01-Primates12.txt",
  "n": 12,
  "optimum": 0.097972333203125,
  "rung": true,
- "cliques": "prop4",
+ "cliques": true,
  "manifold": true,
  "bipartitions": 2035,
  "mincut": {
@@ -34,7 +34,7 @@
    "safe_bound": 0.09326073218749999,
    "safe_infinite": false,
    "safe_minus_lp": 9.527003074242743e-19,
-   "seconds": 0.007779836654663086,
+   "seconds": 0.009369850158691406,
    "resolved_copy": false,
    "refined": false,
    "reported_bound": 0.09326073218749999,
@@ -61,31 +61,31 @@
     },
     "tree_source": "data/ground_truth/Primates12.splits",
     "tree_objective": 0.097972333203125,
-    "seconds": 0.007394075393676758
+    "seconds": 0.00680994987487793
    },
    "rows_cut_off_optimum": 0,
    "safe_le_tree_objective": true
   },
-  "seconds": 0.03768205642700195,
+  "seconds": 0.033123016357421875,
   "gap": 0.04809113819772464
  },
- "n_cliques": 24354,
+ "n_cliques": 1105,
  "ladder": {
   "manifold": "exact",
   "solver": "MOSEK",
   "separator_cuts": [],
   "rounds": 1,
   "inaccurate_solves": 0,
-  "bound": 0.09694544838158883,
-  "primal": 0.09696180358614519,
-  "manifold_multiplier": 0.003343897520435287,
+  "bound": 0.09695188573786016,
+  "primal": 0.0969518878848761,
+  "manifold_multiplier": 0.0033232402845997477,
   "converged": true,
   "stop": "no violated cut",
-  "rows": 30473,
-  "seconds": 28.77029514312744,
+  "rows": 7224,
+  "seconds": 4.257352113723755,
   "rows_cut_off_optimum": 0,
   "optimum_check": {
-   "rows_checked": 30473,
+   "rows_checked": 7224,
    "rows_cut_off_optimum": 0,
    "bounds_violated": 0,
    "max_violation": 0.0,
@@ -128,15 +128,15 @@
      "worst_row": 16
     },
     "clique": {
-     "rows": 24354,
+     "rows": 1105,
      "violated": 0,
      "max_violation": 0.0,
-     "worst_row": 6200
+     "worst_row": 6120
     }
    },
    "objective": 0.097972333203125
   },
-  "gap": 0.010481375588015597
+  "gap": 0.010415669729424034
  },
- "peak_rss_mb": 1685.046875
+ "peak_rss_mb": 449.609375
 }

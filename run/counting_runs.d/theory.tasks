@@ -1,4 +1,4 @@
-# Theory and enumeration (Sections 4, 5.1, 5.2, 6.3, Appendix C). One thread each.
+# Theory and enumeration (Sections 4, 5.1, 5.2, 6.3, Appendices C and H). One thread each.
 # Longest first, so they start first.
 
 # Appendix C / Table C1: canonical survivors, none violating (10).
@@ -8,7 +8,7 @@ experiments/theory/theorem5.sh canon_n10 10
 experiments/theory/theorem5.sh fpviol_n12_t2 12 --fpviol --t01 2
 # Section 4: the facets of P_6.
 Rscript experiments/theory/p6_facets.R "$RESULTS/p6_facets"
-# Section 5.1: membership model, both laminarity encodings; n = 8 also without the tiebreak.
+# Section 5.2: membership model, both laminarity encodings; n = 8 also without the tiebreak.
 "$PY" experiments/theory/membership_model.py 8 nested-disjoint on "$RESULTS/conjecture1/n8_nested-disjoint_tiebreak-on.json"
 "$PY" experiments/theory/membership_model.py 8 nested-disjoint off "$RESULTS/conjecture1/n8_nested-disjoint_tiebreak-off.json"
 "$PY" experiments/theory/membership_model.py 8 quadrant on "$RESULTS/conjecture1/n8_quadrant_tiebreak-on.json"
@@ -17,14 +17,16 @@ Rscript experiments/theory/p6_facets.R "$RESULTS/p6_facets"
 "$PY" experiments/theory/membership_model.py 7 quadrant on "$RESULTS/conjecture1/n7_quadrant_tiebreak-on.json"
 "$PY" experiments/theory/membership_model.py 6 nested-disjoint on "$RESULTS/conjecture1/n6_nested-disjoint_tiebreak-on.json"
 "$PY" experiments/theory/membership_model.py 6 quadrant on "$RESULTS/conjecture1/n6_quadrant_tiebreak-on.json"
-# Section 5.1: with lexicographic order on equal-size splits, one point per tree.
+# Section 5.2: with lexicographic order on equal-size splits, one point per tree.
 "$PY" experiments/theory/membership_model.py 8 nested-disjoint on "$RESULTS/conjecture1/n8_nested-disjoint_tiebreak-on_lex.json" --lex
 "$PY" experiments/theory/membership_model.py 8 quadrant on "$RESULTS/conjecture1/n8_quadrant_tiebreak-on_lex.json" --lex
 "$PY" experiments/theory/membership_model.py 7 nested-disjoint on "$RESULTS/conjecture1/n7_nested-disjoint_tiebreak-on_lex.json" --lex
 "$PY" experiments/theory/membership_model.py 7 quadrant on "$RESULTS/conjecture1/n7_quadrant_tiebreak-on_lex.json" --lex
 "$PY" experiments/theory/membership_model.py 6 nested-disjoint on "$RESULTS/conjecture1/n6_nested-disjoint_tiebreak-on_lex.json" --lex
 "$PY" experiments/theory/membership_model.py 6 quadrant on "$RESULTS/conjecture1/n6_quadrant_tiebreak-on_lex.json" --lex
-# Section 5.2: minimum edge clique cover, and the random-objective LPs over the cover.
+# Section 5.1 and Appendix H: clique covers (the minimum up to n = 7, the fractional minimum up
+# to n = 8), and the random-objective LPs over the cover of Proposition 4.
+"$PY" experiments/theory/clique_cover.py 8 "$RESULTS/clique_cover/n8.json" --no-ilp
 "$PY" experiments/theory/clique_cover.py 7 "$RESULTS/clique_cover/n7.json"
 "$PY" experiments/theory/clique_cover.py 6 "$RESULTS/clique_cover/n6.json"
 "$PY" experiments/theory/clique_cover.py 5 "$RESULTS/clique_cover/n5.json"

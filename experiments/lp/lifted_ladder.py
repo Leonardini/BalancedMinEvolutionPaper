@@ -1,7 +1,7 @@
 """Section 8.4: root LP of the lifted cut-value-ladder model.
 
     BME_THREADS=1 python lifted_ladder.py INSTANCE SPLITS OUT.json \
-        [--rung] [--cliques prop4|extended] [--manifold]
+        [--rung] [--cliques] [--manifold]
 
 w_ij >= 2^-(n-1) with Kraft. For every nontrivial bipartition S an indicator
 y_S in [0, 1] is tied to the cut value W[S] = sum_{i in S, j not in S} w_ij, with
@@ -10,10 +10,8 @@ sum_S y_S = n - 3 and U = (n - 1) / 4:
     --rung                a second indicator t_S for the 3/4 rung, sum_S t_S = 2(n - 3),
                           y_S + t_S <= 1, W[S] >= 7/8 - 3/8 y_S - 1/8 t_S,
                           W[S] <= U - (U - 1/2) y_S - (U - 3/4) t_S
-    --cliques prop4       sum_{S in Q} y_S <= 1 for the cliques Q^{j,k}_{x,y,z} of
-                          Proposition 4 (j + k <= n)
-    --cliques extended    the same families for every j, k, keeping those with
-                          j + k > n only when they are pairwise crossing
+    --cliques             sum_{S in Q} y_S <= 1 for the cliques Q^{j,k}_{x,y} of
+                          Proposition 4 (j <= k, j + k <= n)
     --manifold            manifold tangent cuts until no cut is violated or the bound
                           stalls (lib/membership.py, solve_with_cuts)
 The record also has the min-cut relaxation (Kraft, w >= 2^-(n-1), all W[S] >= 1/2).
@@ -35,35 +33,26 @@ from lib.common import (gurobi_model, log, optimal_tree, optimum, parse_matrix, 
                         peak_rss_mb, write_json)
 
 
-def compatible(a, b):
-    """Bipartitions given by their sides a, b not containing leaf 0."""
-    x = a & b
-    return x == a or x == b or x == 0
-
-
-def clique_cover(n, splits, extended):
-    """Index lists of the families Q^{j,k}_{x,y,z}, without duplicates."""
+def clique_cover(n, splits):
+    """Index lists of the families Q^{j,k}_{x,y}, without duplicates: the bipartitions whose
+    x-block has size j and contains y, and those whose x-block has size k and excludes y."""
     full = (1 << n) - 1
     out, seen = [], set()
     for x in range(n):
         A = [m if (m >> x) & 1 else full & ~m for m in splits]
         size = [bin(a).count('1') for a in A]
-        for y, z in itertools.combinations([v for v in range(n) if v != x], 2):
+        for y in range(n):
+            if y == x:
+                continue
             h1, h2 = {}, {}
             for s, a in enumerate(A):
-                yin, zin = (a >> y) & 1, (a >> z) & 1
-                if yin and not zin:
-                    h1.setdefault(size[s], []).append(s)
-                elif zin and not yin:
-                    h2.setdefault(size[s], []).append(s)
+                (h1 if (a >> y) & 1 else h2).setdefault(size[s], []).append(s)
             for j, a1 in h1.items():
                 for k, a2 in h2.items():
                     clq = a1 + a2
                     if len(clq) < 2:
                         continue
-                    if j + k > n and not (extended and all(
-                            not compatible(splits[p], splits[q])
-                            for p, q in itertools.combinations(clq, 2))):
+                    if j > k or j + k > n:
                         continue
                     key = tuple(sorted(clq))
                     if key not in seen:
@@ -104,7 +93,7 @@ def main():
     ap.add_argument("splits")
     ap.add_argument("out")
     ap.add_argument("--rung", action="store_true")
-    ap.add_argument("--cliques", choices=["prop4", "extended"])
+    ap.add_argument("--cliques", action="store_true")
     ap.add_argument("--manifold", action="store_true")
     a = ap.parse_args()
     import gurobipy as gp
@@ -152,7 +141,7 @@ def main():
             m.addConstr(Ws >= 0.75 - 0.25 * y[s], name="rung_lo")
             m.addConstr(Ws <= U - (U - 0.5) * y[s], name="rung_hi")
     if a.cliques:
-        cover = clique_cover(n, splits, a.cliques == "extended")
+        cover = clique_cover(n, splits)
         log(f"{len(cover)} cliques, {sum(map(len, cover))} nonzeros")
         rows = np.repeat(np.arange(len(cover)), [len(clq) for clq in cover])
         cols = np.concatenate([np.asarray(clq) for clq in cover])

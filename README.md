@@ -104,15 +104,15 @@ Then rebuild the summaries:
 
 `results/APPENDIX_TABLES.md` holds the tables of Appendices D and E of the paper, as
 printed there. `results/SUMMARY.md` holds the other computed results: the certified
-optima, and the results of Sections 4, 5.1, 5.2 and 6.3 and Appendix C.
+optima, and the results of Sections 4, 5.1, 5.2 and 6.3 and Appendices C and H.
 
 ## Where each result comes from
 
 | in the paper | script | output under `results/` |
 |---|---|---|
 | Section 4: facets of the BME polytope for n = 6 | `experiments/theory/p6_facets.R` | `p6_facets/` |
-| Section 5.1, Conjecture 1: integral points of the membership model | `experiments/theory/membership_model.py` | `conjecture1/` |
-| Section 5.2: minimum edge clique covers; fractional optima | `experiments/theory/clique_cover.py`, `clique_integrality.py` | `clique_cover/` |
+| Section 5.2, Conjecture 1: integral points of the membership model | `experiments/theory/membership_model.py` | `conjecture1/` |
+| Section 5.1 and Appendix H: edge clique covers (Proposition 4 and its subfamily, the minimum, the fractional minimum); fractional optima of the clique relaxation | `experiments/theory/clique_cover.py`, `clique_integrality.py` | `clique_cover/` |
 | Section 6.3, Theorem 5, Appendix C, Table C1 | `experiments/theory/theorem5.sh` (enumerator `backtrack.c`) | `theorem5/` |
 | Section 6.3: the cherry lift; the matrix of Catanzaro et al. (2026, p. 492) | `experiments/theory/cherry_lift.py`, `catanzaro_p492.py` | `theorem5/` |
 | Section 8.1, Tables D1 and D2: the compact solver | `experiments/compact_solver.sh` (one run: `compact_solver.py`) | `compact_solver/` |

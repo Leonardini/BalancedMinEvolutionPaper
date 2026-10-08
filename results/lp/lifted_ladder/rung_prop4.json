@@ -1,9 +1,9 @@
 {
- "instance": "/Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/external/catanzaro/upstream/instances/01-Primates12.txt",
+ "instance": "external/catanzaro/upstream/instances/01-Primates12.txt",
  "n": 12,
  "optimum": 0.097972333203125,
  "rung": true,
- "cliques": "prop4",
+ "cliques": true,
  "manifold": false,
  "bipartitions": 2035,
  "mincut": {
@@ -34,7 +34,7 @@
    "safe_bound": 0.09326073218749999,
    "safe_infinite": false,
    "safe_minus_lp": 9.527003074242743e-19,
-   "seconds": 0.007788181304931641,
+   "seconds": 0.007512092590332031,
    "resolved_copy": false,
    "refined": false,
    "reported_bound": 0.09326073218749999,
@@ -61,15 +61,15 @@
     },
     "tree_source": "data/ground_truth/Primates12.splits",
     "tree_objective": 0.097972333203125,
-    "seconds": 0.007267951965332031
+    "seconds": 0.006925821304321289
    },
    "rows_cut_off_optimum": 0,
    "safe_le_tree_objective": true
   },
-  "seconds": 0.028887033462524414,
+  "seconds": 0.027404069900512695,
   "gap": 0.04809113819772464
  },
- "n_cliques": 24354,
+ "n_cliques": 1105,
  "ladder": {
   "separator_cuts": [],
   "rounds": 1,
@@ -88,23 +88,23 @@
   "safe_bound_detail": {
    "lp_objective": 0.0964314712902832,
    "solver": "gurobi",
-   "rows": 30473,
+   "rows": 7224,
    "cols": 4136,
-   "nnz": 2585528,
+   "nnz": 366410,
    "duals_clipped": 0,
    "dual_clip_max": 0.0,
    "dual_clip_l1": 0.0,
    "implied_bounds_used": 66,
    "safe_bound": 0.09643147129028316,
    "safe_infinite": false,
-   "safe_minus_lp": -3.4079629478947927e-17,
-   "seconds": 0.27866077423095703,
+   "safe_minus_lp": -3.7210660298693846e-17,
+   "seconds": 0.0375828742980957,
    "resolved_copy": false,
    "refined": false,
    "reported_bound": 0.0964314712902832,
    "safe_minus_reported": -4.163336342344337e-17,
    "optimum_check": {
-    "rows_checked": 30473,
+    "rows_checked": 7224,
     "rows_cut_off_optimum": 0,
     "bounds_violated": 0,
     "max_violation": 0.0,
@@ -147,22 +147,22 @@
       "worst_row": 16
      },
      "clique": {
-      "rows": 24354,
+      "rows": 1105,
       "violated": 0,
       "max_violation": 0.0,
-      "worst_row": 6200
+      "worst_row": 6120
      }
     },
     "tree_source": "data/ground_truth/Primates12.splits",
     "tree_objective": 0.097972333203125,
-    "seconds": 0.2639298439025879
+    "seconds": 0.03617429733276367
    },
    "rows_cut_off_optimum": 0,
    "safe_le_tree_objective": true
   },
-  "seconds": 1.3034112453460693,
+  "seconds": 0.14876794815063477,
   "gap": 0.015727520846595948,
-  "rows": 30473
+  "rows": 7224
  },
- "peak_rss_mb": 923.359375
+ "peak_rss_mb": 191.1875
 }

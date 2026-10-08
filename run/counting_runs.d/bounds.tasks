@@ -22,16 +22,12 @@ $PY experiments/lp/membership_layers.py external/catanzaro/upstream/instances/01
 # rung, the clique cover and the manifold.
 $PY experiments/lp/lifted_ladder.py external/catanzaro/upstream/instances/01-Primates12.txt data/ground_truth/Primates12.splits $RESULTS/lp/lifted_ladder/ladder.json
 $PY experiments/lp/lifted_ladder.py external/catanzaro/upstream/instances/01-Primates12.txt data/ground_truth/Primates12.splits $RESULTS/lp/lifted_ladder/ladder_manifold.json --manifold
-$PY experiments/lp/lifted_ladder.py external/catanzaro/upstream/instances/01-Primates12.txt data/ground_truth/Primates12.splits $RESULTS/lp/lifted_ladder/ladder_prop4.json --cliques prop4
-$PY experiments/lp/lifted_ladder.py external/catanzaro/upstream/instances/01-Primates12.txt data/ground_truth/Primates12.splits $RESULTS/lp/lifted_ladder/ladder_prop4_manifold.json --cliques prop4 --manifold
-$PY experiments/lp/lifted_ladder.py external/catanzaro/upstream/instances/01-Primates12.txt data/ground_truth/Primates12.splits $RESULTS/lp/lifted_ladder/ladder_extended.json --cliques extended
-$PY experiments/lp/lifted_ladder.py external/catanzaro/upstream/instances/01-Primates12.txt data/ground_truth/Primates12.splits $RESULTS/lp/lifted_ladder/ladder_extended_manifold.json --cliques extended --manifold
+$PY experiments/lp/lifted_ladder.py external/catanzaro/upstream/instances/01-Primates12.txt data/ground_truth/Primates12.splits $RESULTS/lp/lifted_ladder/ladder_prop4.json --cliques
+$PY experiments/lp/lifted_ladder.py external/catanzaro/upstream/instances/01-Primates12.txt data/ground_truth/Primates12.splits $RESULTS/lp/lifted_ladder/ladder_prop4_manifold.json --cliques --manifold
 $PY experiments/lp/lifted_ladder.py external/catanzaro/upstream/instances/01-Primates12.txt data/ground_truth/Primates12.splits $RESULTS/lp/lifted_ladder/rung.json --rung
 $PY experiments/lp/lifted_ladder.py external/catanzaro/upstream/instances/01-Primates12.txt data/ground_truth/Primates12.splits $RESULTS/lp/lifted_ladder/rung_manifold.json --rung --manifold
-$PY experiments/lp/lifted_ladder.py external/catanzaro/upstream/instances/01-Primates12.txt data/ground_truth/Primates12.splits $RESULTS/lp/lifted_ladder/rung_prop4.json --rung --cliques prop4
-$PY experiments/lp/lifted_ladder.py external/catanzaro/upstream/instances/01-Primates12.txt data/ground_truth/Primates12.splits $RESULTS/lp/lifted_ladder/rung_prop4_manifold.json --rung --cliques prop4 --manifold
-$PY experiments/lp/lifted_ladder.py external/catanzaro/upstream/instances/01-Primates12.txt data/ground_truth/Primates12.splits $RESULTS/lp/lifted_ladder/rung_extended.json --rung --cliques extended
-$PY experiments/lp/lifted_ladder.py external/catanzaro/upstream/instances/01-Primates12.txt data/ground_truth/Primates12.splits $RESULTS/lp/lifted_ladder/rung_extended_manifold.json --rung --cliques extended --manifold
+$PY experiments/lp/lifted_ladder.py external/catanzaro/upstream/instances/01-Primates12.txt data/ground_truth/Primates12.splits $RESULTS/lp/lifted_ladder/rung_prop4.json --rung --cliques
+$PY experiments/lp/lifted_ladder.py external/catanzaro/upstream/instances/01-Primates12.txt data/ground_truth/Primates12.splits $RESULTS/lp/lifted_ladder/rung_prop4_manifold.json --rung --cliques --manifold
 
 # Sections 5.3 and 8.4, Table D6: per-split cut-polytope triangles against the strong triangle.
 $PY experiments/lp/per_split_triangles.py external/catanzaro/upstream/instances/01-Primates12.txt data/ground_truth/Primates12.splits $RESULTS/lp/per_split_triangles/Primates12.json

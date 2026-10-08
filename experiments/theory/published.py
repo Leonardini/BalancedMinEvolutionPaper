@@ -24,3 +24,5 @@ CHERRY_LIFT_QUARTET_1235_SUMS = _P["cherry_lift_quartet_1235_pair_sums"]
 MEMBERSHIP_SYSTEMS = _intkeys(_P["membership_systems"])
 MEMBERSHIP_N8_NO_TIEBREAK = _P["membership_n8_no_tiebreak"]
 MIN_EDGE_CLIQUE_COVER = _intkeys(_P["min_edge_clique_cover"])
+FRACTIONAL_EDGE_CLIQUE_COVER = _intkeys(_P["fractional_edge_clique_cover"])
+PRUNED_CLIQUE_COVER = _intkeys(_P["pruned_clique_cover"])

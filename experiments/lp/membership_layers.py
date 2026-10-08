@@ -1,4 +1,4 @@
-"""Section 8.4: root dual gaps of the membership model of Section 5.1, layer by layer.
+"""Section 8.4: root dual gaps of the membership model of Section 5.2, layer by layer.
 
     BME_THREADS=1 python membership_layers.py INSTANCE SPLITS OUT.json [LAMINARITY]
 

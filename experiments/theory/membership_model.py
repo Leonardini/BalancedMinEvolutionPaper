@@ -1,4 +1,4 @@
-"""Section 5.1, Conjecture 1: the integral points of the side-membership model and the
+"""Section 5.2, Conjecture 1: the integral points of the side-membership model and the
 binary topologies on n leaves.
 
     python membership_model.py N LAMINARITY TIEBREAK OUT.json [--lex]

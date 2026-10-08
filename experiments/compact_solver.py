@@ -2,7 +2,7 @@
 
     BME_THREADS=1 BME_WORKERS=10 BME_SEED=1 python compact_solver.py INSTANCE CAP OUT.json [MAX_NODES]
 
-The branch and bound of Section 2.4 and Appendix F: balanced branching, the manifold
+The branch and bound of Section 7.2 and Appendix F: balanced branching, the manifold
 constraint imposed exactly at every node by the conic solver, the cluster equalities at
 every node. With BME_WORKERS=k it runs the parallel search (solver/bnb_parallel.py) with k
 worker processes, each with BME_THREADS threads (the timed solves use k = 10 and one thread

@@ -2,8 +2,13 @@
  "n": 6,
  "vertices": 25,
  "edges": 195,
+ "pair_classes": 3,
+ "proposition4_cliques": 22,
+ "pruned_cliques": 21,
+ "fractional_edge_clique_cover": "39/2",
+ "lower_bound": 20,
  "maximal_cliques": 162,
+ "count_vectors": 6,
  "min_edge_clique_cover": 21,
- "proposition4_cliques": 225,
- "seconds": 0.011548280715942383
+ "seconds": 0.02911376953125
 }

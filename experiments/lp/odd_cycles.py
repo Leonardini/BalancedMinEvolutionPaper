@@ -5,7 +5,7 @@ and do they raise the bound?
 
 The compact model has no split variables, so the inequalities have nothing to act on
 there; they live on a model with one cut vector B_.k per internal split:
-    MODEL = membership  the membership model of Section 5.1 at its full root
+    MODEL = membership  the membership model of Section 5.2 at its full root
                         relaxation (Kraft, min-cut, manifold, split layer, coupling,
                         quadrant laminarity; lib/membership.py), where B = XOR(s)
     MODEL = xlevel      the level-variable LP with B and the per-split triangles,
