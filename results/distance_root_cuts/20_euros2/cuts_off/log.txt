@@ -1,0 +1,120 @@
+Input permutation applied (2.03305) 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19
+--- CUTTING PLANES ----
+GKI      0.0500 | 0.0100
+-----------------------
+Set parameter Username
+Set parameter LicenseID to value 2789566
+Set parameter Threads to value 1
+Set parameter Seed to value 1
+Set parameter NodeLimit to value 1
+Set parameter Cuts to value 0
+Read parameters from file gurobi.env
+Academic license - for non-commercial use only - expires 2027-03-10
+Set parameter MIPGap to value 1e-08
+Set parameter TimeLimit to value 3600
+Set parameter LazyConstraints to value 1
+Set parameter MIPFocus to value 3
+Set parameter Heuristics to value 0
+Set parameter PreCrush to value 1
+Gurobi Optimizer version 12.0.1 build v12.0.1rc0 (mac64[arm] - Darwin 27.0.0 26A428)
+
+CPU model: Apple M4 Pro
+Thread count: 14 physical cores, 14 logical processors, using up to 1 threads
+
+Non-default parameters:
+NodeLimit  1
+TimeLimit  3600
+MIPGap  1e-08
+Heuristics  0
+MIPFocus  3
+Cuts  0
+PreCrush  1
+Seed  1
+Threads  1
+LazyConstraints  1
+
+Optimize a model with 3631 rows, 6840 columns and 201780 nonzeros
+Model fingerprint: 0x996753c9
+Variable types: 0 continuous, 6840 integer (3420 binary)
+Coefficient statistics:
+  Matrix range     [2e-06, 2e+01]
+  Objective range  [8e-02, 6e+04]
+  Bounds range     [1e+00, 2e+01]
+  RHS range        [5e-01, 4e+01]
+Presolve time: 0.26s
+Presolved: 3631 rows, 6840 columns, 191501 nonzeros
+Variable types: 0 continuous, 6840 integer (3420 binary)
+Root relaxation presolved: 3631 rows, 6840 columns, 191501 nonzeros
+
+
+Root relaxation: objective 7.100445e+05, 4455 iterations, 0.18 seconds (0.62 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 710044.548    0 3016          - 710044.548      -     -    0s
+fastme --input_data=/var/folders/dt/8b65fqjn2l756qpj_c7_jmfr0000gq/T//fi16807.inst --output_tree=/var/folders/dt/8b65fqjn2l756qpj_c7_jmfr0000gq/T//fi16807_sol.nw --method=U --user_tree=/var/folders/dt/8b65fqjn2l756qpj_c7_jmfr0000gq/T//fi16807.nw --nni=balME --spr
+
+ . This analysis will run on 1 threads.
+
+#  Analysing dataset 1
+
+ . Warning: Triangular inequality violation.
+
+ . You may ask for triangular inequality correction using the '-q' option.
+
+ . Reading input tree...
+
+ . Tree length is 37.000000.
+
+ . Performing NNI...
+
+ . Performing SPR...
+
+ . SPR did not improve tree length.
+
+ . Time used 0h00m00s
+H    0     0                    716214.75300 711419.239  0.67%     -    0s
+     0     0 711419.239    0 3115 716214.753 711419.239  0.67%     -    0s
+fastme --input_data=/var/folders/dt/8b65fqjn2l756qpj_c7_jmfr0000gq/T//fi282475249.inst --output_tree=/var/folders/dt/8b65fqjn2l756qpj_c7_jmfr0000gq/T//fi282475249_sol.nw --method=U --user_tree=/var/folders/dt/8b65fqjn2l756qpj_c7_jmfr0000gq/T//fi282475249.nw --nni=balME --spr
+
+ . This analysis will run on 1 threads.
+
+#  Analysing dataset 1
+
+ . Warning: Triangular inequality violation.
+
+ . You may ask for triangular inequality correction using the '-q' option.
+
+ . Reading input tree...
+
+ . Tree length is 37.000000.
+
+ . Performing NNI...
+
+ . Performing SPR...
+
+ . SPR did not improve tree length.
+
+ . Time used 0h00m00s
+     0     0 711422.084    0 1585 716214.753 711422.084  0.67%     -    1s
+     0     0 711422.084    0 1479 716214.753 711422.084  0.67%     -    1s
+     0     0 713045.457    0 1509 716214.753 713045.457  0.44%     -    1s
+     0     0 713730.128    0 1483 716214.753 713730.128  0.35%     -    1s
+     0     0 713733.431    0 1458 716214.753 713733.431  0.35%     -    2s
+     0     0 713741.209    0 1470 716214.753 713741.209  0.35%     -    2s
+     0     0 713744.919    0 1470 716214.753 713744.919  0.34%     -    2s
+     0     2 713744.919    0 1470 716214.753 713744.919  0.34%     -    2s
+
+Cutting planes:
+  User: 4
+
+Explored 1 nodes (10501 simplex iterations) in 2.33 seconds (5.19 work units)
+Thread count was 1 (of 14 available processors)
+
+Solution count 1: 716215 
+
+Node limit reached
+Best objective 7.162147530035e+05, best bound 7.137449187772e+05, gap 0.3448%
+
+User-callback calls 366, time in user-callback 0.31 sec

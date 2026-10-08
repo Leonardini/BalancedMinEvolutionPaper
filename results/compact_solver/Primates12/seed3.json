@@ -1,0 +1,1483 @@
+{
+ "objective": 0.097972333203125,
+ "lb": 0.097972333203125,
+ "gap": 0.0,
+ "certified": true,
+ "n_nodes": 27,
+ "seconds": 1.0936689376831055,
+ "cut_counts": {
+  "mincut": 8,
+  "pm": 102,
+  "f6": 0,
+  "f7": 0,
+  "f4": 0,
+  "f5": 0,
+  "p50": 0,
+  "p53": 0,
+  "p54": 0,
+  "manifold": 0,
+  "crossing": 0,
+  "bal_branch": 20,
+  "fb_prune": 15,
+  "fb_open": 5,
+  "lp_seconds": 0.08831138024106622
+ },
+ "root_lb": 0.09734306139470847,
+ "trajectory": [
+  [
+   0,
+   0.09734306139470847,
+   0.097972333203125
+  ],
+  [
+   1,
+   0.09734584998580156,
+   0.097972333203125
+  ],
+  [
+   2,
+   0.09734584998580156,
+   0.097972333203125
+  ],
+  [
+   3,
+   0.09750020514642012,
+   0.097972333203125
+  ],
+  [
+   4,
+   0.09750020514642012,
+   0.097972333203125
+  ],
+  [
+   5,
+   0.09752734110985715,
+   0.097972333203125
+  ],
+  [
+   6,
+   0.09752734110985715,
+   0.097972333203125
+  ],
+  [
+   7,
+   0.09752734110985715,
+   0.097972333203125
+  ],
+  [
+   8,
+   0.09753732201137569,
+   0.097972333203125
+  ],
+  [
+   9,
+   0.09753732201137569,
+   0.097972333203125
+  ],
+  [
+   10,
+   0.0976338784823424,
+   0.097972333203125
+  ],
+  [
+   11,
+   0.0976338784823424,
+   0.097972333203125
+  ],
+  [
+   12,
+   0.09766273329713755,
+   0.097972333203125
+  ],
+  [
+   13,
+   0.09766273329713755,
+   0.097972333203125
+  ],
+  [
+   14,
+   0.09766273329713755,
+   0.097972333203125
+  ],
+  [
+   15,
+   0.09774194866867549,
+   0.097972333203125
+  ],
+  [
+   16,
+   0.09774194866867549,
+   0.097972333203125
+  ],
+  [
+   17,
+   0.09785084592107905,
+   0.097972333203125
+  ],
+  [
+   18,
+   0.09787223123528692,
+   0.097972333203125
+  ],
+  [
+   19,
+   0.09787223123528692,
+   0.097972333203125
+  ],
+  [
+   20,
+   0.09789244461616904,
+   0.097972333203125
+  ],
+  [
+   21,
+   0.09789708166426514,
+   0.097972333203125
+  ],
+  [
+   22,
+   0.09790164062413398,
+   0.097972333203125
+  ],
+  [
+   23,
+   0.09790225279877351,
+   0.097972333203125
+  ],
+  [
+   24,
+   0.097902392002441,
+   0.097972333203125
+  ],
+  [
+   25,
+   0.09790252524601613,
+   0.097972333203125
+  ],
+  [
+   26,
+   0.09795706839276887,
+   0.097972333203125
+  ]
+ ],
+ "trajectory_seconds": [
+  [
+   0.7785708904266357,
+   0.09734306139470847
+  ],
+  [
+   0.8402371406555176,
+   0.09734584998580156
+  ],
+  [
+   0.840322732925415,
+   0.09734584998580156
+  ],
+  [
+   0.856604814529419,
+   0.09750020514642012
+  ],
+  [
+   0.8566889762878418,
+   0.09750020514642012
+  ],
+  [
+   0.8776860237121582,
+   0.09752734110985715
+  ],
+  [
+   0.8777778148651123,
+   0.09752734110985715
+  ],
+  [
+   0.8810579776763916,
+   0.09752734110985715
+  ],
+  [
+   0.8929128646850586,
+   0.09753732201137569
+  ],
+  [
+   0.892982006072998,
+   0.09753732201137569
+  ],
+  [
+   0.8997859954833984,
+   0.0976338784823424
+  ],
+  [
+   0.9101998805999756,
+   0.0976338784823424
+  ],
+  [
+   0.9197697639465332,
+   0.09766273329713755
+  ],
+  [
+   0.9198410511016846,
+   0.09766273329713755
+  ],
+  [
+   0.9342217445373535,
+   0.09766273329713755
+  ],
+  [
+   0.9385800361633301,
+   0.09774194866867549
+  ],
+  [
+   0.939504861831665,
+   0.09774194866867549
+  ],
+  [
+   0.9559009075164795,
+   0.09785084592107905
+  ],
+  [
+   0.9598767757415771,
+   0.09787223123528692
+  ],
+  [
+   0.9601547718048096,
+   0.09787223123528692
+  ],
+  [
+   0.9732749462127686,
+   0.09789244461616904
+  ],
+  [
+   0.9811220169067383,
+   0.09789708166426514
+  ],
+  [
+   0.9980380535125732,
+   0.09790164062413398
+  ],
+  [
+   1.0146598815917969,
+   0.09790225279877351
+  ],
+  [
+   1.031883955001831,
+   0.097902392002441
+  ],
+  [
+   1.048034906387329,
+   0.09790252524601613
+  ],
+  [
+   1.0703020095825195,
+   0.09795706839276887
+  ]
+ ],
+ "unresolved": [],
+ "heuristic_improvements": {
+  "lp_cherries": 0,
+  "nni": 0
+ },
+ "exact_counts": {
+  "conic_solves": 68,
+  "conic_inaccurate": 0,
+  "conic_failed": 0,
+  "conic_infeasible_claim": 0,
+  "conic_cuts_mincut": 0,
+  "conic_cuts_pm": 13,
+  "conic_cuts_crossing": 0,
+  "conic_raised_bound": 55,
+  "conic_seconds": 0.40569500462152064
+ },
+ "infeasible_prunes": [],
+ "events": {
+  "pops": 27,
+  "stop_bound_reached": 0,
+  "tree_at_node": 0,
+  "branch_balanced": 20,
+  "branch_fallback": 7,
+  "face_tree": 0,
+  "face_empty": 0,
+  "face_branch": 0,
+  "face_cherries": 0,
+  "S_crosses_committed": 0,
+  "commit_infeasible": 0,
+  "commit_infeasible_S_crosses": 0,
+  "commit_pruned_bound": 12,
+  "commit_pushed": 15,
+  "forbid_infeasible": 0,
+  "forbid_pruned_bound": 16,
+  "forbid_pushed": 11,
+  "child_undecided": 0,
+  "child_inherited": 0,
+  "dive_pruned_bound": 0
+ },
+ "inherit_keeping": true,
+ "face_rule": "cherry",
+ "cluster_eq": true,
+ "node_log": [
+  {
+   "node": 1,
+   "bound": 0.09734306139470847,
+   "origin": "root",
+   "dived": false,
+   "branch": {
+    "kind": "balanced",
+    "cut": 0.5138274523156939,
+    "crosses": false
+   },
+   "children": [
+    {
+     "kind": "forbid",
+     "keeps": false,
+     "bound": 0.09780795401611951,
+     "seconds": 0.0513715841807425,
+     "conic_seconds": 0.03106070915237069,
+     "lp_seconds": 0.0023462099488824606,
+     "moved": 0.9848484848484849,
+     "max_move": 0.058397639253366954
+    },
+    {
+     "kind": "commit",
+     "keeps": false,
+     "bound": 0.09734584998580156,
+     "seconds": 0.009090666892006993,
+     "conic_seconds": 0.005843999795615673,
+     "lp_seconds": 0.0003570830449461937,
+     "moved": 0.9696969696969697,
+     "max_move": 0.0039663986513510385
+    }
+   ],
+   "cluster_spread": {
+    "max": 0.0,
+    "violated": 0,
+    "rows": 0
+   }
+  },
+  {
+   "node": 2,
+   "bound": 0.09734584998580156,
+   "origin": {
+    "parent": 1,
+    "branch": "balanced",
+    "child": "commit",
+    "keeps": false
+   },
+   "dived": false,
+   "branch": {
+    "kind": "balanced",
+    "cut": 0.6198516739516333,
+    "crosses": false
+   },
+   "children": [
+    {
+     "kind": "forbid",
+     "keeps": false,
+     "bound": 0.09750020514642012,
+     "seconds": 0.008499582996591926,
+     "conic_seconds": 0.005186874885112047,
+     "lp_seconds": 0.00038858293555676937,
+     "moved": 0.9848484848484849,
+     "max_move": 0.06507416302393554
+    },
+    {
+     "kind": "commit",
+     "keeps": false,
+     "bound": 0.09752734110985715,
+     "seconds": 0.007408541860058904,
+     "conic_seconds": 0.0038409591652452946,
+     "lp_seconds": 0.0005952920764684677,
+     "moved": 0.9848484848484849,
+     "max_move": 0.05992583697592327
+    }
+   ],
+   "cluster_spread": {
+    "max": 0.0,
+    "violated": 0,
+    "rows": 0
+   }
+  },
+  {
+   "node": 4,
+   "bound": 0.09750020514642012,
+   "origin": {
+    "parent": 2,
+    "branch": "balanced",
+    "child": "forbid",
+    "keeps": false
+   },
+   "dived": false,
+   "branch": {
+    "kind": "balanced",
+    "cut": 0.538250985401582,
+    "crosses": false
+   },
+   "children": [
+    {
+     "kind": "forbid",
+     "keeps": false,
+     "bound": 0.09790826645096246,
+     "seconds": 0.010287041077390313,
+     "conic_seconds": 0.005645375000312924,
+     "lp_seconds": 0.0015693751629441977,
+     "moved": 0.9696969696969697,
+     "max_move": 0.10587450735129386
+    },
+    {
+     "kind": "commit",
+     "keeps": false,
+     "bound": 0.09753732201137569,
+     "seconds": 0.010299707995727658,
+     "conic_seconds": 0.004445292055606842,
+     "lp_seconds": 0.0027378329541534185,
+     "moved": 0.9696969696969697,
+     "max_move": 0.019125492701462438
+    }
+   ],
+   "cluster_spread": {
+    "max": 0.0,
+    "violated": 0,
+    "rows": 0
+   }
+  },
+  {
+   "node": 3,
+   "bound": 0.09780795401611951,
+   "origin": {
+    "parent": 1,
+    "branch": "balanced",
+    "child": "forbid",
+    "keeps": false
+   },
+   "dived": false,
+   "branch": {
+    "kind": "balanced",
+    "cut": 0.6574471840713046,
+    "crosses": false
+   },
+   "children": [
+    {
+     "kind": "forbid",
+     "keeps": false,
+     "bound": 0.09785084592107905,
+     "seconds": 0.028545208042487502,
+     "conic_seconds": 0.020621082978323102,
+     "lp_seconds": 0.0023801669012755156,
+     "moved": 0.9696969696969697,
+     "max_move": 0.046276408085074605
+    },
+    {
+     "kind": "commit",
+     "keeps": false,
+     "bound": 0.09804736480724205,
+     "seconds": 0.008822167059406638,
+     "conic_seconds": 0.004506249912083149,
+     "lp_seconds": 0.0010330001823604107,
+     "moved": 0.9848484848484849,
+     "max_move": 0.07872359203582024
+    }
+   ],
+   "cluster_spread": {
+    "max": 0.0,
+    "violated": 0,
+    "rows": 0
+   }
+  },
+  {
+   "node": 5,
+   "bound": 0.09752734110985715,
+   "origin": {
+    "parent": 2,
+    "branch": "balanced",
+    "child": "commit",
+    "keeps": false
+   },
+   "dived": false,
+   "branch": {
+    "kind": "balanced",
+    "cut": 0.5702585989942541,
+    "crosses": false
+   },
+   "children": [
+    {
+     "kind": "forbid",
+     "keeps": false,
+     "bound": 0.09791342058047992,
+     "seconds": 0.024575124960392714,
+     "conic_seconds": 0.018846709048375487,
+     "lp_seconds": 0.0011779579799622297,
+     "moved": 0.8939393939393939,
+     "max_move": 0.08987070054026539
+    },
+    {
+     "kind": "commit",
+     "keeps": false,
+     "bound": 0.09763715800458578,
+     "seconds": 0.008216124959290028,
+     "conic_seconds": 0.0041802499908953905,
+     "lp_seconds": 0.0007508748676627874,
+     "moved": 0.8939393939393939,
+     "max_move": 0.035129299498212335
+    }
+   ],
+   "cluster_spread": {
+    "max": 0.0,
+    "violated": 0.0,
+    "rows": 12
+   }
+  },
+  {
+   "node": 6,
+   "bound": 0.09753732201137569,
+   "origin": {
+    "parent": 4,
+    "branch": "balanced",
+    "child": "commit",
+    "keeps": false
+   },
+   "dived": false,
+   "branch": {
+    "kind": "balanced",
+    "cut": 0.5351083502691003,
+    "crosses": false
+   },
+   "children": [
+    {
+     "kind": "forbid",
+     "keeps": false,
+     "bound": 0.09894913309044584,
+     "seconds": 0.012239290867000818,
+     "conic_seconds": 0.0044447919353842735,
+     "lp_seconds": 0.0023275413550436497,
+     "moved": 0.9696969696969697,
+     "max_move": 0.10744582487701981
+    },
+    {
+     "kind": "commit",
+     "keeps": false,
+     "bound": 0.0976338784823424,
+     "seconds": 0.009302166057750583,
+     "conic_seconds": 0.004342333879321814,
+     "lp_seconds": 0.0014947080053389072,
+     "moved": 0.9242424242424242,
+     "max_move": 0.017554175135556932
+    }
+   ],
+   "cluster_spread": {
+    "max": 0.0,
+    "violated": 0.0,
+    "rows": 11
+   }
+  },
+  {
+   "node": 9,
+   "bound": 0.09763715800458578,
+   "origin": {
+    "parent": 5,
+    "branch": "balanced",
+    "child": "commit",
+    "keeps": false
+   },
+   "dived": false,
+   "branch": {
+    "kind": "balanced",
+    "cut": 0.5199525346561961,
+    "crosses": false
+   },
+   "children": [
+    {
+     "kind": "forbid",
+     "keeps": false,
+     "bound": 0.09855303317283699,
+     "seconds": 0.008297333028167486,
+     "conic_seconds": 0.0043951659463346004,
+     "lp_seconds": 0.0005901670083403587,
+     "moved": 0.8787878787878788,
+     "max_move": 0.06005130314233238
+    },
+    {
+     "kind": "commit",
+     "keeps": false,
+     "bound": 0.09766273329713755,
+     "seconds": 0.008463583188131452,
+     "conic_seconds": 0.003844041144475341,
+     "lp_seconds": 0.0010938751511275768,
+     "moved": 0.8787878787878788,
+     "max_move": 0.007315101482740435
+    }
+   ],
+   "cluster_spread": {
+    "max": 0.0,
+    "violated": 0.0,
+    "rows": 23
+   }
+  },
+  {
+   "node": 11,
+   "bound": 0.0976338784823424,
+   "origin": {
+    "parent": 6,
+    "branch": "balanced",
+    "child": "commit",
+    "keeps": false
+   },
+   "dived": false,
+   "branch": {
+    "kind": "fractional",
+    "cut": 0.6245969264501482,
+    "crosses": false
+   },
+   "children": [
+    {
+     "kind": "forbid",
+     "keeps": false,
+     "bound": 0.09795049270500264,
+     "seconds": 0.00980045786127448,
+     "conic_seconds": 0.004700333112850785,
+     "lp_seconds": 0.0012669169809669256,
+     "moved": 0.9242424242424242,
+     "max_move": 0.06270153677347948
+    },
+    {
+     "kind": "commit",
+     "keeps": false,
+     "bound": 0.09794948377958802,
+     "seconds": 0.009597708005458117,
+     "conic_seconds": 0.003906958037987351,
+     "lp_seconds": 0.0020482500549405813,
+     "moved": 0.9242424242424242,
+     "max_move": 0.062298463225734485
+    }
+   ],
+   "cluster_spread": {
+    "max": 0.0,
+    "violated": 0.0,
+    "rows": 22
+   }
+  },
+  {
+   "node": 7,
+   "bound": 0.09790826645096246,
+   "origin": {
+    "parent": 4,
+    "branch": "balanced",
+    "child": "forbid",
+    "keeps": false
+   },
+   "dived": false,
+   "branch": {
+    "kind": "balanced",
+    "cut": 0.5260396512697757,
+    "crosses": false
+   },
+   "children": [
+    {
+     "kind": "forbid",
+     "keeps": false,
+     "bound": 0.09913941903644735,
+     "seconds": 0.03316895803436637,
+     "conic_seconds": 0.0214648749679327,
+     "lp_seconds": 0.0031533767469227314,
+     "moved": 0.9696969696969697,
+     "max_move": 0.11198017436630746
+    },
+    {
+     "kind": "commit",
+     "keeps": false,
+     "bound": 0.09799115870264129,
+     "seconds": 0.010813041124492884,
+     "conic_seconds": 0.005626915954053402,
+     "lp_seconds": 0.0017816668841987848,
+     "moved": 0.9545454545454546,
+     "max_move": 0.013019825636546634
+    }
+   ],
+   "cluster_spread": {
+    "max": 0.0,
+    "violated": 0,
+    "rows": 0
+   }
+  },
+  {
+   "node": 10,
+   "bound": 0.09791342058047992,
+   "origin": {
+    "parent": 5,
+    "branch": "balanced",
+    "child": "forbid",
+    "keeps": false
+   },
+   "dived": false,
+   "branch": {
+    "kind": "balanced",
+    "cut": 0.513389526527643,
+    "crosses": false
+   },
+   "children": [
+    {
+     "kind": "forbid",
+     "keeps": false,
+     "bound": 0.09870681487447171,
+     "seconds": 0.02874374995008111,
+     "conic_seconds": 0.01918108412064612,
+     "lp_seconds": 0.0021579579915851355,
+     "moved": 0.8787878787878788,
+     "max_move": 0.07330494389218406
+    },
+    {
+     "kind": "commit",
+     "keeps": false,
+     "bound": 0.09791961530721281,
+     "seconds": 0.00915395887568593,
+     "conic_seconds": 0.004977082833647728,
+     "lp_seconds": 0.0008721251506358385,
+     "moved": 0.8787878787878788,
+     "max_move": 0.004718847104126039
+    }
+   ],
+   "cluster_spread": {
+    "max": 0.0,
+    "violated": 0.0,
+    "rows": 12
+   }
+  },
+  {
+   "node": 12,
+   "bound": 0.09766273329713755,
+   "origin": {
+    "parent": 9,
+    "branch": "balanced",
+    "child": "commit",
+    "keeps": false
+   },
+   "dived": false,
+   "branch": {
+    "kind": "balanced",
+    "cut": 0.5066967810030947,
+    "crosses": false
+   },
+   "children": [
+    {
+     "kind": "forbid",
+     "keeps": false,
+     "bound": 0.09888792450671888,
+     "seconds": 0.015513666905462742,
+     "conic_seconds": 0.004953790921717882,
+     "lp_seconds": 0.0018772510811686516,
+     "moved": 0.8484848484848485,
+     "max_move": 0.06082580475172203
+    },
+    {
+     "kind": "commit",
+     "keeps": false,
+     "bound": 0.09774194866867549,
+     "seconds": 0.01218233397230506,
+     "conic_seconds": 0.0037608749698847532,
+     "lp_seconds": 0.001507792854681611,
+     "moved": 0.8484848484848485,
+     "max_move": 0.010034043150590723
+    }
+   ],
+   "cluster_spread": {
+    "max": 0.0,
+    "violated": 0.0,
+    "rows": 24
+   }
+  },
+  {
+   "node": 13,
+   "bound": 0.09794948377958802,
+   "origin": {
+    "parent": 11,
+    "branch": "fractional",
+    "child": "commit",
+    "keeps": false
+   },
+   "dived": false,
+   "branch": {
+    "kind": "balanced",
+    "cut": 0.5003874144461581,
+    "crosses": false
+   },
+   "children": [
+    {
+     "kind": "forbid",
+     "keeps": false,
+     "bound": 0.09915714253724443,
+     "seconds": 0.010633207857608795,
+     "conic_seconds": 0.004109875066205859,
+     "lp_seconds": 0.001406748779118061,
+     "moved": 0.8484848484848485,
+     "max_move": 0.06649953503095038
+    },
+    {
+     "kind": "commit",
+     "keeps": false,
+     "bound": 0.09794949000652355,
+     "seconds": 0.008573750033974648,
+     "conic_seconds": 0.0043197087943553925,
+     "lp_seconds": 0.0006085410714149475,
+     "moved": 0.8484848484848485,
+     "max_move": 0.00016981921965456004
+    }
+   ],
+   "cluster_spread": {
+    "max": 0.0,
+    "violated": 0.0,
+    "rows": 34
+   }
+  },
+  {
+   "node": 16,
+   "bound": 0.09774194866867549,
+   "origin": {
+    "parent": 12,
+    "branch": "balanced",
+    "child": "commit",
+    "keeps": false
+   },
+   "dived": false,
+   "branch": {
+    "kind": "balanced",
+    "cut": 0.5385638552789189,
+    "crosses": false
+   },
+   "children": [
+    {
+     "kind": "forbid",
+     "keeps": false,
+     "bound": 0.09925677622025211,
+     "seconds": 0.00968679110519588,
+     "conic_seconds": 0.0037692089099437,
+     "lp_seconds": 0.0010487919207662344,
+     "moved": 0.7575757575757576,
+     "max_move": 0.10571807237070123
+    },
+    {
+     "kind": "commit",
+     "keeps": false,
+     "bound": 0.09787223123528692,
+     "seconds": 0.007080374984070659,
+     "conic_seconds": 0.0032479590736329556,
+     "lp_seconds": 0.0005912501364946365,
+     "moved": 0.803030303030303,
+     "max_move": 0.01928192764042097
+    }
+   ],
+   "cluster_spread": {
+    "max": 0.0,
+    "violated": 0.0,
+    "rows": 26
+   }
+  },
+  {
+   "node": 17,
+   "bound": 0.09794949000652355,
+   "origin": {
+    "parent": 13,
+    "branch": "balanced",
+    "child": "commit",
+    "keeps": false
+   },
+   "dived": false,
+   "branch": {
+    "kind": "balanced",
+    "cut": 0.5344511848705109,
+    "crosses": false
+   },
+   "children": [
+    {
+     "kind": "forbid",
+     "keeps": false,
+     "bound": 0.09882872393335355,
+     "seconds": 0.008700374979525805,
+     "conic_seconds": 0.00489512481726706,
+     "lp_seconds": 0.0005149999633431435,
+     "moved": 0.8484848484848485,
+     "max_move": 0.05665399911049117
+    },
+    {
+     "kind": "commit",
+     "keeps": false,
+     "bound": 0.09807008948590411,
+     "seconds": 0.008045833092182875,
+     "conic_seconds": 0.003397915977984667,
+     "lp_seconds": 0.0008378340862691402,
+     "moved": 0.8787878787878788,
+     "max_move": 0.013117115492724684
+    }
+   ],
+   "cluster_spread": {
+    "max": 0.0,
+    "violated": 0.0,
+    "rows": 34
+   }
+  },
+  {
+   "node": 8,
+   "bound": 0.09785084592107905,
+   "origin": {
+    "parent": 3,
+    "branch": "balanced",
+    "child": "forbid",
+    "keeps": false
+   },
+   "dived": false,
+   "branch": {
+    "kind": "balanced",
+    "cut": 0.5173115825948885,
+    "crosses": false
+   },
+   "children": [
+    {
+     "kind": "forbid",
+     "keeps": false,
+     "bound": 0.09929598888335503,
+     "seconds": 0.06798116699792445,
+     "conic_seconds": 0.03576500108465552,
+     "lp_seconds": 0.0074457095470279455,
+     "moved": 0.9848484848484849,
+     "max_move": 0.11634420871058256
+    },
+    {
+     "kind": "commit",
+     "keeps": false,
+     "bound": 0.09789244461616904,
+     "seconds": 0.010288833174854517,
+     "conic_seconds": 0.004831583937630057,
+     "lp_seconds": 0.0021977920550853014,
+     "moved": 0.9696969696969697,
+     "max_move": 0.008655791298326665
+    }
+   ],
+   "cluster_spread": {
+    "max": 0.0,
+    "violated": 0,
+    "rows": 0
+   }
+  },
+  {
+   "node": 14,
+   "bound": 0.09795049270500264,
+   "origin": {
+    "parent": 11,
+    "branch": "fractional",
+    "child": "forbid",
+    "keeps": false
+   },
+   "dived": false,
+   "branch": {
+    "kind": "balanced",
+    "cut": 0.5011911736180731,
+    "crosses": false
+   },
+   "children": [
+    {
+     "kind": "forbid",
+     "keeps": false,
+     "bound": 0.099144718256025,
+     "seconds": 0.02589408284984529,
+     "conic_seconds": 0.019088834058493376,
+     "lp_seconds": 0.0013252911157906055,
+     "moved": 0.8939393939393939,
+     "max_move": 0.06596291427480726
+    },
+    {
+     "kind": "commit",
+     "keeps": false,
+     "bound": 0.09795055121585547,
+     "seconds": 0.01025900011882186,
+     "conic_seconds": 0.005255124997347593,
+     "lp_seconds": 0.0015899999998509884,
+     "moved": 0.8939393939393939,
+     "max_move": 0.0005202710426538693
+    }
+   ],
+   "cluster_spread": {
+    "max": 0.0,
+    "violated": 0.0,
+    "rows": 22
+   }
+  },
+  {
+   "node": 15,
+   "bound": 0.09791961530721281,
+   "origin": {
+    "parent": 10,
+    "branch": "balanced",
+    "child": "commit",
+    "keeps": false
+   },
+   "dived": false,
+   "branch": {
+    "kind": "balanced",
+    "cut": 0.5338923653396912,
+    "crosses": false
+   },
+   "children": [
+    {
+     "kind": "forbid",
+     "keeps": false,
+     "bound": 0.09935459614859213,
+     "seconds": 0.017973792040720582,
+     "conic_seconds": 0.005023417063057423,
+     "lp_seconds": 0.00425162585452199,
+     "moved": 0.8939393939393939,
+     "max_move": 0.10805381735855704
+    },
+    {
+     "kind": "commit",
+     "keeps": false,
+     "bound": 0.09801110524759159,
+     "seconds": 0.009322250029072165,
+     "conic_seconds": 0.004300417145714164,
+     "lp_seconds": 0.001958915963768959,
+     "moved": 0.8787878787878788,
+     "max_move": 0.016946182671680132
+    }
+   ],
+   "cluster_spread": {
+    "max": 0.0,
+    "violated": 0.0,
+    "rows": 12
+   }
+  },
+  {
+   "node": 18,
+   "bound": 0.09787223123528692,
+   "origin": {
+    "parent": 16,
+    "branch": "balanced",
+    "child": "commit",
+    "keeps": false
+   },
+   "dived": false,
+   "branch": {
+    "kind": "balanced",
+    "cut": 0.5127781429180296,
+    "crosses": false
+   },
+   "children": [
+    {
+     "kind": "forbid",
+     "keeps": false,
+     "bound": 0.0993341257620565,
+     "seconds": 0.007847207831218839,
+     "conic_seconds": 0.003779666032642126,
+     "lp_seconds": 0.0006187919061630964,
+     "moved": 0.7727272727272727,
+     "max_move": 0.05930546428760626
+    },
+    {
+     "kind": "commit",
+     "keeps": false,
+     "bound": 0.0979428049809529,
+     "seconds": 0.00893312506377697,
+     "conic_seconds": 0.003779084188863635,
+     "lp_seconds": 0.0007183740381151438,
+     "moved": 0.803030303030303,
+     "max_move": 0.011214163861589924
+    }
+   ],
+   "cluster_spread": {
+    "max": 0.0,
+    "violated": 0.0,
+    "rows": 37
+   }
+  },
+  {
+   "node": 19,
+   "bound": 0.09789244461616904,
+   "origin": {
+    "parent": 8,
+    "branch": "balanced",
+    "child": "commit",
+    "keeps": false
+   },
+   "dived": false,
+   "branch": {
+    "kind": "balanced",
+    "cut": 0.5043421875245288,
+    "crosses": false
+   },
+   "children": [
+    {
+     "kind": "forbid",
+     "keeps": false,
+     "bound": 0.09834654282653198,
+     "seconds": 0.011104625184088945,
+     "conic_seconds": 0.004946792032569647,
+     "lp_seconds": 0.0026741251349449158,
+     "moved": 0.9393939393939394,
+     "max_move": 0.12282890625089418
+    },
+    {
+     "kind": "commit",
+     "keeps": false,
+     "bound": 0.09789708166426514,
+     "seconds": 0.009632499888539314,
+     "conic_seconds": 0.004503291100263596,
+     "lp_seconds": 0.0019532919395715,
+     "moved": 0.9242424242424242,
+     "max_move": 0.002171093763409876
+    }
+   ],
+   "cluster_spread": {
+    "max": 0.0,
+    "violated": 0.0,
+    "rows": 11
+   }
+  },
+  {
+   "node": 20,
+   "bound": 0.09795055121585547,
+   "origin": {
+    "parent": 14,
+    "branch": "balanced",
+    "child": "commit",
+    "keeps": false
+   },
+   "dived": false,
+   "branch": {
+    "kind": "balanced",
+    "cut": 0.5350629189005636,
+    "crosses": false
+   },
+   "children": [
+    {
+     "kind": "forbid",
+     "keeps": false,
+     "bound": 0.09882728062392872,
+     "seconds": 0.010657374979928136,
+     "conic_seconds": 0.005446959054097533,
+     "lp_seconds": 0.0017566250171512365,
+     "moved": 0.8939393939393939,
+     "max_move": 0.05644269630003892
+    },
+    {
+     "kind": "commit",
+     "keeps": false,
+     "bound": 0.09807136343289687,
+     "seconds": 0.010209042113274336,
+     "conic_seconds": 0.004298083018511534,
+     "lp_seconds": 0.0017592080403119326,
+     "moved": 0.8939393939393939,
+     "max_move": 0.013056256502399496
+    }
+   ],
+   "cluster_spread": {
+    "max": 0.0,
+    "violated": 0.0,
+    "rows": 22
+   }
+  },
+  {
+   "node": 21,
+   "bound": 0.0979428049809529,
+   "origin": {
+    "parent": 18,
+    "branch": "balanced",
+    "child": "commit",
+    "keeps": false
+   },
+   "dived": false,
+   "branch": {
+    "kind": "balanced",
+    "cut": 0.5035342725960261,
+    "crosses": false
+   },
+   "children": [
+    {
+     "kind": "forbid",
+     "keeps": false,
+     "bound": 0.09973701886945796,
+     "seconds": 0.00793387508019805,
+     "conic_seconds": 0.0040536250453442335,
+     "lp_seconds": 0.0005083750002086163,
+     "moved": 0.7424242424242424,
+     "max_move": 0.06161643186057825
+    },
+    {
+     "kind": "commit",
+     "keeps": false,
+     "bound": 0.09797173406981675,
+     "seconds": 0.008058625040575862,
+     "conic_seconds": 0.0032672500237822533,
+     "lp_seconds": 0.0007461248897016048,
+     "moved": 0.7878787878787878,
+     "max_move": 0.009317249974943882
+    }
+   ],
+   "cluster_spread": {
+    "max": 0.0,
+    "violated": 0.0,
+    "rows": 40
+   }
+  },
+  {
+   "node": 22,
+   "bound": 0.09789708166426514,
+   "origin": {
+    "parent": 19,
+    "branch": "balanced",
+    "child": "commit",
+    "keeps": false
+   },
+   "dived": false,
+   "branch": {
+    "kind": "fractional",
+    "cut": 0.7245961090644994,
+    "crosses": false
+   },
+   "children": [
+    {
+     "kind": "forbid",
+     "keeps": false,
+     "bound": 0.09790164062413398,
+     "seconds": 0.008495834190398455,
+     "conic_seconds": 0.004627499962225556,
+     "lp_seconds": 0.0008529999759048223,
+     "moved": 0.8939393939393939,
+     "max_move": 0.012701945789957494
+    },
+    {
+     "kind": "commit",
+     "keeps": false,
+     "bound": 0.09867955083838124,
+     "seconds": 0.00799129088409245,
+     "conic_seconds": 0.003854624927043915,
+     "lp_seconds": 0.0011553331278264523,
+     "moved": 0.8939393939393939,
+     "max_move": 0.11229805453405947
+    }
+   ],
+   "cluster_spread": {
+    "max": 0.0,
+    "violated": 0.0,
+    "rows": 22
+   }
+  },
+  {
+   "node": 23,
+   "bound": 0.09790164062413398,
+   "origin": {
+    "parent": 22,
+    "branch": "fractional",
+    "child": "forbid",
+    "keeps": false
+   },
+   "dived": false,
+   "branch": {
+    "kind": "fractional",
+    "cut": 0.7405825798730379,
+    "crosses": false
+   },
+   "children": [
+    {
+     "kind": "forbid",
+     "keeps": false,
+     "bound": 0.09790225279877351,
+     "seconds": 0.008141500176861882,
+     "conic_seconds": 0.004145709099248052,
+     "lp_seconds": 0.001054875086992979,
+     "moved": 0.8787878787878788,
+     "max_move": 0.004708711544707214
+    },
+    {
+     "kind": "commit",
+     "keeps": false,
+     "bound": 0.09859162540026252,
+     "seconds": 0.008079749997705221,
+     "conic_seconds": 0.003871000139042735,
+     "lp_seconds": 0.0011831249576061964,
+     "moved": 0.9090909090909091,
+     "max_move": 0.1202912899373344
+    }
+   ],
+   "cluster_spread": {
+    "max": 0.0,
+    "violated": 0.0,
+    "rows": 22
+   }
+  },
+  {
+   "node": 24,
+   "bound": 0.09790225279877351,
+   "origin": {
+    "parent": 23,
+    "branch": "fractional",
+    "child": "forbid",
+    "keeps": false
+   },
+   "dived": false,
+   "branch": {
+    "kind": "fractional",
+    "cut": 0.746135939947709,
+    "crosses": false
+   },
+   "children": [
+    {
+     "kind": "forbid",
+     "keeps": false,
+     "bound": 0.097902392002441,
+     "seconds": 0.008016875013709068,
+     "conic_seconds": 0.004391958005726337,
+     "lp_seconds": 0.0007703339215368032,
+     "moved": 0.8636363636363636,
+     "max_move": 0.0019320308000654318
+    },
+    {
+     "kind": "commit",
+     "keeps": false,
+     "bound": 0.09926480345896309,
+     "seconds": 0.008760707918554544,
+     "conic_seconds": 0.00396558316424489,
+     "lp_seconds": 0.0015370422042906284,
+     "moved": 0.8787878787878788,
+     "max_move": 0.12306796997537739
+    }
+   ],
+   "cluster_spread": {
+    "max": 0.0,
+    "violated": 0.0,
+    "rows": 22
+   }
+  },
+  {
+   "node": 25,
+   "bound": 0.097902392002441,
+   "origin": {
+    "parent": 24,
+    "branch": "fractional",
+    "child": "forbid",
+    "keeps": false
+   },
+   "dived": false,
+   "branch": {
+    "kind": "fractional",
+    "cut": 0.7462279674008866,
+    "crosses": false
+   },
+   "children": [
+    {
+     "kind": "forbid",
+     "keeps": false,
+     "bound": 0.09790252524601613,
+     "seconds": 0.00840937509201467,
+     "conic_seconds": 0.004039375111460686,
+     "lp_seconds": 0.001327292062342167,
+     "moved": 0.8333333333333334,
+     "max_move": 0.0018860194977024236
+    },
+    {
+     "kind": "commit",
+     "keeps": false,
+     "bound": 0.0984828059638131,
+     "seconds": 0.007390458835288882,
+     "conic_seconds": 0.0036257500760257244,
+     "lp_seconds": 0.0008820409420877695,
+     "moved": 0.9090909090909091,
+     "max_move": 0.12311398370091889
+    }
+   ],
+   "cluster_spread": {
+    "max": 0.0,
+    "violated": 0.0,
+    "rows": 22
+   }
+  },
+  {
+   "node": 26,
+   "bound": 0.09790252524601613,
+   "origin": {
+    "parent": 25,
+    "branch": "fractional",
+    "child": "forbid",
+    "keeps": false
+   },
+   "dived": false,
+   "branch": {
+    "kind": "fractional",
+    "cut": 0.6852010669148997,
+    "crosses": false
+   },
+   "children": [
+    {
+     "kind": "forbid",
+     "keeps": false,
+     "bound": 0.09795706839276887,
+     "seconds": 0.009450499899685383,
+     "conic_seconds": 0.004299667198210955,
+     "lp_seconds": 0.0013479168992489576,
+     "moved": 0.8333333333333334,
+     "max_move": 0.029169981720264054
+    },
+    {
+     "kind": "commit",
+     "keeps": false,
+     "bound": 0.09868275219517067,
+     "seconds": 0.009596459101885557,
+     "conic_seconds": 0.004660540958866477,
+     "lp_seconds": 0.0013661251869052649,
+     "moved": 0.8636363636363636,
+     "max_move": 0.040208649433079356
+    }
+   ],
+   "cluster_spread": {
+    "max": 0.0,
+    "violated": 0.0,
+    "rows": 22
+   }
+  },
+  {
+   "node": 27,
+   "bound": 0.09795706839276887,
+   "origin": {
+    "parent": 26,
+    "branch": "fractional",
+    "child": "forbid",
+    "keeps": false
+   },
+   "dived": false,
+   "branch": {
+    "kind": "fractional",
+    "cut": 0.6882684673334474,
+    "crosses": false
+   },
+   "children": [
+    {
+     "kind": "forbid",
+     "keeps": false,
+     "bound": 0.09799850251762789,
+     "seconds": 0.013515499886125326,
+     "conic_seconds": 0.004799415823072195,
+     "lp_seconds": 0.002187458099797368,
+     "moved": 0.8181818181818182,
+     "max_move": 0.03086576641635995
+    },
+    {
+     "kind": "commit",
+     "keeps": false,
+     "bound": 0.09867103501645544,
+     "seconds": 0.008846667129546404,
+     "conic_seconds": 0.004287334159016609,
+     "lp_seconds": 0.0010860003530979156,
+     "moved": 0.8484848484848485,
+     "max_move": 0.055164652966732654
+    }
+   ],
+   "cluster_spread": {
+    "max": 0.0,
+    "violated": 0.0,
+    "rows": 22
+   }
+  }
+ ],
+ "workers": 10,
+ "worker_utilisation": 0.06768692312052285,
+ "conic_solver": "MOSEK",
+ "rule": "balanced-exact",
+ "instance": "/Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper/external/catanzaro/upstream/instances/01-Primates12.txt",
+ "n": 12,
+ "cap": 3600.0,
+ "max_nodes": null,
+ "wall_seconds": 1.2163200378417969,
+ "peak_rss_mb": 139.4375
+}

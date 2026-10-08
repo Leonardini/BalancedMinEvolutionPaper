@@ -1,0 +1,16 @@
+# The 12 x 12 matrix of Catanzaro, Pesenti, Sapucaia and Wolsey, Math. Program. 215
+# (2026), Section 9, p. 492, which satisfies (4)-(9) but not the strong four-point
+# conditions. Transcribed by hand from the published PDF; rows and columns in the
+# order printed there. Checked against the printed page by the authors (2026-10-02).
+0 5 6 5 5 6 5 5 6 5 6 2
+5 0 4 2 6 7 7 7 7 6 4 5
+6 4 0 4 5 7 7 7 7 5 2 6
+5 2 4 0 6 7 7 7 7 6 4 5
+5 6 5 6 0 5 6 6 5 2 5 5
+6 7 7 7 5 0 4 4 2 5 7 6
+5 7 7 7 6 4 0 2 4 6 7 5
+5 7 7 7 6 4 2 0 4 6 7 5
+6 7 7 7 5 2 4 4 0 5 7 6
+5 6 5 6 2 5 6 6 5 0 5 5
+6 4 2 4 5 7 7 7 7 5 0 6
+2 5 6 5 5 6 5 5 6 5 6 0

@@ -1,0 +1,17 @@
+# Appendix E, Table E2: both solvers' certified optima against exhaustive enumeration on crops of each instance.
+make -s -C experiments/enumeration && $PY experiments/enumeration/certificates_vs_enumeration.py Primates12 external/catanzaro/upstream/instances/01-Primates12.txt 6 12 results/enumeration/Primates12.json
+make -s -C experiments/enumeration && $PY experiments/enumeration/certificates_vs_enumeration.py M17 external/catanzaro/upstream/instances/02-M17.txt 6 12 results/enumeration/M17.json
+make -s -C experiments/enumeration && $PY experiments/enumeration/certificates_vs_enumeration.py M18 external/catanzaro/upstream/instances/03-M18.txt 6 12 results/enumeration/M18.json
+make -s -C experiments/enumeration && $PY experiments/enumeration/certificates_vs_enumeration.py 20_euros2 external/catanzaro/upstream/instances/supplement/20_euros2.txt 6 12 results/enumeration/20_euros2.json
+make -s -C experiments/enumeration && $PY experiments/enumeration/certificates_vs_enumeration.py 20_rosids external/catanzaro/upstream/instances/supplement/20_rosids.txt 6 12 results/enumeration/20_rosids.json
+make -s -C experiments/enumeration && $PY experiments/enumeration/certificates_vs_enumeration.py 30_B-NS1 external/catanzaro/upstream/instances/supplement/30_B-NS1-284-344-BMGE.txt 6 12 results/enumeration/30_B-NS1.json
+make -s -C experiments/enumeration && $PY experiments/enumeration/certificates_vs_enumeration.py M43 external/catanzaro/upstream/instances/05-M43.txt 6 12 results/enumeration/M43.json
+make -s -C experiments/enumeration && $PY experiments/enumeration/certificates_vs_enumeration.py synthetic data/synthetic/test_n10.txt 6 10 results/enumeration/synthetic.json
+# Random arm: three random subsets of n leaves per size (seeded from instance, n, replicate).
+make -s -C experiments/enumeration && $PY experiments/enumeration/certificates_vs_enumeration.py Primates12 external/catanzaro/upstream/instances/01-Primates12.txt 6 12 results/enumeration/Primates12_random.json 3
+make -s -C experiments/enumeration && $PY experiments/enumeration/certificates_vs_enumeration.py M17 external/catanzaro/upstream/instances/02-M17.txt 6 12 results/enumeration/M17_random.json 3
+make -s -C experiments/enumeration && $PY experiments/enumeration/certificates_vs_enumeration.py M18 external/catanzaro/upstream/instances/03-M18.txt 6 12 results/enumeration/M18_random.json 3
+make -s -C experiments/enumeration && $PY experiments/enumeration/certificates_vs_enumeration.py 20_euros2 external/catanzaro/upstream/instances/supplement/20_euros2.txt 6 12 results/enumeration/20_euros2_random.json 3
+make -s -C experiments/enumeration && $PY experiments/enumeration/certificates_vs_enumeration.py 20_rosids external/catanzaro/upstream/instances/supplement/20_rosids.txt 6 12 results/enumeration/20_rosids_random.json 3
+make -s -C experiments/enumeration && $PY experiments/enumeration/certificates_vs_enumeration.py 30_B-NS1 external/catanzaro/upstream/instances/supplement/30_B-NS1-284-344-BMGE.txt 6 12 results/enumeration/30_B-NS1_random.json 3
+make -s -C experiments/enumeration && $PY experiments/enumeration/certificates_vs_enumeration.py M43 external/catanzaro/upstream/instances/05-M43.txt 6 12 results/enumeration/M43_random.json 3

@@ -1,0 +1,6 @@
+2026-10-08 00:15:05 balanced-exact        1s nodes 0 open 1 lb 0.1226572314 inc 0.1259879881 gap 2.6437% root
+2026-10-08 00:16:05 balanced-exact       61s nodes 3306 open 1364 lb 0.125400179 inc 0.1259405368 gap 0.4291%
+2026-10-08 00:17:05 balanced-exact      121s nodes 5543 open 1379 lb 0.1256337271 inc 0.1259405368 gap 0.2436%
+2026-10-08 00:18:05 balanced-exact      181s nodes 7420 open 1095 lb 0.1257727905 inc 0.1259405368 gap 0.1332%
+2026-10-08 00:19:05 balanced-exact      241s nodes 9129 open 610 lb 0.1258693152 inc 0.1259405368 gap 0.0566%
+2026-10-08 00:19:53 balanced-exact      289s nodes 10361 open 4 lb 0.1259405368 inc 0.1259405368 gap 0.0000% certified

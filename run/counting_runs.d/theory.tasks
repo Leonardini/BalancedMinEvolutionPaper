@@ -1,0 +1,51 @@
+# Theory and enumeration (Sections 4, 5.1, 5.2, 6.3, Appendix C). One thread each.
+# Longest first, so they start first.
+
+# Appendix C / Table C1: canonical survivors, none violating (10).
+experiments/theory/theorem5.sh canon_n11 11
+experiments/theory/theorem5.sh canon_n10 10
+# Appendix C (ii): cherry fixed at {1,2}, violation fixed at {1,2,3,4}: 84 witnesses, one class.
+experiments/theory/theorem5.sh fpviol_n12_t2 12 --fpviol --t01 2
+# Section 4: the facets of P_6.
+Rscript experiments/theory/p6_facets.R "$RESULTS/p6_facets"
+# Section 5.1: membership model, both laminarity encodings; n = 8 also without the tiebreak.
+"$PY" experiments/theory/membership_model.py 8 nested-disjoint on "$RESULTS/conjecture1/n8_nested-disjoint_tiebreak-on.json"
+"$PY" experiments/theory/membership_model.py 8 nested-disjoint off "$RESULTS/conjecture1/n8_nested-disjoint_tiebreak-off.json"
+"$PY" experiments/theory/membership_model.py 8 quadrant on "$RESULTS/conjecture1/n8_quadrant_tiebreak-on.json"
+"$PY" experiments/theory/membership_model.py 8 quadrant off "$RESULTS/conjecture1/n8_quadrant_tiebreak-off.json"
+"$PY" experiments/theory/membership_model.py 7 nested-disjoint on "$RESULTS/conjecture1/n7_nested-disjoint_tiebreak-on.json"
+"$PY" experiments/theory/membership_model.py 7 quadrant on "$RESULTS/conjecture1/n7_quadrant_tiebreak-on.json"
+"$PY" experiments/theory/membership_model.py 6 nested-disjoint on "$RESULTS/conjecture1/n6_nested-disjoint_tiebreak-on.json"
+"$PY" experiments/theory/membership_model.py 6 quadrant on "$RESULTS/conjecture1/n6_quadrant_tiebreak-on.json"
+# Section 5.1: with lexicographic order on equal-size splits, one point per tree.
+"$PY" experiments/theory/membership_model.py 8 nested-disjoint on "$RESULTS/conjecture1/n8_nested-disjoint_tiebreak-on_lex.json" --lex
+"$PY" experiments/theory/membership_model.py 8 quadrant on "$RESULTS/conjecture1/n8_quadrant_tiebreak-on_lex.json" --lex
+"$PY" experiments/theory/membership_model.py 7 nested-disjoint on "$RESULTS/conjecture1/n7_nested-disjoint_tiebreak-on_lex.json" --lex
+"$PY" experiments/theory/membership_model.py 7 quadrant on "$RESULTS/conjecture1/n7_quadrant_tiebreak-on_lex.json" --lex
+"$PY" experiments/theory/membership_model.py 6 nested-disjoint on "$RESULTS/conjecture1/n6_nested-disjoint_tiebreak-on_lex.json" --lex
+"$PY" experiments/theory/membership_model.py 6 quadrant on "$RESULTS/conjecture1/n6_quadrant_tiebreak-on_lex.json" --lex
+# Section 5.2: minimum edge clique cover, and the random-objective LPs over the cover.
+"$PY" experiments/theory/clique_cover.py 7 "$RESULTS/clique_cover/n7.json"
+"$PY" experiments/theory/clique_cover.py 6 "$RESULTS/clique_cover/n6.json"
+"$PY" experiments/theory/clique_cover.py 5 "$RESULTS/clique_cover/n5.json"
+"$PY" experiments/theory/clique_cover.py 4 "$RESULTS/clique_cover/n4.json"
+"$PY" experiments/theory/clique_integrality.py "$RESULTS/clique_cover/integrality.json" 300 12345
+# Table C1, smaller n.
+experiments/theory/theorem5.sh canon_n9 9
+experiments/theory/theorem5.sh canon_n8 8
+experiments/theory/theorem5.sh canon_n7 7
+experiments/theory/theorem5.sh canon_n6 6
+experiments/theory/theorem5.sh canon_n5 5
+# Appendix C: without the ordering on leaf 1's row, survivors = (2n-5)!!.
+experiments/theory/theorem5.sh full_n8 8 --full
+experiments/theory/theorem5.sh full_n7 7 --full
+experiments/theory/theorem5.sh full_n6 6 --full
+experiments/theory/theorem5.sh full_n5 5 --full
+# Appendix C (i): at n = 12 every matrix satisfying (4)-(9) has a cherry (needed in (ii)).
+experiments/theory/theorem5.sh nocherry_n12 12 --nocherry
+# Appendix C (iii): weak-triangle 6-node matrices: 285 = 105 + 180, one S_6 orbit, stabiliser 4.
+experiments/theory/theorem5.sh weak_n6 6 --weak --full
+# Section 6.3: the cherry lift satisfies (4)-(9) and violates (10) on 216 quartets.
+"$PY" experiments/theory/cherry_lift.py "$RESULTS/theorem5/cherry_lift.json"
+# Section 6.3: the matrix of Catanzaro et al. (2026, p. 492) is a relabelling of it.
+"$PY" experiments/theory/catanzaro_p492.py data/theory/catanzaro2026_p492.txt "$RESULTS/theorem5/catanzaro_p492.json"

@@ -1,0 +1,20 @@
+2026-10-03 21:52:08   compact: round 4, bound 0.0786622263, rows 2060, {'inaccurate_solves': 0, 'mincut': 3}, 0s
+2026-10-03 21:52:09 compact: root gap 0.8047% (closes 0.0% of the compact gap), cut off 0, 0s
+2026-10-03 21:52:09   lift: round 4, bound 0.0786622263, rows 2332, {'inaccurate_solves': 0, 'mincut': 3}, 0s
+2026-10-03 21:52:09 lift: root gap 0.8047% (closes 0.0% of the compact gap), cut off 0, 0s
+2026-10-03 21:52:09   lift_manifold: round 3, bound 0.0788133288, rows 2332, {'inaccurate_solves': 0, 'mincut': 2}, 0s
+2026-10-03 21:52:09 lift_manifold: root gap 0.6155% (closes 23.5% of the compact gap), cut off 0, 0s
+/Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper/experiments/lp/conic_manifold.py:248: UserWarning: Solution may be inaccurate. Try another solver, adjusting the solver settings, or solve with verbose=True for more information.
+  prob.solve(solver=cp.CLARABEL, tol_feas=tol, tol_gap_abs=tol, tol_gap_rel=tol,
+2026-10-03 21:52:18   lift_triangle: round 4, bound 0.0786624753, rows 4372, {'triangle_rows': 2040, 'inaccurate_solves': 4, 'mincut': 3}, 9s
+2026-10-03 21:52:18 lift_triangle: root gap 0.8047% (closes 0.0% of the compact gap), cut off 0, 9s
+2026-10-03 21:52:19   lift_base: round 3, bound 0.0789639562, rows 4372, {'triangle_rows': 2040, 'inaccurate_solves': 0, 'mincut': 2}, 0s
+2026-10-03 21:52:19 lift_base: root gap 0.4242% (closes 47.3% of the compact gap), cut off 0, 1s
+2026-10-03 21:52:20   lift_base_2k: round 4, bound 0.0789724632, rows 4491, {'triangle_rows': 2040, 'inaccurate_solves': 0, 'mincut': 2, '2k': 119}, 1s
+2026-10-03 21:52:20 lift_base_2k: root gap 0.4135% (closes 48.6% of the compact gap), cut off 0, 1s
+2026-10-03 21:52:20   lift_2k_K4: round 4, bound 0.0786622263, rows 2332, {'inaccurate_solves': 0, 'mincut': 3}, 0s
+2026-10-03 21:52:20 lift_2k_K4: root gap 0.8047% (closes 0.0% of the compact gap), cut off 0, 0s
+2026-10-03 21:52:30   lift_buneman: round 4, bound 0.0786623067, rows 6252, {'buneman_rows': 3360, 'inaccurate_solves': 4, 'mincut': 3}, 10s
+2026-10-03 21:52:32 lift_buneman: root gap 0.8047% (closes 0.0% of the compact gap), cut off 0, 11s
+2026-10-03 21:52:33   lift_base_buneman: round 3, bound 0.0789639719, rows 8292, {'triangle_rows': 2040, 'buneman_rows': 3360, 'inaccurate_solves': 0, 'mincut': 2}, 1s
+2026-10-03 21:52:33 lift_base_buneman: root gap 0.4242% (closes 47.3% of the compact gap), cut off 0, 1s

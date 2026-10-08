@@ -1,0 +1,282 @@
+{
+ "label": "M43",
+ "instance": "external/catanzaro/upstream/instances/05-M43.txt",
+ "top_kept": 200,
+ "cert_rel": 1e-09,
+ "leaves": "first n",
+ "sizes": {
+  "6": {
+   "leaves": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "trees": 105,
+   "enumeration_seconds": 0.006006956100463867,
+   "optimum": "1097571/32000000",
+   "optimum_float": 0.03429909375,
+   "optimal_trees": 1,
+   "gap_to_runner_up": 0.0022026821043923356,
+   "distance": {
+    "finished": true,
+    "certified": true,
+    "time": 0.087071875,
+    "nodes": 1,
+    "tree_is_optimal": true,
+    "rel_diff_from_optimum": 0.0,
+    "false_certificate": false
+   },
+   "compact": {
+    "finished": true,
+    "certified": true,
+    "objective": 0.034299093749999995,
+    "lb": 0.034299093749999995,
+    "nodes": 1,
+    "time": 0.03171372413635254,
+    "rel_diff_from_optimum": -1.3457682820501782e-16,
+    "false_certificate": false,
+    "rule": "balanced-exact"
+   }
+  },
+  "7": {
+   "leaves": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+   ],
+   "trees": 945,
+   "enumeration_seconds": 0.009051799774169922,
+   "optimum": "5770497/160000000",
+   "optimum_float": 0.03606560625,
+   "optimal_trees": 1,
+   "gap_to_runner_up": 0.004533318360619544,
+   "distance": {
+    "finished": true,
+    "certified": true,
+    "time": 0.07545725,
+    "nodes": 1,
+    "tree_is_optimal": true,
+    "rel_diff_from_optimum": 0.0,
+    "false_certificate": false
+   },
+   "compact": {
+    "finished": true,
+    "certified": true,
+    "objective": 0.03606560625,
+    "lb": 0.03606560625,
+    "nodes": 3,
+    "time": 0.05163097381591797,
+    "rel_diff_from_optimum": -2.1745414153275477e-18,
+    "false_certificate": false,
+    "rule": "balanced-exact"
+   }
+  },
+  "8": {
+   "leaves": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "trees": 10395,
+   "enumeration_seconds": 0.014921188354492188,
+   "optimum": "1730763/40000000",
+   "optimum_float": 0.043269075,
+   "optimal_trees": 1,
+   "gap_to_runner_up": 0.00045095717900139995,
+   "distance": {
+    "finished": true,
+    "certified": true,
+    "time": 0.189715458,
+    "nodes": 1,
+    "tree_is_optimal": true,
+    "rel_diff_from_optimum": 0.0,
+    "false_certificate": false
+   },
+   "compact": {
+    "finished": true,
+    "certified": true,
+    "objective": 0.043269075,
+    "lb": 0.043269075,
+    "nodes": 17,
+    "time": 0.15164899826049805,
+    "rel_diff_from_optimum": -6.651319755169982e-17,
+    "false_certificate": false,
+    "rule": "balanced-exact"
+   }
+  },
+  "9": {
+   "leaves": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "trees": 135135,
+   "enumeration_seconds": 0.08689093589782715,
+   "optimum": "15887099/320000000",
+   "optimum_float": 0.049647184375,
+   "optimal_trees": 1,
+   "gap_to_runner_up": 0.0007485633469017849,
+   "distance": {
+    "finished": true,
+    "certified": true,
+    "time": 0.65528575,
+    "nodes": 1,
+    "tree_is_optimal": true,
+    "rel_diff_from_optimum": 0.0,
+    "false_certificate": false
+   },
+   "compact": {
+    "finished": true,
+    "certified": true,
+    "objective": 0.049647184375,
+    "lb": 0.049647184375,
+    "nodes": 26,
+    "time": 0.35869693756103516,
+    "rel_diff_from_optimum": 5.155841640970724e-18,
+    "false_certificate": false,
+    "rule": "balanced-exact"
+   }
+  },
+  "10": {
+   "leaves": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "trees": 2027025,
+   "enumeration_seconds": 1.354264259338379,
+   "optimum": "164093693/3200000000",
+   "optimum_float": 0.0512792790625,
+   "optimal_trees": 1,
+   "gap_to_runner_up": 0.0009270465989207763,
+   "distance": {
+    "finished": true,
+    "certified": true,
+    "time": 0.507287083,
+    "nodes": 1,
+    "tree_is_optimal": true,
+    "rel_diff_from_optimum": 0.0,
+    "false_certificate": false
+   },
+   "compact": {
+    "finished": true,
+    "certified": true,
+    "objective": 0.05127927906249999,
+    "lb": 0.05127927906249999,
+    "nodes": 55,
+    "time": 0.8412477970123291,
+    "rel_diff_from_optimum": -2.2717041274640315e-16,
+    "false_certificate": false,
+    "rule": "balanced-exact"
+   }
+  },
+  "11": {
+   "leaves": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+   ],
+   "trees": 34459425,
+   "enumeration_seconds": 26.703040838241577,
+   "optimum": "817508569/16000000000",
+   "optimum_float": 0.0510942855625,
+   "optimal_trees": 1,
+   "gap_to_runner_up": 0.0010107921572134616,
+   "distance": {
+    "finished": true,
+    "certified": true,
+    "time": 0.872475166,
+    "nodes": 1,
+    "tree_is_optimal": true,
+    "rel_diff_from_optimum": 0.0,
+    "false_certificate": false
+   },
+   "compact": {
+    "finished": true,
+    "certified": true,
+    "objective": 0.051094285562499994,
+    "lb": 0.051094285562499994,
+    "nodes": 74,
+    "time": 3.511478900909424,
+    "rel_diff_from_optimum": -1.1347385006256867e-16,
+    "false_certificate": false,
+    "rule": "balanced-exact"
+   }
+  },
+  "12": {
+   "leaves": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "trees": 654729075,
+   "enumeration_seconds": 583.3311989307404,
+   "optimum": "1696586303/32000000000",
+   "optimum_float": 0.05301832196875,
+   "optimal_trees": 1,
+   "gap_to_runner_up": 0.001588296006654723,
+   "distance": {
+    "finished": true,
+    "certified": true,
+    "time": 1.77764875,
+    "nodes": 1,
+    "tree_is_optimal": true,
+    "rel_diff_from_optimum": 0.0,
+    "false_certificate": false
+   },
+   "compact": {
+    "finished": true,
+    "certified": true,
+    "objective": 0.05301832196875,
+    "lb": 0.05301832196875,
+    "nodes": 119,
+    "time": 3.4369759559631348,
+    "rel_diff_from_optimum": -5.495750266619102e-17,
+    "false_certificate": false,
+    "rule": "balanced-exact"
+   }
+  }
+ }
+}

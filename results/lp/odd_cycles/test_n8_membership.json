@@ -1,0 +1,160 @@
+{
+ "instance": "data/synthetic/test_n8.txt",
+ "n": 8,
+ "optimum": 6.015625,
+ "model": "membership",
+ "tol": 1e-06,
+ "arms": {
+  "membership": {
+   "bound_before": 5.0454872123734855,
+   "loop_before": {
+    "manifold": "exact",
+    "solver": "MOSEK",
+    "separator_cuts": [],
+    "rounds": 1,
+    "inaccurate_solves": 0,
+    "bound": 5.0454872123734855,
+    "primal": 5.045487219093092,
+    "manifold_multiplier": 1.66645641121285,
+    "converged": true,
+    "stop": "no violated cut",
+    "rows": 1856,
+    "seconds": 0.09561967849731445,
+    "rows_cut_off_optimum": 0,
+    "optimum_check": {
+     "rows_checked": 1856,
+     "rows_cut_off_optimum": 0,
+     "bounds_violated": 0,
+     "max_violation": 0.0,
+     "worst_family": "kraft",
+     "families": {
+      "kraft": {
+       "rows": 8,
+       "violated": 0,
+       "max_violation": 0.0,
+       "worst_row": 0
+      },
+      "mincut": {
+       "rows": 119,
+       "violated": 0,
+       "max_violation": 0.0,
+       "worst_row": 15
+      },
+      "xor": {
+       "rows": 560,
+       "violated": 0,
+       "max_violation": 0.0,
+       "worst_row": 127
+      },
+      "mccormick": {
+       "rows": 560,
+       "violated": 0,
+       "max_violation": 0.0,
+       "worst_row": 132
+      },
+      "coupling": {
+       "rows": 5,
+       "violated": 0,
+       "max_violation": 0.0,
+       "worst_row": 1247
+      },
+      "symbreak": {
+       "rows": 24,
+       "violated": 0,
+       "max_violation": 0.0,
+       "worst_row": 1260
+      },
+      "quadrant": {
+       "rows": 580,
+       "violated": 0,
+       "max_violation": 0.0,
+       "worst_row": 1276
+      }
+     },
+     "objective": 6.015625
+    }
+   },
+   "violations_before": {
+    "violated": 0,
+    "max_violation": 0.0,
+    "cycle_lengths": {}
+   },
+   "bound_after": 5.0454872123734855,
+   "loop_after": {
+    "manifold": "exact",
+    "solver": "MOSEK",
+    "separator_cuts": [
+     0
+    ],
+    "rounds": 1,
+    "inaccurate_solves": 0,
+    "bound": 5.0454872123734855,
+    "primal": 5.045487219093092,
+    "manifold_multiplier": 1.66645641121285,
+    "converged": true,
+    "stop": "no violated cut",
+    "rows": 1856,
+    "seconds": 0.09160399436950684,
+    "rows_cut_off_optimum": 0,
+    "optimum_check": {
+     "rows_checked": 1856,
+     "rows_cut_off_optimum": 0,
+     "bounds_violated": 0,
+     "max_violation": 0.0,
+     "worst_family": "kraft",
+     "families": {
+      "kraft": {
+       "rows": 8,
+       "violated": 0,
+       "max_violation": 0.0,
+       "worst_row": 0
+      },
+      "mincut": {
+       "rows": 119,
+       "violated": 0,
+       "max_violation": 0.0,
+       "worst_row": 15
+      },
+      "xor": {
+       "rows": 560,
+       "violated": 0,
+       "max_violation": 0.0,
+       "worst_row": 127
+      },
+      "mccormick": {
+       "rows": 560,
+       "violated": 0,
+       "max_violation": 0.0,
+       "worst_row": 132
+      },
+      "coupling": {
+       "rows": 5,
+       "violated": 0,
+       "max_violation": 0.0,
+       "worst_row": 1247
+      },
+      "symbreak": {
+       "rows": 24,
+       "violated": 0,
+       "max_violation": 0.0,
+       "worst_row": 1260
+      },
+      "quadrant": {
+       "rows": 580,
+       "violated": 0,
+       "max_violation": 0.0,
+       "worst_row": 1276
+      }
+     },
+     "objective": 6.015625
+    }
+   },
+   "cuts_by_cycle_length": {},
+   "bound_before_rows_cut_off_optimum": 0,
+   "bound_after_rows_cut_off_optimum": 0,
+   "gap_before": 0.16126965820284916,
+   "gap_after": 0.16126965820284916
+  }
+ },
+ "peak_rss_mb": 158.140625
+}

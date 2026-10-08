@@ -1,0 +1,280 @@
+{
+ "20_B-HA": {
+  "n": 20,
+  "certified_runs": 3,
+  "runs": [
+   "results/distance_solver/20_B-HA/seed1",
+   "results/distance_solver/20_B-HA/seed2",
+   "results/distance_solver/20_B-HA/seed3"
+  ],
+  "same_tree_in_all_runs": true,
+  "is_tree_metric": true,
+  "exact_value": "25882449457/102400000000",
+  "exact_value_float": 0.25275829547851564,
+  "max_relative_difference_from_reported": 6.792389086569338e-13,
+  "ground_truth_file": "same tree"
+ },
+ "20_euros2": {
+  "n": 20,
+  "certified_runs": 12,
+  "runs": [
+   "results/distance_solver/20_euros2/seed1",
+   "results/distance_solver/20_euros2/seed2",
+   "results/distance_solver/20_euros2/seed3",
+   "results/distance_cut_families/d/20_euros2/seed1",
+   "results/distance_cut_families/d/20_euros2/seed2",
+   "results/distance_cut_families/d/20_euros2/seed3",
+   "results/distance_cut_families/full/20_euros2/seed1",
+   "results/distance_cut_families/full/20_euros2/seed2",
+   "results/distance_cut_families/full/20_euros2/seed3",
+   "results/distance_cut_families/cooff/20_euros2/seed1",
+   "results/distance_cut_families/cooff/20_euros2/seed2",
+   "results/distance_cut_families/cooff/20_euros2/seed3"
+  ],
+  "same_tree_in_all_runs": true,
+  "is_tree_metric": true,
+  "exact_value": "69942846973/204800000000",
+  "exact_value_float": 0.34151780748535154,
+  "max_relative_difference_from_reported": 6.702689842570307e-13,
+  "ground_truth_file": "same tree"
+ },
+ "20_rosids": {
+  "n": 20,
+  "certified_runs": 9,
+  "runs": [
+   "results/distance_cut_families/d/20_rosids/seed1",
+   "results/distance_cut_families/d/20_rosids/seed2",
+   "results/distance_cut_families/d/20_rosids/seed3",
+   "results/distance_cut_families/full/20_rosids/seed1",
+   "results/distance_cut_families/full/20_rosids/seed2",
+   "results/distance_cut_families/full/20_rosids/seed3",
+   "results/distance_cut_families/cooff/20_rosids/seed1",
+   "results/distance_cut_families/cooff/20_rosids/seed2",
+   "results/distance_cut_families/cooff/20_rosids/seed3"
+  ],
+  "same_tree_in_all_runs": true,
+  "is_tree_metric": true,
+  "exact_value": "10120103307/20480000000",
+  "exact_value_float": 0.4941456692871094,
+  "max_relative_difference_from_reported": 3.087877769120226e-12,
+  "ground_truth_file": "same tree"
+ },
+ "21_nucleic": {
+  "n": 21,
+  "certified_runs": 3,
+  "runs": [
+   "results/distance_solver/21_nucleic/seed1",
+   "results/distance_solver/21_nucleic/seed2",
+   "results/distance_solver/21_nucleic/seed3"
+  ],
+  "same_tree_in_all_runs": true,
+  "is_tree_metric": true,
+  "exact_value": "733155741273/409600000000",
+  "exact_value_float": 1.789931008967285,
+  "max_relative_difference_from_reported": 5.96769242649402e-13,
+  "ground_truth_file": "same tree"
+ },
+ "22_euros2": {
+  "n": 22,
+  "certified_runs": 3,
+  "runs": [
+   "results/distance_solver/22_euros2/seed1",
+   "results/distance_solver/22_euros2/seed2",
+   "results/distance_solver/22_euros2/seed3"
+  ],
+  "same_tree_in_all_runs": true,
+  "is_tree_metric": true,
+  "exact_value": "36000985813/102400000000",
+  "exact_value_float": 0.3515721270800781,
+  "max_relative_difference_from_reported": 3.255836666761622e-13,
+  "ground_truth_file": "same tree"
+ },
+ "23_euros2": {
+  "n": 23,
+  "certified_runs": 3,
+  "runs": [
+   "results/distance_solver/23_euros2/seed1",
+   "results/distance_solver/23_euros2/seed2",
+   "results/distance_solver/23_euros2/seed3"
+  ],
+  "same_tree_in_all_runs": true,
+  "is_tree_metric": true,
+  "exact_value": "36374997201/102400000000",
+  "exact_value_float": 0.35522458204101565,
+  "max_relative_difference_from_reported": 3.087307812891959e-13,
+  "ground_truth_file": "same tree"
+ },
+ "24_proteic": {
+  "n": 24,
+  "certified_runs": 3,
+  "runs": [
+   "results/distance_solver/24_proteic/seed1",
+   "results/distance_solver/24_proteic/seed2",
+   "results/distance_solver/24_proteic/seed3"
+  ],
+  "same_tree_in_all_runs": true,
+  "is_tree_metric": true,
+  "exact_value": "211341581629/81920000000",
+  "exact_value_float": 2.579853291369629,
+  "max_relative_difference_from_reported": 4.4363130481103667e-13,
+  "ground_truth_file": "same tree"
+ },
+ "25_proteic": {
+  "n": 25,
+  "certified_runs": 3,
+  "runs": [
+   "results/distance_solver/25_proteic/seed1",
+   "results/distance_solver/25_proteic/seed2",
+   "results/distance_solver/25_proteic/seed3"
+  ],
+  "same_tree_in_all_runs": true,
+  "is_tree_metric": true,
+  "exact_value": "153258358813/81920000000",
+  "exact_value_float": 1.8708295753540038,
+  "max_relative_difference_from_reported": 3.1095889793186988e-12,
+  "ground_truth_file": "same tree"
+ },
+ "26_proteic": {
+  "n": 26,
+  "certified_runs": 3,
+  "runs": [
+   "results/distance_solver/26_proteic/seed1",
+   "results/distance_solver/26_proteic/seed2",
+   "results/distance_solver/26_proteic/seed3"
+  ],
+  "same_tree_in_all_runs": true,
+  "is_tree_metric": true,
+  "exact_value": "392983087851/204800000000",
+  "exact_value_float": 1.9188627336474608,
+  "max_relative_difference_from_reported": 1.2177975273133518e-13,
+  "ground_truth_file": "another tree with exactly the same value"
+ },
+ "27_nucleic": {
+  "n": 27,
+  "certified_runs": 3,
+  "runs": [
+   "results/distance_solver/27_nucleic/seed1",
+   "results/distance_solver/27_nucleic/seed2",
+   "results/distance_solver/27_nucleic/seed3"
+  ],
+  "same_tree_in_all_runs": true,
+  "is_tree_metric": true,
+  "exact_value": "523841402801/819200000000",
+  "exact_value_float": 0.6394548374035645,
+  "max_relative_difference_from_reported": 9.80614407659508e-13,
+  "ground_truth_file": "same tree"
+ },
+ "28_nucleic": {
+  "n": 28,
+  "certified_runs": 2,
+  "runs": [
+   "results/distance_solver/28_nucleic/seed1",
+   "results/distance_solver/28_nucleic/seed3"
+  ],
+  "same_tree_in_all_runs": true,
+  "is_tree_metric": true,
+  "exact_value": "105508757533/163840000000",
+  "exact_value_float": 0.643974350177002,
+  "max_relative_difference_from_reported": 3.886972924906249e-13,
+  "ground_truth_file": "same tree"
+ },
+ "29_B-NS1": {
+  "n": 29,
+  "certified_runs": 7,
+  "runs": [
+   "results/distance_solver/29_B-NS1/seed1",
+   "results/distance_solver/29_B-NS1/seed2",
+   "results/distance_solver/29_B-NS1/seed3",
+   "results/robustness/no_2k/29_B-NS1/seed1",
+   "results/robustness/no_co/29_B-NS1/seed1",
+   "results/robustness/no_wb/29_B-NS1/seed1",
+   "results/robustness/strict/29_B-NS1/seed1"
+  ],
+  "same_tree_in_all_runs": true,
+  "is_tree_metric": true,
+  "exact_value": "208276012533/655360000000",
+  "exact_value_float": 0.3178039742019653,
+  "max_relative_difference_from_reported": 1.968844672775587e-13,
+  "ground_truth_file": "same tree"
+ },
+ "30_B-NS1": {
+  "n": 30,
+  "certified_runs": 5,
+  "runs": [
+   "results/distance_solver/30_B-NS1/seed1",
+   "results/distance_solver/30_B-NS1/seed2",
+   "results/distance_solver/30_B-NS1/seed3",
+   "results/robustness/no_2k/30_B-NS1/seed1",
+   "results/robustness/no_co/30_B-NS1/seed1"
+  ],
+  "same_tree_in_all_runs": true,
+  "is_tree_metric": true,
+  "exact_value": "4211215453577/13107200000000",
+  "exact_value_float": 0.32129024151435853,
+  "max_relative_difference_from_reported": 8.064992308389891e-14,
+  "ground_truth_file": "same tree"
+ },
+ "M17": {
+  "n": 17,
+  "certified_runs": 12,
+  "runs": [
+   "results/distance_solver/M17/seed1",
+   "results/distance_solver/M17/seed2",
+   "results/distance_solver/M17/seed3",
+   "results/distance_cut_families/d/M17/seed1",
+   "results/distance_cut_families/d/M17/seed2",
+   "results/distance_cut_families/d/M17/seed3",
+   "results/distance_cut_families/full/M17/seed1",
+   "results/distance_cut_families/full/M17/seed2",
+   "results/distance_cut_families/full/M17/seed3",
+   "results/distance_cut_families/cooff/M17/seed1",
+   "results/distance_cut_families/cooff/M17/seed2",
+   "results/distance_cut_families/cooff/M17/seed3"
+  ],
+  "same_tree_in_all_runs": true,
+  "is_tree_metric": true,
+  "exact_value": "2030089067/25600000000",
+  "exact_value_float": 0.0793003541796875,
+  "max_relative_difference_from_reported": 9.620466584928978e-13,
+  "ground_truth_file": "same tree"
+ },
+ "M18": {
+  "n": 18,
+  "certified_runs": 12,
+  "runs": [
+   "results/distance_solver/M18/seed1",
+   "results/distance_solver/M18/seed2",
+   "results/distance_solver/M18/seed3",
+   "results/distance_cut_families/d/M18/seed1",
+   "results/distance_cut_families/d/M18/seed2",
+   "results/distance_cut_families/d/M18/seed3",
+   "results/distance_cut_families/full/M18/seed1",
+   "results/distance_cut_families/full/M18/seed2",
+   "results/distance_cut_families/full/M18/seed3",
+   "results/distance_cut_families/cooff/M18/seed1",
+   "results/distance_cut_families/cooff/M18/seed2",
+   "results/distance_cut_families/cooff/M18/seed3"
+  ],
+  "same_tree_in_all_runs": true,
+  "is_tree_metric": true,
+  "exact_value": "3224077741/25600000000",
+  "exact_value_float": 0.1259405367578125,
+  "max_relative_difference_from_reported": 3.0280301665482957e-13,
+  "ground_truth_file": "same tree"
+ },
+ "Primates12": {
+  "n": 12,
+  "certified_runs": 3,
+  "runs": [
+   "results/distance_solver/Primates12/seed1",
+   "results/distance_solver/Primates12/seed2",
+   "results/distance_solver/Primates12/seed3"
+  ],
+  "same_tree_in_all_runs": true,
+  "is_tree_metric": true,
+  "exact_value": "250809173/2560000000",
+  "exact_value_float": 0.097972333203125,
+  "max_relative_difference_from_reported": 2.3336678970907016e-17,
+  "ground_truth_file": "same tree"
+ }
+}

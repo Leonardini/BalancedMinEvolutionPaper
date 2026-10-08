@@ -1,0 +1,121 @@
+Input permutation applied (0.395061) 0 1 2 3 4 5 6 7 8 9 10 11
+--- CUTTING PLANES ----
+GKI      0.0500 | 0.0100
+CO(G)    0.0500 | 0.0050
+WB       0.1250 | ------
+2Ksplits 0.0010 | ------
+-----------------------
+Set parameter Username
+Set parameter LicenseID to value 2789566
+Set parameter Threads to value 10
+Set parameter Seed to value 2
+Read parameters from file gurobi.env
+Academic license - for non-commercial use only - expires 2027-03-10
+Set parameter MIPGap to value 1e-08
+Set parameter TimeLimit to value 3600
+Set parameter MIPFocus to value 3
+Set parameter Heuristics to value 0
+Set parameter PreCrush to value 1
+Gurobi Optimizer version 12.0.1 build v12.0.1rc0 (mac64[arm] - Darwin 27.0.0 26A428)
+
+CPU model: Apple M4 Pro
+Thread count: 14 physical cores, 14 logical processors, using up to 10 threads
+
+Non-default parameters:
+TimeLimit  3600
+MIPGap  1e-08
+Heuristics  0
+MIPFocus  3
+PreCrush  1
+Seed  2
+Threads  10
+
+Optimize a model with 1894 rows, 1320 columns and 64680 nonzeros
+Model fingerprint: 0x5e7ec934
+Variable types: 0 continuous, 1320 integer (1155 binary)
+Coefficient statistics:
+  Matrix range     [5e-04, 2e+01]
+  Objective range  [3e-03, 2e+02]
+  Bounds range     [1e+00, 1e+01]
+  RHS range        [5e-01, 2e+01]
+Presolve time: 0.05s
+Presolved: 1894 rows, 1320 columns, 60995 nonzeros
+Extracted 990 lazy constraints
+Variable types: 0 continuous, 1320 integer (1155 binary)
+Root relaxation presolved: 904 rows, 1320 columns, 21395 nonzeros
+
+
+Use crossover to convert LP symmetric solution to basic solution...
+
+Root relaxation: objective 7.859637e+02, 796 iterations, 0.01 seconds (0.04 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0  785.96373    0  121          -  785.96373      -     -    0s
+fastme --input_data=/var/folders/dt/8b65fqjn2l756qpj_c7_jmfr0000gq/T//fi16807.inst --output_tree=/var/folders/dt/8b65fqjn2l756qpj_c7_jmfr0000gq/T//fi16807_sol.nw --method=U --user_tree=/var/folders/dt/8b65fqjn2l756qpj_c7_jmfr0000gq/T//fi16807.nw --nni=balME --spr
+
+ . This analysis will run on 1 threads.
+
+#  Analysing dataset 1
+
+ . Warning: Triangular inequality violation.
+
+ . You may ask for triangular inequality correction using the '-q' option.
+
+ . Reading input tree...
+
+ . Tree length is 21.000000.
+
+ . Performing NNI...
+
+ . Performing SPR...
+
+ . SPR did not improve tree length.
+
+ . Time used 0h00m00s
+H    0     0                     802.5893536  799.46750  0.39%     -    0s
+     0     0  799.46750    0  244  802.58935  799.46750  0.39%     -    0s
+fastme --input_data=/var/folders/dt/8b65fqjn2l756qpj_c7_jmfr0000gq/T//fi282475249.inst --output_tree=/var/folders/dt/8b65fqjn2l756qpj_c7_jmfr0000gq/T//fi282475249_sol.nw --method=U --user_tree=/var/folders/dt/8b65fqjn2l756qpj_c7_jmfr0000gq/T//fi282475249.nw --nni=balME --spr
+
+ . This analysis will run on 1 threads.
+
+#  Analysing dataset 1
+
+ . Warning: Triangular inequality violation.
+
+ . You may ask for triangular inequality correction using the '-q' option.
+
+ . Reading input tree...
+
+ . Tree length is 21.000000.
+
+ . Performing NNI...
+
+ . Performing SPR...
+
+ . SPR did not improve tree length.
+
+ . Time used 0h00m00s
+     0     0  800.51582    0  210  802.58935  800.51582  0.26%     -    0s
+     0     0  800.65190    0  221  802.58935  800.65190  0.24%     -    0s
+     0     0  800.66300    0  218  802.58935  800.66300  0.24%     -    0s
+     0     0     cutoff    0       802.58935  802.58935  0.00%     -    0s
+
+Cutting planes:
+  User: 9
+  Gomory: 1
+  Cover: 3
+  MIR: 1
+  GUB cover: 6
+  Lazy constraints: 4
+
+Explored 1 nodes (1967 simplex iterations) in 0.60 seconds (1.03 work units)
+Thread count was 10 (of 14 available processors)
+
+Solution count 1: 802.589 
+
+Optimal solution found (tolerance 1.00e-08)
+Best objective 8.025893536000e+02, best bound 8.025893536000e+02, gap 0.0000%
+
+User-callback calls 476, time in user-callback 0.17 sec

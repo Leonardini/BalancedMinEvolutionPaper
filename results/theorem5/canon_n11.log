@@ -1,0 +1,5 @@
+2026-10-03 00:58:19 start n=11, 50 row types
+2026-10-03 00:59:19 nodes=989M survivors=2128 violating=0 elapsed=60s
+2026-10-03 01:00:19 nodes=2030M survivors=3343 violating=0 elapsed=120s
+2026-10-03 01:01:19 nodes=3087M survivors=4468 violating=0 elapsed=180s
+2026-10-03 01:01:44 done

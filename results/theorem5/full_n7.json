@@ -1,0 +1,27 @@
+{
+ "n": 7,
+ "survivors": 945,
+ "ordered": false,
+ "violating": 0,
+ "nodes": 30005,
+ "seconds": 0,
+ "row_types": 5,
+ "name": "full_n7",
+ "options": [
+  "--full"
+ ],
+ "checks": [
+  {
+   "label": "labelled survivors = (2n-5)!!",
+   "computed": 945,
+   "expected": 945,
+   "ok": true
+  },
+  {
+   "label": "violating (10)",
+   "computed": 0,
+   "expected": 0,
+   "ok": true
+  }
+ ]
+}

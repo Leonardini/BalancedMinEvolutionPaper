@@ -1,0 +1,2 @@
+Instance | N | Best Sol | Time (s) | Node Best Sol | First Root DB | Last Root BD | Best Dual Bound | Final Gap (%) | Nodes | INF | CO@Root | CO@Search | GKI@Root | GKI@Search | EHC@Root | EHC@Search | 2K@Root | 2K@Search | 4PT@Root | 4PT@Search | Overall Cuts
+30_B-NS1-284-344-BMGE.txt | 30 | 689965539.914 | 3600.84548913 | 0 | 639929004.421 | 675315911.752 | 688900583.526 | 0.154349214004 | 1506 | 0 | 0 | 95 | 2 | 77 | 31 | 0 | 29 | 0 | 21924 | 0 | 22158

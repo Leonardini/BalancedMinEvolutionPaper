@@ -1,0 +1,174 @@
+Input permutation applied (0.422455) 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+--- CUTTING PLANES ----
+GKI      0.0500 | 0.0100
+CO(G)    0.0500 | 0.0050
+WB       0.1250 | ------
+2Ksplits 0.0010 | ------
+-----------------------
+Set parameter Username
+Set parameter LicenseID to value 2789566
+Set parameter Threads to value 10
+Set parameter Seed to value 2
+Read parameters from file gurobi.env
+Academic license - for non-commercial use only - expires 2027-03-10
+Set parameter MIPGap to value 1e-08
+Set parameter TimeLimit to value 3600
+Set parameter MIPFocus to value 3
+Set parameter Heuristics to value 0
+Set parameter PreCrush to value 1
+Gurobi Optimizer version 12.0.1 build v12.0.1rc0 (mac64[arm] - Darwin 27.0.0 26A428)
+
+CPU model: Apple M4 Pro
+Thread count: 14 physical cores, 14 logical processors, using up to 10 threads
+
+Non-default parameters:
+TimeLimit  3600
+MIPGap  1e-08
+Heuristics  0
+MIPFocus  3
+PreCrush  1
+Seed  2
+Threads  10
+
+Optimize a model with 6114 rows, 4080 columns and 310320 nonzeros
+Model fingerprint: 0x30c49bc8
+Variable types: 0 continuous, 4080 integer (3720 binary)
+Coefficient statistics:
+  Matrix range     [2e-05, 3e+01]
+  Objective range  [2e-02, 3e+03]
+  Bounds range     [1e+00, 2e+01]
+  RHS range        [5e-01, 3e+01]
+Presolve time: 0.24s
+Presolved: 6114 rows, 4080 columns, 298184 nonzeros
+Extracted 3360 lazy constraints
+Variable types: 0 continuous, 4080 integer (3720 binary)
+Root relaxation presolved: 2754 rows, 4080 columns, 96584 nonzeros
+
+
+Use crossover to convert LP symmetric solution to basic solution...
+
+Root relaxation: objective 2.054695e+04, 2571 iterations, 0.06 seconds (0.29 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 20546.9490    0  427          - 20546.9490      -     -    0s
+fastme --input_data=/var/folders/dt/8b65fqjn2l756qpj_c7_jmfr0000gq/T//fi16807.inst --output_tree=/var/folders/dt/8b65fqjn2l756qpj_c7_jmfr0000gq/T//fi16807_sol.nw --method=U --user_tree=/var/folders/dt/8b65fqjn2l756qpj_c7_jmfr0000gq/T//fi16807.nw --nni=balME --spr
+
+ . This analysis will run on 1 threads.
+
+#  Analysing dataset 1
+
+ . Warning: Triangular inequality violation.
+
+ . You may ask for triangular inequality correction using the '-q' option.
+
+ . Reading input tree...
+
+ . Tree length is 31.000000.
+
+ . Performing NNI...
+
+ . Performing SPR...
+
+ . SPR did not improve tree length.
+
+ . Time used 0h00m00s
+H    0     0                    20788.112046 20672.2248  0.56%     -    1s
+     0     0 20672.2248    0  546 20788.1120 20672.2248  0.56%     -    1s
+fastme --input_data=/var/folders/dt/8b65fqjn2l756qpj_c7_jmfr0000gq/T//fi282475249.inst --output_tree=/var/folders/dt/8b65fqjn2l756qpj_c7_jmfr0000gq/T//fi282475249_sol.nw --method=U --user_tree=/var/folders/dt/8b65fqjn2l756qpj_c7_jmfr0000gq/T//fi282475249.nw --nni=balME --spr
+
+ . This analysis will run on 1 threads.
+
+#  Analysing dataset 1
+
+ . Warning: Triangular inequality violation.
+
+ . You may ask for triangular inequality correction using the '-q' option.
+
+ . Reading input tree...
+
+ . Tree length is 31.000000.
+
+ . Performing NNI...
+
+ . Performing SPR...
+
+ . SPR did not improve tree length.
+
+ . Time used 0h00m00s
+     0     0 20690.5144    0  545 20788.1120 20690.5144  0.47%     -    1s
+     0     0 20694.5857    0  624 20788.1120 20694.5857  0.45%     -    1s
+     0     0 20695.3354    0  616 20788.1120 20695.3354  0.45%     -    1s
+     0     0 20696.2207    0  630 20788.1120 20696.2207  0.44%     -    1s
+     0     0 20696.4556    0  615 20788.1120 20696.4556  0.44%     -    1s
+     0     0 20696.5619    0  624 20788.1120 20696.5619  0.44%     -    1s
+     0     0 20696.5752    0  626 20788.1120 20696.5752  0.44%     -    1s
+     0     0 20736.4755    0  614 20788.1120 20736.4755  0.25%     -    2s
+     0     0 20745.7698    0  704 20788.1120 20745.7698  0.20%     -    2s
+     0     0 20748.4218    0  702 20788.1120 20748.4218  0.19%     -    2s
+     0     0 20749.3580    0  703 20788.1120 20749.3580  0.19%     -    2s
+     0     0 20750.0107    0  709 20788.1120 20750.0107  0.18%     -    2s
+     0     0 20750.9110    0  710 20788.1120 20750.9110  0.18%     -    2s
+     0     0 20752.3762    0  710 20788.1120 20752.3762  0.17%     -    2s
+     0     0 20752.5197    0  712 20788.1120 20752.5197  0.17%     -    2s
+     0     0 20752.6261    0  709 20788.1120 20752.6261  0.17%     -    2s
+     0     0 20752.6800    0  729 20788.1120 20752.6800  0.17%     -    2s
+     0     0 20752.6896    0  713 20788.1120 20752.6896  0.17%     -    2s
+     0     0 20769.3896    0  769 20788.1120 20769.3896  0.09%     -    3s
+     0     0 20769.4223    0  767 20788.1120 20769.4223  0.09%     -    3s
+     0     0 20769.4321    0  768 20788.1120 20769.4321  0.09%     -    3s
+     0     0 20769.4544    0  768 20788.1120 20769.4544  0.09%     -    3s
+     0     0 20769.4829    0  770 20788.1120 20769.4829  0.09%     -    3s
+     0     0 20769.4955    0  765 20788.1120 20769.4955  0.09%     -    3s
+     0     0 20771.8256    0  767 20788.1120 20771.8256  0.08%     -    3s
+     0     0 20771.9089    0  754 20788.1120 20771.9089  0.08%     -    3s
+     0     0 20772.2091    0  780 20788.1120 20772.2091  0.08%     -    3s
+     0     0 20772.2107    0  780 20788.1120 20772.2107  0.08%     -    3s
+     0     0 20772.2487    0  781 20788.1120 20772.2487  0.08%     -    3s
+     0     0 20778.4767    0  817 20788.1120 20778.4767  0.05%     -    4s
+     0     0 20779.4396    0  793 20788.1120 20779.4396  0.04%     -    5s
+     0     0 20779.4413    0  792 20788.1120 20779.4413  0.04%     -    5s
+     0     0 20779.7949    0  831 20788.1120 20779.7949  0.04%     -    5s
+     0     0 20779.7954    0  823 20788.1120 20779.7954  0.04%     -    5s
+     0     0 20779.8679    0  828 20788.1120 20779.8679  0.04%     -    5s
+     0     0 20784.0092    0  798 20788.1120 20784.0092  0.02%     -    6s
+     0     0 20784.0160    0  800 20788.1120 20784.0160  0.02%     -    6s
+     0     0 20785.1313    0  800 20788.1120 20785.1313  0.01%     -    6s
+     0     0 20785.1334    0  799 20788.1120 20785.1334  0.01%     -    6s
+     0     0 20785.1380    0  802 20788.1120 20785.1380  0.01%     -    6s
+     0     0 20785.1389    0  805 20788.1120 20785.1389  0.01%     -    6s
+     0     0 20785.8851    0  821 20788.1120 20785.8851  0.01%     -    6s
+     0     0 20785.8963    0  818 20788.1120 20785.8963  0.01%     -    6s
+     0     0 20785.9028    0  818 20788.1120 20785.9028  0.01%     -    6s
+     0     0 20785.9042    0  815 20788.1120 20785.9042  0.01%     -    6s
+     0     0 20785.9727    0  827 20788.1120 20785.9727  0.01%     -    6s
+     0     0 20785.9737    0  827 20788.1120 20785.9737  0.01%     -    6s
+     0     0     cutoff    0      20788.1120 20788.1120  0.00%     -    6s
+
+Cutting planes:
+  User: 26
+  Gomory: 7
+  Lift-and-project: 6
+  Cover: 83
+  Implied bound: 1
+  Clique: 111
+  MIR: 160
+  Mixing: 1
+  StrongCG: 34
+  Flow cover: 177
+  GUB cover: 201
+  Zero half: 13
+  RLT: 10
+  Relax-and-lift: 6
+  Lazy constraints: 17
+
+Explored 1 nodes (21884 simplex iterations) in 6.69 seconds (18.44 work units)
+Thread count was 10 (of 14 available processors)
+
+Solution count 1: 20788.1 
+
+Optimal solution found (tolerance 1.00e-08)
+Best objective 2.078811204608e+04, best bound 2.078811204608e+04, gap 0.0000%
+
+User-callback calls 3070, time in user-callback 0.59 sec

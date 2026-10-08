@@ -1,0 +1,20 @@
+{
+ "_comment": "Numbers stated in the paper, used only in asserted cross-checks after the computed value has been written out. Read by published.py and p6_facets.R.",
+ "canonical_survivors": {"5": 4, "6": 7, "7": 19, "8": 85, "9": 502, "10": 1252, "11": 5008},
+ "row_types": {"8": 9, "9": 16, "10": 28, "11": 50, "12": 89},
+ "cherry_fixed_witnesses": 84,
+ "cherry_fixed_classes": 1,
+ "weak6_survivors": 285,
+ "weak6_non_trees": 180,
+ "weak6_orbits": 1,
+ "weak6_stabiliser": 4,
+ "cherry_lift_violating_quartets": 216,
+ "cherry_lift_quartet_1235_pair_sums": [8, 9, 9],
+ "p6_facets": 90262,
+ "p6_family_matches": {"F1": 15, "F2": 60, "F6": 90},
+ "p6_named_facets": 165,
+ "p6_support_histogram": {"1": 9, "2": 36, "3": 42, "4": 72, "5": 477, "6": 258, "7": 2358, "8": 5796, "9": 81214},
+ "membership_systems": {"6": 105, "7": 945, "8": 10395},
+ "membership_n8_no_tiebreak": 17535,
+ "min_edge_clique_cover": {"4": 1, "5": 5, "6": 21, "7": 49}
+}

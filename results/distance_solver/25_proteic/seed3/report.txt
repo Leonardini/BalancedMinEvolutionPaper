@@ -1,0 +1,2 @@
+Instance | N | Best Sol | Time (s) | Node Best Sol | First Root DB | Last Root BD | Best Dual Bound | Final Gap (%) | Nodes | INF | CO@Root | CO@Search | GKI@Root | GKI@Search | EHC@Root | EHC@Search | 2K@Root | 2K@Search | 4PT@Root | 4PT@Search | Overall Cuts
+25_proteic_M2624_139x348_2006-BMGE.txt | 25 | 125549247.54 | 285.118109375 | 0 | 122189346.625 | 125402949.352 | 125549247.54 | 3.56063333374e-14 | 733 | 0 | 0 | 2 | 11 | 3 | 206 | 0 | 25 | 0 | 12144 | 0 | 12391

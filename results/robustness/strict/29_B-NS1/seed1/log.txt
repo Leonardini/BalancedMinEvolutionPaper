@@ -1,0 +1,274 @@
+Input permutation applied (3.25694) 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28
+--- CUTTING PLANES ----
+GKI      0.0500 | 0.0100
+CO(G)    0.0500 | 0.0050
+WB       0.1250 | ------
+2Ksplits 0.0010 | ------
+-----------------------
+Set parameter Username
+Set parameter LicenseID to value 2789566
+Set parameter Threads to value 10
+Set parameter Seed to value 1
+Set parameter NumericFocus to value 3
+Set parameter FeasibilityTol to value 1e-09
+Set parameter OptimalityTol to value 1e-09
+Set parameter IntFeasTol to value 1e-09
+Read parameters from file gurobi.env
+Academic license - for non-commercial use only - expires 2027-03-10
+Set parameter MIPGap to value 1e-08
+Set parameter TimeLimit to value 3600
+Set parameter MIPFocus to value 3
+Set parameter Heuristics to value 0
+Set parameter PreCrush to value 1
+Gurobi Optimizer version 12.0.1 build v12.0.1rc0 (mac64[arm] - Darwin 27.0.0 26A428)
+
+CPU model: Apple M4 Pro
+Thread count: 14 physical cores, 14 logical processors, using up to 10 threads
+
+Non-default parameters:
+TimeLimit  3600
+FeasibilityTol  1e-09
+IntFeasTol  1e-09
+MIPGap  1e-08
+OptimalityTol  1e-09
+Heuristics  0
+MIPFocus  3
+NumericFocus  3
+PreCrush  1
+Seed  1
+Threads  10
+
+Optimize a model with 34330 rows, 21924 columns and 3104892 nonzeros
+Model fingerprint: 0x902fbfd7
+Variable types: 0 continuous, 21924 integer (20790 binary)
+Coefficient statistics:
+  Matrix range     [4e-09, 5e+01]
+  Objective range  [1e-02, 7e+07]
+  Bounds range     [1e+00, 3e+01]
+  RHS range        [5e-01, 6e+01]
+Presolve removed 0 rows and 0 columns (presolve time = 5s)...
+Presolve time: 5.55s
+Presolved: 34330 rows, 21924 columns, 3034934 nonzeros
+Extracted 19656 lazy constraints
+Variable types: 0 continuous, 21924 integer (20790 binary)
+Root relaxation presolved: 14674 rows, 21924 columns, 912086 nonzeros
+
+Deterministic concurrent LP optimizer: primal simplex, dual simplex, and barrier
+Showing barrier log only...
+
+Root barrier log...
+
+Ordering time: 1.25s
+
+Barrier statistics:
+ AA' NZ     : 1.372e+06
+ Factor NZ  : 3.928e+07 (roughly 300 MB of memory)
+ Factor Ops : 1.817e+11 (less than 1 second per iteration)
+ Threads    : 8
+
+Barrier performed 0 iterations in 7.51 seconds (17.85 work units)
+Barrier solve interrupted - model solved by another algorithm
+
+Concurrent spin time: 1.24s (can be avoided by choosing Method=3)
+
+Solved with dual simplex
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+    3318    3.1867338e+08   0.000000e+00   0.000000e+00      8s
+
+Use crossover to convert LP symmetric solution to basic solution...
+
+Root crossover log...
+
+       0 DPushes remaining with DInf 0.0000000e+00                 8s
+
+    7288 PPushes remaining with PInf 0.0000000e+00                 8s
+       0 PPushes remaining with PInf 0.0000000e+00                 8s
+
+  Push phase complete: Pinf 0.0000000e+00, Dinf 4.3607194e-08      8s
+
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+   11159    3.1867338e+08   0.000000e+00   4.148532e+04      8s
+   11162    3.1867338e+08   0.000000e+00   0.000000e+00      8s
+   11162    3.1867338e+08   0.000000e+00   0.000000e+00      8s
+
+Root relaxation: objective 3.186734e+08, 11162 iterations, 1.85 seconds (3.21 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 3.1867e+08    0 1115          - 3.1867e+08      -     -    7s
+fastme --input_data=/var/folders/dt/8b65fqjn2l756qpj_c7_jmfr0000gq/T//fi16807.inst --output_tree=/var/folders/dt/8b65fqjn2l756qpj_c7_jmfr0000gq/T//fi16807_sol.nw --method=U --user_tree=/var/folders/dt/8b65fqjn2l756qpj_c7_jmfr0000gq/T//fi16807.nw --nni=balME --spr
+
+ . This analysis will run on 1 threads.
+
+#  Analysing dataset 1
+
+ . Warning: Triangular inequality violation.
+
+ . You may ask for triangular inequality correction using the '-q' option.
+
+ . Reading input tree...
+
+ . Tree length is 55.000000.
+
+ . Performing NNI...
+
+ . Performing SPR...
+
+ . SPR did not improve tree length.
+
+ . Time used 0h00m00s
+H    0     0                    3.412394e+08 3.1867e+08  6.61%     -    8s
+fastme --input_data=/var/folders/dt/8b65fqjn2l756qpj_c7_jmfr0000gq/T//fi282475249.inst --output_tree=/var/folders/dt/8b65fqjn2l756qpj_c7_jmfr0000gq/T//fi282475249_sol.nw --method=U --user_tree=/var/folders/dt/8b65fqjn2l756qpj_c7_jmfr0000gq/T//fi282475249.nw --nni=balME --spr
+
+ . This analysis will run on 1 threads.
+
+#  Analysing dataset 1
+
+ . Warning: Triangular inequality violation.
+
+ . You may ask for triangular inequality correction using the '-q' option.
+
+ . Reading input tree...
+
+ . Tree length is 55.000000.
+
+ . Performing NNI...
+
+ . Performing SPR...
+
+ . SPR did not improve tree length.
+
+ . Time used 0h00m00s
+     0     2 3.3554e+08    0 1399 3.4124e+08 3.3554e+08  1.67%     -    9s
+     3     8 3.3721e+08    2 1280 3.4124e+08 3.3670e+08  1.33%  3337   11s
+    15    26 3.3873e+08    4 1781 3.4124e+08 3.3776e+08  1.02%  1675   18s
+    22    26 3.4057e+08    4 1997 3.4124e+08 3.3800e+08  0.95%  2339   20s
+    34    33 infeasible    6      3.4124e+08 3.3802e+08  0.94%  2569   30s
+    42    40 3.4041e+08    6 2291 3.4124e+08 3.3802e+08  0.94%  2907   36s
+    43    40     cutoff    4      3.4124e+08 3.3916e+08  0.61%  2892   40s
+    47    43 3.4050e+08    6 2301 3.4124e+08 3.3917e+08  0.61%  2856   46s
+    50    47 3.4030e+08    6 2298 3.4124e+08 3.3945e+08  0.52%  2828   52s
+    54    46     cutoff    4      3.4124e+08 3.3954e+08  0.50%  2739   58s
+    59    48     cutoff    4      3.4124e+08 3.3966e+08  0.46%  2789   64s
+    66    48 3.4081e+08    7 2301 3.4124e+08 3.3992e+08  0.39%  2969   65s
+    69    46     cutoff    7      3.4124e+08 3.3996e+08  0.38%  3098   73s
+    73    59 3.4013e+08    7 2331 3.4124e+08 3.3996e+08  0.38%  3029   79s
+    76    59 3.4014e+08   10 2226 3.4124e+08 3.3996e+08  0.38%  2928   80s
+    90    61 3.4045e+08    7 2394 3.4124e+08 3.4011e+08  0.33%  2865   90s
+    96    63 3.4036e+08    8 2453 3.4124e+08 3.4014e+08  0.32%  2900   99s
+   100    68     cutoff    9      3.4124e+08 3.4016e+08  0.32%  2984  106s
+   111    73 3.4038e+08   10 2431 3.4124e+08 3.4021e+08  0.30%  2835  116s
+   120    81 3.4059e+08    7 2440 3.4124e+08 3.4026e+08  0.29%  2785  125s
+   130    86 3.4064e+08    6 2446 3.4124e+08 3.4028e+08  0.28%  2860  136s
+   135    87 infeasible    9      3.4124e+08 3.4031e+08  0.27%  2884  144s
+   137    87 3.4056e+08    8 2476 3.4124e+08 3.4033e+08  0.27%  2918  145s
+   142    89     cutoff   10      3.4124e+08 3.4036e+08  0.26%  2958  154s
+   143    89 3.4053e+08   15 2411 3.4124e+08 3.4036e+08  0.26%  2957  155s
+   150    92 3.4060e+08    8 2443 3.4124e+08 3.4036e+08  0.26%  2969  164s
+   154    92 3.4100e+08   12 2475 3.4124e+08 3.4038e+08  0.25%  3041  165s
+   159    95     cutoff   11      3.4124e+08 3.4038e+08  0.25%  3106  174s
+   161    95 3.4044e+08   10 2450 3.4124e+08 3.4040e+08  0.25%  3111  175s
+   170    97 3.4064e+08   16 2506 3.4124e+08 3.4041e+08  0.24%  3097  187s
+   174    94     cutoff   11      3.4124e+08 3.4041e+08  0.24%  3125  197s
+   181   101     cutoff    5      3.4124e+08 3.4045e+08  0.23%  3040  206s
+   192   107 3.4080e+08   14 2447 3.4124e+08 3.4046e+08  0.23%  3015  218s
+   204   110     cutoff   15      3.4124e+08 3.4049e+08  0.22%  3054  229s
+   213   126 3.4075e+08   12 2447 3.4124e+08 3.4050e+08  0.22%  3066  240s
+   229   128     cutoff   16      3.4124e+08 3.4053e+08  0.21%  3037  254s
+   236   128 3.4107e+08   16 2482 3.4124e+08 3.4053e+08  0.21%  3073  256s
+   237   129 3.4083e+08   17 2524 3.4124e+08 3.4054e+08  0.21%  3072  266s
+   244   139     cutoff    8      3.4124e+08 3.4056e+08  0.20%  3127  282s
+   257   139 3.4062e+08   19 2586 3.4124e+08 3.4057e+08  0.20%  3114  286s
+   270   145     cutoff    5      3.4124e+08 3.4057e+08  0.19%  3251  304s
+   271   145 3.4062e+08   18 2570 3.4124e+08 3.4057e+08  0.19%  3257  305s
+   286   145     cutoff   14      3.4124e+08 3.4058e+08  0.19%  3333  323s
+   300   154 3.4079e+08    9 2471 3.4124e+08 3.4060e+08  0.19%  3470  341s
+   321   163     cutoff   15      3.4124e+08 3.4062e+08  0.18%  3591  369s
+   324   163 3.4075e+08   21 2491 3.4124e+08 3.4062e+08  0.18%  3588  370s
+   344   169 3.4065e+08   14 2473 3.4124e+08 3.4063e+08  0.18%  3666  391s
+   366   175     cutoff   20      3.4124e+08 3.4064e+08  0.18%  3742  408s
+   373   175 3.4073e+08   17 2388 3.4124e+08 3.4064e+08  0.18%  3769  410s
+   382   179     cutoff   17      3.4124e+08 3.4065e+08  0.17%  3773  425s
+   394   183     cutoff   15      3.4124e+08 3.4065e+08  0.17%  3785  443s
+   402   183 3.4122e+08   16 2471 3.4124e+08 3.4067e+08  0.17%  3794  445s
+   410   191     cutoff   19      3.4124e+08 3.4069e+08  0.16%  3829  469s
+   412   191 3.4093e+08   21 2488 3.4124e+08 3.4069e+08  0.16%  3840  470s
+   430   195     cutoff   23      3.4124e+08 3.4070e+08  0.16%  3852  489s
+   452   203     cutoff   13      3.4124e+08 3.4071e+08  0.16%  3868  511s
+   470   192     cutoff   14      3.4124e+08 3.4073e+08  0.15%  3872  532s
+   485   204     cutoff    9      3.4124e+08 3.4074e+08  0.15%  4001  558s
+   490   204 3.4091e+08   12 2143 3.4124e+08 3.4074e+08  0.15%  3981  560s
+   517   218 3.4091e+08   12 2543 3.4124e+08 3.4076e+08  0.14%  4009  591s
+   551   217     cutoff   14      3.4124e+08 3.4077e+08  0.14%  4027  623s
+   574   214     cutoff   10      3.4124e+08 3.4079e+08  0.13%  4158  661s
+   601   215     cutoff   15      3.4124e+08 3.4080e+08  0.13%  4270  711s
+   623   215 3.4088e+08   27 2478 3.4124e+08 3.4081e+08  0.13%  4346  715s
+   654   219     cutoff   18      3.4124e+08 3.4082e+08  0.12%  4510  760s
+   670   219 3.4090e+08   13 2456 3.4124e+08 3.4082e+08  0.12%  4569  765s
+   692   223 infeasible   27      3.4124e+08 3.4083e+08  0.12%  4610  805s
+   712   230     cutoff   24      3.4124e+08 3.4083e+08  0.12%  4646  836s
+   737   229     cutoff   18      3.4124e+08 3.4085e+08  0.11%  4734  870s
+   756   230 infeasible    7      3.4124e+08 3.4086e+08  0.11%  4727  902s
+   772   230 3.4098e+08   29 2569 3.4124e+08 3.4088e+08  0.11%  4748  905s
+   777   230     cutoff   16      3.4124e+08 3.4089e+08  0.10%  4742  942s
+   817   240 3.4103e+08   13 2511 3.4124e+08 3.4091e+08  0.10%  4876  995s
+   838   240     cutoff   13      3.4124e+08 3.4091e+08  0.10%  4927 1000s
+   861   230 3.4120e+08   10 2577 3.4124e+08 3.4092e+08  0.09%  4930 1042s
+   881   232     cutoff   25      3.4124e+08 3.4094e+08  0.09%  5113 1084s
+   895   224     cutoff   27      3.4124e+08 3.4095e+08  0.09%  5189 1127s
+   913   215     cutoff    6      3.4124e+08 3.4095e+08  0.08%  5232 1163s
+   932   213     cutoff   12      3.4124e+08 3.4097e+08  0.08%  5362 1206s
+   952   207     cutoff   11      3.4124e+08 3.4099e+08  0.07%  5431 1250s
+   970   199     cutoff   18      3.4124e+08 3.4100e+08  0.07%  5506 1294s
+   983   199 3.4104e+08   13 2531 3.4124e+08 3.4100e+08  0.07%  5525 1296s
+   992   194     cutoff   26      3.4124e+08 3.4101e+08  0.07%  5546 1336s
+  1027   186     cutoff   12      3.4124e+08 3.4103e+08  0.06%  5644 1386s
+  1057   185     cutoff   24      3.4124e+08 3.4105e+08  0.06%  5650 1433s
+  1098   182 3.4112e+08   15 2619 3.4124e+08 3.4108e+08  0.05%  5738 1488s
+  1115   172     cutoff   22      3.4124e+08 3.4109e+08  0.04%  5803 1529s
+  1116   172 3.4112e+08   14 2607 3.4124e+08 3.4109e+08  0.04%  5802 1530s
+  1143   166     cutoff   15      3.4124e+08 3.4112e+08  0.04%  5901 1583s
+  1161   166 3.4117e+08   18 2631 3.4124e+08 3.4113e+08  0.03%  5941 1585s
+  1169   142     cutoff   21      3.4124e+08 3.4114e+08  0.03%  5958 1638s
+  1194   142     cutoff   17      3.4124e+08 3.4114e+08  0.03%  6027 1640s
+  1205   119     cutoff   15      3.4124e+08 3.4116e+08  0.02%  6082 1690s
+  1228    94     cutoff   21      3.4124e+08 3.4117e+08  0.02%  6145 1737s
+  1259    80     cutoff   14      3.4124e+08 3.4119e+08  0.02%  6236 1784s
+  1277    80     cutoff   20      3.4124e+08 3.4119e+08  0.01%  6252 1785s
+  1281    52     cutoff   18      3.4124e+08 3.4120e+08  0.01%  6275 1827s
+  1311    41     cutoff   12      3.4124e+08 3.4121e+08  0.01%  6386 1876s
+  1324    31 infeasible   13      3.4124e+08 3.4121e+08  0.01%  6393 1904s
+  1334    23     cutoff   23      3.4124e+08 3.4122e+08  0.00%  6425 1924s
+  1341    23     cutoff   14      3.4124e+08 3.4123e+08  0.00%  6456 1925s
+  1344    13     cutoff   17      3.4124e+08 3.4123e+08  0.00%  6467 1951s
+  1354     4     cutoff   15      3.4124e+08 3.4123e+08  0.00%  6505 2002s
+  1363     0 infeasible   12      3.4124e+08 3.4124e+08  0.00%  6490 2016s
+
+Cutting planes:
+  User: 296
+  Cover: 3812
+  Clique: 2
+  MIR: 6797
+  StrongCG: 4002
+  Flow cover: 2687
+  GUB cover: 2917
+  Zero half: 3854
+  RLT: 783
+  Relax-and-lift: 17
+
+Explored 1367 nodes (8881803 simplex iterations) in 2016.10 seconds (13860.88 work units)
+Thread count was 10 (of 14 available processors)
+
+Solution count 1: 3.41239e+08 
+
+Optimal solution found (tolerance 1.00e-08)
+Best objective 3.412394189341e+08, best bound 3.412394189341e+08, gap 0.0000%
+
+User-callback calls 257736, time in user-callback 202.49 sec

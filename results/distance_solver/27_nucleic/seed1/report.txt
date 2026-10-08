@@ -1,0 +1,2 @@
+Instance | N | Best Sol | Time (s) | Node Best Sol | First Root DB | Last Root BD | Best Dual Bound | Final Gap (%) | Nodes | INF | CO@Root | CO@Search | GKI@Root | GKI@Search | EHC@Root | EHC@Search | 2K@Root | 2K@Search | 4PT@Root | 4PT@Search | Overall Cuts
+27_nucleic_M2573_346x897_2006.txt | 27 | 171652350.87 | 1542.91421154 | 0 | 166724784.213 | 171180330.667 | 171652350.87 | 5.20860720579e-14 | 2455 | 0 | 0 | 442 | 11 | 4 | 120 | 0 | 61 | 0 | 15600 | 0 | 16238

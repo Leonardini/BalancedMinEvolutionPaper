@@ -1,0 +1,2 @@
+Instance | N | Best Sol | Time (s) | Node Best Sol | First Root DB | Last Root BD | Best Dual Bound | Final Gap (%) | Nodes | INF | CO@Root | CO@Search | GKI@Root | GKI@Search | EHC@Root | EHC@Search | 2K@Root | 2K@Search | 4PT@Root | 4PT@Search | Overall Cuts
+22_euros2.txt | 22 | 2949200.7578 | 25.52782875 | 0 | 2922421.41758 | 2948871.54922 | 2949200.7578 | 1.26315249601e-13 | 1 | 0 | 0 | 0 | 5 | 0 | 45 | 0 | 10 | 0 | 7980 | 0 | 8040

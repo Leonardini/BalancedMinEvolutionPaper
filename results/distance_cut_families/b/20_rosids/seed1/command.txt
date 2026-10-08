@@ -1,0 +1,1 @@
+/Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper/external/catanzaro/build/bin/solver_bmep -i /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper/external/catanzaro/upstream/instances/supplement/20_rosids.txt -O B --heuk 4 --heuls --str A --relax --labeled -t 3600

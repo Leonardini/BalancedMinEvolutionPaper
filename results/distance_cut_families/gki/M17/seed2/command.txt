@@ -1,0 +1,1 @@
+/Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper/external/catanzaro/build/bin/solver_bmep -i /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper/external/catanzaro/upstream/instances/02-M17.txt -O B --heuk 4 --heuls --str A --gkiR 0.05 --gkiN 0.01 -t 3600

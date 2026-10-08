@@ -1,0 +1,11 @@
+{
+ "n": 6,
+ "laminarity": "quadrant",
+ "tiebreak": "on",
+ "points": 270,
+ "distinct_split_systems": 105,
+ "tree_systems": 105,
+ "non_tree_systems": 0,
+ "topologies": 105,
+ "seconds": 0.03033280372619629
+}

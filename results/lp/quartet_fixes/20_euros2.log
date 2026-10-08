@@ -1,0 +1,17 @@
+2026-10-08 13:03:38 20_euros2: L* matches the certified run in /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_solver/20_euros2/seed1
+2026-10-08 13:03:38 root LB=0.3396119090 gap=0.5581%
+2026-10-08 13:03:38 w*: row residual 1e-12, manifold excess -4.46e-09 (ln units)
+2026-10-08 13:03:38 1682 of 4845 quartets violated at w*
+Set parameter Username
+Set parameter LicenseID to value 2789566
+Academic license - for non-commercial use only - expires 2027-03-10
+2026-10-08 13:03:40 200/1682 quartets, 2s
+2026-10-08 13:03:42 400/1682 quartets, 3s
+2026-10-08 13:03:43 600/1682 quartets, 5s
+2026-10-08 13:03:45 800/1682 quartets, 6s
+2026-10-08 13:03:46 1000/1682 quartets, 8s
+2026-10-08 13:03:48 1200/1682 quartets, 9s
+2026-10-08 13:03:49 1400/1682 quartets, 11s
+2026-10-08 13:03:51 1600/1682 quartets, 12s
+2026-10-08 13:03:51 1682/1682 quartets, 13s
+2026-10-08 13:03:51 summary: {'violated': 1682, 'pairs': 190, 'weights_differing_from_tree': 183, 'tight_rows_quantiles': [2.0, 10.0, 14.0, 16.0, 50.0], 'winner_is_T': 1017, 'separation_quantiles': [-8.322935858654905, -2.075594909960395, -0.727991593758235, 0.47830916569719883, 1.2829254314889214, 1.6892462104738013, 1.9981796906665037], 'box': {'infeasible': 72, 'unsettled': 0, 'keeps_manifold': 866, 'excess_quantiles': [-0.06036455044280977, -0.00755200680767254, -0.0036520994230809425, -0.00030730360670266855, 0.0008990458137054235, 0.0021976167353077915, 0.022375798159287995]}, 'rows': {'infeasible': 1633, 'unsettled': 0, 'keeps_manifold': 34, 'excess_quantiles': [-0.019476267192555144, -0.007395631675089758, -0.003916215325419249, -0.0009955959399030206, 0.0002526107569451364, 0.0015998278320247686, 0.01400160550608702]}}

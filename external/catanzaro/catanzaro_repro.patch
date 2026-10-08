@@ -1,0 +1,98 @@
+diff -ru a/makefile b/makefile
+--- a/makefile	2026-04-15 14:05:33
++++ b/makefile	2026-10-02 08:06:42
+@@ -9,7 +9,8 @@
+ 
+ 
+ 
+-GUROBI_FLAGS =-I$(GUROBI_HOME)/include -L$(GUROBI_HOME)/lib -lgurobi_c++ -lgurobi100
++BOOST_FLAGS ?= -I/opt/homebrew/include -L/opt/homebrew/lib
++GUROBI_FLAGS =-I$(GUROBI_HOME)/include -L$(GUROBI_HOME)/lib -lgurobi_c++ -lgurobi120
+ 
+ DEP_CODE= src/solver_bmep.cpp  src/common.hpp src/huffmanhedron_cuts.hpp src/instance.hpp src/lpnj.hpp src/min_cut.hpp src/solver_common.hpp src/solver_gurobi.hpp src/solver_params.hpp src/weak_bunemans_cuts.hpp src/tsp.hpp  src/validation.hpp
+ 
+@@ -21,13 +22,13 @@
+ utils: validatepl
+ 
+ solver_bmep: $(DEP_CODE)
+-	g++ $(RELEASE_FLAGS)  src/solver_bmep.cpp -o bin/solver_bmep -lboost_program_options $(GUROBI_FLAGS)
++	g++ $(RELEASE_FLAGS)  src/solver_bmep.cpp -o bin/solver_bmep $(BOOST_FLAGS) -lboost_program_options $(GUROBI_FLAGS)
+ 
+ solver_bmep_dbg: $(DEP_CODE)
+-	g++ $(DEBUG_FLAGS)  src/solver_bmep.cpp -o bin/solver_bmep_dbg -lboost_program_options $(GUROBI_FLAGS)
++	g++ $(DEBUG_FLAGS)  src/solver_bmep.cpp -o bin/solver_bmep_dbg $(BOOST_FLAGS) -lboost_program_options $(GUROBI_FLAGS)
+ 
+ validatepl: src/instance.hpp src/tsp.hpp src/validation.hpp
+-	g++ $(DEBUG_FLAGS) utils/validatepl.cpp -o bin/validatepl -lboost_program_options
++	g++ $(DEBUG_FLAGS) utils/validatepl.cpp -o bin/validatepl $(BOOST_FLAGS) -lboost_program_options
+ 
+ clean:
+ 	rm utils/validatepl
+diff -ru a/src/solver_bmep.cpp b/src/solver_bmep.cpp
+--- a/src/solver_bmep.cpp	2026-04-15 14:05:33
++++ b/src/solver_bmep.cpp	2026-10-02 08:06:42
+@@ -78,6 +78,7 @@
+         
+         
+         ("report,R", po::value<std::string>()->default_value(""), "File to write running report. Prints to terminal if empty")
++        ("export", po::value<std::string>()->default_value(""), "Write the model (before callback cuts) to this file, e.g. model.mps, and exit without solving.")
+         ("timelimit,t", po::value<double>()->default_value(-1), "Timelimit in seconds. Negative values disables timelimit.");
+         
+     po::store(po::parse_command_line(argc, argv, options), vm);    
+@@ -219,6 +220,12 @@
+         solver->set_perm_type(perm_type);
+ 
+         solver->set_timelimit(timelimit);
++        solver->set_export_file(vm["export"].as<std::string>());
++        if(!vm["export"].as<std::string>().empty()) {
++            solver->solve(inst);
++            delete solver;
++            return 0;
++        }
+ 
+ 
+         NumMatrix<double> sol = solver->solve(inst);
+diff -ru a/src/solver_common.hpp b/src/solver_common.hpp
+--- a/src/solver_common.hpp	2026-04-15 14:05:33
++++ b/src/solver_common.hpp	2026-10-02 08:06:48
+@@ -61,6 +61,7 @@
+     bool _2K_splits; // separate 2K splits
+ 
+     double _timelimit; //max runtime for the lp solver in seconds, negative time disables timelimit
++    std::string _export_file; // if set, solve() writes the model here and returns without solving
+     std::vector<double> powers_of_two;
+     void compute_powers_of_two() {
+         powers_of_two.resize(_n);
+@@ -139,7 +140,8 @@
+         _buneman_type(BN_NONE),
+         _2K_splits(false),
+         _perm_type(IP_NONE),
+-        _timelimit(-1) {
++        _timelimit(-1),
++        _export_file() {
+             _perm.clear();
+         
+     }
+@@ -209,6 +211,11 @@
+         create_cons();
+ 
+         load_custom_plugins();
++        if(!_export_file.empty()) {
++            // write the model as built (before any callback cut is added) and stop
++            export_model(_export_file);
++            return NumMatrix<double>();
++        }
+         if(_relax) {
+             solve_root_node();
+         } else {
+@@ -334,6 +341,10 @@
+ 
+     void set_separate_2K_splits(bool separate) {
+         _2K_splits = separate;
++    }
++
++    void set_export_file(const std::string &filename) {
++        _export_file = filename;
+     }
+ 
+     void set_timelimit(double timelimit_secs) {

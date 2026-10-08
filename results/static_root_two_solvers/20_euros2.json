@@ -1,0 +1,78 @@
+{
+ "label": "20_euros2",
+ "instance": "/Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper/external/catanzaro/upstream/instances/supplement/20_euros2.txt",
+ "flags": "-O B --str A",
+ "optimum_solver_scale": 716214.75300352,
+ "gurobi": {
+  "lp": {
+   "bound": 710044.5481225894,
+   "seconds": 0.12490701675415039,
+   "root_gap_pct": 0.8615020641581611
+  },
+  "root_on": {
+   "bound": 713488.1895628583,
+   "seconds": 8.309134244918823,
+   "status": 8,
+   "root_gap_pct": 0.380690767570414
+  },
+  "root_off": {
+   "bound": 710165.1378329376,
+   "seconds": 2.1878931522369385,
+   "status": 8,
+   "root_gap_pct": 0.844664975862705
+  },
+  "root_max": {
+   "bound": 713672.2042604757,
+   "seconds": 22.019831657409668,
+   "status": 8,
+   "root_gap_pct": 0.3549980969229998
+  }
+ },
+ "cplex": {
+  "lp": {
+   "seconds": 0.08275318145751953,
+   "status": "optimal",
+   "bound": 710044.5481225896,
+   "root_gap_pct": 0.8615020641581286
+  },
+  "root_on": {
+   "seconds": 2.553208112716675,
+   "status": "node limit exceeded, no integer solution",
+   "bound": 713763.0081262975,
+   "cuts": {
+    "GUB_cover": 94,
+    "MIR": 452,
+    "clique": 2,
+    "cover": 5,
+    "flow_cover": 28,
+    "fractional": 8,
+    "zero_half": 9
+   },
+   "root_gap_pct": 0.3423197954162235
+  },
+  "root_off": {
+   "seconds": 1.1770260334014893,
+   "status": "node limit exceeded, no integer solution",
+   "bound": 710044.5481225896,
+   "cuts": {},
+   "root_gap_pct": 0.8615020641581286
+  },
+  "root_max": {
+   "seconds": 84.46734309196472,
+   "status": "node limit exceeded, no integer solution",
+   "bound": 714052.1006399809,
+   "cuts": {
+    "GUB_cover": 121,
+    "MIR": 376,
+    "clique": 2,
+    "cover": 3,
+    "disjunctive": 4,
+    "flow_cover": 18,
+    "fractional": 4,
+    "lift_and_project": 46,
+    "zero_half": 14
+   },
+   "root_gap_pct": 0.30195585255257407
+  }
+ }
+}

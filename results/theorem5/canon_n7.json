@@ -1,0 +1,25 @@
+{
+ "n": 7,
+ "survivors": 19,
+ "ordered": true,
+ "violating": 0,
+ "nodes": 386,
+ "seconds": 0,
+ "row_types": 5,
+ "name": "canon_n7",
+ "options": [],
+ "checks": [
+  {
+   "label": "canonical survivors (Table C1)",
+   "computed": 19,
+   "expected": 19,
+   "ok": true
+  },
+  {
+   "label": "violating (10)",
+   "computed": 0,
+   "expected": 0,
+   "ok": true
+  }
+ ]
+}

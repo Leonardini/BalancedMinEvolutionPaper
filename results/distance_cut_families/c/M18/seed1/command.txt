@@ -1,0 +1,1 @@
+/Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper/external/catanzaro/build/bin/solver_bmep -i /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper/external/catanzaro/upstream/instances/03-M18.txt -O B --heuk 4 --heuls --str A --gkiR 0.05 --gkiN 0.01 --2KR 0.001 --co G --coR 0.05 --coN 0.005 -t 3600

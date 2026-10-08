@@ -1,0 +1,72 @@
+2026-10-03 19:30:57 brute-force optimal tree, n=10
+2026-10-03 19:31:00   100000 trees
+2026-10-03 19:31:03   200000 trees
+2026-10-03 19:31:06   300000 trees
+2026-10-03 19:31:09   400000 trees
+2026-10-03 19:31:12   500000 trees
+2026-10-03 19:31:15   600000 trees
+2026-10-03 19:31:18   700000 trees
+2026-10-03 19:31:21   800000 trees
+2026-10-03 19:31:24   900000 trees
+2026-10-03 19:31:26   1000000 trees
+2026-10-03 19:31:29   1100000 trees
+2026-10-03 19:31:32   1200000 trees
+2026-10-03 19:31:35   1300000 trees
+2026-10-03 19:31:38   1400000 trees
+2026-10-03 19:31:41   1500000 trees
+2026-10-03 19:31:44   1600000 trees
+2026-10-03 19:31:47   1700000 trees
+2026-10-03 19:31:49   1800000 trees
+2026-10-03 19:31:52   1900000 trees
+2026-10-03 19:31:55   2000000 trees
+2026-10-03 19:31:56   base: bound 5.746844951652 (no violated cut), 1 rounds, rows {'mincut': 0, 'pm': 0, 'f6': 0, 'f7': 0, 'f4': 0, 'f5': 0, 'p50': 0, 'p53': 0, 'p54': 0, 'crossing': 0}, cut off 0, 0s
+2026-10-03 19:31:56 test_n10 base: bound=5.746844951652 converged 0s
+2026-10-03 19:31:56   full: bound 6.152023802110 (no violated cut), 12 rounds, rows {'mincut': 1, 'pm': 11, 'f6': 25, 'f7': 35, 'f4': 18, 'f5': 15, 'p50': 7, 'p53': 47, 'p54': 11, 'crossing': 0}, cut off 0, 0s
+2026-10-03 19:31:56 test_n10 full: bound=6.152023802110 converged 0s
+/Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper/experiments/lp/conic_manifold.py:97: UserWarning: Solution may be inaccurate. Try another solver, adjusting the solver settings, or solve with verbose=True for more information.
+  prob.solve(solver=cp.CLARABEL, tol_feas=tol, tol_gap_abs=tol, tol_gap_rel=tol,
+2026-10-03 19:31:56   default: bound 6.067224431673 (no violated cut), 14 rounds, rows {'mincut': 1, 'pm': 13, 'f6': 0, 'f7': 0, 'f4': 0, 'f5': 0, 'p50': 0, 'p53': 0, 'p54': 0, 'crossing': 0}, cut off 0, 0s
+2026-10-03 19:31:56 test_n10 default: bound=6.067224431673 converged 0s
+2026-10-03 19:31:56   mincut: bound 5.758463541313 (no violated cut), 2 rounds, rows {'mincut': 1, 'pm': 0, 'f6': 0, 'f7': 0, 'f4': 0, 'f5': 0, 'p50': 0, 'p53': 0, 'p54': 0, 'crossing': 0}, cut off 0, 0s
+2026-10-03 19:31:56 test_n10 mincut: bound=5.758463541313 converged 0s
+2026-10-03 19:31:56   only_manifold: bound 5.952557689454 (no violated cut), 1 rounds, rows {'mincut': 0, 'pm': 0, 'f6': 0, 'f7': 0, 'f4': 0, 'f5': 0, 'p50': 0, 'p53': 0, 'p54': 0, 'crossing': 0}, cut off 0, 0s
+2026-10-03 19:31:56 test_n10 only_manifold: bound=5.952557689454 converged 0s
+2026-10-03 19:31:56   without_manifold: bound 6.144062499182 (no violated cut), 13 rounds, rows {'mincut': 1, 'pm': 12, 'f6': 129, 'f7': 64, 'f4': 60, 'f5': 63, 'p50': 16, 'p53': 299, 'p54': 34, 'crossing': 0}, cut off 0, 0s
+2026-10-03 19:31:56 test_n10 without_manifold: bound=6.144062499182 converged 0s
+2026-10-03 19:31:56   only_pm: bound 6.059003276200 (no violated cut), 18 rounds, rows {'mincut': 1, 'pm': 17, 'f6': 0, 'f7': 0, 'f4': 0, 'f5': 0, 'p50': 0, 'p53': 0, 'p54': 0, 'crossing': 0}, cut off 0, 0s
+2026-10-03 19:31:56 test_n10 only_pm: bound=6.059003276200 converged 0s
+2026-10-03 19:31:57   without_pm: bound 6.086434200388 (no violated cut), 4 rounds, rows {'mincut': 1, 'pm': 0, 'f6': 26, 'f7': 18, 'f4': 19, 'f5': 15, 'p50': 5, 'p53': 52, 'p54': 12, 'crossing': 0}, cut off 0, 0s
+2026-10-03 19:31:57 test_n10 without_pm: bound=6.086434200388 converged 0s
+2026-10-03 19:31:57   only_f6: bound 5.826402889600 (no violated cut), 2 rounds, rows {'mincut': 1, 'pm': 0, 'f6': 120, 'f7': 0, 'f4': 0, 'f5': 0, 'p50': 0, 'p53': 0, 'p54': 0, 'crossing': 0}, cut off 0, 0s
+2026-10-03 19:31:57 test_n10 only_f6: bound=5.826402889600 converged 0s
+2026-10-03 19:31:57   without_f6: bound 6.152023802245 (no violated cut), 12 rounds, rows {'mincut': 1, 'pm': 11, 'f6': 0, 'f7': 35, 'f4': 18, 'f5': 15, 'p50': 7, 'p53': 47, 'p54': 11, 'crossing': 0}, cut off 0, 0s
+2026-10-03 19:31:57 test_n10 without_f6: bound=6.152023802245 converged 0s
+2026-10-03 19:31:57   only_f7: bound 6.004882812492 (no violated cut), 6 rounds, rows {'mincut': 2, 'pm': 0, 'f6': 0, 'f7': 22, 'f4': 0, 'f5': 0, 'p50': 0, 'p53': 0, 'p54': 0, 'crossing': 0}, cut off 0, 0s
+2026-10-03 19:31:57 test_n10 only_f7: bound=6.004882812492 converged 0s
+2026-10-03 19:31:57   without_f7: bound 6.140147129621 (no violated cut), 14 rounds, rows {'mincut': 1, 'pm': 13, 'f6': 23, 'f7': 0, 'f4': 20, 'f5': 15, 'p50': 8, 'p53': 48, 'p54': 14, 'crossing': 0}, cut off 0, 0s
+2026-10-03 19:31:57 test_n10 without_f7: bound=6.140147129621 converged 0s
+2026-10-03 19:31:57   only_f4: bound 5.874981527717 (no violated cut), 3 rounds, rows {'mincut': 1, 'pm': 0, 'f6': 0, 'f7': 0, 'f4': 60, 'f5': 0, 'p50': 0, 'p53': 0, 'p54': 0, 'crossing': 0}, cut off 0, 0s
+2026-10-03 19:31:57 test_n10 only_f4: bound=5.874981527717 converged 0s
+2026-10-03 19:31:57   without_f4: bound 6.152023802239 (no violated cut), 12 rounds, rows {'mincut': 1, 'pm': 11, 'f6': 25, 'f7': 35, 'f4': 0, 'f5': 15, 'p50': 7, 'p53': 47, 'p54': 11, 'crossing': 0}, cut off 0, 0s
+2026-10-03 19:31:57 test_n10 without_f4: bound=6.152023802239 converged 0s
+2026-10-03 19:31:57   only_f5: bound 5.840236215541 (no violated cut), 3 rounds, rows {'mincut': 1, 'pm': 0, 'f6': 0, 'f7': 0, 'f4': 0, 'f5': 65, 'p50': 0, 'p53': 0, 'p54': 0, 'crossing': 0}, cut off 0, 0s
+2026-10-03 19:31:57 test_n10 only_f5: bound=5.840236215541 converged 0s
+2026-10-03 19:31:57   without_f5: bound 6.152023802246 (no violated cut), 12 rounds, rows {'mincut': 1, 'pm': 11, 'f6': 25, 'f7': 35, 'f4': 18, 'f5': 0, 'p50': 7, 'p53': 47, 'p54': 11, 'crossing': 0}, cut off 0, 0s
+2026-10-03 19:31:57 test_n10 without_f5: bound=6.152023802246 converged 0s
+2026-10-03 19:31:57   only_p50: bound 5.943359374952 (no violated cut), 3 rounds, rows {'mincut': 1, 'pm': 0, 'f6': 0, 'f7': 0, 'f4': 0, 'f5': 0, 'p50': 13, 'p53': 0, 'p54': 0, 'crossing': 0}, cut off 0, 0s
+2026-10-03 19:31:57 test_n10 only_p50: bound=5.943359374952 converged 0s
+2026-10-03 19:31:57   without_p50: bound 6.151795052328 (no violated cut), 12 rounds, rows {'mincut': 1, 'pm': 11, 'f6': 25, 'f7': 43, 'f4': 19, 'f5': 16, 'p50': 0, 'p53': 48, 'p54': 13, 'crossing': 0}, cut off 0, 0s
+2026-10-03 19:31:57 test_n10 without_p50: bound=6.151795052328 converged 0s
+2026-10-03 19:31:57   only_p53: bound 5.813541666563 (no violated cut), 3 rounds, rows {'mincut': 1, 'pm': 0, 'f6': 0, 'f7': 0, 'f4': 0, 'f5': 0, 'p50': 0, 'p53': 339, 'p54': 0, 'crossing': 0}, cut off 0, 0s
+2026-10-03 19:31:57 test_n10 only_p53: bound=5.813541666563 converged 0s
+2026-10-03 19:31:58   without_p53: bound 6.152023802263 (no violated cut), 12 rounds, rows {'mincut': 1, 'pm': 11, 'f6': 25, 'f7': 35, 'f4': 18, 'f5': 15, 'p50': 7, 'p53': 0, 'p54': 11, 'crossing': 0}, cut off 0, 0s
+2026-10-03 19:31:58 test_n10 without_p53: bound=6.152023802263 converged 0s
+2026-10-03 19:31:58   only_p54: bound 5.848455964926 (no violated cut), 4 rounds, rows {'mincut': 1, 'pm': 0, 'f6': 0, 'f7': 0, 'f4': 0, 'f5': 0, 'p50': 0, 'p53': 0, 'p54': 32, 'crossing': 0}, cut off 0, 0s
+2026-10-03 19:31:58 test_n10 only_p54: bound=5.848455964926 converged 0s
+2026-10-03 19:31:58   without_p54: bound 6.151910964180 (no violated cut), 12 rounds, rows {'mincut': 1, 'pm': 11, 'f6': 25, 'f7': 35, 'f4': 18, 'f5': 15, 'p50': 7, 'p53': 47, 'p54': 0, 'crossing': 0}, cut off 0, 0s
+2026-10-03 19:31:58 test_n10 without_p54: bound=6.151910964180 converged 0s
+2026-10-03 19:31:58   only_crossing: bound 5.758463541313 (no violated cut), 2 rounds, rows {'mincut': 1, 'pm': 0, 'f6': 0, 'f7': 0, 'f4': 0, 'f5': 0, 'p50': 0, 'p53': 0, 'p54': 0, 'crossing': 0}, cut off 0, 0s
+2026-10-03 19:31:58 test_n10 only_crossing: bound=5.758463541313 converged 0s
+2026-10-03 19:31:58   without_crossing: bound 6.152023802110 (no violated cut), 12 rounds, rows {'mincut': 1, 'pm': 11, 'f6': 25, 'f7': 35, 'f4': 18, 'f5': 15, 'p50': 7, 'p53': 47, 'p54': 11, 'crossing': 0}, cut off 0, 0s
+2026-10-03 19:31:58 test_n10 without_crossing: bound=6.152023802110 converged 0s
+2026-10-03 19:31:58 min-cut from base 2.9%; unfinished arms: []; arms above full: []; rows cutting off the optimum: 0

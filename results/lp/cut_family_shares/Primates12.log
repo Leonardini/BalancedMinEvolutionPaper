@@ -1,0 +1,49 @@
+2026-10-03 19:30:57   base: bound 0.081799050442 (no violated cut), 1 rounds, rows {'mincut': 0, 'pm': 0, 'f6': 0, 'f7': 0, 'f4': 0, 'f5': 0, 'p50': 0, 'p53': 0, 'p54': 0, 'crossing': 0}, cut off 0, 0s
+2026-10-03 19:30:57 01-Primates12 base: bound=0.081799050442 converged 0s
+2026-10-03 19:30:57   full: bound 0.097350331009 (no violated cut), 10 rounds, rows {'mincut': 5, 'pm': 5, 'f6': 0, 'f7': 8, 'f4': 0, 'f5': 0, 'p50': 0, 'p53': 0, 'p54': 0, 'crossing': 0}, cut off 0, 0s
+2026-10-03 19:30:57 01-Primates12 full: bound=0.097350331009 converged 0s
+2026-10-03 19:30:57   default: bound 0.097343061398 (no violated cut), 10 rounds, rows {'mincut': 5, 'pm': 5, 'f6': 0, 'f7': 0, 'f4': 0, 'f5': 0, 'p50': 0, 'p53': 0, 'p54': 0, 'crossing': 0}, cut off 0, 0s
+2026-10-03 19:30:57 01-Primates12 default: bound=0.097343061398 converged 0s
+2026-10-03 19:30:57   mincut: bound 0.096201474334 (no violated cut), 7 rounds, rows {'mincut': 6, 'pm': 0, 'f6': 0, 'f7': 0, 'f4': 0, 'f5': 0, 'p50': 0, 'p53': 0, 'p54': 0, 'crossing': 0}, cut off 0, 0s
+2026-10-03 19:30:57 01-Primates12 mincut: bound=0.096201474334 converged 0s
+2026-10-03 19:30:57   only_manifold: bound 0.097337631234 (no violated cut), 6 rounds, rows {'mincut': 5, 'pm': 0, 'f6': 0, 'f7': 0, 'f4': 0, 'f5': 0, 'p50': 0, 'p53': 0, 'p54': 0, 'crossing': 0}, cut off 0, 0s
+2026-10-03 19:30:57 01-Primates12 only_manifold: bound=0.097337631234 converged 0s
+2026-10-03 19:30:58   without_manifold: bound 0.096703005123 (no violated cut), 19 rounds, rows {'mincut': 6, 'pm': 18, 'f6': 215, 'f7': 252, 'f4': 268, 'f5': 295, 'p50': 60, 'p53': 3000, 'p54': 97, 'crossing': 0}, cut off 0, 1s
+2026-10-03 19:30:58 01-Primates12 without_manifold: bound=0.096703005123 converged 1s
+2026-10-03 19:30:58   only_pm: bound 0.096574540142 (no violated cut), 18 rounds, rows {'mincut': 6, 'pm': 17, 'f6': 0, 'f7': 0, 'f4': 0, 'f5': 0, 'p50': 0, 'p53': 0, 'p54': 0, 'crossing': 0}, cut off 0, 0s
+2026-10-03 19:30:58 01-Primates12 only_pm: bound=0.096574540142 converged 0s
+2026-10-03 19:30:59   without_pm: bound 0.097343129559 (no violated cut), 7 rounds, rows {'mincut': 5, 'pm': 0, 'f6': 0, 'f7': 8, 'f4': 0, 'f5': 0, 'p50': 0, 'p53': 0, 'p54': 0, 'crossing': 0}, cut off 0, 0s
+2026-10-03 19:30:59 01-Primates12 without_pm: bound=0.097343129559 converged 0s
+2026-10-03 19:30:59   only_f6: bound 0.096259315857 (no violated cut), 7 rounds, rows {'mincut': 6, 'pm': 0, 'f6': 225, 'f7': 0, 'f4': 0, 'f5': 0, 'p50': 0, 'p53': 0, 'p54': 0, 'crossing': 0}, cut off 0, 0s
+2026-10-03 19:30:59 01-Primates12 only_f6: bound=0.096259315857 converged 0s
+2026-10-03 19:30:59   without_f6: bound 0.097350331009 (no violated cut), 10 rounds, rows {'mincut': 5, 'pm': 5, 'f6': 0, 'f7': 8, 'f4': 0, 'f5': 0, 'p50': 0, 'p53': 0, 'p54': 0, 'crossing': 0}, cut off 0, 0s
+2026-10-03 19:30:59 01-Primates12 without_f6: bound=0.097350331009 converged 0s
+2026-10-03 19:30:59   only_f7: bound 0.096492920246 (no violated cut), 9 rounds, rows {'mincut': 6, 'pm': 0, 'f6': 0, 'f7': 129, 'f4': 0, 'f5': 0, 'p50': 0, 'p53': 0, 'p54': 0, 'crossing': 0}, cut off 0, 0s
+2026-10-03 19:30:59 01-Primates12 only_f7: bound=0.096492920246 converged 0s
+2026-10-03 19:30:59   without_f7: bound 0.097343692614 (no violated cut), 11 rounds, rows {'mincut': 5, 'pm': 6, 'f6': 0, 'f7': 0, 'f4': 1, 'f5': 0, 'p50': 3, 'p53': 0, 'p54': 3, 'crossing': 0}, cut off 0, 0s
+2026-10-03 19:30:59 01-Primates12 without_f7: bound=0.097343692614 converged 0s
+2026-10-03 19:30:59   only_f4: bound 0.096282499771 (no violated cut), 7 rounds, rows {'mincut': 6, 'pm': 0, 'f6': 0, 'f7': 0, 'f4': 282, 'f5': 0, 'p50': 0, 'p53': 0, 'p54': 0, 'crossing': 0}, cut off 0, 0s
+2026-10-03 19:30:59 01-Primates12 only_f4: bound=0.096282499771 converged 0s
+2026-10-03 19:30:59   without_f4: bound 0.097350331009 (no violated cut), 10 rounds, rows {'mincut': 5, 'pm': 5, 'f6': 0, 'f7': 8, 'f4': 0, 'f5': 0, 'p50': 0, 'p53': 0, 'p54': 0, 'crossing': 0}, cut off 0, 0s
+2026-10-03 19:30:59 01-Primates12 without_f4: bound=0.097350331009 converged 0s
+2026-10-03 19:30:59   only_f5: bound 0.096256465960 (no violated cut), 7 rounds, rows {'mincut': 6, 'pm': 0, 'f6': 0, 'f7': 0, 'f4': 0, 'f5': 311, 'p50': 0, 'p53': 0, 'p54': 0, 'crossing': 0}, cut off 0, 0s
+2026-10-03 19:30:59 01-Primates12 only_f5: bound=0.096256465960 converged 0s
+2026-10-03 19:31:00   without_f5: bound 0.097350331009 (no violated cut), 10 rounds, rows {'mincut': 5, 'pm': 5, 'f6': 0, 'f7': 8, 'f4': 0, 'f5': 0, 'p50': 0, 'p53': 0, 'p54': 0, 'crossing': 0}, cut off 0, 0s
+2026-10-03 19:31:00 01-Primates12 without_f5: bound=0.097350331009 converged 0s
+2026-10-03 19:31:00   only_p50: bound 0.096401933105 (no violated cut), 7 rounds, rows {'mincut': 6, 'pm': 0, 'f6': 0, 'f7': 0, 'f4': 0, 'f5': 0, 'p50': 62, 'p53': 0, 'p54': 0, 'crossing': 0}, cut off 0, 0s
+2026-10-03 19:31:00 01-Primates12 only_p50: bound=0.096401933105 converged 0s
+2026-10-03 19:31:00   without_p50: bound 0.097350331009 (no violated cut), 10 rounds, rows {'mincut': 5, 'pm': 5, 'f6': 0, 'f7': 8, 'f4': 0, 'f5': 0, 'p50': 0, 'p53': 0, 'p54': 0, 'crossing': 0}, cut off 0, 0s
+2026-10-03 19:31:00 01-Primates12 without_p50: bound=0.097350331009 converged 0s
+2026-10-03 19:31:00   only_p53: bound 0.096236179289 (no violated cut), 7 rounds, rows {'mincut': 6, 'pm': 0, 'f6': 0, 'f7': 0, 'f4': 0, 'f5': 0, 'p50': 0, 'p53': 4220, 'p54': 0, 'crossing': 0}, cut off 0, 0s
+2026-10-03 19:31:00 01-Primates12 only_p53: bound=0.096236179289 converged 0s
+2026-10-03 19:31:00   without_p53: bound 0.097350331009 (no violated cut), 10 rounds, rows {'mincut': 5, 'pm': 5, 'f6': 0, 'f7': 8, 'f4': 0, 'f5': 0, 'p50': 0, 'p53': 0, 'p54': 0, 'crossing': 0}, cut off 0, 0s
+2026-10-03 19:31:00 01-Primates12 without_p53: bound=0.097350331009 converged 0s
+2026-10-03 19:31:01   only_p54: bound 0.096300520606 (no violated cut), 8 rounds, rows {'mincut': 6, 'pm': 0, 'f6': 0, 'f7': 0, 'f4': 0, 'f5': 0, 'p50': 0, 'p53': 0, 'p54': 133, 'crossing': 0}, cut off 0, 0s
+2026-10-03 19:31:01 01-Primates12 only_p54: bound=0.096300520606 converged 0s
+2026-10-03 19:31:01   without_p54: bound 0.097350331009 (no violated cut), 10 rounds, rows {'mincut': 5, 'pm': 5, 'f6': 0, 'f7': 8, 'f4': 0, 'f5': 0, 'p50': 0, 'p53': 0, 'p54': 0, 'crossing': 0}, cut off 0, 0s
+2026-10-03 19:31:01 01-Primates12 without_p54: bound=0.097350331009 converged 0s
+2026-10-03 19:31:01   only_crossing: bound 0.096201474334 (no violated cut), 7 rounds, rows {'mincut': 6, 'pm': 0, 'f6': 0, 'f7': 0, 'f4': 0, 'f5': 0, 'p50': 0, 'p53': 0, 'p54': 0, 'crossing': 0}, cut off 0, 0s
+2026-10-03 19:31:01 01-Primates12 only_crossing: bound=0.096201474334 converged 0s
+2026-10-03 19:31:01   without_crossing: bound 0.097350331009 (no violated cut), 10 rounds, rows {'mincut': 5, 'pm': 5, 'f6': 0, 'f7': 8, 'f4': 0, 'f5': 0, 'p50': 0, 'p53': 0, 'p54': 0, 'crossing': 0}, cut off 0, 0s
+2026-10-03 19:31:01 01-Primates12 without_crossing: bound=0.097350331009 converged 0s
+2026-10-03 19:31:01 min-cut from base 92.6%; unfinished arms: []; arms above full: []; rows cutting off the optimum: 0

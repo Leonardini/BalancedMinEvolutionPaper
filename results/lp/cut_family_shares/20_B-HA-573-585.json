@@ -1,0 +1,808 @@
+{
+ "instance": "/Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/external/catanzaro/upstream/instances/supplement/20_B-HA-573-585-BMGE.txt",
+ "n": 20,
+ "cap_per_arm_seconds": 1800.0,
+ "manifold": "exact (MOSEK)",
+ "separator_threshold": 1e-07,
+ "facet_separators_per_call_limit": "none",
+ "optimal_tree": "/Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/data/ground_truth/20_B-HA-573-585-BMGE.splits",
+ "standalone_from_base": {
+  "possible": false,
+  "reason": "every arm but base contains min-cut"
+ },
+ "arms": {
+  "base": {
+   "converged": true,
+   "capped": false,
+   "inaccurate_solves": 0,
+   "stop": "no violated cut",
+   "bound": 0.21160039170647624,
+   "primal": 0.21160040033825706,
+   "rounds": 1,
+   "rows": {
+    "mincut": 0,
+    "pm": 0,
+    "f6": 0,
+    "f7": 0,
+    "f4": 0,
+    "f5": 0,
+    "p50": 0,
+    "p53": 0,
+    "p54": 0,
+    "crossing": 0
+   },
+   "manifold": false,
+   "manifold_multiplier": 0.0,
+   "seconds": 0.03406095504760742,
+   "finished": true,
+   "rows_cut_off_optimum": 0,
+   "manifold_at_optimum_minus_rhs": 0.0
+  },
+  "full": {
+   "converged": true,
+   "capped": false,
+   "inaccurate_solves": 0,
+   "stop": "no violated cut",
+   "bound": 0.2506971401031704,
+   "primal": 0.2506971401500209,
+   "rounds": 10,
+   "rows": {
+    "mincut": 9,
+    "pm": 0,
+    "f6": 0,
+    "f7": 0,
+    "f4": 0,
+    "f5": 0,
+    "p50": 0,
+    "p53": 0,
+    "p54": 0,
+    "crossing": 0
+   },
+   "manifold": true,
+   "manifold_multiplier": 0.005778246709959811,
+   "seconds": 0.5876460075378418,
+   "finished": true,
+   "census": {
+    "kraft": {
+     "rows": 20,
+     "tight": 20,
+     "nonzero_dual": 20
+    },
+    "double_cherry": {
+     "rows": 3420,
+     "tight": 136,
+     "nonzero_dual": 136
+    },
+    "mincut": {
+     "rows": 9,
+     "tight": 9,
+     "nonzero_dual": 9
+    }
+   },
+   "rows_cut_off_optimum": 0,
+   "manifold_at_optimum_minus_rhs": 0.0
+  },
+  "default": {
+   "converged": true,
+   "capped": false,
+   "inaccurate_solves": 0,
+   "stop": "no violated cut",
+   "bound": 0.2506971401031704,
+   "primal": 0.2506971401500209,
+   "rounds": 10,
+   "rows": {
+    "mincut": 9,
+    "pm": 0,
+    "f6": 0,
+    "f7": 0,
+    "f4": 0,
+    "f5": 0,
+    "p50": 0,
+    "p53": 0,
+    "p54": 0,
+    "crossing": 0
+   },
+   "manifold": true,
+   "manifold_multiplier": 0.005778246709959811,
+   "seconds": 0.4995708465576172,
+   "finished": true,
+   "census": {
+    "kraft": {
+     "rows": 20,
+     "tight": 20,
+     "nonzero_dual": 20
+    },
+    "double_cherry": {
+     "rows": 3420,
+     "tight": 136,
+     "nonzero_dual": 136
+    },
+    "mincut": {
+     "rows": 9,
+     "tight": 9,
+     "nonzero_dual": 9
+    }
+   },
+   "rows_cut_off_optimum": 0,
+   "manifold_at_optimum_minus_rhs": 0.0
+  },
+  "mincut": {
+   "converged": true,
+   "capped": false,
+   "inaccurate_solves": 0,
+   "stop": "no violated cut",
+   "bound": 0.24632250304199604,
+   "primal": 0.24632250340171896,
+   "rounds": 11,
+   "rows": {
+    "mincut": 10,
+    "pm": 0,
+    "f6": 0,
+    "f7": 0,
+    "f4": 0,
+    "f5": 0,
+    "p50": 0,
+    "p53": 0,
+    "p54": 0,
+    "crossing": 0
+   },
+   "manifold": false,
+   "manifold_multiplier": 0.0,
+   "seconds": 0.20188188552856445,
+   "finished": true,
+   "rows_cut_off_optimum": 0,
+   "manifold_at_optimum_minus_rhs": 0.0
+  },
+  "only_manifold": {
+   "converged": true,
+   "capped": false,
+   "inaccurate_solves": 0,
+   "stop": "no violated cut",
+   "bound": 0.2506971401031704,
+   "primal": 0.2506971401500209,
+   "rounds": 10,
+   "rows": {
+    "mincut": 9,
+    "pm": 0,
+    "f6": 0,
+    "f7": 0,
+    "f4": 0,
+    "f5": 0,
+    "p50": 0,
+    "p53": 0,
+    "p54": 0,
+    "crossing": 0
+   },
+   "manifold": true,
+   "manifold_multiplier": 0.005778246709959811,
+   "seconds": 0.4154040813446045,
+   "finished": true,
+   "rows_cut_off_optimum": 0,
+   "manifold_at_optimum_minus_rhs": 0.0
+  },
+  "without_manifold": {
+   "converged": true,
+   "capped": false,
+   "inaccurate_solves": 0,
+   "stop": "no violated cut",
+   "bound": 0.24667852461157977,
+   "primal": 0.2466785266935076,
+   "rounds": 33,
+   "rows": {
+    "mincut": 10,
+    "pm": 32,
+    "f6": 1508,
+    "f7": 5008,
+    "f4": 2070,
+    "f5": 2113,
+    "p50": 709,
+    "p53": 2946,
+    "p54": 162,
+    "crossing": 0
+   },
+   "manifold": false,
+   "manifold_multiplier": 0.0,
+   "seconds": 3.515023946762085,
+   "finished": true,
+   "rows_cut_off_optimum": 0,
+   "manifold_at_optimum_minus_rhs": 0.0
+  },
+  "only_pm": {
+   "converged": true,
+   "capped": false,
+   "inaccurate_solves": 0,
+   "stop": "no violated cut",
+   "bound": 0.24662596037761472,
+   "primal": 0.2466259604615963,
+   "rounds": 51,
+   "rows": {
+    "mincut": 12,
+    "pm": 50,
+    "f6": 0,
+    "f7": 0,
+    "f4": 0,
+    "f5": 0,
+    "p50": 0,
+    "p53": 0,
+    "p54": 0,
+    "crossing": 0
+   },
+   "manifold": false,
+   "manifold_multiplier": 0.0,
+   "seconds": 1.175854206085205,
+   "finished": true,
+   "rows_cut_off_optimum": 0,
+   "manifold_at_optimum_minus_rhs": 0.0
+  },
+  "without_pm": {
+   "converged": true,
+   "capped": false,
+   "inaccurate_solves": 0,
+   "stop": "no violated cut",
+   "bound": 0.2506971401031704,
+   "primal": 0.2506971401500209,
+   "rounds": 10,
+   "rows": {
+    "mincut": 9,
+    "pm": 0,
+    "f6": 0,
+    "f7": 0,
+    "f4": 0,
+    "f5": 0,
+    "p50": 0,
+    "p53": 0,
+    "p54": 0,
+    "crossing": 0
+   },
+   "manifold": true,
+   "manifold_multiplier": 0.005778246709959811,
+   "seconds": 0.6188960075378418,
+   "finished": true,
+   "rows_cut_off_optimum": 0,
+   "manifold_at_optimum_minus_rhs": 0.0
+  },
+  "only_f6": {
+   "converged": true,
+   "capped": false,
+   "inaccurate_solves": 0,
+   "stop": "no violated cut",
+   "bound": 0.24632643428762346,
+   "primal": 0.24632643572088037,
+   "rounds": 11,
+   "rows": {
+    "mincut": 10,
+    "pm": 0,
+    "f6": 1535,
+    "f7": 0,
+    "f4": 0,
+    "f5": 0,
+    "p50": 0,
+    "p53": 0,
+    "p54": 0,
+    "crossing": 0
+   },
+   "manifold": false,
+   "manifold_multiplier": 0.0,
+   "seconds": 0.2949490547180176,
+   "finished": true,
+   "rows_cut_off_optimum": 0,
+   "manifold_at_optimum_minus_rhs": 0.0
+  },
+  "without_f6": {
+   "converged": true,
+   "capped": false,
+   "inaccurate_solves": 0,
+   "stop": "no violated cut",
+   "bound": 0.2506971401031704,
+   "primal": 0.2506971401500209,
+   "rounds": 10,
+   "rows": {
+    "mincut": 9,
+    "pm": 0,
+    "f6": 0,
+    "f7": 0,
+    "f4": 0,
+    "f5": 0,
+    "p50": 0,
+    "p53": 0,
+    "p54": 0,
+    "crossing": 0
+   },
+   "manifold": true,
+   "manifold_multiplier": 0.005778246709959811,
+   "seconds": 0.5818648338317871,
+   "finished": true,
+   "rows_cut_off_optimum": 0,
+   "manifold_at_optimum_minus_rhs": 0.0
+  },
+  "only_f7": {
+   "converged": true,
+   "capped": false,
+   "inaccurate_solves": 0,
+   "stop": "no violated cut",
+   "bound": 0.24650731325523928,
+   "primal": 0.24650731450196153,
+   "rounds": 12,
+   "rows": {
+    "mincut": 11,
+    "pm": 0,
+    "f6": 0,
+    "f7": 3290,
+    "f4": 0,
+    "f5": 0,
+    "p50": 0,
+    "p53": 0,
+    "p54": 0,
+    "crossing": 0
+   },
+   "manifold": false,
+   "manifold_multiplier": 0.0,
+   "seconds": 0.39432597160339355,
+   "finished": true,
+   "rows_cut_off_optimum": 0,
+   "manifold_at_optimum_minus_rhs": 0.0
+  },
+  "without_f7": {
+   "converged": true,
+   "capped": false,
+   "inaccurate_solves": 0,
+   "stop": "no violated cut",
+   "bound": 0.2506971401031704,
+   "primal": 0.2506971401500209,
+   "rounds": 10,
+   "rows": {
+    "mincut": 9,
+    "pm": 0,
+    "f6": 0,
+    "f7": 0,
+    "f4": 0,
+    "f5": 0,
+    "p50": 0,
+    "p53": 0,
+    "p54": 0,
+    "crossing": 0
+   },
+   "manifold": true,
+   "manifold_multiplier": 0.005778246709959811,
+   "seconds": 0.5882699489593506,
+   "finished": true,
+   "rows_cut_off_optimum": 0,
+   "manifold_at_optimum_minus_rhs": 0.0
+  },
+  "only_f4": {
+   "converged": true,
+   "capped": false,
+   "inaccurate_solves": 0,
+   "stop": "no violated cut",
+   "bound": 0.24632839833136916,
+   "primal": 0.24632840221107744,
+   "rounds": 11,
+   "rows": {
+    "mincut": 10,
+    "pm": 0,
+    "f6": 0,
+    "f7": 0,
+    "f4": 2227,
+    "f5": 0,
+    "p50": 0,
+    "p53": 0,
+    "p54": 0,
+    "crossing": 0
+   },
+   "manifold": false,
+   "manifold_multiplier": 0.0,
+   "seconds": 0.33687925338745117,
+   "finished": true,
+   "rows_cut_off_optimum": 0,
+   "manifold_at_optimum_minus_rhs": 0.0
+  },
+  "without_f4": {
+   "converged": true,
+   "capped": false,
+   "inaccurate_solves": 0,
+   "stop": "no violated cut",
+   "bound": 0.2506971401031704,
+   "primal": 0.2506971401500209,
+   "rounds": 10,
+   "rows": {
+    "mincut": 9,
+    "pm": 0,
+    "f6": 0,
+    "f7": 0,
+    "f4": 0,
+    "f5": 0,
+    "p50": 0,
+    "p53": 0,
+    "p54": 0,
+    "crossing": 0
+   },
+   "manifold": true,
+   "manifold_multiplier": 0.005778246709959811,
+   "seconds": 0.5684149265289307,
+   "finished": true,
+   "rows_cut_off_optimum": 0,
+   "manifold_at_optimum_minus_rhs": 0.0
+  },
+  "only_f5": {
+   "converged": true,
+   "capped": false,
+   "inaccurate_solves": 0,
+   "stop": "no violated cut",
+   "bound": 0.24632643379787048,
+   "primal": 0.24632643579491603,
+   "rounds": 11,
+   "rows": {
+    "mincut": 10,
+    "pm": 0,
+    "f6": 0,
+    "f7": 0,
+    "f4": 0,
+    "f5": 2285,
+    "p50": 0,
+    "p53": 0,
+    "p54": 0,
+    "crossing": 0
+   },
+   "manifold": false,
+   "manifold_multiplier": 0.0,
+   "seconds": 0.36661601066589355,
+   "finished": true,
+   "rows_cut_off_optimum": 0,
+   "manifold_at_optimum_minus_rhs": 0.0
+  },
+  "without_f5": {
+   "converged": true,
+   "capped": false,
+   "inaccurate_solves": 0,
+   "stop": "no violated cut",
+   "bound": 0.2506971401031704,
+   "primal": 0.2506971401500209,
+   "rounds": 10,
+   "rows": {
+    "mincut": 9,
+    "pm": 0,
+    "f6": 0,
+    "f7": 0,
+    "f4": 0,
+    "f5": 0,
+    "p50": 0,
+    "p53": 0,
+    "p54": 0,
+    "crossing": 0
+   },
+   "manifold": true,
+   "manifold_multiplier": 0.005778246709959811,
+   "seconds": 0.5707941055297852,
+   "finished": true,
+   "rows_cut_off_optimum": 0,
+   "manifold_at_optimum_minus_rhs": 0.0
+  },
+  "only_p50": {
+   "converged": true,
+   "capped": false,
+   "inaccurate_solves": 0,
+   "stop": "no violated cut",
+   "bound": 0.24649810096220967,
+   "primal": 0.24649810322106055,
+   "rounds": 10,
+   "rows": {
+    "mincut": 9,
+    "pm": 0,
+    "f6": 0,
+    "f7": 0,
+    "f4": 0,
+    "f5": 0,
+    "p50": 660,
+    "p53": 0,
+    "p54": 0,
+    "crossing": 0
+   },
+   "manifold": false,
+   "manifold_multiplier": 0.0,
+   "seconds": 0.21534109115600586,
+   "finished": true,
+   "rows_cut_off_optimum": 0,
+   "manifold_at_optimum_minus_rhs": 0.0
+  },
+  "without_p50": {
+   "converged": true,
+   "capped": false,
+   "inaccurate_solves": 0,
+   "stop": "no violated cut",
+   "bound": 0.2506971401031704,
+   "primal": 0.2506971401500209,
+   "rounds": 10,
+   "rows": {
+    "mincut": 9,
+    "pm": 0,
+    "f6": 0,
+    "f7": 0,
+    "f4": 0,
+    "f5": 0,
+    "p50": 0,
+    "p53": 0,
+    "p54": 0,
+    "crossing": 0
+   },
+   "manifold": true,
+   "manifold_multiplier": 0.005778246709959811,
+   "seconds": 0.5934770107269287,
+   "finished": true,
+   "rows_cut_off_optimum": 0,
+   "manifold_at_optimum_minus_rhs": 0.0
+  },
+  "only_p53": {
+   "converged": true,
+   "capped": false,
+   "inaccurate_solves": 0,
+   "stop": "no violated cut",
+   "bound": 0.24632486029063408,
+   "primal": 0.2463248639696427,
+   "rounds": 11,
+   "rows": {
+    "mincut": 10,
+    "pm": 0,
+    "f6": 0,
+    "f7": 0,
+    "f4": 0,
+    "f5": 0,
+    "p50": 0,
+    "p53": 16615,
+    "p54": 0,
+    "crossing": 0
+   },
+   "manifold": false,
+   "manifold_multiplier": 0.0,
+   "seconds": 1.1129519939422607,
+   "finished": true,
+   "rows_cut_off_optimum": 0,
+   "manifold_at_optimum_minus_rhs": 0.0
+  },
+  "without_p53": {
+   "converged": true,
+   "capped": false,
+   "inaccurate_solves": 0,
+   "stop": "no violated cut",
+   "bound": 0.2506971401031704,
+   "primal": 0.2506971401500209,
+   "rounds": 10,
+   "rows": {
+    "mincut": 9,
+    "pm": 0,
+    "f6": 0,
+    "f7": 0,
+    "f4": 0,
+    "f5": 0,
+    "p50": 0,
+    "p53": 0,
+    "p54": 0,
+    "crossing": 0
+   },
+   "manifold": true,
+   "manifold_multiplier": 0.005778246709959811,
+   "seconds": 0.5545790195465088,
+   "finished": true,
+   "rows_cut_off_optimum": 0,
+   "manifold_at_optimum_minus_rhs": 0.0
+  },
+  "only_p54": {
+   "converged": true,
+   "capped": false,
+   "inaccurate_solves": 0,
+   "stop": "no violated cut",
+   "bound": 0.24633036495959526,
+   "primal": 0.24633036878022024,
+   "rounds": 11,
+   "rows": {
+    "mincut": 10,
+    "pm": 0,
+    "f6": 0,
+    "f7": 0,
+    "f4": 0,
+    "f5": 0,
+    "p50": 0,
+    "p53": 0,
+    "p54": 168,
+    "crossing": 0
+   },
+   "manifold": false,
+   "manifold_multiplier": 0.0,
+   "seconds": 0.21990609169006348,
+   "finished": true,
+   "rows_cut_off_optimum": 0,
+   "manifold_at_optimum_minus_rhs": 0.0
+  },
+  "without_p54": {
+   "converged": true,
+   "capped": false,
+   "inaccurate_solves": 0,
+   "stop": "no violated cut",
+   "bound": 0.2506971401031704,
+   "primal": 0.2506971401500209,
+   "rounds": 10,
+   "rows": {
+    "mincut": 9,
+    "pm": 0,
+    "f6": 0,
+    "f7": 0,
+    "f4": 0,
+    "f5": 0,
+    "p50": 0,
+    "p53": 0,
+    "p54": 0,
+    "crossing": 0
+   },
+   "manifold": true,
+   "manifold_multiplier": 0.005778246709959811,
+   "seconds": 0.5701696872711182,
+   "finished": true,
+   "rows_cut_off_optimum": 0,
+   "manifold_at_optimum_minus_rhs": 0.0
+  },
+  "only_crossing": {
+   "converged": true,
+   "capped": false,
+   "inaccurate_solves": 0,
+   "stop": "no violated cut",
+   "bound": 0.24632250304199604,
+   "primal": 0.24632250340171896,
+   "rounds": 11,
+   "rows": {
+    "mincut": 10,
+    "pm": 0,
+    "f6": 0,
+    "f7": 0,
+    "f4": 0,
+    "f5": 0,
+    "p50": 0,
+    "p53": 0,
+    "p54": 0,
+    "crossing": 0
+   },
+   "manifold": false,
+   "manifold_multiplier": 0.0,
+   "seconds": 0.276090145111084,
+   "finished": true,
+   "rows_cut_off_optimum": 0,
+   "manifold_at_optimum_minus_rhs": 0.0
+  },
+  "without_crossing": {
+   "converged": true,
+   "capped": false,
+   "inaccurate_solves": 0,
+   "stop": "no violated cut",
+   "bound": 0.2506971401031704,
+   "primal": 0.2506971401500209,
+   "rounds": 10,
+   "rows": {
+    "mincut": 9,
+    "pm": 0,
+    "f6": 0,
+    "f7": 0,
+    "f4": 0,
+    "f5": 0,
+    "p50": 0,
+    "p53": 0,
+    "p54": 0,
+    "crossing": 0
+   },
+   "manifold": true,
+   "manifold_multiplier": 0.005778246709959811,
+   "seconds": 0.534766674041748,
+   "finished": true,
+   "rows_cut_off_optimum": 0,
+   "manifold_at_optimum_minus_rhs": 0.0
+  }
+ },
+ "peak_rss_mb": 1381.203125,
+ "cut_closeable_gap": 0.039096748396694164,
+ "shares": {
+  "mincut_from_base": {
+   "value": 0.8881073940782181,
+   "valid": true
+  },
+  "manifold": {
+   "over_mincut": {
+    "value": 0.11189260592178189,
+    "valid": true
+   },
+   "marginal": {
+    "value": 0.10278643765501551,
+    "valid": true
+   }
+  },
+  "pm": {
+   "over_mincut": {
+    "value": 0.007761702649531275,
+    "valid": true
+   },
+   "marginal": {
+    "value": 0.0,
+    "valid": true
+   }
+  },
+  "f6": {
+   "over_mincut": {
+    "value": 0.00010055172843356644,
+    "valid": true
+   },
+   "marginal": {
+    "value": 0.0,
+    "valid": true
+   }
+  },
+  "f7": {
+   "over_mincut": {
+    "value": 0.004726997022055746,
+    "valid": true
+   },
+   "marginal": {
+    "value": 0.0,
+    "valid": true
+   }
+  },
+  "f4": {
+   "over_mincut": {
+    "value": 0.0001507872039203404,
+    "valid": true
+   },
+   "marginal": {
+    "value": 0.0,
+    "valid": true
+   }
+  },
+  "f5": {
+   "over_mincut": {
+    "value": 0.00010053920173996025,
+    "valid": true
+   },
+   "marginal": {
+    "value": 0.0,
+    "valid": true
+   }
+  },
+  "p50": {
+   "over_mincut": {
+    "value": 0.004491368909555527,
+    "valid": true
+   },
+   "marginal": {
+    "value": 0.0,
+    "valid": true
+   }
+  },
+  "p53": {
+   "over_mincut": {
+    "value": 6.029270296643217e-05,
+    "valid": true
+   },
+   "marginal": {
+    "value": 0.0,
+    "valid": true
+   }
+  },
+  "p54": {
+   "over_mincut": {
+    "value": 0.00020108878414762222,
+    "valid": true
+   },
+   "marginal": {
+    "value": 0.0,
+    "valid": true
+   }
+  },
+  "crossing": {
+   "over_mincut": {
+    "value": 0.0,
+    "valid": true
+   },
+   "marginal": {
+    "value": 0.0,
+    "valid": true
+   }
+  }
+ },
+ "unfinished_arms": [],
+ "arms_above_full": [],
+ "rows_cut_off_optimum_total": 0
+}

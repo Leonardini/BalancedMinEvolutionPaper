@@ -1,0 +1,11 @@
+{
+ "n": 8,
+ "laminarity": "nested-disjoint",
+ "tiebreak": "off",
+ "points": 154560,
+ "distinct_split_systems": 17535,
+ "tree_systems": 10395,
+ "non_tree_systems": 7140,
+ "topologies": 10395,
+ "seconds": 123.25218987464905
+}

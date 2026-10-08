@@ -1,0 +1,304 @@
+{
+ "instance": "/Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/external/catanzaro/upstream/instances/01-Primates12.txt",
+ "n": 12,
+ "optimum": 0.097972333203125,
+ "laminarity": "nested",
+ "arms": {
+  "kraft": {
+   "separator_cuts": [],
+   "rounds": 1,
+   "converged": true,
+   "bound_stalled": false,
+   "stop_rule": {
+    "stall_rounds": 500,
+    "stall_rel": 1e-10
+   },
+   "bound": 0.08145063430175778,
+   "bound_rise_last_window": 0.0,
+   "stop": "no violated cut",
+   "safe_bound": 0.08145063430175781,
+   "safe_minus_lp": 2.7755575615628914e-17,
+   "rows_cut_off_optimum": 0,
+   "safe_bound_detail": {
+    "lp_objective": 0.08145063430175778,
+    "solver": "gurobi",
+    "rows": 12,
+    "cols": 66,
+    "nnz": 132,
+    "duals_clipped": 0,
+    "dual_clip_max": 0.0,
+    "dual_clip_l1": 0.0,
+    "implied_bounds_used": 0,
+    "safe_bound": 0.08145063430175781,
+    "safe_infinite": false,
+    "safe_minus_lp": 3.111776702063645e-17,
+    "seconds": 0.0006709098815917969,
+    "resolved_copy": false,
+    "refined": false,
+    "reported_bound": 0.08145063430175778,
+    "safe_minus_reported": 2.7755575615628914e-17,
+    "optimum_check": {
+     "rows_checked": 12,
+     "rows_cut_off_optimum": 0,
+     "bounds_violated": 0,
+     "max_violation": 0.0,
+     "worst_family": "kraft",
+     "families": {
+      "kraft": {
+       "rows": 12,
+       "violated": 0,
+       "max_violation": 0.0,
+       "worst_row": 0
+      }
+     },
+     "tree_source": "data/ground_truth/Primates12.splits",
+     "tree_objective": 0.097972333203125,
+     "seconds": 0.0003409385681152344
+    },
+    "rows_cut_off_optimum": 0,
+    "safe_le_tree_objective": true
+   },
+   "seconds": 0.0022950172424316406,
+   "gap": 0.16863637275140683,
+   "rows": 12,
+   "vars": 66
+  },
+  "mincut": {
+   "separator_cuts": [],
+   "rounds": 1,
+   "converged": true,
+   "bound_stalled": false,
+   "stop_rule": {
+    "stall_rounds": 500,
+    "stall_rel": 1e-10
+   },
+   "bound": 0.09326073218749999,
+   "bound_rise_last_window": 0.0,
+   "stop": "no violated cut",
+   "safe_bound": 0.09326073218749999,
+   "safe_minus_lp": 0.0,
+   "rows_cut_off_optimum": 0,
+   "safe_bound_detail": {
+    "lp_objective": 0.09326073218749999,
+    "solver": "gurobi",
+    "rows": 2047,
+    "cols": 66,
+    "nnz": 67584,
+    "duals_clipped": 0,
+    "dual_clip_max": 0.0,
+    "dual_clip_l1": 0.0,
+    "implied_bounds_used": 0,
+    "safe_bound": 0.09326073218749999,
+    "safe_infinite": false,
+    "safe_minus_lp": 1.0291450309139749e-17,
+    "seconds": 0.009512901306152344,
+    "resolved_copy": false,
+    "refined": false,
+    "reported_bound": 0.09326073218749999,
+    "safe_minus_reported": 0.0,
+    "optimum_check": {
+     "rows_checked": 2047,
+     "rows_cut_off_optimum": 0,
+     "bounds_violated": 0,
+     "max_violation": 0.0,
+     "worst_family": "kraft",
+     "families": {
+      "kraft": {
+       "rows": 12,
+       "violated": 0,
+       "max_violation": 0.0,
+       "worst_row": 0
+      },
+      "mincut": {
+       "rows": 2035,
+       "violated": 0,
+       "max_violation": 0.0,
+       "worst_row": 12
+      }
+     },
+     "tree_source": "data/ground_truth/Primates12.splits",
+     "tree_objective": 0.097972333203125,
+     "seconds": 0.0073299407958984375
+    },
+    "rows_cut_off_optimum": 0,
+    "safe_le_tree_objective": true
+   },
+   "seconds": 0.045298099517822266,
+   "gap": 0.04809113819772464,
+   "rows": 2047,
+   "vars": 66
+  },
+  "manifold": {
+   "manifold": "exact",
+   "solver": "MOSEK",
+   "separator_cuts": [],
+   "rounds": 1,
+   "inaccurate_solves": 0,
+   "bound": 0.09644804570437585,
+   "primal": 0.09644804576339175,
+   "manifold_multiplier": 0.006143903153535723,
+   "converged": true,
+   "stop": "no violated cut",
+   "rows": 2047,
+   "seconds": 0.5060911178588867,
+   "rows_cut_off_optimum": 0,
+   "optimum_check": {
+    "rows_checked": 2047,
+    "rows_cut_off_optimum": 0,
+    "bounds_violated": 0,
+    "max_violation": 0.0,
+    "worst_family": "kraft",
+    "families": {
+     "kraft": {
+      "rows": 12,
+      "violated": 0,
+      "max_violation": 0.0,
+      "worst_row": 0
+     },
+     "mincut": {
+      "rows": 2035,
+      "violated": 0,
+      "max_violation": 0.0,
+      "worst_row": 12
+     }
+    },
+    "objective": 0.097972333203125
+   },
+   "gap": 0.015558346411826931,
+   "vars": 66
+  },
+  "split_coupling": {
+   "manifold": "exact",
+   "solver": "MOSEK",
+   "separator_cuts": [],
+   "rounds": 1,
+   "inaccurate_solves": 0,
+   "bound": 0.0964480432550162,
+   "primal": 0.09644804589416038,
+   "manifold_multiplier": 0.006143885954346749,
+   "converged": true,
+   "stop": "no violated cut",
+   "rows": 6848,
+   "seconds": 0.6871488094329834,
+   "rows_cut_off_optimum": 0,
+   "optimum_check": {
+    "rows_checked": 6848,
+    "rows_cut_off_optimum": 0,
+    "bounds_violated": 0,
+    "max_violation": 0.0,
+    "worst_family": "kraft",
+    "families": {
+     "kraft": {
+      "rows": 12,
+      "violated": 0,
+      "max_violation": 0.0,
+      "worst_row": 0
+     },
+     "mincut": {
+      "rows": 2035,
+      "violated": 0,
+      "max_violation": 0.0,
+      "worst_row": 12
+     },
+     "xor": {
+      "rows": 2376,
+      "violated": 0,
+      "max_violation": 0.0,
+      "worst_row": 2047
+     },
+     "mccormick": {
+      "rows": 2376,
+      "violated": 0,
+      "max_violation": 0.0,
+      "worst_row": 2051
+     },
+     "coupling": {
+      "rows": 9,
+      "violated": 0,
+      "max_violation": 0.0,
+      "worst_row": 6799
+     },
+     "symbreak": {
+      "rows": 40,
+      "violated": 0,
+      "max_violation": 0.0,
+      "worst_row": 6826
+     }
+    },
+    "objective": 0.097972333203125
+   },
+   "gap": 0.015558371412350707,
+   "vars": 1362
+  },
+  "laminarity": {
+   "manifold": "exact",
+   "solver": "MOSEK",
+   "separator_cuts": [],
+   "rounds": 1,
+   "inaccurate_solves": 0,
+   "bound": 0.09644803851344043,
+   "primal": 0.09644804618211687,
+   "manifold_multiplier": 0.006143771333358103,
+   "converged": true,
+   "stop": "no violated cut",
+   "rows": 7748,
+   "seconds": 0.7522170543670654,
+   "rows_cut_off_optimum": 0,
+   "optimum_check": {
+    "rows_checked": 7748,
+    "rows_cut_off_optimum": 0,
+    "bounds_violated": 0,
+    "max_violation": 0.0,
+    "worst_family": "kraft",
+    "families": {
+     "kraft": {
+      "rows": 12,
+      "violated": 0,
+      "max_violation": 0.0,
+      "worst_row": 0
+     },
+     "mincut": {
+      "rows": 2035,
+      "violated": 0,
+      "max_violation": 0.0,
+      "worst_row": 12
+     },
+     "xor": {
+      "rows": 2376,
+      "violated": 0,
+      "max_violation": 0.0,
+      "worst_row": 2047
+     },
+     "mccormick": {
+      "rows": 2376,
+      "violated": 0,
+      "max_violation": 0.0,
+      "worst_row": 2051
+     },
+     "coupling": {
+      "rows": 9,
+      "violated": 0,
+      "max_violation": 0.0,
+      "worst_row": 6799
+     },
+     "symbreak": {
+      "rows": 40,
+      "violated": 0,
+      "max_violation": 0.0,
+      "worst_row": 6826
+     },
+     "nested": {
+      "rows": 900,
+      "violated": 0,
+      "max_violation": 0.0,
+      "worst_row": 6848
+     }
+    },
+    "objective": 0.097972333203125
+   },
+   "gap": 0.015558419809440128,
+   "vars": 1398
+  }
+ },
+ "peak_rss_mb": 244.828125
+}

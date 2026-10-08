@@ -1,0 +1,9 @@
+{
+ "n": 7,
+ "vertices": 56,
+ "edges": 1050,
+ "maximal_cliques": 11741,
+ "min_edge_clique_cover": 49,
+ "proposition4_cliques": 714,
+ "seconds": 262.13212418556213
+}

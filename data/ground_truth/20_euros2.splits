@@ -1,0 +1,23 @@
+n = 20   internal splits = 17 (expect 17)
+round-trip ||2^(-tau_rebuilt) - 2^(-tau)||_inf = 0.00e+00
+Newick:
+(((((((AkaBr_L12568,BatBr_M88341),((BraBr_DQ310545,((BraBr_AY167979,BraBr_X73284),BraBr_AY174646)),BraBr_AY167976)),(((BraBr_AP000423,BraBr_DQ310544),BraBr_DQ310539),((BraBr_AY174636,CapBr_AY167985),TroBr_AF254051))),(BraBr_DQ310542,BraBr_AY167980)),BraBr_AY483262),(BraBr_DQ310541,BraBr_AY167983)),EmbBr_AJ402949,CapBr_AY483279);
+
+splits (smaller side, 1-indexed leaves):
+  {1, 5}
+  {2, 15}
+  {3, 10}
+  {6, 11}
+  {7, 13}
+  {9, 12}
+  {14, 18}
+  {3, 10, 16}
+  {7, 13, 20}
+  {9, 12, 17}
+  {4, 9, 12, 17}
+  {6, 11, 14, 18}
+  {4, 9, 12, 17, 19}
+  {6, 8, 11, 14, 18}
+  {3, 7, 10, 13, 16, 20}
+  {1, 4, 5, 9, 12, 17, 19}
+  {2, 6, 8, 11, 14, 15, 18}

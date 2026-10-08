@@ -1,0 +1,2 @@
+Instance | N | Best Sol | Time (s) | Node Best Sol | First Root DB | Last Root BD | Best Dual Bound | Final Gap (%) | Nodes | INF | CO@Root | CO@Search | GKI@Root | GKI@Search | EHC@Root | EHC@Search | 2K@Root | 2K@Search | 4PT@Root | 4PT@Search | Overall Cuts
+20_B-HA-573-585-BMGE.txt | 20 | 530072.564879 | 22.329647375 | 0 | 517865.092587 | 530018.734525 | 530072.564879 | 6.58864443513e-14 | 1 | 0 | 0 | 0 | 14 | 0 | 44 | 0 | 111 | 0 | 5814 | 0 | 5983

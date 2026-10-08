@@ -1,0 +1,2 @@
+Instance | N | Best Sol | Time (s) | Node Best Sol | First Root DB | Last Root BD | Best Dual Bound | Final Gap (%) | Nodes | INF | CO@Root | CO@Search | GKI@Root | GKI@Search | EHC@Root | EHC@Search | 2K@Root | 2K@Search | 4PT@Root | 4PT@Search | Overall Cuts
+24_proteic_M2577_40x12260_2005.txt | 24 | 86565511.8352 | 619.535833125 | 0 | 80261538.9969 | 86327488.8529 | 86565511.8352 | 5.16412167315e-14 | 1286 | 0 | 0 | 10 | 8 | 14 | 74 | 0 | 36 | 0 | 10626 | 0 | 10768

@@ -1,0 +1,170 @@
+{
+ "instance": "/Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/external/catanzaro/upstream/instances/01-Primates12.txt",
+ "n": 12,
+ "optimum": 0.097972333203125,
+ "model": "membership",
+ "tol": 1e-06,
+ "arms": {
+  "membership": {
+   "bound_before": 0.09644804424875328,
+   "loop_before": {
+    "manifold": "exact",
+    "solver": "MOSEK",
+    "separator_cuts": [],
+    "rounds": 1,
+    "inaccurate_solves": 0,
+    "bound": 0.09644804424875328,
+    "primal": 0.09644804580414225,
+    "manifold_multiplier": 0.006143884256102678,
+    "converged": true,
+    "stop": "no violated cut",
+    "rows": 9944,
+    "seconds": 0.8509008884429932,
+    "rows_cut_off_optimum": 0,
+    "optimum_check": {
+     "rows_checked": 9944,
+     "rows_cut_off_optimum": 0,
+     "bounds_violated": 0,
+     "max_violation": 0.0,
+     "worst_family": "kraft",
+     "families": {
+      "kraft": {
+       "rows": 12,
+       "violated": 0,
+       "max_violation": 0.0,
+       "worst_row": 0
+      },
+      "mincut": {
+       "rows": 2035,
+       "violated": 0,
+       "max_violation": 0.0,
+       "worst_row": 12
+      },
+      "xor": {
+       "rows": 2376,
+       "violated": 0,
+       "max_violation": 0.0,
+       "worst_row": 2047
+      },
+      "mccormick": {
+       "rows": 2376,
+       "violated": 0,
+       "max_violation": 0.0,
+       "worst_row": 2051
+      },
+      "coupling": {
+       "rows": 9,
+       "violated": 0,
+       "max_violation": 0.0,
+       "worst_row": 6799
+      },
+      "symbreak": {
+       "rows": 40,
+       "violated": 0,
+       "max_violation": 0.0,
+       "worst_row": 6826
+      },
+      "quadrant": {
+       "rows": 3096,
+       "violated": 0,
+       "max_violation": 0.0,
+       "worst_row": 6849
+      }
+     },
+     "objective": 0.097972333203125
+    }
+   },
+   "violations_before": {
+    "violated": 7,
+    "max_violation": 0.10535178702218645,
+    "cycle_lengths": {
+     "3": 7
+    }
+   },
+   "bound_after": 0.09644804270781812,
+   "loop_after": {
+    "manifold": "exact",
+    "solver": "MOSEK",
+    "separator_cuts": [
+     7
+    ],
+    "rounds": 2,
+    "inaccurate_solves": 0,
+    "bound": 0.09644804270781812,
+    "primal": 0.09644804586642541,
+    "manifold_multiplier": 0.0061439114662015445,
+    "converged": true,
+    "stop": "no violated cut",
+    "rows": 9951,
+    "seconds": 1.117607831954956,
+    "rows_cut_off_optimum": 0,
+    "optimum_check": {
+     "rows_checked": 9951,
+     "rows_cut_off_optimum": 0,
+     "bounds_violated": 0,
+     "max_violation": 0.0,
+     "worst_family": "kraft",
+     "families": {
+      "kraft": {
+       "rows": 12,
+       "violated": 0,
+       "max_violation": 0.0,
+       "worst_row": 0
+      },
+      "mincut": {
+       "rows": 2035,
+       "violated": 0,
+       "max_violation": 0.0,
+       "worst_row": 12
+      },
+      "xor": {
+       "rows": 2376,
+       "violated": 0,
+       "max_violation": 0.0,
+       "worst_row": 2047
+      },
+      "mccormick": {
+       "rows": 2376,
+       "violated": 0,
+       "max_violation": 0.0,
+       "worst_row": 2051
+      },
+      "coupling": {
+       "rows": 9,
+       "violated": 0,
+       "max_violation": 0.0,
+       "worst_row": 6799
+      },
+      "symbreak": {
+       "rows": 40,
+       "violated": 0,
+       "max_violation": 0.0,
+       "worst_row": 6826
+      },
+      "quadrant": {
+       "rows": 3096,
+       "violated": 0,
+       "max_violation": 0.0,
+       "worst_row": 6849
+      },
+      "oddcycle": {
+       "rows": 7,
+       "violated": 0,
+       "max_violation": 0.0,
+       "worst_row": 9944
+      }
+     },
+     "objective": 0.097972333203125
+    }
+   },
+   "cuts_by_cycle_length": {
+    "3": 7
+   },
+   "bound_before_rows_cut_off_optimum": 0,
+   "bound_after_rows_cut_off_optimum": 0,
+   "gap_before": 0.01555836126931291,
+   "gap_after": 0.01555837699758136
+  }
+ },
+ "peak_rss_mb": 236.8125
+}

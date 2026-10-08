@@ -1,0 +1,2 @@
+Instance | N | Best Sol | Time (s) | Node Best Sol | First Root DB | Last Root BD | Best Dual Bound | Final Gap (%) | Nodes | INF | CO@Root | CO@Search | GKI@Root | GKI@Search | EHC@Root | EHC@Search | 2K@Root | 2K@Search | 4PT@Root | 4PT@Search | Overall Cuts
+02-M17.txt | 17 | 20788.1120461 | 14.992122959 | 0 | 20546.9489905 | 20765.4570716 | 20788.1120461 | 3.50005695469e-14 | 71 | 0 | 0 | 57 | 5 | 0 | 0 | 0 | 12 | 0 | 0 | 0 | 74

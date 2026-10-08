@@ -1,0 +1,4 @@
+2026-10-08 01:20:25 balanced-exact        1s nodes 0 open 1 lb 0.2506971401 inc 0.2527582955 gap 0.8155% root
+MOSEK: solution status solsta.unknown at tolerance 1e-10; retrying looser
+MOSEK: solution status solsta.unknown at tolerance 1e-09; retrying looser
+2026-10-08 01:20:34 balanced-exact       10s nodes 317 open 0 lb 0.2527582955 inc 0.2527582955 gap 0.0000% certified

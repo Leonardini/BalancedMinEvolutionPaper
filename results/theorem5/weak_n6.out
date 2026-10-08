@@ -1,0 +1,8 @@
+n=6: survivors=285 (FULL)  non-tree=180  [4160 nodes, 0s, 3 row-types]  ->  COUNTEREXAMPLE
+  first non-tree:
+   0 2 3 4 5 5 
+   2 0 4 3 5 5 
+   3 4 0 3 3 4 
+   4 3 3 0 4 3 
+   5 5 3 4 0 2 
+   5 5 4 3 2 0 

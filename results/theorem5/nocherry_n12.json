@@ -1,0 +1,21 @@
+{
+ "n": 12,
+ "survivors": 0,
+ "ordered": true,
+ "violating": 0,
+ "nodes": 2443,
+ "seconds": 0,
+ "row_types": 39,
+ "name": "nocherry_n12",
+ "options": [
+  "--nocherry"
+ ],
+ "checks": [
+  {
+   "label": "survivors without a cherry",
+   "computed": 0,
+   "expected": 0,
+   "ok": true
+  }
+ ]
+}

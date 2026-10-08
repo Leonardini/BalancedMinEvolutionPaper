@@ -1,0 +1,2 @@
+Instance | N | Best Sol | Time (s) | Node Best Sol | First Root DB | Last Root BD | Best Dual Bound | Final Gap (%) | Nodes | INF | CO@Root | CO@Search | GKI@Root | GKI@Search | EHC@Root | EHC@Search | 2K@Root | 2K@Search | 4PT@Root | 4PT@Search | Overall Cuts
+05-M43.txt | 43 | 3.09717637257e+12 | 3600.79495138 | 0 | 2.96201609817e+12 | 3.07033675104e+12 | 3.07033675105e+12 | 0.866583568082 | 1 | 0 | 0 | 0 | 11 | 0 | 590 | 0 | 24 | 0 | 68880 | 0 | 69505

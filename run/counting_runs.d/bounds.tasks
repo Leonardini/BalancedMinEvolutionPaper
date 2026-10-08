@@ -1,0 +1,71 @@
+# Bound experiments of Sections 8.2-8.5 and 8.7 (experiments/lp/, experiments/base_rows/,
+# and the distance-indexed model's root). One thread each; every line writes one record under
+# results/ and logs its progress to stderr.
+
+# Section 8.2, Table D3. The argument is the n = 10 optimum; the script recomputes it by
+# enumerating every tree and stops if they differ.
+$PY experiments/lp/named_facets.py $RESULTS/lp/named_facets.json 7.019531
+
+# Section 8.3, Table D4: which cut families carry the root bound, with the manifold imposed
+# exactly; 1800 s cap per root cut loop.
+$PY experiments/lp/cut_family_shares.py data/synthetic/test_n10.txt $RESULTS/lp/cut_family_shares/test_n10.json 1800
+$PY experiments/lp/cut_family_shares.py external/catanzaro/upstream/instances/01-Primates12.txt $RESULTS/lp/cut_family_shares/Primates12.json 1800
+$PY experiments/lp/cut_family_shares.py external/catanzaro/upstream/instances/02-M17.txt $RESULTS/lp/cut_family_shares/M17.json 1800
+$PY experiments/lp/cut_family_shares.py external/catanzaro/upstream/instances/03-M18.txt $RESULTS/lp/cut_family_shares/M18.json 1800
+$PY experiments/lp/cut_family_shares.py external/catanzaro/upstream/instances/supplement/20_B-HA-573-585-BMGE.txt $RESULTS/lp/cut_family_shares/20_B-HA-573-585.json 1800
+
+# Section 8.4, Table D5: the membership model, layer by layer, with each laminarity encoding.
+$PY experiments/lp/membership_layers.py external/catanzaro/upstream/instances/01-Primates12.txt data/ground_truth/Primates12.splits $RESULTS/lp/membership_layers/quadrant.json quadrant
+$PY experiments/lp/membership_layers.py external/catanzaro/upstream/instances/01-Primates12.txt data/ground_truth/Primates12.splits $RESULTS/lp/membership_layers/nested.json nested
+
+# Section 8.4, Table D5: the lifted cut-value-ladder model, every combination of the 3/4
+# rung, the clique cover and the manifold.
+$PY experiments/lp/lifted_ladder.py external/catanzaro/upstream/instances/01-Primates12.txt data/ground_truth/Primates12.splits $RESULTS/lp/lifted_ladder/ladder.json
+$PY experiments/lp/lifted_ladder.py external/catanzaro/upstream/instances/01-Primates12.txt data/ground_truth/Primates12.splits $RESULTS/lp/lifted_ladder/ladder_manifold.json --manifold
+$PY experiments/lp/lifted_ladder.py external/catanzaro/upstream/instances/01-Primates12.txt data/ground_truth/Primates12.splits $RESULTS/lp/lifted_ladder/ladder_prop4.json --cliques prop4
+$PY experiments/lp/lifted_ladder.py external/catanzaro/upstream/instances/01-Primates12.txt data/ground_truth/Primates12.splits $RESULTS/lp/lifted_ladder/ladder_prop4_manifold.json --cliques prop4 --manifold
+$PY experiments/lp/lifted_ladder.py external/catanzaro/upstream/instances/01-Primates12.txt data/ground_truth/Primates12.splits $RESULTS/lp/lifted_ladder/ladder_extended.json --cliques extended
+$PY experiments/lp/lifted_ladder.py external/catanzaro/upstream/instances/01-Primates12.txt data/ground_truth/Primates12.splits $RESULTS/lp/lifted_ladder/ladder_extended_manifold.json --cliques extended --manifold
+$PY experiments/lp/lifted_ladder.py external/catanzaro/upstream/instances/01-Primates12.txt data/ground_truth/Primates12.splits $RESULTS/lp/lifted_ladder/rung.json --rung
+$PY experiments/lp/lifted_ladder.py external/catanzaro/upstream/instances/01-Primates12.txt data/ground_truth/Primates12.splits $RESULTS/lp/lifted_ladder/rung_manifold.json --rung --manifold
+$PY experiments/lp/lifted_ladder.py external/catanzaro/upstream/instances/01-Primates12.txt data/ground_truth/Primates12.splits $RESULTS/lp/lifted_ladder/rung_prop4.json --rung --cliques prop4
+$PY experiments/lp/lifted_ladder.py external/catanzaro/upstream/instances/01-Primates12.txt data/ground_truth/Primates12.splits $RESULTS/lp/lifted_ladder/rung_prop4_manifold.json --rung --cliques prop4 --manifold
+$PY experiments/lp/lifted_ladder.py external/catanzaro/upstream/instances/01-Primates12.txt data/ground_truth/Primates12.splits $RESULTS/lp/lifted_ladder/rung_extended.json --rung --cliques extended
+$PY experiments/lp/lifted_ladder.py external/catanzaro/upstream/instances/01-Primates12.txt data/ground_truth/Primates12.splits $RESULTS/lp/lifted_ladder/rung_extended_manifold.json --rung --cliques extended --manifold
+
+# Sections 5.3 and 8.4, Table D6: per-split cut-polytope triangles against the strong triangle.
+$PY experiments/lp/per_split_triangles.py external/catanzaro/upstream/instances/01-Primates12.txt data/ground_truth/Primates12.splits $RESULTS/lp/per_split_triangles/Primates12.json
+
+# Section 8.4: odd-cycle inequalities, exact separation, tolerance 1e-6.
+$PY experiments/lp/odd_cycles.py external/catanzaro/upstream/instances/01-Primates12.txt $RESULTS/lp/odd_cycles/Primates12_membership.json membership data/ground_truth/Primates12.splits
+$PY experiments/lp/odd_cycles.py external/catanzaro/upstream/instances/01-Primates12.txt $RESULTS/lp/odd_cycles/Primates12_xlevel.json xlevel data/ground_truth/Primates12.splits
+$PY experiments/lp/odd_cycles.py data/synthetic/test_n8.txt $RESULTS/lp/odd_cycles/test_n8_membership.json membership
+$PY experiments/lp/odd_cycles.py data/synthetic/test_n8.txt $RESULTS/lp/odd_cycles/test_n8_xlevel.json xlevel
+
+# Section 8.5, Table D7: local fixes of the quartets violated at the compact model's root.
+$PY experiments/lp/quartet_fixes.py external/catanzaro/upstream/instances/02-M17.txt data/ground_truth/M17.splits $RESULTS/lp/quartet_fixes/M17.json
+$PY experiments/lp/quartet_fixes.py external/catanzaro/upstream/instances/03-M18.txt data/ground_truth/M18.splits $RESULTS/lp/quartet_fixes/M18.json
+$PY experiments/lp/quartet_fixes.py external/catanzaro/upstream/instances/supplement/20_euros2.txt data/ground_truth/20_euros2.splits $RESULTS/lp/quartet_fixes/20_euros2.json
+$PY experiments/lp/quartet_fixes.py external/catanzaro/upstream/instances/supplement/20_rosids.txt data/ground_truth/20_rosids.splits $RESULTS/lp/quartet_fixes/20_rosids.json
+
+# Section 8.7, Table D9 columns (a) and (b): the root LP of the distance-indexed model with
+# no separated cuts.
+experiments/distance_cut_families.sh counts
+
+# Section 8.7, Tables D10 and D11: rows of the distance-indexed base model added to the
+# compact root relaxation, with the manifold imposed exactly.
+$PY experiments/base_rows/base_rows_in_compact.py external/catanzaro/upstream/instances/01-Primates12.txt data/ground_truth/Primates12.splits $RESULTS/base_rows/Primates12.json
+$PY experiments/base_rows/base_rows_in_compact.py external/catanzaro/upstream/instances/02-M17.txt data/ground_truth/M17.splits $RESULTS/base_rows/M17.json
+$PY experiments/base_rows/base_rows_in_compact.py external/catanzaro/upstream/instances/03-M18.txt data/ground_truth/M18.splits $RESULTS/base_rows/M18.json
+$PY experiments/base_rows/base_rows_in_compact.py external/catanzaro/upstream/instances/supplement/20_euros2.txt data/ground_truth/20_euros2.splits $RESULTS/base_rows/20_euros2.json
+$PY experiments/base_rows/base_rows_in_compact.py external/catanzaro/upstream/instances/supplement/20_rosids.txt data/ground_truth/20_rosids.splits $RESULTS/base_rows/20_rosids.json
+
+# Section 8.7, Table D11: the distance-indexed model's root with Gurobi's cuts on and off.
+experiments/distance_root_cuts.sh
+
+# Section 8.7, Table D12: the distance-indexed model's static root in Gurobi and CPLEX.
+$PY experiments/static_root_two_solvers.py M17 external/catanzaro/upstream/instances/02-M17.txt $RESULTS/static_root_two_solvers/M17.json
+$PY experiments/static_root_two_solvers.py M18 external/catanzaro/upstream/instances/03-M18.txt $RESULTS/static_root_two_solvers/M18.json
+$PY experiments/static_root_two_solvers.py 20_euros2 external/catanzaro/upstream/instances/supplement/20_euros2.txt $RESULTS/static_root_two_solvers/20_euros2.json --labeled
+$PY experiments/static_root_two_solvers.py 20_rosids external/catanzaro/upstream/instances/supplement/20_rosids.txt $RESULTS/static_root_two_solvers/20_rosids.json --labeled
+$PY experiments/static_root_two_solvers.py 28_nucleic external/catanzaro/upstream/instances/supplement/28_nucleic_M2573_346x897_2006.txt $RESULTS/static_root_two_solvers/28_nucleic.json --labeled

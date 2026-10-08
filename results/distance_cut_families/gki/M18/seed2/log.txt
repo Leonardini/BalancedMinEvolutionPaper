@@ -1,0 +1,159 @@
+Input permutation applied (0.743781) 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17
+--- CUTTING PLANES ----
+GKI      0.0500 | 0.0100
+-----------------------
+Set parameter Username
+Set parameter LicenseID to value 2789566
+Set parameter Threads to value 10
+Set parameter Seed to value 2
+Read parameters from file gurobi.env
+Academic license - for non-commercial use only - expires 2027-03-10
+Set parameter MIPGap to value 1e-08
+Set parameter TimeLimit to value 3600
+Set parameter LazyConstraints to value 1
+Set parameter MIPFocus to value 3
+Set parameter Heuristics to value 0
+Set parameter PreCrush to value 1
+Gurobi Optimizer version 12.0.1 build v12.0.1rc0 (mac64[arm] - Darwin 27.0.0 26A428)
+
+CPU model: Apple M4 Pro
+Thread count: 14 physical cores, 14 logical processors, using up to 10 threads
+
+Non-default parameters:
+TimeLimit  3600
+MIPGap  1e-08
+Heuristics  0
+MIPFocus  3
+PreCrush  1
+Seed  2
+Threads  10
+LazyConstraints  1
+
+Optimize a model with 2620 rows, 4896 columns and 129744 nonzeros
+Model fingerprint: 0xf220bce0
+Variable types: 0 continuous, 4896 integer (2448 binary)
+Coefficient statistics:
+  Matrix range     [8e-06, 2e+01]
+  Objective range  [9e-03, 1e+04]
+  Bounds range     [1e+00, 2e+01]
+  RHS range        [5e-01, 3e+01]
+Presolve time: 0.12s
+Presolved: 2620 rows, 4896 columns, 122383 nonzeros
+Variable types: 0 continuous, 4896 integer (2448 binary)
+Root relaxation presolved: 2620 rows, 4896 columns, 122383 nonzeros
+
+
+Root relaxation: objective 6.429062e+04, 3057 iterations, 0.08 seconds (0.30 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 64290.6199    0 1922          - 64290.6199      -     -    0s
+fastme --input_data=/var/folders/dt/8b65fqjn2l756qpj_c7_jmfr0000gq/T//fi16807.inst --output_tree=/var/folders/dt/8b65fqjn2l756qpj_c7_jmfr0000gq/T//fi16807_sol.nw --method=U --user_tree=/var/folders/dt/8b65fqjn2l756qpj_c7_jmfr0000gq/T//fi16807.nw --nni=balME --spr
+
+ . This analysis will run on 1 threads.
+
+#  Analysing dataset 1
+
+ . Warning: Triangular inequality violation.
+
+ . You may ask for triangular inequality correction using the '-q' option.
+
+ . Reading input tree...
+
+ . Tree length is 33.000000.
+
+ . Performing NNI...
+
+ . Performing SPR...
+
+ . Time used 0h00m00s
+H    0     0                    66053.990287 64776.9131  1.93%     -    1s
+     0     0 64776.9131    0 2461 66053.9903 64776.9131  1.93%     -    1s
+fastme --input_data=/var/folders/dt/8b65fqjn2l756qpj_c7_jmfr0000gq/T//fi282475249.inst --output_tree=/var/folders/dt/8b65fqjn2l756qpj_c7_jmfr0000gq/T//fi282475249_sol.nw --method=U --user_tree=/var/folders/dt/8b65fqjn2l756qpj_c7_jmfr0000gq/T//fi282475249.nw --nni=balME --spr
+
+ . This analysis will run on 1 threads.
+
+#  Analysing dataset 1
+
+ . Warning: Triangular inequality violation.
+
+ . You may ask for triangular inequality correction using the '-q' option.
+
+ . Reading input tree...
+
+ . Tree length is 33.000000.
+
+ . Performing NNI...
+
+ . Performing SPR...
+
+ . Time used 0h00m00s
+     0     0 64821.2364    0 2496 66053.9903 64821.2364  1.87%     -    1s
+     0     0 64832.4001    0 2550 66053.9903 64832.4001  1.85%     -    1s
+     0     0 64834.4304    0 2550 66053.9903 64834.4304  1.85%     -    1s
+     0     0 64834.7977    0 2570 66053.9903 64834.7977  1.85%     -    1s
+     0     0 64834.8536    0 2541 66053.9903 64834.8536  1.85%     -    1s
+     0     0 64968.6901    0 2553 66053.9903 64968.6901  1.64%     -    2s
+     0     0 65057.6208    0 2606 66053.9903 65057.6208  1.51%     -    2s
+     0     0 65069.2723    0 2624 66053.9903 65069.2723  1.49%     -    2s
+     0     0 65072.2955    0 2608 66053.9903 65072.2955  1.49%     -    2s
+     0     0 65073.1946    0 2637 66053.9903 65073.1946  1.48%     -    2s
+     0     0 65073.6129    0 2641 66053.9903 65073.6129  1.48%     -    2s
+     0     0 65073.7264    0 2652 66053.9903 65073.7264  1.48%     -    2s
+     0     0 65223.8183    0 2619 66053.9903 65223.8183  1.26%     -    4s
+     0     0 65246.6113    0 2556 66053.9903 65246.6113  1.22%     -    4s
+     0     0 65259.3832    0 2718 66053.9903 65259.3832  1.20%     -    4s
+     0     0 65263.0503    0 2701 66053.9903 65263.0503  1.20%     -    4s
+     0     0 65263.5749    0 2514 66053.9903 65263.5749  1.20%     -    4s
+     0     0 65264.0178    0 2425 66053.9903 65264.0178  1.20%     -    4s
+     0     0 65264.0739    0 2675 66053.9903 65264.0739  1.20%     -    4s
+     0     0 65353.4082    0 2654 66053.9903 65353.4082  1.06%     -    5s
+     0     0 65365.7901    0 2735 66053.9903 65365.7901  1.04%     -    5s
+     0     0 65368.1523    0 2736 66053.9903 65368.1523  1.04%     -    5s
+     0     0 65368.6727    0 2743 66053.9903 65368.6727  1.04%     -    6s
+     0     0 65368.9283    0 2762 66053.9903 65368.9283  1.04%     -    6s
+     0     0 65431.7443    0 2631 66053.9903 65431.7443  0.94%     -    7s
+     0     0 65457.8178    0 2682 66053.9903 65457.8178  0.90%     -    7s
+     0     0 65466.0053    0 2677 66053.9903 65466.0053  0.89%     -    7s
+     0     0 65467.1216    0 2696 66053.9903 65467.1216  0.89%     -    7s
+     0     0 65468.7045    0 2700 66053.9903 65468.7045  0.89%     -    7s
+     0     0 65469.2256    0 2717 66053.9903 65469.2256  0.89%     -    7s
+     0     0 65469.3982    0 2740 66053.9903 65469.3982  0.89%     -    7s
+     0     0 65487.2099    0 2665 66053.9903 65487.2099  0.86%     -    9s
+     0     0 65492.9966    0 2676 66053.9903 65492.9966  0.85%     -    9s
+     0     0 65494.7845    0 2725 66053.9903 65494.7845  0.85%     -    9s
+     0     0 65495.7638    0 2742 66053.9903 65495.7638  0.85%     -    9s
+     0     0 65496.3401    0 2728 66053.9903 65496.3401  0.84%     -    9s
+     0     0 65496.5489    0 2735 66053.9903 65496.5489  0.84%     -    9s
+     0     0 65501.0320    0 2761 66053.9903 65501.0320  0.84%     -   11s
+     0     0 65502.7223    0 2777 66053.9903 65502.7223  0.83%     -   11s
+     0     0 65503.1693    0 2757 66053.9903 65503.1693  0.83%     -   11s
+     0     0 65503.3025    0 2762 66053.9903 65503.3025  0.83%     -   11s
+     0     0 65512.7282    0 2696 66053.9903 65512.7282  0.82%     -   12s
+     0     0 65514.7551    0 2746 66053.9903 65514.7551  0.82%     -   12s
+     0     0 65515.0929    0 2768 66053.9903 65515.0929  0.82%     -   13s
+     0     0 65516.1153    0 2778 66053.9903 65516.1153  0.81%     -   14s
+     0     0 65516.5177    0 2794 66053.9903 65516.5177  0.81%     -   14s
+     0     0 65516.6407    0 2799 66053.9903 65516.6407  0.81%     -   15s
+     0     0 65516.6723    0 2799 66053.9903 65516.6723  0.81%     -   15s
+     0     0 65516.6723    0 1256 66053.9903 65516.6723  0.81%     -   16s
+     0     0 65516.6723    0 1778 66053.9903 65516.6723  0.81%     -   17s
+     0     0 65516.6723    0 1759 66053.9903 65516.6723  0.81%     -   17s
+     0     0 65516.6723    0 1945 66053.9903 65516.6723  0.81%     -   17s
+     0     0 65516.6723    0 1972 66053.9903 65516.6723  0.81%     -   17s
+     0     0 65516.6723    0 1998 66053.9903 65516.6723  0.81%     -   17s
+     0     0 65516.6723    0 1990 66053.9903 65516.6723  0.81%     -   17s
+     0     0 65516.7918    0 2016 66053.9903 65516.7918  0.81%     -   17s
+     0     0 65525.8519    0 2005 66053.9903 65525.8519  0.80%     -   18s
+     0     0 65527.0953    0 2037 66053.9903 65527.0953  0.80%     -   18s
+     0     0 65527.6355    0 2004 66053.9903 65527.6355  0.80%     -   18s
+     0     0 65527.7436    0 1982 66053.9903 65527.7436  0.80%     -   18s
+     0     0 65528.0155    0 1983 66053.9903 65528.0155  0.80%     -   19s
+     0     0 65528.3239    0 2032 66053.9903 65528.3239  0.80%     -   19s
+     0     0 65528.4492    0 2032 66053.9903 65528.4492  0.80%     -   19s
+     0     0 65528.4611    0 2032 66053.9903 65528.4611  0.80%     -   19s
+     0     2 65528.4611    0 2032 66053.9903 65528.4611  0.80%     -   19s
+     1     5 65638.2365    1 1853 66053.9903 65528.4670  0.80%  1040   20s
+   109    81 65788.8834   11 1985 66053.9903 65780.4852  0.41%  1136   25s
+SOL REJECTED

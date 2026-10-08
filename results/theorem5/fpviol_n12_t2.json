@@ -1,0 +1,61 @@
+{
+ "n": 12,
+ "survivors": 84,
+ "ordered": false,
+ "violating": 84,
+ "nodes": 16105308831,
+ "seconds": 920,
+ "row_types": 89,
+ "name": "fpviol_n12_t2",
+ "options": [
+  "--fpviol",
+  "--t01",
+  "2"
+ ],
+ "classes": 1,
+ "class_is_lift_of_r": true,
+ "checks": [
+  {
+   "label": "dumped matrices = violating survivors",
+   "computed": 84,
+   "expected": 84,
+   "ok": true
+  },
+  {
+   "label": "dumped matrices pairwise distinct",
+   "computed": 84,
+   "expected": 84,
+   "ok": true
+  },
+  {
+   "label": "witnesses",
+   "computed": 84,
+   "expected": 84,
+   "ok": true
+  },
+  {
+   "label": "every survivor violates (10)",
+   "computed": 84,
+   "expected": 84,
+   "ok": true
+  },
+  {
+   "label": "relabelling classes",
+   "computed": 1,
+   "expected": 1,
+   "ok": true
+  },
+  {
+   "label": "the class is the cherry lift of r",
+   "computed": true,
+   "expected": true,
+   "ok": true
+  },
+  {
+   "label": "row types",
+   "computed": 89,
+   "expected": 89,
+   "ok": true
+  }
+ ]
+}

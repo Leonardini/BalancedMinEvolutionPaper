@@ -1,0 +1,33 @@
+{
+ "n": 8,
+ "survivors": 10395,
+ "ordered": false,
+ "violating": 0,
+ "nodes": 1466140,
+ "seconds": 0,
+ "row_types": 9,
+ "name": "full_n8",
+ "options": [
+  "--full"
+ ],
+ "checks": [
+  {
+   "label": "labelled survivors = (2n-5)!!",
+   "computed": 10395,
+   "expected": 10395,
+   "ok": true
+  },
+  {
+   "label": "violating (10)",
+   "computed": 0,
+   "expected": 0,
+   "ok": true
+  },
+  {
+   "label": "row types",
+   "computed": 9,
+   "expected": 9,
+   "ok": true
+  }
+ ]
+}

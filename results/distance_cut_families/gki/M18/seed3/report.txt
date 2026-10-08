@@ -1,0 +1,2 @@
+Instance | N | Best Sol | Time (s) | Node Best Sol | First Root DB | Last Root BD | Best Dual Bound | Final Gap (%) | Nodes | INF | CO@Root | CO@Search | GKI@Root | GKI@Search | EHC@Root | EHC@Search | 2K@Root | 2K@Search | 4PT@Root | 4PT@Search | Overall Cuts
+03-M18.txt | 18 | 65824.223657 | 32.808143125 | 0 | 64290.6198942 | 65534.3369256 | 65824.223657 | -5.96895321111e-13 | 257 | 1 | 0 | 0 | 5 | 5 | 0 | 0 | 0 | 0 | 0 | 1 | 11

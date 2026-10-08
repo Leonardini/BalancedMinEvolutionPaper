@@ -1,0 +1,112 @@
+2026-10-08 02:20:41 balanced-exact        1s nodes 0 open 1 lb 1.84700208 inc 1.870829575 gap 1.2736% root
+2026-10-08 02:21:41 balanced-exact       61s nodes 314 open 306 lb 1.854561842 inc 1.870829575 gap 0.8695%
+2026-10-08 02:22:41 balanced-exact      121s nodes 590 open 582 lb 1.856167077 inc 1.870829575 gap 0.7837%
+2026-10-08 02:23:41 balanced-exact      181s nodes 872 open 864 lb 1.857218363 inc 1.870829575 gap 0.7275%
+2026-10-08 02:24:41 balanced-exact      242s nodes 1156 open 1148 lb 1.857917221 inc 1.870829575 gap 0.6902%
+2026-10-08 02:25:42 balanced-exact      303s nodes 1446 open 1434 lb 1.858453609 inc 1.870829575 gap 0.6615%
+/Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper/compact/solver/cut_loop.py:43: UserWarning: min-cut (14, 23) found violated again although it is in the model; not added twice
+  warnings.warn(f"min-cut {key} found violated again although it is in the model; "
+2026-10-08 02:26:42 balanced-exact      363s nodes 1742 open 1719 lb 1.858911804 inc 1.870829575 gap 0.6370%
+2026-10-08 02:27:42 balanced-exact      423s nodes 2027 open 2002 lb 1.859312003 inc 1.870829575 gap 0.6156%
+/Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper/compact/solver/cut_loop.py:43: UserWarning: min-cut (10, 19) found violated again although it is in the model; not added twice
+  warnings.warn(f"min-cut {key} found violated again although it is in the model; "
+2026-10-08 02:28:43 balanced-exact      483s nodes 2322 open 2290 lb 1.859668741 inc 1.870829575 gap 0.5966%
+MOSEK: solution status solsta.unknown at tolerance 1e-10; retrying looser
+2026-10-08 02:29:43 balanced-exact      543s nodes 2614 open 2572 lb 1.859917961 inc 1.870829575 gap 0.5833%
+/Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper/compact/solver/cut_loop.py:43: UserWarning: min-cut (4, 10, 12, 19, 21, 22, 25) found violated again although it is in the model; not added twice
+  warnings.warn(f"min-cut {key} found violated again although it is in the model; "
+2026-10-08 02:30:43 balanced-exact      604s nodes 2904 open 2840 lb 1.860143124 inc 1.870829575 gap 0.5712%
+2026-10-08 02:31:43 balanced-exact      664s nodes 3198 open 3120 lb 1.860388306 inc 1.870829575 gap 0.5581%
+2026-10-08 02:32:44 balanced-exact      724s nodes 3503 open 3398 lb 1.86057197 inc 1.870829575 gap 0.5483%
+2026-10-08 02:33:44 balanced-exact      784s nodes 3795 open 3667 lb 1.860736557 inc 1.870829575 gap 0.5395%
+2026-10-08 02:34:44 balanced-exact      844s nodes 4093 open 3931 lb 1.860877513 inc 1.870829575 gap 0.5320%
+2026-10-08 02:35:45 balanced-exact      905s nodes 4384 open 4193 lb 1.861033787 inc 1.870829575 gap 0.5236%
+2026-10-08 02:36:45 balanced-exact      965s nodes 4668 open 4441 lb 1.861200439 inc 1.870829575 gap 0.5147%
+2026-10-08 02:37:45 balanced-exact     1025s nodes 4947 open 4693 lb 1.861362723 inc 1.870829575 gap 0.5060%
+2026-10-08 02:38:45 balanced-exact     1085s nodes 5240 open 4943 lb 1.861481767 inc 1.870829575 gap 0.4997%
+2026-10-08 02:39:45 balanced-exact     1145s nodes 5538 open 5190 lb 1.861586141 inc 1.870829575 gap 0.4941%
+2026-10-08 02:40:45 balanced-exact     1205s nodes 5817 open 5427 lb 1.861678924 inc 1.870829575 gap 0.4891%
+2026-10-08 02:41:46 balanced-exact     1266s nodes 6092 open 5663 lb 1.861785107 inc 1.870829575 gap 0.4834%
+2026-10-08 02:42:46 balanced-exact     1326s nodes 6364 open 5898 lb 1.861884362 inc 1.870829575 gap 0.4781%
+/Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper/compact/solver/cut_loop.py:43: UserWarning: min-cut (1, 5, 6) found violated again although it is in the model; not added twice
+  warnings.warn(f"min-cut {key} found violated again although it is in the model; "
+2026-10-08 02:43:46 balanced-exact     1386s nodes 6634 open 6134 lb 1.861979193 inc 1.870829575 gap 0.4731%
+2026-10-08 02:44:46 balanced-exact     1447s nodes 6903 open 6373 lb 1.862070023 inc 1.870829575 gap 0.4682%
+/Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper/compact/solver/cut_loop.py:43: UserWarning: min-cut (1, 2, 5, 6, 7, 9, 11, 13, 14, 18, 20, 23) found violated again although it is in the model; not added twice
+  warnings.warn(f"min-cut {key} found violated again although it is in the model; "
+2026-10-08 02:45:46 balanced-exact     1507s nodes 7174 open 6607 lb 1.862151181 inc 1.870829575 gap 0.4639%
+2026-10-08 02:46:46 balanced-exact     1567s nodes 7441 open 6840 lb 1.862225446 inc 1.870829575 gap 0.4599%
+/Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper/compact/solver/cut_loop.py:43: UserWarning: min-cut (8, 15) found violated again although it is in the model; not added twice
+  warnings.warn(f"min-cut {key} found violated again although it is in the model; "
+2026-10-08 02:47:46 balanced-exact     1627s nodes 7698 open 7065 lb 1.862292192 inc 1.870829575 gap 0.4563%
+2026-10-08 02:48:47 balanced-exact     1687s nodes 7955 open 7282 lb 1.862373042 inc 1.870829575 gap 0.4520%
+2026-10-08 02:49:47 balanced-exact     1747s nodes 8207 open 7500 lb 1.862432865 inc 1.870829575 gap 0.4488%
+/Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper/compact/solver/cut_loop.py:43: UserWarning: min-cut (14, 20) found violated again although it is in the model; not added twice
+  warnings.warn(f"min-cut {key} found violated again although it is in the model; "
+2026-10-08 02:50:47 balanced-exact     1807s nodes 8463 open 7710 lb 1.86250683 inc 1.870829575 gap 0.4449%
+/Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper/compact/solver/cut_loop.py:43: UserWarning: min-cut (1, 2, 5, 6, 7, 9, 11, 13, 14, 18, 20, 23) found violated again although it is in the model; not added twice
+  warnings.warn(f"min-cut {key} found violated again although it is in the model; "
+2026-10-08 02:51:47 balanced-exact     1867s nodes 8715 open 7937 lb 1.862571012 inc 1.870829575 gap 0.4414%
+/Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper/compact/solver/cut_loop.py:43: UserWarning: min-cut (8, 15) found violated again although it is in the model; not added twice
+  warnings.warn(f"min-cut {key} found violated again although it is in the model; "
+/Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper/compact/solver/cut_loop.py:43: UserWarning: min-cut (8, 15, 17, 24) found violated again although it is in the model; not added twice
+  warnings.warn(f"min-cut {key} found violated again although it is in the model; "
+2026-10-08 02:52:47 balanced-exact     1928s nodes 8966 open 8126 lb 1.86262293 inc 1.870829575 gap 0.4387%
+2026-10-08 02:53:48 balanced-exact     1988s nodes 9228 open 8311 lb 1.862670453 inc 1.870829575 gap 0.4361%
+MOSEK: solution status solsta.unknown at tolerance 1e-10; retrying looser
+2026-10-08 02:54:48 balanced-exact     2048s nodes 9481 open 8495 lb 1.862723928 inc 1.870829575 gap 0.4333%
+2026-10-08 02:55:48 balanced-exact     2108s nodes 9728 open 8701 lb 1.862782926 inc 1.870829575 gap 0.4301%
+2026-10-08 02:56:48 balanced-exact     2169s nodes 9971 open 8879 lb 1.862821445 inc 1.870829575 gap 0.4281%
+2026-10-08 02:57:48 balanced-exact     2229s nodes 10232 open 9067 lb 1.862874402 inc 1.870829575 gap 0.4252%
+2026-10-08 02:58:48 balanced-exact     2289s nodes 10482 open 9258 lb 1.862922503 inc 1.870829575 gap 0.4227%
+/Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper/compact/solver/cut_loop.py:43: UserWarning: min-cut (12, 22, 25) found violated again although it is in the model; not added twice
+  warnings.warn(f"min-cut {key} found violated again although it is in the model; "
+/Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper/compact/solver/cut_loop.py:43: UserWarning: min-cut (10, 19, 24) found violated again although it is in the model; not added twice
+  warnings.warn(f"min-cut {key} found violated again although it is in the model; "
+2026-10-08 02:59:49 balanced-exact     2349s nodes 10737 open 9429 lb 1.86295924 inc 1.870829575 gap 0.4207%
+/Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper/compact/solver/cut_loop.py:43: UserWarning: min-cut (8, 15) found violated again although it is in the model; not added twice
+  warnings.warn(f"min-cut {key} found violated again although it is in the model; "
+2026-10-08 03:00:49 balanced-exact     2410s nodes 10988 open 9606 lb 1.863001634 inc 1.870829575 gap 0.4184%
+2026-10-08 03:01:49 balanced-exact     2470s nodes 11241 open 9784 lb 1.863042341 inc 1.870829575 gap 0.4162%
+/Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper/compact/solver/cut_loop.py:43: UserWarning: min-cut (6,) found violated again although it is in the model; not added twice
+  warnings.warn(f"min-cut {key} found violated again although it is in the model; "
+/Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper/compact/solver/cut_loop.py:43: UserWarning: min-cut (10, 19, 21) found violated again although it is in the model; not added twice
+  warnings.warn(f"min-cut {key} found violated again although it is in the model; "
+2026-10-08 03:02:50 balanced-exact     2530s nodes 11494 open 9957 lb 1.863083275 inc 1.870829575 gap 0.4141%
+/Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper/compact/solver/cut_loop.py:43: UserWarning: min-cut (19,) found violated again although it is in the model; not added twice
+  warnings.warn(f"min-cut {key} found violated again although it is in the model; "
+2026-10-08 03:03:50 balanced-exact     2590s nodes 11740 open 10134 lb 1.863129645 inc 1.870829575 gap 0.4116%
+2026-10-08 03:04:50 balanced-exact     2650s nodes 11981 open 10296 lb 1.863177314 inc 1.870829575 gap 0.4090%
+2026-10-08 03:05:50 balanced-exact     2710s nodes 12229 open 10483 lb 1.863212474 inc 1.870829575 gap 0.4072%
+2026-10-08 03:06:51 balanced-exact     2771s nodes 12473 open 10678 lb 1.863258995 inc 1.870829575 gap 0.4047%
+/Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper/compact/solver/cut_loop.py:43: UserWarning: min-cut (1, 5, 6) found violated again although it is in the model; not added twice
+  warnings.warn(f"min-cut {key} found violated again although it is in the model; "
+2026-10-08 03:07:51 balanced-exact     2831s nodes 12726 open 10840 lb 1.863297578 inc 1.870829575 gap 0.4026%
+2026-10-08 03:08:51 balanced-exact     2891s nodes 12971 open 11019 lb 1.863336386 inc 1.870829575 gap 0.4005%
+2026-10-08 03:09:51 balanced-exact     2951s nodes 13212 open 11188 lb 1.863373954 inc 1.870829575 gap 0.3985%
+2026-10-08 03:10:51 balanced-exact     3012s nodes 13447 open 11364 lb 1.863410019 inc 1.870829575 gap 0.3966%
+2026-10-08 03:11:52 balanced-exact     3072s nodes 13692 open 11542 lb 1.863446728 inc 1.870829575 gap 0.3946%
+/Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper/compact/solver/cut_loop.py:43: UserWarning: min-cut (6,) found violated again although it is in the model; not added twice
+  warnings.warn(f"min-cut {key} found violated again although it is in the model; "
+2026-10-08 03:12:52 balanced-exact     3132s nodes 13926 open 11715 lb 1.863483023 inc 1.870829575 gap 0.3927%
+/Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper/compact/solver/cut_loop.py:43: UserWarning: min-cut (12, 22, 25) found violated again although it is in the model; not added twice
+  warnings.warn(f"min-cut {key} found violated again although it is in the model; "
+/Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper/compact/solver/cut_loop.py:43: UserWarning: min-cut (8, 15) found violated again although it is in the model; not added twice
+  warnings.warn(f"min-cut {key} found violated again although it is in the model; "
+/Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper/compact/solver/cut_loop.py:43: UserWarning: min-cut (8, 15, 17) found violated again although it is in the model; not added twice
+  warnings.warn(f"min-cut {key} found violated again although it is in the model; "
+2026-10-08 03:13:52 balanced-exact     3193s nodes 14178 open 11899 lb 1.863517328 inc 1.870829575 gap 0.3909%
+/Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper/compact/solver/cut_loop.py:43: UserWarning: min-cut (16,) found violated again although it is in the model; not added twice
+  warnings.warn(f"min-cut {key} found violated again although it is in the model; "
+2026-10-08 03:14:53 balanced-exact     3253s nodes 14414 open 12090 lb 1.863560108 inc 1.870829575 gap 0.3886%
+2026-10-08 03:15:53 balanced-exact     3313s nodes 14658 open 12263 lb 1.863588387 inc 1.870829575 gap 0.3871%
+MOSEK: solution status solsta.unknown at tolerance 1e-10; retrying looser
+2026-10-08 03:16:53 balanced-exact     3373s nodes 14898 open 12426 lb 1.863626288 inc 1.870829575 gap 0.3850%
+2026-10-08 03:17:53 balanced-exact     3433s nodes 15141 open 12591 lb 1.863653416 inc 1.870829575 gap 0.3836%
+/Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper/compact/solver/cut_loop.py:43: UserWarning: min-cut (2, 7, 9, 11, 13, 14, 18, 20, 23) found violated again although it is in the model; not added twice
+  warnings.warn(f"min-cut {key} found violated again although it is in the model; "
+/Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper/compact/solver/cut_loop.py:43: UserWarning: min-cut (14, 23) found violated again although it is in the model; not added twice
+  warnings.warn(f"min-cut {key} found violated again although it is in the model; "
+2026-10-08 03:18:53 balanced-exact     3493s nodes 15373 open 12744 lb 1.863685419 inc 1.870829575 gap 0.3819%
+2026-10-08 03:19:53 balanced-exact     3554s nodes 15608 open 12918 lb 1.863715827 inc 1.870829575 gap 0.3802%
+2026-10-08 03:20:41 balanced-exact     3601s nodes 15790 open 13059 lb 1.863739185 inc 1.870829575 gap 0.3790% stopped

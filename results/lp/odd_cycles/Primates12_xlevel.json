@@ -1,0 +1,390 @@
+{
+ "instance": "external/catanzaro/upstream/instances/01-Primates12.txt",
+ "n": 12,
+ "optimum": 0.097972333203125,
+ "model": "xlevel",
+ "tol": 1e-06,
+ "arms": {
+  "xlevel mincut=0": {
+   "bound_before": 0.09594283822462152,
+   "loop_before": {
+    "manifold_cuts": 0,
+    "separator_cuts": [],
+    "rounds": 1,
+    "converged": true,
+    "bound_stalled": false,
+    "stop_rule": {
+     "manifold_tol": 1e-07,
+     "stall_rounds": 500,
+     "stall_rel": 1e-10
+    },
+    "bound": 0.09594283822462152,
+    "bound_rise_last_window": 0.0,
+    "stop": "no violated cut",
+    "safe_bound": 0.09594283822462038,
+    "safe_minus_lp": -1.1379786002407855e-15,
+    "rows_cut_off_optimum": 0,
+    "safe_bound_detail": {
+     "lp_objective": 0.09594283822462152,
+     "solver": "gurobi",
+     "rows": 8065,
+     "cols": 1254,
+     "nnz": 27654,
+     "duals_clipped": 57,
+     "dual_clip_max": 1.866331220156444e-17,
+     "dual_clip_l1": 3.4808201058382122e-16,
+     "implied_bounds_used": 0,
+     "safe_bound": 0.09594283822462038,
+     "safe_infinite": false,
+     "safe_minus_lp": -1.1326892485199402e-15,
+     "seconds": 0.008515119552612305,
+     "resolved_copy": false,
+     "refined": false,
+     "reported_bound": 0.09594283822462152,
+     "safe_minus_reported": -1.1379786002407855e-15,
+     "optimum_check": {
+      "rows_checked": 8065,
+      "rows_cut_off_optimum": 0,
+      "bounds_violated": 0,
+      "max_violation": 0.0,
+      "worst_family": "level_sum",
+      "families": {
+       "level_sum": {
+        "rows": 66,
+        "violated": 0,
+        "max_violation": 0.0,
+        "worst_row": 0
+       },
+       "kraft": {
+        "rows": 12,
+        "violated": 0,
+        "max_violation": 0.0,
+        "worst_row": 66
+       },
+       "manifold_eq": {
+        "rows": 1,
+        "violated": 0,
+        "max_violation": 0.0,
+        "worst_row": 78
+       },
+       "tau_split": {
+        "rows": 66,
+        "violated": 0,
+        "max_violation": 0.0,
+        "worst_row": 79
+       },
+       "cut_triangle": {
+        "rows": 7920,
+        "violated": 0,
+        "max_violation": 0.0,
+        "worst_row": 145
+       }
+      },
+      "tree_source": "data/ground_truth/Primates12.splits",
+      "tree_objective": 0.097972333203125,
+      "seconds": 0.007992982864379883
+     },
+     "rows_cut_off_optimum": 0,
+     "safe_le_tree_objective": true
+    },
+    "seconds": 0.05998110771179199
+   },
+   "violations_before": {
+    "violated": 0,
+    "max_violation": 0.0,
+    "cycle_lengths": {}
+   },
+   "bound_after": 0.09594283822462152,
+   "loop_after": {
+    "manifold_cuts": 0,
+    "separator_cuts": [
+     0
+    ],
+    "rounds": 1,
+    "converged": true,
+    "bound_stalled": false,
+    "stop_rule": {
+     "manifold_tol": 1e-07,
+     "stall_rounds": 500,
+     "stall_rel": 1e-10
+    },
+    "bound": 0.09594283822462152,
+    "bound_rise_last_window": 0.0,
+    "stop": "no violated cut",
+    "safe_bound": 0.09594283822462038,
+    "safe_minus_lp": -1.1379786002407855e-15,
+    "rows_cut_off_optimum": 0,
+    "safe_bound_detail": {
+     "lp_objective": 0.09594283822462152,
+     "solver": "gurobi",
+     "rows": 8065,
+     "cols": 1254,
+     "nnz": 27654,
+     "duals_clipped": 57,
+     "dual_clip_max": 1.866331220156444e-17,
+     "dual_clip_l1": 3.4808201058382122e-16,
+     "implied_bounds_used": 0,
+     "safe_bound": 0.09594283822462038,
+     "safe_infinite": false,
+     "safe_minus_lp": -1.1326892485199402e-15,
+     "seconds": 0.006023883819580078,
+     "resolved_copy": false,
+     "refined": false,
+     "reported_bound": 0.09594283822462152,
+     "safe_minus_reported": -1.1379786002407855e-15,
+     "optimum_check": {
+      "rows_checked": 8065,
+      "rows_cut_off_optimum": 0,
+      "bounds_violated": 0,
+      "max_violation": 0.0,
+      "worst_family": "level_sum",
+      "families": {
+       "level_sum": {
+        "rows": 66,
+        "violated": 0,
+        "max_violation": 0.0,
+        "worst_row": 0
+       },
+       "kraft": {
+        "rows": 12,
+        "violated": 0,
+        "max_violation": 0.0,
+        "worst_row": 66
+       },
+       "manifold_eq": {
+        "rows": 1,
+        "violated": 0,
+        "max_violation": 0.0,
+        "worst_row": 78
+       },
+       "tau_split": {
+        "rows": 66,
+        "violated": 0,
+        "max_violation": 0.0,
+        "worst_row": 79
+       },
+       "cut_triangle": {
+        "rows": 7920,
+        "violated": 0,
+        "max_violation": 0.0,
+        "worst_row": 145
+       }
+      },
+      "tree_source": "data/ground_truth/Primates12.splits",
+      "tree_objective": 0.097972333203125,
+      "seconds": 0.007376194000244141
+     },
+     "rows_cut_off_optimum": 0,
+     "safe_le_tree_objective": true
+    },
+    "seconds": 0.034471988677978516
+   },
+   "cuts_by_cycle_length": {},
+   "bound_before_safe_bound": 0.09594283822462038,
+   "bound_before_safe_minus_lp": -1.1379786002407855e-15,
+   "bound_before_rows_cut_off_optimum": 0,
+   "bound_after_safe_bound": 0.09594283822462038,
+   "bound_after_safe_minus_lp": -1.1379786002407855e-15,
+   "bound_after_rows_cut_off_optimum": 0,
+   "gap_before": 0.020714980567991058,
+   "gap_after": 0.020714980567991058
+  },
+  "xlevel mincut=1": {
+   "bound_before": 0.09763485484645251,
+   "loop_before": {
+    "manifold_cuts": 0,
+    "separator_cuts": [],
+    "rounds": 1,
+    "converged": true,
+    "bound_stalled": false,
+    "stop_rule": {
+     "manifold_tol": 1e-07,
+     "stall_rounds": 500,
+     "stall_rel": 1e-10
+    },
+    "bound": 0.09763485484645251,
+    "bound_rise_last_window": 0.0,
+    "stop": "no violated cut",
+    "safe_bound": 0.09763485484645205,
+    "safe_minus_lp": -4.579669976578771e-16,
+    "rows_cut_off_optimum": 0,
+    "safe_bound_detail": {
+     "lp_objective": 0.09763485484645251,
+     "solver": "gurobi",
+     "rows": 10100,
+     "cols": 1254,
+     "nnz": 702174,
+     "duals_clipped": 89,
+     "dual_clip_max": 5.4531981144231856e-18,
+     "dual_clip_l1": 1.3869508060755046e-16,
+     "implied_bounds_used": 0,
+     "safe_bound": 0.09763485484645205,
+     "safe_infinite": false,
+     "safe_minus_lp": -4.560822592975335e-16,
+     "seconds": 0.0858466625213623,
+     "resolved_copy": false,
+     "refined": false,
+     "reported_bound": 0.09763485484645251,
+     "safe_minus_reported": -4.579669976578771e-16,
+     "optimum_check": {
+      "rows_checked": 10100,
+      "rows_cut_off_optimum": 0,
+      "bounds_violated": 0,
+      "max_violation": 0.0,
+      "worst_family": "level_sum",
+      "families": {
+       "level_sum": {
+        "rows": 66,
+        "violated": 0,
+        "max_violation": 0.0,
+        "worst_row": 0
+       },
+       "kraft": {
+        "rows": 12,
+        "violated": 0,
+        "max_violation": 0.0,
+        "worst_row": 66
+       },
+       "manifold_eq": {
+        "rows": 1,
+        "violated": 0,
+        "max_violation": 0.0,
+        "worst_row": 78
+       },
+       "mincut": {
+        "rows": 2035,
+        "violated": 0,
+        "max_violation": 0.0,
+        "worst_row": 79
+       },
+       "tau_split": {
+        "rows": 66,
+        "violated": 0,
+        "max_violation": 0.0,
+        "worst_row": 2114
+       },
+       "cut_triangle": {
+        "rows": 7920,
+        "violated": 0,
+        "max_violation": 0.0,
+        "worst_row": 2180
+       }
+      },
+      "tree_source": "data/ground_truth/Primates12.splits",
+      "tree_objective": 0.097972333203125,
+      "seconds": 0.08169770240783691
+     },
+     "rows_cut_off_optimum": 0,
+     "safe_le_tree_objective": true
+    },
+    "seconds": 0.4406590461730957
+   },
+   "violations_before": {
+    "violated": 0,
+    "max_violation": 0.0,
+    "cycle_lengths": {}
+   },
+   "bound_after": 0.09763485484645251,
+   "loop_after": {
+    "manifold_cuts": 0,
+    "separator_cuts": [
+     0
+    ],
+    "rounds": 1,
+    "converged": true,
+    "bound_stalled": false,
+    "stop_rule": {
+     "manifold_tol": 1e-07,
+     "stall_rounds": 500,
+     "stall_rel": 1e-10
+    },
+    "bound": 0.09763485484645251,
+    "bound_rise_last_window": 0.0,
+    "stop": "no violated cut",
+    "safe_bound": 0.09763485484645205,
+    "safe_minus_lp": -4.579669976578771e-16,
+    "rows_cut_off_optimum": 0,
+    "safe_bound_detail": {
+     "lp_objective": 0.09763485484645251,
+     "solver": "gurobi",
+     "rows": 10100,
+     "cols": 1254,
+     "nnz": 702174,
+     "duals_clipped": 89,
+     "dual_clip_max": 5.4531981144231856e-18,
+     "dual_clip_l1": 1.3869508060755046e-16,
+     "implied_bounds_used": 0,
+     "safe_bound": 0.09763485484645205,
+     "safe_infinite": false,
+     "safe_minus_lp": -4.560822592975335e-16,
+     "seconds": 0.08477997779846191,
+     "resolved_copy": false,
+     "refined": false,
+     "reported_bound": 0.09763485484645251,
+     "safe_minus_reported": -4.579669976578771e-16,
+     "optimum_check": {
+      "rows_checked": 10100,
+      "rows_cut_off_optimum": 0,
+      "bounds_violated": 0,
+      "max_violation": 0.0,
+      "worst_family": "level_sum",
+      "families": {
+       "level_sum": {
+        "rows": 66,
+        "violated": 0,
+        "max_violation": 0.0,
+        "worst_row": 0
+       },
+       "kraft": {
+        "rows": 12,
+        "violated": 0,
+        "max_violation": 0.0,
+        "worst_row": 66
+       },
+       "manifold_eq": {
+        "rows": 1,
+        "violated": 0,
+        "max_violation": 0.0,
+        "worst_row": 78
+       },
+       "mincut": {
+        "rows": 2035,
+        "violated": 0,
+        "max_violation": 0.0,
+        "worst_row": 79
+       },
+       "tau_split": {
+        "rows": 66,
+        "violated": 0,
+        "max_violation": 0.0,
+        "worst_row": 2114
+       },
+       "cut_triangle": {
+        "rows": 7920,
+        "violated": 0,
+        "max_violation": 0.0,
+        "worst_row": 2180
+       }
+      },
+      "tree_source": "data/ground_truth/Primates12.splits",
+      "tree_objective": 0.097972333203125,
+      "seconds": 0.08253788948059082
+     },
+     "rows_cut_off_optimum": 0,
+     "safe_le_tree_objective": true
+    },
+    "seconds": 0.19473624229431152
+   },
+   "cuts_by_cycle_length": {},
+   "bound_before_safe_bound": 0.09763485484645205,
+   "bound_before_safe_minus_lp": -4.579669976578771e-16,
+   "bound_before_rows_cut_off_optimum": 0,
+   "bound_after_safe_bound": 0.09763485484645205,
+   "bound_after_safe_minus_lp": -4.579669976578771e-16,
+   "bound_after_rows_cut_off_optimum": 0,
+   "gap_before": 0.0034446291686531043,
+   "gap_after": 0.0034446291686531043
+  }
+ },
+ "peak_rss_mb": 266.171875
+}

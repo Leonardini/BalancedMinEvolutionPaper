@@ -1,0 +1,20 @@
+libc++abi: terminating due to uncaught exception of type std::out_of_range: map::at:  key not found
+time: command terminated abnormally
+       28.47 real        69.58 user         2.99 sys
+           535511040  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+               41163  page reclaims
+                 353  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                  25  voluntary context switches
+               92503  involuntary context switches
+        914186955070  instructions retired
+        289405757140  cycles elapsed
+           503809752  peak memory footprint

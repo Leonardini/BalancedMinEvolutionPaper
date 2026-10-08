@@ -1,0 +1,109 @@
+Input permutation applied (0.743781) 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17
+--- CUTTING PLANES ----
+GKI      0.0500 | 0.0100
+-----------------------
+Set parameter Username
+Set parameter LicenseID to value 2789566
+Set parameter Threads to value 1
+Set parameter Seed to value 1
+Set parameter NodeLimit to value 1
+Set parameter Cuts to value 0
+Read parameters from file gurobi.env
+Academic license - for non-commercial use only - expires 2027-03-10
+Set parameter MIPGap to value 1e-08
+Set parameter TimeLimit to value 3600
+Set parameter LazyConstraints to value 1
+Set parameter MIPFocus to value 3
+Set parameter Heuristics to value 0
+Set parameter PreCrush to value 1
+Gurobi Optimizer version 12.0.1 build v12.0.1rc0 (mac64[arm] - Darwin 27.0.0 26A428)
+
+CPU model: Apple M4 Pro
+Thread count: 14 physical cores, 14 logical processors, using up to 1 threads
+
+Non-default parameters:
+NodeLimit  1
+TimeLimit  3600
+MIPGap  1e-08
+Heuristics  0
+MIPFocus  3
+Cuts  0
+PreCrush  1
+Seed  1
+Threads  1
+LazyConstraints  1
+
+Optimize a model with 2620 rows, 4896 columns and 129744 nonzeros
+Model fingerprint: 0xf220bce0
+Variable types: 0 continuous, 4896 integer (2448 binary)
+Coefficient statistics:
+  Matrix range     [8e-06, 2e+01]
+  Objective range  [9e-03, 1e+04]
+  Bounds range     [1e+00, 2e+01]
+  RHS range        [5e-01, 3e+01]
+Presolve time: 0.14s
+Presolved: 2620 rows, 4896 columns, 122383 nonzeros
+Variable types: 0 continuous, 4896 integer (2448 binary)
+Root relaxation presolved: 2620 rows, 4896 columns, 122383 nonzeros
+
+
+Root relaxation: objective 6.429062e+04, 3057 iterations, 0.08 seconds (0.30 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 64290.6199    0 1922          - 64290.6199      -     -    0s
+fastme --input_data=/var/folders/dt/8b65fqjn2l756qpj_c7_jmfr0000gq/T//fi16807.inst --output_tree=/var/folders/dt/8b65fqjn2l756qpj_c7_jmfr0000gq/T//fi16807_sol.nw --method=U --user_tree=/var/folders/dt/8b65fqjn2l756qpj_c7_jmfr0000gq/T//fi16807.nw --nni=balME --spr
+
+ . This analysis will run on 1 threads.
+
+#  Analysing dataset 1
+
+ . Warning: Triangular inequality violation.
+
+ . You may ask for triangular inequality correction using the '-q' option.
+
+ . Reading input tree...
+
+ . Tree length is 33.000000.
+
+ . Performing NNI...
+
+ . Performing SPR...
+
+ . Time used 0h00m00s
+H    0     0                    66053.990287 64322.9290  2.62%     -    0s
+     0     0 64322.9290    0 1858 66053.9903 64322.9290  2.62%     -    0s
+fastme --input_data=/var/folders/dt/8b65fqjn2l756qpj_c7_jmfr0000gq/T//fi282475249.inst --output_tree=/var/folders/dt/8b65fqjn2l756qpj_c7_jmfr0000gq/T//fi282475249_sol.nw --method=U --user_tree=/var/folders/dt/8b65fqjn2l756qpj_c7_jmfr0000gq/T//fi282475249.nw --nni=balME --spr
+
+ . This analysis will run on 1 threads.
+
+#  Analysing dataset 1
+
+ . Warning: Triangular inequality violation.
+
+ . You may ask for triangular inequality correction using the '-q' option.
+
+ . Reading input tree...
+
+ . Tree length is 33.000000.
+
+ . Performing NNI...
+
+ . Performing SPR...
+
+ . Time used 0h00m00s
+     0     2 64325.9901    0 1858 66053.9903 64325.9901  2.62%     -    0s
+
+Cutting planes:
+  User: 1
+
+Explored 1 nodes (3215 simplex iterations) in 0.52 seconds (0.87 work units)
+Thread count was 1 (of 14 available processors)
+
+Solution count 1: 66054 
+
+Node limit reached
+Best objective 6.605399028736e+04, best bound 6.432599009919e+04, gap 2.6160%
+
+User-callback calls 245, time in user-callback 0.23 sec

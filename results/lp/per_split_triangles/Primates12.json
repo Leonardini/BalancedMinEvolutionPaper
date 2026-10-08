@@ -1,0 +1,608 @@
+{
+ "instance": "external/catanzaro/upstream/instances/01-Primates12.txt",
+ "n": 12,
+ "optimum": 0.097972333203125,
+ "arms": {
+  "mincut=0 strongtri=0 cutpoly=0": {
+   "mincut": false,
+   "strongtri": false,
+   "cutpoly": false,
+   "bound": 0.0955511990234375,
+   "safe_bound": 0.09555119902343749,
+   "safe_minus_lp": -1.3877787807814457e-17,
+   "rows_cut_off_optimum": 0,
+   "gap": 0.024712427483662973,
+   "rows": 79,
+   "safe_bound_detail": {
+    "lp_objective": 0.0955511990234375,
+    "solver": "gurobi",
+    "rows": 79,
+    "cols": 660,
+    "nnz": 2640,
+    "duals_clipped": 0,
+    "dual_clip_max": 0.0,
+    "dual_clip_l1": 0.0,
+    "implied_bounds_used": 0,
+    "safe_bound": 0.09555119902343749,
+    "safe_infinite": false,
+    "safe_minus_lp": -8.358521123505436e-18,
+    "seconds": 0.0011639595031738281,
+    "resolved_copy": false,
+    "refined": false,
+    "reported_bound": 0.0955511990234375,
+    "safe_minus_reported": -1.3877787807814457e-17,
+    "optimum_check": {
+     "rows_checked": 79,
+     "rows_cut_off_optimum": 0,
+     "bounds_violated": 0,
+     "max_violation": 0.0,
+     "worst_family": "level_sum",
+     "families": {
+      "level_sum": {
+       "rows": 66,
+       "violated": 0,
+       "max_violation": 0.0,
+       "worst_row": 0
+      },
+      "kraft": {
+       "rows": 12,
+       "violated": 0,
+       "max_violation": 0.0,
+       "worst_row": 66
+      },
+      "manifold_eq": {
+       "rows": 1,
+       "violated": 0,
+       "max_violation": 0.0,
+       "worst_row": 78
+      }
+     },
+     "tree_source": "data/ground_truth/Primates12.splits",
+     "tree_objective": 0.097972333203125,
+     "seconds": 0.0007588863372802734
+    },
+    "rows_cut_off_optimum": 0,
+    "safe_le_tree_objective": true
+   }
+  },
+  "mincut=0 strongtri=0 cutpoly=1": {
+   "mincut": false,
+   "strongtri": false,
+   "cutpoly": true,
+   "bound": 0.09594283822462152,
+   "safe_bound": 0.09594283822462038,
+   "safe_minus_lp": -1.1379786002407855e-15,
+   "rows_cut_off_optimum": 0,
+   "gap": 0.020714980567991058,
+   "rows": 8065,
+   "safe_bound_detail": {
+    "lp_objective": 0.09594283822462152,
+    "solver": "gurobi",
+    "rows": 8065,
+    "cols": 1254,
+    "nnz": 27654,
+    "duals_clipped": 57,
+    "dual_clip_max": 1.866331220156444e-17,
+    "dual_clip_l1": 3.4808201058382122e-16,
+    "implied_bounds_used": 0,
+    "safe_bound": 0.09594283822462038,
+    "safe_infinite": false,
+    "safe_minus_lp": -1.1326892485199402e-15,
+    "seconds": 0.00587010383605957,
+    "resolved_copy": false,
+    "refined": false,
+    "reported_bound": 0.09594283822462152,
+    "safe_minus_reported": -1.1379786002407855e-15,
+    "optimum_check": {
+     "rows_checked": 8065,
+     "rows_cut_off_optimum": 0,
+     "bounds_violated": 0,
+     "max_violation": 0.0,
+     "worst_family": "level_sum",
+     "families": {
+      "level_sum": {
+       "rows": 66,
+       "violated": 0,
+       "max_violation": 0.0,
+       "worst_row": 0
+      },
+      "kraft": {
+       "rows": 12,
+       "violated": 0,
+       "max_violation": 0.0,
+       "worst_row": 66
+      },
+      "manifold_eq": {
+       "rows": 1,
+       "violated": 0,
+       "max_violation": 0.0,
+       "worst_row": 78
+      },
+      "tau_split": {
+       "rows": 66,
+       "violated": 0,
+       "max_violation": 0.0,
+       "worst_row": 79
+      },
+      "cut_triangle": {
+       "rows": 7920,
+       "violated": 0,
+       "max_violation": 0.0,
+       "worst_row": 145
+      }
+     },
+     "tree_source": "data/ground_truth/Primates12.splits",
+     "tree_objective": 0.097972333203125,
+     "seconds": 0.007181644439697266
+    },
+    "rows_cut_off_optimum": 0,
+    "safe_le_tree_objective": true
+   }
+  },
+  "mincut=0 strongtri=1 cutpoly=0": {
+   "mincut": false,
+   "strongtri": true,
+   "cutpoly": false,
+   "bound": 0.0959428382246215,
+   "safe_bound": 0.09594283822462149,
+   "safe_minus_lp": -1.3877787807814457e-17,
+   "rows_cut_off_optimum": 0,
+   "gap": 0.0207149805679912,
+   "rows": 739,
+   "safe_bound_detail": {
+    "lp_objective": 0.0959428382246215,
+    "solver": "gurobi",
+    "rows": 739,
+    "cols": 660,
+    "nnz": 22440,
+    "duals_clipped": 0,
+    "dual_clip_max": 0.0,
+    "dual_clip_l1": 0.0,
+    "implied_bounds_used": 0,
+    "safe_bound": 0.09594283822462149,
+    "safe_infinite": false,
+    "safe_minus_lp": -6.199857657427851e-18,
+    "seconds": 0.0036468505859375,
+    "resolved_copy": false,
+    "refined": false,
+    "reported_bound": 0.0959428382246215,
+    "safe_minus_reported": -1.3877787807814457e-17,
+    "optimum_check": {
+     "rows_checked": 739,
+     "rows_cut_off_optimum": 0,
+     "bounds_violated": 0,
+     "max_violation": 0.0,
+     "worst_family": "level_sum",
+     "families": {
+      "level_sum": {
+       "rows": 66,
+       "violated": 0,
+       "max_violation": 0.0,
+       "worst_row": 0
+      },
+      "kraft": {
+       "rows": 12,
+       "violated": 0,
+       "max_violation": 0.0,
+       "worst_row": 66
+      },
+      "manifold_eq": {
+       "rows": 1,
+       "violated": 0,
+       "max_violation": 0.0,
+       "worst_row": 78
+      },
+      "strongtri": {
+       "rows": 660,
+       "violated": 0,
+       "max_violation": 0.0,
+       "worst_row": 79
+      }
+     },
+     "tree_source": "data/ground_truth/Primates12.splits",
+     "tree_objective": 0.097972333203125,
+     "seconds": 0.003509998321533203
+    },
+    "rows_cut_off_optimum": 0,
+    "safe_le_tree_objective": true
+   }
+  },
+  "mincut=0 strongtri=1 cutpoly=1": {
+   "mincut": false,
+   "strongtri": true,
+   "cutpoly": true,
+   "bound": 0.0959428382246215,
+   "safe_bound": 0.09594283822462149,
+   "safe_minus_lp": -1.3877787807814457e-17,
+   "rows_cut_off_optimum": 0,
+   "gap": 0.0207149805679912,
+   "rows": 8725,
+   "safe_bound_detail": {
+    "lp_objective": 0.0959428382246215,
+    "solver": "gurobi",
+    "rows": 8725,
+    "cols": 1254,
+    "nnz": 47454,
+    "duals_clipped": 0,
+    "dual_clip_max": 0.0,
+    "dual_clip_l1": 0.0,
+    "implied_bounds_used": 0,
+    "safe_bound": 0.09594283822462149,
+    "safe_infinite": false,
+    "safe_minus_lp": -7.959462726230253e-18,
+    "seconds": 0.008311033248901367,
+    "resolved_copy": false,
+    "refined": false,
+    "reported_bound": 0.0959428382246215,
+    "safe_minus_reported": -1.3877787807814457e-17,
+    "optimum_check": {
+     "rows_checked": 8725,
+     "rows_cut_off_optimum": 0,
+     "bounds_violated": 0,
+     "max_violation": 0.0,
+     "worst_family": "level_sum",
+     "families": {
+      "level_sum": {
+       "rows": 66,
+       "violated": 0,
+       "max_violation": 0.0,
+       "worst_row": 0
+      },
+      "kraft": {
+       "rows": 12,
+       "violated": 0,
+       "max_violation": 0.0,
+       "worst_row": 66
+      },
+      "manifold_eq": {
+       "rows": 1,
+       "violated": 0,
+       "max_violation": 0.0,
+       "worst_row": 78
+      },
+      "strongtri": {
+       "rows": 660,
+       "violated": 0,
+       "max_violation": 0.0,
+       "worst_row": 79
+      },
+      "tau_split": {
+       "rows": 66,
+       "violated": 0,
+       "max_violation": 0.0,
+       "worst_row": 739
+      },
+      "cut_triangle": {
+       "rows": 7920,
+       "violated": 0,
+       "max_violation": 0.0,
+       "worst_row": 805
+      }
+     },
+     "tree_source": "data/ground_truth/Primates12.splits",
+     "tree_objective": 0.097972333203125,
+     "seconds": 0.009759902954101562
+    },
+    "rows_cut_off_optimum": 0,
+    "safe_le_tree_objective": true
+   }
+  },
+  "mincut=1 strongtri=0 cutpoly=0": {
+   "mincut": true,
+   "strongtri": false,
+   "cutpoly": false,
+   "bound": 0.09699157748046877,
+   "safe_bound": 0.09699157748046874,
+   "safe_minus_lp": -2.7755575615628914e-17,
+   "rows_cut_off_optimum": 0,
+   "gap": 0.010010537573121137,
+   "rows": 2114,
+   "safe_bound_detail": {
+    "lp_objective": 0.09699157748046877,
+    "solver": "gurobi",
+    "rows": 2114,
+    "cols": 660,
+    "nnz": 677160,
+    "duals_clipped": 0,
+    "dual_clip_max": 0.0,
+    "dual_clip_l1": 0.0,
+    "implied_bounds_used": 0,
+    "safe_bound": 0.09699157748046874,
+    "safe_infinite": false,
+    "safe_minus_lp": -2.4423348001130496e-17,
+    "seconds": 0.07404279708862305,
+    "resolved_copy": false,
+    "refined": false,
+    "reported_bound": 0.09699157748046877,
+    "safe_minus_reported": -2.7755575615628914e-17,
+    "optimum_check": {
+     "rows_checked": 2114,
+     "rows_cut_off_optimum": 0,
+     "bounds_violated": 0,
+     "max_violation": 0.0,
+     "worst_family": "level_sum",
+     "families": {
+      "level_sum": {
+       "rows": 66,
+       "violated": 0,
+       "max_violation": 0.0,
+       "worst_row": 0
+      },
+      "kraft": {
+       "rows": 12,
+       "violated": 0,
+       "max_violation": 0.0,
+       "worst_row": 66
+      },
+      "manifold_eq": {
+       "rows": 1,
+       "violated": 0,
+       "max_violation": 0.0,
+       "worst_row": 78
+      },
+      "mincut": {
+       "rows": 2035,
+       "violated": 0,
+       "max_violation": 0.0,
+       "worst_row": 79
+      }
+     },
+     "tree_source": "data/ground_truth/Primates12.splits",
+     "tree_objective": 0.097972333203125,
+     "seconds": 0.06949019432067871
+    },
+    "rows_cut_off_optimum": 0,
+    "safe_le_tree_objective": true
+   }
+  },
+  "mincut=1 strongtri=0 cutpoly=1": {
+   "mincut": true,
+   "strongtri": false,
+   "cutpoly": true,
+   "bound": 0.09763485484645251,
+   "safe_bound": 0.09763485484645205,
+   "safe_minus_lp": -4.579669976578771e-16,
+   "rows_cut_off_optimum": 0,
+   "gap": 0.0034446291686531043,
+   "rows": 10100,
+   "safe_bound_detail": {
+    "lp_objective": 0.09763485484645251,
+    "solver": "gurobi",
+    "rows": 10100,
+    "cols": 1254,
+    "nnz": 702174,
+    "duals_clipped": 89,
+    "dual_clip_max": 5.4531981144231856e-18,
+    "dual_clip_l1": 1.3869508060755046e-16,
+    "implied_bounds_used": 0,
+    "safe_bound": 0.09763485484645205,
+    "safe_infinite": false,
+    "safe_minus_lp": -4.560822592975335e-16,
+    "seconds": 0.07892704010009766,
+    "resolved_copy": false,
+    "refined": false,
+    "reported_bound": 0.09763485484645251,
+    "safe_minus_reported": -4.579669976578771e-16,
+    "optimum_check": {
+     "rows_checked": 10100,
+     "rows_cut_off_optimum": 0,
+     "bounds_violated": 0,
+     "max_violation": 0.0,
+     "worst_family": "level_sum",
+     "families": {
+      "level_sum": {
+       "rows": 66,
+       "violated": 0,
+       "max_violation": 0.0,
+       "worst_row": 0
+      },
+      "kraft": {
+       "rows": 12,
+       "violated": 0,
+       "max_violation": 0.0,
+       "worst_row": 66
+      },
+      "manifold_eq": {
+       "rows": 1,
+       "violated": 0,
+       "max_violation": 0.0,
+       "worst_row": 78
+      },
+      "mincut": {
+       "rows": 2035,
+       "violated": 0,
+       "max_violation": 0.0,
+       "worst_row": 79
+      },
+      "tau_split": {
+       "rows": 66,
+       "violated": 0,
+       "max_violation": 0.0,
+       "worst_row": 2114
+      },
+      "cut_triangle": {
+       "rows": 7920,
+       "violated": 0,
+       "max_violation": 0.0,
+       "worst_row": 2180
+      }
+     },
+     "tree_source": "data/ground_truth/Primates12.splits",
+     "tree_objective": 0.097972333203125,
+     "seconds": 0.07746505737304688
+    },
+    "rows_cut_off_optimum": 0,
+    "safe_le_tree_objective": true
+   }
+  },
+  "mincut=1 strongtri=1 cutpoly=0": {
+   "mincut": true,
+   "strongtri": true,
+   "cutpoly": false,
+   "bound": 0.09763485484645253,
+   "safe_bound": 0.09763485484645251,
+   "safe_minus_lp": -1.3877787807814457e-17,
+   "rows_cut_off_optimum": 0,
+   "gap": 0.0034446291686529625,
+   "rows": 2774,
+   "safe_bound_detail": {
+    "lp_objective": 0.09763485484645253,
+    "solver": "gurobi",
+    "rows": 2774,
+    "cols": 660,
+    "nnz": 696960,
+    "duals_clipped": 0,
+    "dual_clip_max": 0.0,
+    "dual_clip_l1": 0.0,
+    "implied_bounds_used": 0,
+    "safe_bound": 0.09763485484645251,
+    "safe_infinite": false,
+    "safe_minus_lp": -1.369361108134585e-17,
+    "seconds": 0.07306218147277832,
+    "resolved_copy": false,
+    "refined": false,
+    "reported_bound": 0.09763485484645253,
+    "safe_minus_reported": -1.3877787807814457e-17,
+    "optimum_check": {
+     "rows_checked": 2774,
+     "rows_cut_off_optimum": 0,
+     "bounds_violated": 0,
+     "max_violation": 0.0,
+     "worst_family": "level_sum",
+     "families": {
+      "level_sum": {
+       "rows": 66,
+       "violated": 0,
+       "max_violation": 0.0,
+       "worst_row": 0
+      },
+      "kraft": {
+       "rows": 12,
+       "violated": 0,
+       "max_violation": 0.0,
+       "worst_row": 66
+      },
+      "manifold_eq": {
+       "rows": 1,
+       "violated": 0,
+       "max_violation": 0.0,
+       "worst_row": 78
+      },
+      "strongtri": {
+       "rows": 660,
+       "violated": 0,
+       "max_violation": 0.0,
+       "worst_row": 79
+      },
+      "mincut": {
+       "rows": 2035,
+       "violated": 0,
+       "max_violation": 0.0,
+       "worst_row": 739
+      }
+     },
+     "tree_source": "data/ground_truth/Primates12.splits",
+     "tree_objective": 0.097972333203125,
+     "seconds": 0.0701141357421875
+    },
+    "rows_cut_off_optimum": 0,
+    "safe_le_tree_objective": true
+   }
+  },
+  "mincut=1 strongtri=1 cutpoly=1": {
+   "mincut": true,
+   "strongtri": true,
+   "cutpoly": true,
+   "bound": 0.09763485484645253,
+   "safe_bound": 0.0976348548464517,
+   "safe_minus_lp": -8.326672684688674e-16,
+   "rows_cut_off_optimum": 0,
+   "gap": 0.0034446291686529625,
+   "rows": 10760,
+   "safe_bound_detail": {
+    "lp_objective": 0.09763485484645253,
+    "solver": "gurobi",
+    "rows": 10760,
+    "cols": 1254,
+    "nnz": 721974,
+    "duals_clipped": 73,
+    "dual_clip_max": 2.130796082112918e-17,
+    "dual_clip_l1": 4.205995568546024e-16,
+    "implied_bounds_used": 0,
+    "safe_bound": 0.0976348548464517,
+    "safe_infinite": false,
+    "safe_minus_lp": -8.2856289106872e-16,
+    "seconds": 0.08031177520751953,
+    "resolved_copy": false,
+    "refined": false,
+    "reported_bound": 0.09763485484645253,
+    "safe_minus_reported": -8.326672684688674e-16,
+    "optimum_check": {
+     "rows_checked": 10760,
+     "rows_cut_off_optimum": 0,
+     "bounds_violated": 0,
+     "max_violation": 0.0,
+     "worst_family": "level_sum",
+     "families": {
+      "level_sum": {
+       "rows": 66,
+       "violated": 0,
+       "max_violation": 0.0,
+       "worst_row": 0
+      },
+      "kraft": {
+       "rows": 12,
+       "violated": 0,
+       "max_violation": 0.0,
+       "worst_row": 66
+      },
+      "manifold_eq": {
+       "rows": 1,
+       "violated": 0,
+       "max_violation": 0.0,
+       "worst_row": 78
+      },
+      "strongtri": {
+       "rows": 660,
+       "violated": 0,
+       "max_violation": 0.0,
+       "worst_row": 79
+      },
+      "mincut": {
+       "rows": 2035,
+       "violated": 0,
+       "max_violation": 0.0,
+       "worst_row": 739
+      },
+      "tau_split": {
+       "rows": 66,
+       "violated": 0,
+       "max_violation": 0.0,
+       "worst_row": 2774
+      },
+      "cut_triangle": {
+       "rows": 7920,
+       "violated": 0,
+       "max_violation": 0.0,
+       "worst_row": 2840
+      }
+     },
+     "tree_source": "data/ground_truth/Primates12.splits",
+     "tree_objective": 0.097972333203125,
+     "seconds": 0.07957625389099121
+    },
+    "rows_cut_off_optimum": 0,
+    "safe_le_tree_objective": true
+   }
+  }
+ },
+ "peak_rss_mb": 430.453125,
+ "mincut=0": {
+  "cutpoly_minus_strongtri": 1.3877787807814457e-17,
+  "both_minus_strongtri": 0.0
+ },
+ "mincut=1": {
+  "cutpoly_minus_strongtri": -1.3877787807814457e-17,
+  "both_minus_strongtri": 0.0
+ }
+}

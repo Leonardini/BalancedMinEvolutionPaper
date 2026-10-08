@@ -1,0 +1,75 @@
+{
+ "label": "28_nucleic",
+ "instance": "external/catanzaro/upstream/instances/supplement/28_nucleic_M2573_346x897_2006.txt",
+ "flags": "-O B --str A",
+ "optimum_solver_scale": 345731096.6841344,
+ "gurobi": {
+  "lp": {
+   "bound": 335919746.30355054,
+   "seconds": 0.2897517681121826,
+   "root_gap_pct": 2.837855915965723
+  },
+  "root_on": {
+   "bound": 338081397.18116355,
+   "seconds": 28.33960771560669,
+   "status": 8,
+   "root_gap_pct": 2.212615404381679
+  },
+  "root_off": {
+   "bound": 336083043.08089685,
+   "seconds": 13.013054847717285,
+   "status": 8,
+   "root_gap_pct": 2.790623607702893
+  },
+  "root_max": {
+   "bound": 338250584.4186897,
+   "seconds": 123.02693200111389,
+   "status": 8,
+   "root_gap_pct": 2.1636793268495063
+  }
+ },
+ "cplex": {
+  "lp": {
+   "seconds": 0.27687716484069824,
+   "status": "optimal",
+   "bound": 335919746.30355,
+   "root_gap_pct": 2.837855915965878
+  },
+  "root_on": {
+   "seconds": 15.079989671707153,
+   "status": "node limit exceeded, no integer solution",
+   "bound": 338253691.9681074,
+   "cuts": {
+    "GUB_cover": 31,
+    "MIR": 1861,
+    "cover": 1,
+    "flow_cover": 185,
+    "fractional": 29,
+    "zero_half": 51
+   },
+   "root_gap_pct": 2.1627804926261813
+  },
+  "root_off": {
+   "seconds": 2.9317548274993896,
+   "status": "node limit exceeded, no integer solution",
+   "bound": 335919746.30355,
+   "cuts": {},
+   "root_gap_pct": 2.837855915965878
+  },
+  "root_max": {
+   "seconds": 1067.7837119102478,
+   "status": "node limit exceeded, no integer solution",
+   "bound": 338462835.6455036,
+   "cuts": {
+    "GUB_cover": 33,
+    "MIR": 1889,
+    "disjunctive": 23,
+    "flow_cover": 143,
+    "fractional": 31,
+    "lift_and_project": 69,
+    "zero_half": 65
+   },
+   "root_gap_pct": 2.1022873291815127
+  }
+ }
+}

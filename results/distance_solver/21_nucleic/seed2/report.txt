@@ -1,0 +1,2 @@
+Instance | N | Best Sol | Time (s) | Node Best Sol | First Root DB | Last Root BD | Best Dual Bound | Final Gap (%) | Nodes | INF | CO@Root | CO@Search | GKI@Root | GKI@Search | EHC@Root | EHC@Search | 2K@Root | 2K@Search | 4PT@Root | 4PT@Search | Overall Cuts
+21_nucleic_M2839_470x829_2006.txt | 21 | 7507514.79064 | 269.220820375 | 0 | 7244048.93822 | 7491096.0463 | 7507514.79064 | 0 | 780 | 0 | 0 | 0 | 3 | 11 | 75 | 0 | 6 | 0 | 6840 | 0 | 6935

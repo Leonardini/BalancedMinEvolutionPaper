@@ -1,0 +1,77 @@
+{
+ "label": "M18",
+ "instance": "/Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper/external/catanzaro/upstream/instances/03-M18.txt",
+ "flags": "-O B --str A",
+ "optimum_solver_scale": 66029.11213568,
+ "gurobi": {
+  "lp": {
+   "bound": 64290.61989415258,
+   "seconds": 0.06499934196472168,
+   "root_gap_pct": 2.6329177923142093
+  },
+  "root_on": {
+   "bound": 65436.60853698606,
+   "seconds": 4.740301847457886,
+   "status": 8,
+   "root_gap_pct": 0.8973369162929731
+  },
+  "root_off": {
+   "bound": 64330.844865226856,
+   "seconds": 1.3499550819396973,
+   "status": 8,
+   "root_gap_pct": 2.5719977378515355
+  },
+  "root_max": {
+   "bound": 65500.01573918881,
+   "seconds": 18.990328073501587,
+   "status": 8,
+   "root_gap_pct": 0.8013077555911577
+  }
+ },
+ "cplex": {
+  "lp": {
+   "seconds": 0.04956793785095215,
+   "status": "optimal",
+   "bound": 64290.61989415255,
+   "root_gap_pct": 2.6329177923142533
+  },
+  "root_on": {
+   "seconds": 2.155931234359741,
+   "status": "node limit exceeded, no integer solution",
+   "bound": 65325.3397968319,
+   "cuts": {
+    "GUB_cover": 182,
+    "MIR": 460,
+    "clique": 1,
+    "cover": 4,
+    "flow_cover": 14,
+    "fractional": 15,
+    "zero_half": 18
+   },
+   "root_gap_pct": 1.0658515858913191
+  },
+  "root_off": {
+   "seconds": 0.7927820682525635,
+   "status": "node limit exceeded, no integer solution",
+   "bound": 64290.61989415254,
+   "cuts": {},
+   "root_gap_pct": 2.6329177923142644
+  },
+  "root_max": {
+   "seconds": 89.44091010093689,
+   "status": "node limit exceeded, no integer solution",
+   "bound": 65422.8221935836,
+   "cuts": {
+    "GUB_cover": 144,
+    "MIR": 249,
+    "clique": 1,
+    "disjunctive": 8,
+    "flow_cover": 13,
+    "fractional": 13,
+    "lift_and_project": 75,
+    "zero_half": 26
+   },
+   "root_gap_pct": 0.9182161057240428
+  }
+ }
+}

@@ -1,0 +1,74 @@
+{
+ "n": 6,
+ "survivors": 285,
+ "ordered": false,
+ "violating": 180,
+ "nodes": 4160,
+ "seconds": 0,
+ "row_types": 3,
+ "name": "weak_n6",
+ "options": [
+  "--weak",
+  "--full"
+ ],
+ "weak_orbits": 1,
+ "r_stabiliser": 4,
+ "r_orbit_size": 180,
+ "orbit_is_r": true,
+ "checks": [
+  {
+   "label": "dumped matrices = violating survivors",
+   "computed": 180,
+   "expected": 180,
+   "ok": true
+  },
+  {
+   "label": "dumped matrices pairwise distinct",
+   "computed": 180,
+   "expected": 180,
+   "ok": true
+  },
+  {
+   "label": "weak survivors",
+   "computed": 285,
+   "expected": 285,
+   "ok": true
+  },
+  {
+   "label": "weak survivors satisfying (10) = (2n-5)!!",
+   "computed": 105,
+   "expected": 105,
+   "ok": true
+  },
+  {
+   "label": "weak non-trees",
+   "computed": 180,
+   "expected": 180,
+   "ok": true
+  },
+  {
+   "label": "S_6 orbits among the non-trees",
+   "computed": 1,
+   "expected": 1,
+   "ok": true
+  },
+  {
+   "label": "the orbit is that of r",
+   "computed": true,
+   "expected": true,
+   "ok": true
+  },
+  {
+   "label": "stabiliser order of r",
+   "computed": 4,
+   "expected": 4,
+   "ok": true
+  },
+  {
+   "label": "orbit size n!/|stabiliser| = non-trees",
+   "computed": 180,
+   "expected": 180,
+   "ok": true
+  }
+ ]
+}

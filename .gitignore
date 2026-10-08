@@ -1,0 +1,9 @@
+# Third-party source (fetched, not redistributed) and its build
+external/catanzaro/upstream
+external/catanzaro/build
+__pycache__/
+# Built from their C sources on first use
+experiments/theory/build/
+experiments/enumeration/build/
+compact/solver/_face_enum.so
+compact/solver/_cut_enum.so

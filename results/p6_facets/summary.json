@@ -1,0 +1,61 @@
+{
+  "n": 6,
+  "vertices": 105,
+  "coordinates_kept": 9,
+  "eliminated_pairs": [2, 4, 7, 9, 11, 14],
+  "eliminated_pairs_labels": ["1-3", "1-5", "2-4", "2-6", "3-5", "4-6"],
+  "det_eliminated_kraft_block": 4,
+  "linearity_rows": 0,
+  "facets": 90262,
+  "families": {
+    "F1": {
+      "size": 15,
+      "matched": 15,
+      "distinct_facets": 15,
+      "trivial": 0
+    },
+    "F2": {
+      "size": 60,
+      "matched": 60,
+      "distinct_facets": 60,
+      "trivial": 0
+    },
+    "F6": {
+      "size": 90,
+      "matched": 90,
+      "distinct_facets": 90,
+      "trivial": 0
+    }
+  },
+  "named_distinct_facets": 165,
+  "named_fraction": 0.0018,
+  "support_histogram": {
+    "1": 9,
+    "2": 36,
+    "3": 42,
+    "4": 72,
+    "5": 477,
+    "6": 258,
+    "7": 2358,
+    "8": 5796,
+    "9": 81214
+  },
+  "full_support_fraction": 0.8998,
+  "cuts": {
+    "(1,5)": {
+      "size": 6,
+      "matched": 0,
+      "trivial": 6
+    },
+    "(2,4)": {
+      "size": 15,
+      "matched": 0,
+      "trivial": 0
+    },
+    "(3,3)": {
+      "size": 10,
+      "matched": 10,
+      "trivial": 0
+    }
+  }
+}

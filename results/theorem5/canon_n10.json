@@ -1,0 +1,31 @@
+{
+ "n": 10,
+ "survivors": 1252,
+ "ordered": true,
+ "violating": 0,
+ "nodes": 16204031,
+ "seconds": 1,
+ "row_types": 28,
+ "name": "canon_n10",
+ "options": [],
+ "checks": [
+  {
+   "label": "canonical survivors (Table C1)",
+   "computed": 1252,
+   "expected": 1252,
+   "ok": true
+  },
+  {
+   "label": "violating (10)",
+   "computed": 0,
+   "expected": 0,
+   "ok": true
+  },
+  {
+   "label": "row types",
+   "computed": 28,
+   "expected": 28,
+   "ok": true
+  }
+ ]
+}
