@@ -186,7 +186,7 @@ def sec_optima(opt, checked):
                "certified runs agreeing"], rows)])
 
 
-TABLE7 = ["Primates12", "M17", "M18", "20_euros2", "21_nucleic", "22_euros2", "23_euros2",
+TABLE7 = ["Primates12", "M17", "M18", "20_euros2", "20_B-HA", "20_rosids", "21_nucleic", "22_euros2", "23_euros2",
           "24_proteic", "25_proteic", "26_proteic", "27_nucleic", "28_nucleic", "29_B-NS1",
           "30_B-NS1", "M43"]
 

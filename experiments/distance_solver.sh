@@ -1,6 +1,8 @@
 #!/bin/bash
 # Section 8.6, Table D8 and the distance-indexed column of Table D2: the distance-indexed
 # solver of Catanzaro et al., configuration of Section 7.1, on every instance.
+# 20_rosids is not run here: Table D8 reads its runs from distance_cut_families.sh,
+# whose configuration full is this configuration.
 # TIMED: 10 threads, 3600 s cap, one instance at a time. Seed 1 runs everywhere; seeds 2
 # and 3 run only where seed 1 certified, because only those runs report a time and node
 # count that a median and range describe (an uncapped run reports a gap at the cap).

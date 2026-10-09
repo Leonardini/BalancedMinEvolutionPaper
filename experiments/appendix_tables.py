@@ -103,8 +103,7 @@ def d2_versus(opt):
                      spread([int(r["nodes"]) for r in theirs], lambda x: f"{x:.0f}")])
     return ("**Table D2. The two solvers on the instances of Table D1 with $n\\ge12$** "
             "(Section 8.1): the compact solver as in Table D1, the distance-indexed solver in the "
-            "configuration of Section 7.1 (Table D8; 20_rosids from the configuration full of "
-            "Table D9, which is the same). Time in seconds to certify, and nodes, for each solver.\n\n"
+            "configuration of Section 7.1 (Table D8). Time in seconds to certify, and nodes, for each solver.\n\n"
             + table(["instance", "compact (s)", "nodes", "distance-indexed (s)", "nodes"], rows))
 
 
@@ -230,10 +229,15 @@ def d7_quartets():
                      "no fix (rows)", "> 12.5%", "differ"], rows))
 
 
+# Table D8 reads 20_rosids from the runs of the configuration full of Table D9, which is the
+# configuration of Section 7.1; every other instance from results/distance_solver.
+D8_DIRS = {"20_rosids": "distance_cut_families/full/20_rosids"}
+
+
 def d8_distance_solver():
     rows = []
     for label in S.TABLE7:
-        c = S.timed_cells(S.seed_runs(RES / "distance_solver" / label))
+        c = S.timed_cells(S.seed_runs(RES / D8_DIRS.get(label, f"distance_solver/{label}")))
         if c is None:
             rows.append([label, PENDING, "", "", "", ""])
             continue
@@ -245,8 +249,9 @@ def d8_distance_solver():
                      spread([float(r["final_gap_pct"]) for r in uncert], lambda x: f"{x:.3f}%")
                      if uncert else "–"])
     return ("**Table D8. The distance-indexed solver** (Section 8.6), configuration of "
-            "Section 7.1, time limit 3600 s. Time in seconds. Last column: final gap of "
-            "the runs that did not certify.\n\n"
+            "Section 7.1, time limit 3600 s (20_rosids from the configuration full of Table D9, "
+            "which is the same). Time in seconds. Last column: final gap of the runs that did "
+            "not certify.\n\n"
             + table(["instance", "$n$", "certified", "time (s)", "nodes", "final gap"], rows))
 
 
@@ -379,7 +384,7 @@ def d13_heuristics():
     r = load(RES / "heuristics_vs_optimum.json")
     if r is None:
         return "**Table D13. NJ and FastME against the certified optimum** (Section 8.8). " + PENDING
-    order = ["Primates12", "M17", "M18", "20_euros2", "20_B-HA", "20_rosids"] + S.TABLE7[4:-1]
+    order = S.TABLE7
     recs = sorted(r["instances"], key=lambda x: order.index(_short(x["instance"])))
 
     def cell(h):
