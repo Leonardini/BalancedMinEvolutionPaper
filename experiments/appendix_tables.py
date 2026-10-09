@@ -458,11 +458,9 @@ def e2_enumeration():
                              for s in ("distance", "compact")))])
     if not rows:
         return "**Table E2.** pending"
-    return ("**Table E2. Certificates against exhaustive enumeration.** Crops of each instance "
-            "to $n=6,\\dots,12$ leaves (the first $n$, or three random subsets per $n$). "
-            "Columns: crops, crops certified by each solver, smallest relative gap between the "
-            "optimum and the best non-optimal tree, and false certificates (a certified tree "
-            "that is not optimal). Both solvers had a time limit of one hour per crop.\n\n"
+    # Title only: the paragraph before the table in Appendix E describes the crops, the
+    # thread count, the time limit and the columns.
+    return ("**Table E2. Certificates against exhaustive enumeration.**\n\n"
             + table(["instance", "crops", "distance-indexed", "compact", "runner-up gap",
                      "false certificates"], rows))
 
@@ -525,7 +523,7 @@ CLASS = {"D1": TIMED_BOTH, "D2": TIMED_BOTH, "D3": BOUND, "D4": BOUND, "D5": BOU
          "D7": BOUND, "D8": TIMED,
          "D9": "10 threads, except the two root-LP rows (one thread).",
          "D10": BOUND, "D11": BOUND, "D12": BOUND, "D13": BOUND, "E1": BOUND,
-         "E2": "One thread per crop; not comparable with the times of Tables D1 and D8.",
+         "E2": None,  # described in the text of Appendix E
          "E3": BOUND, "E4": TIMED}
 
 
@@ -537,6 +535,8 @@ def with_threads(block):
         return block
     if m.group(1) not in CLASS:
         raise KeyError(f"no thread count for Table {m.group(1)}")
+    if CLASS[m.group(1)] is None:
+        return block
     head = block[:m.end()].rstrip(".,:;")
     rest = block[m.end():]
     sep = " " if head.endswith(".**") else ". "
