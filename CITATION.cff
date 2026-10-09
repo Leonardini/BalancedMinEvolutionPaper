@@ -13,3 +13,4 @@ authors:
     given-names: Samir
     affiliation: "MRC Centre for Global Infectious Disease Analysis, School of Public Health, Imperial College London; Section of Health Data Science and AI, Department of Public Health, University of Copenhagen"
 repository-code: "https://github.com/Leonardini/BalancedMinEvolutionPaper"
+license: MIT
