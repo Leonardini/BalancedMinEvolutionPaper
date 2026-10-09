@@ -118,7 +118,7 @@ optima, and the results of Sections 4, 5.1, 5.2 and 6.3 and Appendices C and H.
 | Section 8.1, Tables D1 and D2: the compact solver | `experiments/compact_solver.sh` (one run: `compact_solver.py`) | `compact_solver/` |
 | Section 8.2, Table D3: facets F1 and F6 | `experiments/lp/named_facets.py` | `lp/named_facets.json` |
 | Section 8.3, Table D4: shares of the cut families | `experiments/lp/cut_family_shares.py` | `lp/cut_family_shares/` |
-| Section 8.4, Table D5: membership model; lifted ladder model | `experiments/lp/membership_layers.py`, `lifted_ladder.py` | `lp/membership_layers/`, `lp/lifted_ladder/` |
+| Section 8.4, Table D5: membership model; lifted ladder model, and its gap with the exact hull of the trees for n ≤ 7 | `experiments/lp/membership_layers.py`, `lifted_ladder.py`, `tree_hull.py` | `lp/membership_layers/`, `lp/lifted_ladder/` |
 | Section 8.4, Table D6: per-split triangles; odd cycles | `experiments/lp/per_split_triangles.py`, `odd_cycles.py` | `lp/per_split_triangles/`, `lp/odd_cycles/` |
 | Section 8.5, Table D7: local fixes of the quartets violated at the root | `experiments/lp/quartet_fixes.py` | `lp/quartet_fixes/` |
 | Section 8.6, Tables D8 and D2: the distance-indexed solver | `experiments/distance_solver.sh` | `distance_solver/` |

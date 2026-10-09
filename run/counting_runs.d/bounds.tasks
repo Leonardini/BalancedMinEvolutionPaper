@@ -65,3 +65,7 @@ $PY experiments/static_root_two_solvers.py M18 external/catanzaro/upstream/insta
 $PY experiments/static_root_two_solvers.py 20_euros2 external/catanzaro/upstream/instances/supplement/20_euros2.txt $RESULTS/static_root_two_solvers/20_euros2.json --labeled
 $PY experiments/static_root_two_solvers.py 20_rosids external/catanzaro/upstream/instances/supplement/20_rosids.txt $RESULTS/static_root_two_solvers/20_rosids.json --labeled
 $PY experiments/static_root_two_solvers.py 28_nucleic external/catanzaro/upstream/instances/supplement/28_nucleic_M2573_346x897_2006.txt $RESULTS/static_root_two_solvers/28_nucleic.json --labeled
+
+# Section 8.4: the lifted ladder model on the synthetic instances n = 4..7 with no cliques, the cover of
+# Proposition 4, all maximal cliques, and the exact convex hull of the trees' split vectors.
+$PY experiments/lp/tree_hull.py $RESULTS/lp/lifted_ladder/tree_hull_small_n.json
