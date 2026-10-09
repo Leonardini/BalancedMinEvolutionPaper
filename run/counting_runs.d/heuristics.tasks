@@ -1,0 +1,2 @@
+# Section 8.8, Table D13: the trees of NJ and FastME against the certified optimal trees of data/ground_truth.
+$PY experiments/heuristics_vs_optimum.py results/heuristics_vs_optimum.json

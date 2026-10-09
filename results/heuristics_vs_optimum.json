@@ -1,0 +1,321 @@
+{
+ "fastme_version": "FastME 2.1.6.3",
+ "summary": {
+  "nj": {
+   "instances": 16,
+   "optimal": 7,
+   "same_tree": 6
+  },
+  "fastme": {
+   "instances": 16,
+   "optimal": 12,
+   "same_tree": 10
+  }
+ },
+ "instances": [
+  {
+   "instance": "20_B-HA-573-585-BMGE",
+   "n": 20,
+   "optimum": 0.2527582954785156,
+   "nj": {
+    "relative_gap": 0.0,
+    "optimal": true,
+    "splits_missing": 0,
+    "same_tree": true,
+    "flags": "-m N"
+   },
+   "fastme": {
+    "relative_gap": 0.0,
+    "optimal": true,
+    "splits_missing": 0,
+    "same_tree": true,
+    "flags": "-m B -n B -s"
+   }
+  },
+  {
+   "instance": "20_euros2",
+   "n": 20,
+   "optimum": 0.34151780748535154,
+   "nj": {
+    "relative_gap": 0.0,
+    "optimal": true,
+    "splits_missing": 0,
+    "same_tree": true,
+    "flags": "-m N"
+   },
+   "fastme": {
+    "relative_gap": 0.0,
+    "optimal": true,
+    "splits_missing": 0,
+    "same_tree": true,
+    "flags": "-m B -n B -s"
+   }
+  },
+  {
+   "instance": "20_rosids",
+   "n": 20,
+   "optimum": 0.4941456692871094,
+   "nj": {
+    "relative_gap": 0.0018302357928686327,
+    "optimal": false,
+    "splits_missing": 4,
+    "same_tree": false,
+    "flags": "-m N"
+   },
+   "fastme": {
+    "relative_gap": 0.0018302357928686327,
+    "optimal": false,
+    "splits_missing": 4,
+    "same_tree": false,
+    "flags": "-m B -n B -s"
+   }
+  },
+  {
+   "instance": "21_nucleic_M2839_470x829_2006",
+   "n": 21,
+   "optimum": 1.7899310089672853,
+   "nj": {
+    "relative_gap": 0.0008851339373993358,
+    "optimal": false,
+    "splits_missing": 1,
+    "same_tree": false,
+    "flags": "-m N"
+   },
+   "fastme": {
+    "relative_gap": 0.0,
+    "optimal": true,
+    "splits_missing": 0,
+    "same_tree": true,
+    "flags": "-m B -n B -s"
+   }
+  },
+  {
+   "instance": "22_euros2",
+   "n": 22,
+   "optimum": 0.3515721270800781,
+   "nj": {
+    "relative_gap": 0.0,
+    "optimal": true,
+    "splits_missing": 0,
+    "same_tree": true,
+    "flags": "-m N"
+   },
+   "fastme": {
+    "relative_gap": 0.0,
+    "optimal": true,
+    "splits_missing": 0,
+    "same_tree": true,
+    "flags": "-m B -n B -s"
+   }
+  },
+  {
+   "instance": "23_euros2",
+   "n": 23,
+   "optimum": 0.35522458204101565,
+   "nj": {
+    "relative_gap": 0.0,
+    "optimal": true,
+    "splits_missing": 0,
+    "same_tree": true,
+    "flags": "-m N"
+   },
+   "fastme": {
+    "relative_gap": 0.0,
+    "optimal": true,
+    "splits_missing": 0,
+    "same_tree": true,
+    "flags": "-m B -n B -s"
+   }
+  },
+  {
+   "instance": "24_proteic_M2577_40x12260_2005",
+   "n": 24,
+   "optimum": 2.579853291369629,
+   "nj": {
+    "relative_gap": 0.001253249144624097,
+    "optimal": false,
+    "splits_missing": 4,
+    "same_tree": false,
+    "flags": "-m N"
+   },
+   "fastme": {
+    "relative_gap": 0.0,
+    "optimal": true,
+    "splits_missing": 0,
+    "same_tree": true,
+    "flags": "-m B -n B -s"
+   }
+  },
+  {
+   "instance": "25_proteic_M2624_139x348_2006-BMGE",
+   "n": 25,
+   "optimum": 1.8708295753540036,
+   "nj": {
+    "relative_gap": 0.0,
+    "optimal": true,
+    "splits_missing": 1,
+    "same_tree": false,
+    "flags": "-m N"
+   },
+   "fastme": {
+    "relative_gap": 0.0,
+    "optimal": true,
+    "splits_missing": 1,
+    "same_tree": false,
+    "flags": "-m B -n B -s"
+   }
+  },
+  {
+   "instance": "26_proteic_M2624_139x348_2006-BMGE",
+   "n": 26,
+   "optimum": 1.918862733647461,
+   "nj": {
+    "relative_gap": 0.0001955660920938401,
+    "optimal": false,
+    "splits_missing": 2,
+    "same_tree": false,
+    "flags": "-m N"
+   },
+   "fastme": {
+    "relative_gap": 0.0,
+    "optimal": true,
+    "splits_missing": 1,
+    "same_tree": false,
+    "flags": "-m B -n B -s"
+   }
+  },
+  {
+   "instance": "27_nucleic_M2573_346x897_2006",
+   "n": 27,
+   "optimum": 0.6394548374035645,
+   "nj": {
+    "relative_gap": 0.0010897974805874754,
+    "optimal": false,
+    "splits_missing": 5,
+    "same_tree": false,
+    "flags": "-m N"
+   },
+   "fastme": {
+    "relative_gap": 5.7334446722540046e-05,
+    "optimal": false,
+    "splits_missing": 2,
+    "same_tree": false,
+    "flags": "-m B -n B -s"
+   }
+  },
+  {
+   "instance": "28_nucleic_M2573_346x897_2006",
+   "n": 28,
+   "optimum": 0.6439743501770019,
+   "nj": {
+    "relative_gap": 0.0008092289720433528,
+    "optimal": false,
+    "splits_missing": 5,
+    "same_tree": false,
+    "flags": "-m N"
+   },
+   "fastme": {
+    "relative_gap": 0.0008092289720433528,
+    "optimal": false,
+    "splits_missing": 5,
+    "same_tree": false,
+    "flags": "-m B -n B -s"
+   }
+  },
+  {
+   "instance": "29_B-NS1-284-344-BMGE",
+   "n": 29,
+   "optimum": 0.3178039742019654,
+   "nj": {
+    "relative_gap": 0.0002032775751996998,
+    "optimal": false,
+    "splits_missing": 2,
+    "same_tree": false,
+    "flags": "-m N"
+   },
+   "fastme": {
+    "relative_gap": 0.0,
+    "optimal": true,
+    "splits_missing": 0,
+    "same_tree": true,
+    "flags": "-m B -n B -s"
+   }
+  },
+  {
+   "instance": "30_B-NS1-284-344-BMGE",
+   "n": 30,
+   "optimum": 0.32129024151435853,
+   "nj": {
+    "relative_gap": 0.00021254696057886838,
+    "optimal": false,
+    "splits_missing": 3,
+    "same_tree": false,
+    "flags": "-m N"
+   },
+   "fastme": {
+    "relative_gap": 0.0,
+    "optimal": true,
+    "splits_missing": 0,
+    "same_tree": true,
+    "flags": "-m B -n B -s"
+   }
+  },
+  {
+   "instance": "M17",
+   "n": 17,
+   "optimum": 0.07930035417968749,
+   "nj": {
+    "relative_gap": 0.0,
+    "optimal": true,
+    "splits_missing": 0,
+    "same_tree": true,
+    "flags": "-m N"
+   },
+   "fastme": {
+    "relative_gap": 0.0,
+    "optimal": true,
+    "splits_missing": 0,
+    "same_tree": true,
+    "flags": "-m B -n B -s"
+   }
+  },
+  {
+   "instance": "M18",
+   "n": 18,
+   "optimum": 0.12594053675781253,
+   "nj": {
+    "relative_gap": 0.0006895254794042783,
+    "optimal": false,
+    "splits_missing": 4,
+    "same_tree": false,
+    "flags": "-m N"
+   },
+   "fastme": {
+    "relative_gap": 0.00037677549909913527,
+    "optimal": false,
+    "splits_missing": 3,
+    "same_tree": false,
+    "flags": "-m B -n B -s"
+   }
+  },
+  {
+   "instance": "Primates12",
+   "n": 12,
+   "optimum": 0.097972333203125,
+   "nj": {
+    "relative_gap": 0.0,
+    "optimal": true,
+    "splits_missing": 0,
+    "same_tree": true,
+    "flags": "-m N"
+   },
+   "fastme": {
+    "relative_gap": 0.0,
+    "optimal": true,
+    "splits_missing": 0,
+    "same_tree": true,
+    "flags": "-m B -n B -s"
+   }
+  }
+ ]
+}

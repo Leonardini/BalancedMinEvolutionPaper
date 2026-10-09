@@ -23,7 +23,7 @@ The paper compares two exact solvers for the Balanced Minimum Evolution (BME) pr
 | MOSEK Python API | 11.2.5 | the manifold constraint at every node of the compact solver |
 | Gurobi, with gurobipy | 12.0.1 | the distance-indexed solver, and most bound experiments |
 | CVXPY | 1.9.3 | the bound experiments that impose the manifold constraint exactly (with MOSEK) |
-| FastME | 2.1.6.3 | the starting tree of both solvers |
+| FastME | 2.1.6.3 | the starting tree of both solvers, and the NJ and FastME trees of Table D13 |
 | boost | Homebrew | building the distance-indexed solver |
 | R, with packages `rcdd` and `jsonlite` | 4.5.3 | the facets of the BME polytope for n = 6 (Section 4) |
 | a C compiler | Apple clang 16 | the enumerators and two small extensions of the compact solver |
@@ -127,6 +127,7 @@ optima, and the results of Sections 4, 5.1, 5.2 and 6.3 and Appendices C and H.
 | Section 8.7, Table D10: rows of the distance-indexed model added to the compact one | `experiments/base_rows/base_rows_in_compact.py` | `base_rows/` |
 | Section 8.7, Table D11: the distance-indexed root with Gurobi's cuts on and off | `experiments/distance_root_cuts.sh` | `distance_root_cuts/` |
 | Section 8.7, Table D12: the static root in Gurobi and CPLEX | `experiments/static_root_two_solvers.py` | `static_root_two_solvers/` |
+| Section 8.8, Table D13: NJ and FastME against the certified optimal trees | `experiments/heuristics_vs_optimum.py` | `heuristics_vs_optimum.json` |
 | Appendix E: the certified optima, checked exactly | `experiments/check_optima.py` | `check_optima.json` |
 | Appendix E, Table E1: safe bounds | inside every bound script (`experiments/lp/lib/safe_bound.py`) | in each JSON record |
 | Appendix E, Table E2: certificates against enumeration of all trees | `experiments/enumeration/certificates_vs_enumeration.py` | `enumeration/` |
