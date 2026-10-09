@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite the paper and this repository."
+title: "Code and data for \"A Compact Weight-Space Integer Programming Formulation for Balanced Minimum Evolution\""
+type: dataset
+authors:
+  - family-names: Chindelevitch
+    given-names: Leonid
+    affiliation: "MRC Centre for Global Infectious Disease Analysis, School of Public Health, Imperial College London"
+  - family-names: Penn
+    given-names: Matthew
+    affiliation: "Section of Health Data Science and AI, Department of Public Health, University of Copenhagen"
+  - family-names: Bhatt
+    given-names: Samir
+    affiliation: "MRC Centre for Global Infectious Disease Analysis, School of Public Health, Imperial College London; Section of Health Data Science and AI, Department of Public Health, University of Copenhagen"
+repository-code: "https://github.com/Leonardini/BalancedMinEvolutionPaper"
