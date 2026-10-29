@@ -20,6 +20,12 @@
       "distinct_facets": 60,
       "trivial": 0
     },
+    "F3": {
+      "size": 20,
+      "matched": 20,
+      "distinct_facets": 10,
+      "trivial": 0
+    },
     "F6": {
       "size": 90,
       "matched": 90,
@@ -27,8 +33,8 @@
       "trivial": 0
     }
   },
-  "named_distinct_facets": 165,
-  "named_fraction": 0.0018,
+  "named_distinct_facets": 175,
+  "named_fraction": 0.0019,
   "support_histogram": {
     "1": 9,
     "2": 36,

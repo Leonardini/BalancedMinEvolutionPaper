@@ -51,7 +51,9 @@ def _optimum(opt, inst, recs):
     if inst in opt:
         return opt[inst]["compact"]
     if inst.startswith("test_n"):
-        return S.synthetic_optimum(inst)
+        L = S.synthetic_optimum(inst)  # the enumeration record covers n = 6..10 only
+        if L is not None:
+            return L
     vals = {round(r["objective"], 12) for r in recs}
     if recs and all(r["certified"] for r in recs) and len(vals) == 1:
         return recs[0]["objective"]
@@ -113,7 +115,9 @@ def d3_facets():
         return "**Table D3.** pending"
     rows = [[x["n"], f"{x['opt']:.4f}", f"{x['base']:.4f}", f"{x['f1']:.4f}", f"{x['f1_f6']:.4f}",
              gap(x["closed"], 0)] for x in r["rows"]]
-    return ("**Table D3. Root bound with F1 and F6 on the synthetic instances** (Section 8.2). "
+    return ("**Table D3. Root bound with F1 and F6 on test_n6 to test_n10** (Section 8.2). "
+            "Base: Kraft, $0\\le w_{ij}\\le\\tfrac14$, every cut $W[S]\\ge\\tfrac12$, the double "
+            "cherry and every crossing cut; F1 adds $w_{ij}\\ge2^{-(n-1)}$. "
             "$L^*$ by enumeration of all trees.\n\n"
             + table(["$n$", "$L^*$", "base", "$+$F1", "$+$F1$+$F6", "gap closed"], rows))
 
@@ -256,7 +260,7 @@ def d8_distance_solver():
 
 
 def d9_cut_families(opt):
-    labels = {"a": "(a) base", "b": "(b) parity triangles", "gki": "+ GK", "c": "+ 2K, CO",
+    labels = {"a": "(a) base", "b": "(b) + parity", "gki": "+ GK", "c": "+ 2K, CO",
               "d": "+ 4pt", "full": "full", "cooff": "full − CO"}
     grow, nrow = [], []
     for cfg, _ in S.T8_CFG:
@@ -281,8 +285,8 @@ def d9_cut_families(opt):
                 nd.append(f"{c['cert']} of {c['seeds']} certified")
         grow.append(g), nrow.append(nd)
     return ("**Table D9. The distance-indexed model by cut configuration** (Section 8.7). "
-            "(a) base, no separated cuts; (b) strong triangles strengthened by parity on all "
-            "triples; then cumulatively generalized Kraft (GK), 2-K-split and circular order "
+            "(a) base: the model of Section 2.4 without its parity rows and quartet inequalities, "
+            "and no separated cuts; (b) (a) with the parity rows on every triple; then cumulatively generalized Kraft (GK), 2-K-split and circular order "
             "(2K, CO), and four-point (4pt); full is the configuration of Section 7.1, and "
             "full − CO the same without circular order. (a) and (b) are root LPs; the other rows "
             "are full solves (time limit 3600 s, three seeds where the first certifies), of which we report the converged root bound. "
@@ -450,7 +454,8 @@ def e2_enumeration():
             continue
         Sz = rec["sizes"]
         gaps = [r["gap_to_runner_up"] for r in Sz.values() if r["gap_to_runner_up"] is not None]
-        rows.append([p.stem.replace("_random", " (random)"), str(len(Sz)),
+        name = "test_n10" if p.stem == "synthetic" else p.stem
+        rows.append([name.replace("_random", " (random)"), str(len(Sz)),
                      f"{sum(bool(r['distance'].get('certified')) for r in Sz.values())}",
                      f"{sum(bool(r['compact']['certified']) for r in Sz.values())}",
                      f"{min(gaps):.0e}" if gaps else "–",
@@ -458,10 +463,10 @@ def e2_enumeration():
                              for s in ("distance", "compact")))])
     if not rows:
         return "**Table E2.** pending"
-    # Title only: the paragraph before the table in Appendix E describes the crops, the
+    # Title only: the paragraph before the table in Appendix E describes the square submatrices, the
     # thread count, the time limit and the columns.
     return ("**Table E2. Certificates against exhaustive enumeration.**\n\n"
-            + table(["instance", "crops", "distance-indexed", "compact", "runner-up gap",
+            + table(["instance", "submatrices", "distance-indexed", "compact", "runner-up gap",
                      "false certificates"], rows))
 
 

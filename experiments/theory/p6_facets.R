@@ -7,7 +7,7 @@
 ## the n coordinates w_ij with i, j at circular distance 2 on the cycle 1, 2, ..., n
 ## (their Kraft submatrix is invertible) and keep the other n(n-3)/2 coordinates, in
 ## which P_n is full-dimensional. cddlib (rcdd::scdd, exact rational arithmetic) turns
-## the vertices into the facet list. We then lift F1, F2, F6 and the cut inequalities
+## the vertices into the facet list. We then lift F1, F2, F3, F6 and the cut inequalities
 ## W[S] >= 1/2 into the same coordinates and look them up among the facets, and record
 ## the number of nonzero coefficients of every facet.
 ##
@@ -134,6 +134,10 @@ for (tri in combn(n, 3L, simplify = FALSE)) for (j in tri) {
   F2[[length(F2) + 1]] <- list(a = unitVec(list(c(ik[1], j, -1), c(j, ik[2], -1),
                                                 c(ik[1], ik[2], 1))), beta = -1 / 4)
 }
+## F3: w_ij + w_ik + w_jk <= 1/2, for every triple. A triple and its complement give the
+## same cut W[S] >= 1/2 on the Kraft space, so at n = 6 the 20 triples give 10 facets.
+F3 <- lapply(combn(n, 3L, simplify = FALSE), function(t)
+  list(a = -unitVec(list(c(t[1], t[2], 1), c(t[1], t[3], 1), c(t[2], t[3], 1))), beta = -1 / 2))
 ## F6: w_kl <= 2^(n-4) w_ij for disjoint pairs {i,j}, {k,l} (ordered)
 F6 <- list()
 for (p in seq_len(npair)) for (q in seq_len(npair)) {
@@ -154,7 +158,7 @@ for (s in 1:(n %/% 2)) {
   cuts[[sprintf("(%d,%d)", s, n - s)]] <- lapply(Ss, cutIneq)
 }
 
-fam <- list(F1 = matchFamily(F1), F2 = matchFamily(F2), F6 = matchFamily(F6))
+fam <- list(F1 = matchFamily(F1), F2 = matchFamily(F2), F3 = matchFamily(F3), F6 = matchFamily(F6))
 namedKeys <- unique(unlist(lapply(fam, function(f) f$keys[f$keys %in% facetKeys])))
 cutRes <- lapply(cuts, matchFamily)
 say("families matched")
@@ -171,9 +175,9 @@ summary <- list(
   full_support_fraction = as.numeric(supportHist[ncol(X)]) / nrow(facetRows),
   cuts = lapply(cutRes, function(f) f[c("size", "matched", "trivial")]))
 writeLines(toJSON(summary, auto_unbox = TRUE, pretty = TRUE), file.path(outdir, "summary.json"))
-say("facets %d; F1 %d/%d, F2 %d/%d, F6 %d/%d; named distinct %d (%.2f%%); full support %.2f%%",
+say("facets %d; F1 %d/%d, F2 %d/%d, F3 %d/%d (%d distinct), F6 %d/%d; named distinct %d (%.2f%%); full support %.2f%%",
     nrow(facetRows), fam$F1$matched, fam$F1$size, fam$F2$matched, fam$F2$size,
-    fam$F6$matched, fam$F6$size, length(namedKeys), 100 * summary$named_fraction,
+    fam$F3$matched, fam$F3$size, fam$F3$distinct_facets, fam$F6$matched, fam$F6$size, length(namedKeys), 100 * summary$named_fraction,
     100 * summary$full_support_fraction)
 for (k in names(cutRes)) say("cuts %s: %d of %d are facets, %d vanish on the Kraft space",
                              k, cutRes[[k]]$matched, cutRes[[k]]$size, cutRes[[k]]$trivial)
@@ -187,6 +191,7 @@ stopifnot(linearity == 0,
           nrow(facetRows) == pub$p6_facets,
           fam$F1$matched == pub$p6_family_matches$F1,
           fam$F2$matched == pub$p6_family_matches$F2,
+          fam$F3$distinct_facets == pub$p6_family_matches$F3,
           fam$F6$matched == pub$p6_family_matches$F6,
           length(namedKeys) == pub$p6_named_facets,
           all(as.integer(supportHist) == unlist(pub$p6_support_histogram[names(supportHist)])),

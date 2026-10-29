@@ -161,8 +161,8 @@ optima, and the results of Sections 4, 5.1, 5.2 and 6.3 and Appendices C and H.
   the nodes whose point has no split to branch on. `compact/tests/` holds its tests.
 - `external/catanzaro/`: the download, patch and build scripts for the distance-indexed
   solver.
-- `data/synthetic/`: the synthetic instances, n = 4, …, 10, each the leading part of the
-  next.
+- `data/synthetic/`: the synthetic instances test_n4 to test_n10 (n = 4, …, 10); test_n5 is a
+  separate tree metric, and each of the others is a leading square submatrix of test_n10.
 - `data/ground_truth/`: the certified optimal tree of each real instance, as its list of
   splits, written from a certified run of the distance-indexed solver by
   `experiments/tau_to_splits.py`. The bound experiments read these trees;
