@@ -310,6 +310,15 @@ def sec_theorem5():
     return "\n".join(out + items)
 
 
+def sec_splitohedron():
+    rs = [r for r in (load(RES / f"splitohedron/summary_n{n}.json") for n in (5, 6, 7)) if r is not None]
+    if not rs:
+        return "## Vertices of the splitohedron (Appendix I)\n\npending"
+    return "\n".join(["## Vertices of the splitohedron (Appendix I)", ""] + [
+        f"- n = {r['n']}: {r['vertices']} vertices, of which {r['tree_vertices']} are trees "
+        f"(of {r['trees']}) and {r['other_vertices']} are not." for r in rs])
+
+
 def sec_p6():
     r = load(RES / "p6_facets/summary.json")
     if r is None:
@@ -418,6 +427,7 @@ def main():
         "or only one seed ran.",
         sec_optima(opt, checked),
         sec_p6(),
+        sec_splitohedron(),
         sec_conjecture1(),
         sec_clique(),
         sec_theorem5(),

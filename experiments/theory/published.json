@@ -1,5 +1,5 @@
 {
- "_comment": "Numbers stated in the paper, used only in asserted cross-checks after the computed value has been written out. Read by published.py and p6_facets.R.",
+ "_comment": "Numbers stated in the paper, used only in asserted cross-checks after the computed value has been written out. Read by published.py, p6_facets.R and splitohedron.R.",
  "canonical_survivors": {"5": 4, "6": 7, "7": 19, "8": 85, "9": 502, "10": 1252, "11": 5008},
  "row_types": {"8": 9, "9": 16, "10": 28, "11": 50, "12": 89},
  "cherry_fixed_witnesses": 84,
@@ -18,5 +18,6 @@
  "membership_n8_no_tiebreak": 17535,
  "min_edge_clique_cover": {"4": 1, "5": 5, "6": 21, "7": 49},
  "fractional_edge_clique_cover": {"4": "1", "5": "5", "6": "39/2", "7": "217/5", "8": "784/9"},
- "pruned_clique_cover": {"4": 1, "5": 5, "6": 21, "7": 49, "8": 116}
+ "pruned_clique_cover": {"4": 1, "5": 5, "6": 21, "7": 49, "8": 116},
+ "splitohedron_vertices": {"5": {"vertices": 27, "trees": 15}, "6": {"vertices": 2335, "trees": 105}}
 }

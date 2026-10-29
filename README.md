@@ -111,6 +111,7 @@ optima, and the results of Sections 4, 5.1, 5.2 and 6.3 and Appendices C and H.
 | in the paper | script | output under `results/` |
 |---|---|---|
 | Section 4: facets of the BME polytope for n = 6 | `experiments/theory/p6_facets.R` | `p6_facets/` |
+| Appendix I: vertices of the splitohedron for n = 5, 6 | `experiments/theory/splitohedron.R` | `splitohedron/` |
 | Section 5.2, Conjecture 1: integral points of the membership model | `experiments/theory/membership_model.py` | `conjecture1/` |
 | Section 5.1 and Appendix H: edge clique covers (Proposition 4 and its subfamily, the minimum, the fractional minimum); fractional optima of the clique relaxation | `experiments/theory/clique_cover.py`, `clique_integrality.py` | `clique_cover/` |
 | Section 6.3, Theorem 5, Appendix C, Table C1 | `experiments/theory/theorem5.sh` (enumerator `backtrack.c`) | `theorem5/` |

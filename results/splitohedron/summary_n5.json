@@ -1,0 +1,30 @@
+{
+  "n": 5,
+  "trees": 15,
+  "dimension": 5,
+  "inequalities": {
+    "caterpillar": 10,
+    "cherry clade-face": 10,
+    "intersecting-cherry": 30
+  },
+  "equalities": 5,
+  "trees_among_vertices": 15,
+  "vertices": 27,
+  "tree_vertices": 15,
+  "other_vertices": 12,
+  "other_vertices_integral": 0,
+  "equal_to_bme_polytope": false,
+  "scdd_seconds": 0.00708603858947754,
+  "example_other_vertex_w": {
+    "1-2": "1/12",
+    "1-3": "1/12",
+    "1-4": "1/6",
+    "1-5": "1/6",
+    "2-3": "1/6",
+    "2-4": "1/6",
+    "2-5": "1/12",
+    "3-4": "1/12",
+    "3-5": "1/6",
+    "4-5": "1/12"
+  }
+}

@@ -1,4 +1,4 @@
-# Theory and enumeration (Sections 4, 5.1, 5.2, 6.3, Appendices C and H). One thread each.
+# Theory and enumeration (Sections 4, 5.1, 5.2, 6.3, Appendices C, H and I). One thread each.
 # Longest first, so they start first.
 
 # Appendix C / Table C1: canonical survivors, none violating (10).
@@ -8,6 +8,9 @@ experiments/theory/theorem5.sh canon_n10 10
 experiments/theory/theorem5.sh fpviol_n12_t2 12 --fpviol --t01 2
 # Section 4: the facets of P_6.
 Rscript experiments/theory/p6_facets.R "$RESULTS/p6_facets"
+# Appendix I: the vertices of the splitohedron.
+Rscript experiments/theory/splitohedron.R 6 "$RESULTS/splitohedron"
+Rscript experiments/theory/splitohedron.R 5 "$RESULTS/splitohedron"
 # Section 5.2: membership model, both laminarity encodings; n = 8 also without the tiebreak.
 "$PY" experiments/theory/membership_model.py 8 nested-disjoint on "$RESULTS/conjecture1/n8_nested-disjoint_tiebreak-on.json"
 "$PY" experiments/theory/membership_model.py 8 nested-disjoint off "$RESULTS/conjecture1/n8_nested-disjoint_tiebreak-off.json"
