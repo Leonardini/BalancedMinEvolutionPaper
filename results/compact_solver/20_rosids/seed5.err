@@ -1,0 +1,14 @@
+2026-10-28 20:10:00 balanced-exact        2s nodes 0 open 1 lb 0.4888769062 inc 0.4950500724 gap 1.2470% root
+2026-10-28 20:15:00 balanced-exact      303s nodes 7891 open 3821 lb 0.4927394694 inc 0.4941456693 gap 0.2846%
+2026-10-28 20:20:00 balanced-exact      603s nodes 13889 open 5147 lb 0.49319051 inc 0.4941456693 gap 0.1933%
+2026-10-28 20:25:00 balanced-exact      903s nodes 18862 open 5543 lb 0.4934328425 inc 0.4941456693 gap 0.1443%
+2026-10-28 20:30:00 balanced-exact     1203s nodes 23048 open 5420 lb 0.4935902396 inc 0.4941456693 gap 0.1124%
+2026-10-28 20:35:00 balanced-exact     1503s nodes 26775 open 5021 lb 0.4937132283 inc 0.4941456693 gap 0.0875%
+2026-10-28 20:40:00 balanced-exact     1803s nodes 30213 open 4441 lb 0.4938108973 inc 0.4941456693 gap 0.0677%
+2026-10-28 20:45:00 balanced-exact     2103s nodes 33299 open 3853 lb 0.4938928724 inc 0.4941456693 gap 0.0512%
+2026-10-28 20:50:00 balanced-exact     2403s nodes 36149 open 3184 lb 0.4939581874 inc 0.4941456693 gap 0.0379%
+MOSEK: solution status solsta.unknown at tolerance 1e-10; retrying looser
+2026-10-28 20:55:00 balanced-exact     2703s nodes 38914 open 2470 lb 0.4940165195 inc 0.4941456693 gap 0.0261%
+2026-10-28 21:00:00 balanced-exact     3003s nodes 41401 open 1740 lb 0.4940664267 inc 0.4941456693 gap 0.0160%
+2026-10-28 21:05:01 balanced-exact     3303s nodes 43830 open 904 lb 0.4941112237 inc 0.4941456693 gap 0.0070%
+2026-10-28 21:09:04 balanced-exact     3546s nodes 45706 open 2 lb 0.4941456693 inc 0.4941456693 gap 0.0000% certified

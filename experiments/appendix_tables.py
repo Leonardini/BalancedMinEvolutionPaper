@@ -38,10 +38,13 @@ def secs(x):
 D1_INSTANCES = ("test_n5", "test_n6", "test_n7", "test_n8", "test_n9", "test_n10", "Primates12",
                 "M17", "M18", "20_euros2", "20_B-HA", "20_rosids", "21_nucleic", "25_proteic")
 # One run each, at seed 1, with the same ten workers and time limit.
+# 20_rosids certifies within a few minutes of the time limit, so whether a run certifies
+# depends on the seed and on the machine; it gets seven seeds (experiments/compact_solver.sh).
+COMPACT_SEEDS = {"20_rosids": tuple(range(1, 8))}
 
 
 def _compact_runs(inst):
-    recs = [load(RES / "compact_solver" / inst / f"seed{s}.json") for s in SEEDS]
+    recs = [load(RES / "compact_solver" / inst / f"seed{s}.json") for s in COMPACT_SEEDS.get(inst, SEEDS)]
     return [r for r in recs if r is not None]
 
 
@@ -76,7 +79,7 @@ def d1_compact(opt):
                      spread([r["n_nodes"] for r in recs], lambda x: f"{x:.0f}"),
                      spread([r["seconds"] for r in recs], secs), root, final])
     return ("**Table D1. The compact solver** (Section 8.1): ten workers of one thread each, "
-            "time limit 3600 s; seeds 2 and 3 where seed 1 certified. Time in seconds. Gaps relative to $L^*$; the final "
+            "time limit 3600 s; seeds 2 and 3 where seed 1 certified, and seeds 1 to 7 for 20_rosids. Time in seconds. Gaps relative to $L^*$; the final "
             "gap is given for runs stopped by the time limit.\n\n"
             + table(["instance", "certified", "nodes", "time (s)", "root gap", "final gap"], rows))
 

@@ -17,4 +17,5 @@ for s in $SEEDS; do
   SEEDS=$s "$REPO/experiments/distance_cut_families.sh" timed || echo "FAILED distance_cut_families seed $s"
   SEEDS=$s "$REPO/experiments/compact_solver.sh" || echo "FAILED compact_solver seed $s"
 done
+ROSIDS_SEEDS=1 "$REPO/experiments/compact_solver.sh" || echo "FAILED compact_solver 20_rosids seeds 4-7"
 echo "$(date '+%F %T') timed runs done"

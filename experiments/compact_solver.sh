@@ -2,7 +2,8 @@
 # Section 8.1, Tables D1 and D2: the compact solver, timed. Ten workers of one thread each,
 # TIMED_CAP seconds, one run at a time. Seed 1 runs everywhere; seeds 2 and 3 run only where
 # seed 1 certified, because only those runs report a time and node count that a median and
-# range describe.
+# range describe. 20_rosids certifies within a few minutes of the time limit, so it also runs
+# seeds 4 to 7 (ROSIDS_SEEDS=1 runs only these), and every one of its seeds runs.
 set -euo pipefail
 source "$(dirname "$0")/../run/config.sh"
 OUT=$RESULTS/compact_solver
@@ -20,11 +21,15 @@ M18|$INST/03-M18.txt
 20_B-HA|$SUP/20_B-HA-573-585-BMGE.txt
 21_nucleic|$SUP/21_nucleic_M2839_470x829_2006.txt
 25_proteic|$SUP/25_proteic_M2624_139x348_2006-BMGE.txt"
+if [ "${ROSIDS_SEEDS:-0}" = 1 ]; then
+  SEEDS="4 5 6 7"
+  LIST=$(echo "$LIST" | grep '^20_rosids|')
+fi
 for seed in $SEEDS; do
   echo "$LIST" | grep . | while IFS='|' read -r label file; do
     f=$OUT/$label/seed$seed.json
     [ -f "$f" ] && { echo "skip (done): $f"; continue; }
-    if [ "$seed" != 1 ] && ! grep -qs '"certified": true' "$OUT/$label/seed1.json"; then
+    if [ "$seed" != 1 ] && [ "$label" != 20_rosids ] && ! grep -qs '"certified": true' "$OUT/$label/seed1.json"; then
       echo "skip $label seed $seed: seed 1 did not certify"; continue
     fi
     echo "$(date '+%F %T') start $label seed $seed"
