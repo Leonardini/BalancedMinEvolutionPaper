@@ -7,7 +7,7 @@
 #                            certified (as for Table E8).
 #   distance_cut_families.sh counts  configurations without separated cuts: the root LP alone
 #                            (--relax), one thread. A bound, not a timing.
-# Columns: (a) base; (b) + strong triangles on all triples; (gki) + generalized Kraft;
+# Columns: (a) base; (b) + parity rows on all triples; (gki) + generalized Kraft;
 # (c) + 2-K-split and circular order; (d) + four-point. "full" is the Section 7.1
 # configuration (Table E8) and "cooff" the same with circular-order cuts switched off.
 set -euo pipefail
