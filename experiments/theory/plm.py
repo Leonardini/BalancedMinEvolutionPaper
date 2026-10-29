@@ -1,5 +1,5 @@
 """Exact checks of conditions (4)-(10) on integer path-length matrices, and the
-relabelling canonical form used to compare counterexamples (Section 6.3, Appendix C).
+relabelling canonical form used to compare counterexamples (Section 6.3, Appendix D).
 
 Conditions, for an n x n integer matrix tau (Catanzaro, Pesenti and Wolsey 2020):
   (4) zero diagonal; (5) symmetry; (6) triangle tau_ik + tau_kj - tau_ij >= slack

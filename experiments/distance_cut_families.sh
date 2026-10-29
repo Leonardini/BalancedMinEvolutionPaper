@@ -1,15 +1,15 @@
 #!/bin/bash
-# Section 8.7, Table D9: root gap of the distance-indexed model as cut families are switched
+# Section 8.7, Table E9: root gap of the distance-indexed model as cut families are switched
 # on, plus the circular-order leave-one-out.
 #   distance_cut_families.sh timed   configurations with separated cuts: full MIP runs, whose
 #                            converged root bound ("Last Root BD") and node count we
 #                            report. 10 threads, 3600 s cap; seeds 2-3 only where seed 1
-#                            certified (as for Table D8).
+#                            certified (as for Table E8).
 #   distance_cut_families.sh counts  configurations without separated cuts: the root LP alone
 #                            (--relax), one thread. A bound, not a timing.
 # Columns: (a) base; (b) + strong triangles on all triples; (gki) + generalized Kraft;
 # (c) + 2-K-split and circular order; (d) + four-point. "full" is the Section 7.1
-# configuration (Table D8) and "cooff" the same with circular-order cuts switched off.
+# configuration (Table E8) and "cooff" the same with circular-order cuts switched off.
 set -euo pipefail
 source "$(dirname "$0")/../run/config.sh"
 mode=$1

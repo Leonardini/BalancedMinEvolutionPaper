@@ -1,4 +1,4 @@
-# Appendix E, Table E2: both solvers' certified optima against exhaustive enumeration on crops of each instance.
+# Appendix F, Table F2: both solvers' certified optima against exhaustive enumeration on square submatrices of each instance.
 make -s -C experiments/enumeration && $PY experiments/enumeration/certificates_vs_enumeration.py Primates12 external/catanzaro/upstream/instances/01-Primates12.txt 6 12 results/enumeration/Primates12.json
 make -s -C experiments/enumeration && $PY experiments/enumeration/certificates_vs_enumeration.py M17 external/catanzaro/upstream/instances/02-M17.txt 6 12 results/enumeration/M17.json
 make -s -C experiments/enumeration && $PY experiments/enumeration/certificates_vs_enumeration.py M18 external/catanzaro/upstream/instances/03-M18.txt 6 12 results/enumeration/M18.json

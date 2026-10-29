@@ -1,5 +1,5 @@
 #!/bin/bash
-# Appendix E, Table E4. Is the distance-indexed solver's certificate robust at n = 29 and 30, where its objective
+# Appendix F, Table F4. Is the distance-indexed solver's certificate robust at n = 29 and 30, where its objective
 # coefficients span about 2^29? On 29_B-NS1 and 30_B-NS1 (seed 1, timed settings):
 #   no_gki, no_2k, no_co, no_wb   the Section 7.1 configuration with one separated cut family
 #                                 switched off (the strong triangle and four-point rows stay,

@@ -1,5 +1,5 @@
 """The crossing graph of Section 5.1, the cliques of Proposition 4 and the smaller cover of
-Appendix H.
+Appendix I.
 
 Leaves are 0..n-1 (leaf x here is leaf x+1 in the paper). A nontrivial bipartition is
 stored as the frozenset of its block not containing leaf 0.
@@ -44,7 +44,7 @@ def prop4_cliques(n, splits):
 
 
 def pruned_cliques(n, splits):
-    """The subfamily of Appendix H, as distinct tuples of indices into splits: Q^{2,2}_{x,y}
+    """The subfamily of Appendix I, as distinct tuples of indices into splits: Q^{2,2}_{x,y}
     (which does not depend on y), and Q^{j,k}_{x,y} for 2 <= j < k <= n/2, taking one of
     Q^{j,k}_{x,y} = Q^{j,k}_{y,x} when k = n/2, and leaving out y = s(x) when j = 3, where
     s(x) = x + 1 mod n for odd n and s(x) = x XOR 1 (a perfect matching) for even n."""

@@ -1,4 +1,4 @@
-## Appendix I: the vertices of the splitohedron Sp(n) of Forcey, Keefe and Sands (2017,
+## Appendix J: the vertices of the splitohedron Sp(n) of Forcey, Keefe and Sands (2017,
 ## Definition 5.1), an outer relaxation of the BME polytope P_n. Sp(n) contains P_n, and every tree is a vertex of Sp(n) for n <= 11
 ## (their Theorem 5.2), so the two are equal exactly when Sp(n) has no other vertex.
 ##
@@ -17,7 +17,7 @@
 ## with the (2n-5)!! tree vectors.
 ##
 ## Writes OUTDIR/vertices_n<N>.rds (the V-representation), OUTDIR/summary_n<N>.json, and
-## progress to stderr, then checks the counts against those stated in Appendix I
+## progress to stderr, then checks the counts against those stated in Appendix J
 ## (published.json, key splitohedron_vertices).
 suppressPackageStartupMessages({
   library(rcdd)

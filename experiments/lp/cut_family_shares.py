@@ -1,4 +1,4 @@
-"""Table D4 (Section 8.3) with the manifold imposed exactly: which cut families carry the
+"""Table E4 (Section 8.3) with the manifold imposed exactly: which cut families carry the
 compact model's root bound.
 
     BME_THREADS=1 python cut_family_shares.py INSTANCE OUT.json [CAP]

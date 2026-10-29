@@ -1,4 +1,4 @@
-"""Table D3 (Section 8.2): root-LP gap closed by F1 and F6 on the synthetic instances.
+"""Table E3 (Section 8.2): root-LP gap closed by F1 and F6 on the synthetic instances.
 
     BME_THREADS=1 python named_facets.py OUT.json [L10]
 

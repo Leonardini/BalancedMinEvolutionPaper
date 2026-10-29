@@ -1,4 +1,4 @@
-"""The level variables, rows and arms used by base_rows_in_compact.py (Table D10), which
+"""The level variables, rows and arms used by base_rows_in_compact.py (Table E10), which
 imposes the manifold exactly; run alone, this file solves the same arms with the manifold
 imposed by tangent cuts.
 

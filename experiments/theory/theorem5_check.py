@@ -1,4 +1,4 @@
-"""Read one enumeration run (Theorem 5, Appendix C), record its counts as JSON, analyse
+"""Read one enumeration run (Theorem 5, Appendix D), record its counts as JSON, analyse
 the dumped counterexamples where the run has any, and compare with the paper.
 
     python theorem5_check.py OUTDIR NAME N [backtrack options]
@@ -7,7 +7,7 @@ Expects OUTDIR/NAME.out (stdout of backtrack) and, where the run violates (10),
 OUTDIR/NAME.dump. Writes OUTDIR/NAME.json.
 
 What is compared, by run type:
-  canonical (no option)    survivors = Table C1, none violating (10); row types (n >= 8)
+  canonical (no option)    survivors = Table D1, none violating (10); row types (n >= 8)
   --full                   survivors = (2n-5)!!, none violating (10)
   --nocherry               no survivors (every matrix satisfying (4)-(9) has a cherry)
   --weak --full (n = 6)    285 survivors, 180 violating (10); the 180 form one orbit of
@@ -114,7 +114,7 @@ def main():
         check("labelled survivors = (2n-5)!!", rec["survivors"], double_factorial(2 * n - 5))
         check("violating (10)", rec["violating"], 0)
     else:
-        check("canonical survivors (Table C1)", rec["survivors"], P.CANONICAL_SURVIVORS[n])
+        check("canonical survivors (Table D1)", rec["survivors"], P.CANONICAL_SURVIVORS[n])
         check("violating (10)", rec["violating"], 0)
     if n in P.ROW_TYPES and not nocherry:
         check("row types", rec["row_types"], P.ROW_TYPES[n])

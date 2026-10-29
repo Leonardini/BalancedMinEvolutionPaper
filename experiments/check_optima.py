@@ -2,7 +2,7 @@
 
     python check_optima.py OUT.json
 
-For every certified run in results/distance_solver, in the Table D9 configurations that separate
+For every certified run in results/distance_solver, in the Table E9 configurations that separate
 the four-point condition (d, full, cooff) and in results/robustness, read the solver's integer path-length
 output tau.txt and check, per instance, that
   - every certified run returns the same tree (identical path-length matrix),

@@ -1,5 +1,5 @@
 #!/bin/bash
-# One run of the enumerator behind Theorem 5 (Appendix C), followed by its check.
+# One run of the enumerator behind Theorem 5 (Appendix D), followed by its check.
 #   theorem5.sh NAME N [backtrack options]
 # Builds experiments/theory/build/backtrack if it is missing or older than its source,
 # runs it, and writes to $RESULTS/theorem5/:

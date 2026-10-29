@@ -1,4 +1,4 @@
-"""Write the tables of the paper's Appendices D and E, results/APPENDIX_TABLES.md.
+"""Write the tables of the paper's Appendices E and F, results/APPENDIX_TABLES.md.
 
     python experiments/appendix_tables.py [OUT.md]
 
@@ -33,7 +33,7 @@ def secs(x):
     return f"{x:.1f}" if x < 100 else f"{x:.0f}"
 
 
-# ------------------------------------------------------------------------- Appendix D
+# ------------------------------------------------------------------------- Appendix E
 
 D1_INSTANCES = ("test_n5", "test_n6", "test_n7", "test_n8", "test_n9", "test_n10", "Primates12",
                 "M17", "M18", "20_euros2", "20_B-HA", "20_rosids", "21_nucleic", "25_proteic")
@@ -78,7 +78,7 @@ def d1_compact(opt):
         rows.append([inst, f"{cert} of {len(recs)}",
                      spread([r["n_nodes"] for r in recs], lambda x: f"{x:.0f}"),
                      spread([r["seconds"] for r in recs], secs), root, final])
-    return ("**Table D1. The compact solver** (Section 8.1): ten workers of one thread each, "
+    return ("**Table E1. The compact solver** (Section 8.1): ten workers of one thread each, "
             "time limit 3600 s; seeds 2 and 3 where seed 1 certified, and seeds 1 to 7 for 20_rosids. Time in seconds. Gaps relative to $L^*$; the final "
             "gap is given for runs stopped by the time limit.\n\n"
             + table(["instance", "certified", "nodes", "time (s)", "root gap", "final gap"], rows))
@@ -106,19 +106,19 @@ def d2_versus(opt):
                      spread([float(r["time"]) for r in theirs], secs)
                      if all(S.certified(r) for r in theirs) else f"{c['cert']} of {c['seeds']} certified",
                      spread([int(r["nodes"]) for r in theirs], lambda x: f"{x:.0f}")])
-    return ("**Table D2. The two solvers on the instances of Table D1 with $n\\ge12$** "
-            "(Section 8.1): the compact solver as in Table D1, the distance-indexed solver in the "
-            "configuration of Section 7.1 (Table D8). Time in seconds to certify, and nodes, for each solver.\n\n"
+    return ("**Table E2. The two solvers on the instances of Table E1 with $n\\ge12$** "
+            "(Section 8.1): the compact solver as in Table E1, the distance-indexed solver in the "
+            "configuration of Section 7.1 (Table E8). Time in seconds to certify, and nodes, for each solver.\n\n"
             + table(["instance", "compact (s)", "nodes", "distance-indexed (s)", "nodes"], rows))
 
 
 def d3_facets():
     r = load(RES / "lp/named_facets.json")
     if r is None:
-        return "**Table D3.** pending"
+        return "**Table E3.** pending"
     rows = [[x["n"], f"{x['opt']:.4f}", f"{x['base']:.4f}", f"{x['f1']:.4f}", f"{x['f1_f6']:.4f}",
              gap(x["closed"], 0)] for x in r["rows"]]
-    return ("**Table D3. Root bound with F1 and F6 on test_n6 to test_n10** (Section 8.2). "
+    return ("**Table E3. Root bound with F1 and F6 on test_n6 to test_n10** (Section 8.2). "
             "Base: Kraft, $0\\le w_{ij}\\le\\tfrac14$, every cut $W[S]\\ge\\tfrac12$, the double "
             "cherry and every crossing cut; F1 adds $w_{ij}\\ge2^{-(n-1)}$. "
             "$L^*$ by enumeration of all trees.\n\n"
@@ -145,7 +145,7 @@ def d4_families(opt):
                      f"{S.T6_NAME[best_other].replace('perfect matching (PM)', 'PM')} "
                      f"{gap(inc[best_other], 0)}",
                      gap(max(abs(marg[f]) for f in others), 1)])
-    return ("**Table D4. Shares of the root cut-closeable gap** (Section 8.3; definitions in "
+    return ("**Table E4. Shares of the root cut-closeable gap** (Section 8.3; definitions in "
             "Section 7.4), with the manifold imposed exactly (Section 7.2) and every other family separated by the solver's own separators until "
             "none is violated. Min-cut is standalone; the manifold and the other families are "
             "measured with min-cut on: \"incr.\" is the increment over min-cut alone and "
@@ -167,7 +167,7 @@ def d5_split_layer():
             r = recs[lam]
             cells.append(PENDING if r is None or key not in r["arms"] else gap(r["arms"][key]["gap"]))
         rows.append(cells)
-    out = ["**Table D5. Root gap on Primates12 of the membership model and the lifted ladder "
+    out = ["**Table E5. Root gap on Primates12 of the membership model and the lifted ladder "
            "model** (Section 8.4). Left: membership model, layers added cumulatively, with the "
            "two laminarity encodings. Right: lifted ladder model.", "",
            table(["membership model", "quadrant", "nested/disjoint"], rows), ""]
@@ -187,7 +187,7 @@ def d5_split_layer():
 def d6_cut_polytope():
     r = load(RES / "lp/per_split_triangles/Primates12.json")
     if r is None:
-        return "**Table D6.** pending"
+        return "**Table E6.** pending"
     rows = []
     for mc in (0, 1):
         cells = ["on" if mc else "off"]
@@ -196,7 +196,7 @@ def d6_cut_polytope():
         diff = r[f"mincut={mc}"]
         cells.append(f"{max(abs(diff['cutpoly_minus_strongtri']), abs(diff['both_minus_strongtri'])):.0e}")
         rows.append(cells)
-    return ("**Table D6. Root gap on Primates12 of the level-indicator model with per-split "
+    return ("**Table E6. Root gap on Primates12 of the level-indicator model with per-split "
             "triangles** (Section 8.4). The last column is the largest difference between the "
             "bound with per-split triangles (alone or with the strong triangle) and the bound "
             "with the strong triangle alone.\n\n"
@@ -222,7 +222,7 @@ def d7_quartets():
                      f"{100 * no_rows / v:.0f}%",
                      f"{100 * no_strong / len(strong):.0f}%" if strong else "–",
                      f"{sm['weights_differing_from_tree']}/{sm['pairs']}"])
-    return ("**Table D7. Local fixes of the quartets violated at the compact model's root** "
+    return ("**Table E7. Local fixes of the quartets violated at the compact model's root** "
             "(Section 8.5). At the root optimum $w^*$ (manifold exact): quartets whose "
             "optimal-tree resolution $w^*$ violates; the share of them with no local fix "
             "(a change of the quartet's six weights that keeps Kraft and satisfies the tree's "
@@ -236,7 +236,7 @@ def d7_quartets():
                      "no fix (rows)", "> 12.5%", "differ"], rows))
 
 
-# Table D8 reads 20_rosids from the runs of the configuration full of Table D9, which is the
+# Table E8 reads 20_rosids from the runs of the configuration full of Table E9, which is the
 # configuration of Section 7.1; every other instance from results/distance_solver.
 D8_DIRS = {"20_rosids": "distance_cut_families/full/20_rosids"}
 
@@ -255,8 +255,8 @@ def d8_distance_solver():
                      spread([int(r["nodes"]) for r in recs], lambda x: f"{x:.0f}"),
                      spread([float(r["final_gap_pct"]) for r in uncert], lambda x: f"{x:.3f}%")
                      if uncert else "–"])
-    return ("**Table D8. The distance-indexed solver** (Section 8.6), configuration of "
-            "Section 7.1, time limit 3600 s (20_rosids from the configuration full of Table D9, "
+    return ("**Table E8. The distance-indexed solver** (Section 8.6), configuration of "
+            "Section 7.1, time limit 3600 s (20_rosids from the configuration full of Table E9, "
             "which is the same). Time in seconds. Last column: final gap of the runs that did "
             "not certify.\n\n"
             + table(["instance", "$n$", "certified", "time (s)", "nodes", "final gap"], rows))
@@ -287,7 +287,7 @@ def d9_cut_families(opt):
             else:
                 nd.append(f"{c['cert']} of {c['seeds']} certified")
         grow.append(g), nrow.append(nd)
-    return ("**Table D9. The distance-indexed model by cut configuration** (Section 8.7). "
+    return ("**Table E9. The distance-indexed model by cut configuration** (Section 8.7). "
             "(a) base: the model of Section 2.4 without its parity rows and quartet inequalities, "
             "and no separated cuts; (b) (a) with the parity rows on every triple; then cumulatively generalized Kraft (GK), 2-K-split and circular order "
             "(2K, CO), and four-point (4pt); full is the configuration of Section 7.1, and "
@@ -320,7 +320,7 @@ def d10_lift(opt):
             a_ = r["arms"][k]
             cells.append(f"{a_['root_gap_pct']:.3f}" + ("" if a_.get("finished", True) else "*"))
         rows.append(cells)
-    return ("**Table D10. Rows of the distance-indexed base model added to the compact root "
+    return ("**Table E10. Rows of the distance-indexed base model added to the compact root "
             "relaxation** (Section 8.7), with the compact model's manifold imposed exactly "
             "(Section 7.2). Root gap to $L^*$ (%); a cell marked * is the bound of the arm's last "
             "solve before the conic solver failed, which is valid but may be weaker. L: the level indicators; M: the manifold "
@@ -346,12 +346,12 @@ def d11_integrality(opt):
         cells.append(PENDING if x is None else f"{x['arms']['lift_base_2k']['root_gap_pct']:.3f}%")
         cells.append(PENDING if x is None else f"{x['arms']['compact']['root_gap_pct']:.3f}%")
         rows.append(cells)
-    return ("**Table D11. Where the distance-indexed model's root bound comes from** (Section "
+    return ("**Table E11. Where the distance-indexed model's root bound comes from** (Section "
             "8.7). Root gap to $L^*$ of the distance-indexed model in the configuration with "
-            "generalized Kraft only (Table D9), stopped at the root node, with Gurobi's "
+            "generalized Kraft only (Table E9), stopped at the root node, with Gurobi's "
             "general-purpose cutting planes off (Cuts 0) and on (default), one thread; and, "
             "for comparison, the compact relaxation with the distance-indexed model's level "
-            "indicators, manifold equality, triangles and lifted 2-K-splits added (Table D10), "
+            "indicators, manifold equality, triangles and lifted 2-K-splits added (Table E10), "
             "and the compact relaxation alone, both with the manifold imposed exactly.\n\n"
             + table(["instance", "Gurobi cuts off", "Gurobi cuts on", "compact + base rows",
                      "compact"], rows))
@@ -368,7 +368,7 @@ def d12_two_solvers():
         rows.append([inst, f"{g['lp']['root_gap_pct']:.3f}"]
                     + [f"{x[k]['root_gap_pct']:.3f}" for x in (g, c) for k in ("root_on", "root_max")]
                     + [f"{c['root_off']['root_gap_pct']:.3f}"])
-    return ("**Table D12. The distance-indexed model's static root in two MIP solvers** (Section "
+    return ("**Table E12. The distance-indexed model's static root in two MIP solvers** (Section "
             "8.7). The model of the generalized-Kraft configuration exported before any callback "
             "cut (so without generalized Kraft), solved on one thread to the end of the root node "
             "with each solver's general-purpose cutting planes at their defaults and at their most "
@@ -390,7 +390,7 @@ def _short(stem):
 def d13_heuristics():
     r = load(RES / "heuristics_vs_optimum.json")
     if r is None:
-        return "**Table D13. NJ and FastME against the certified optimum** (Section 8.8). " + PENDING
+        return "**Table E13. NJ and FastME against the certified optimum** (Section 8.8). " + PENDING
     order = S.TABLE7
     recs = sorted(r["instances"], key=lambda x: order.index(_short(x["instance"])))
 
@@ -401,7 +401,7 @@ def d13_heuristics():
 
     rows = [[_short(x["instance"]), x["n"], *cell(x["nj"]), *cell(x["fastme"])] for x in recs]
     s = r["summary"]
-    return ("**Table D13. NJ and FastME against the certified optimum** (Section 8.8). "
+    return ("**Table E13. NJ and FastME against the certified optimum** (Section 8.8). "
             f"FastME {r['fastme_version'].split()[-1]}: NJ is its method N, without topology search; FastME is "
             "balanced greedy addition followed by balanced NNI and SPR. For each tree: its BME "
             'gap to $L^*$ ("optimal" when it is the optimal tree; "optimal (tie)" when its value is '
@@ -412,12 +412,12 @@ def d13_heuristics():
             + table(["instance", "$n$", "NJ", "splits", "FastME", "splits"], rows))
 
 
-# ------------------------------------------------------------------------- Appendix E
+# ------------------------------------------------------------------------- Appendix F
 
-E1_GROUPS = [("Table D3", "lp/named_facets.json"),
-             ("Table D5", "lp/membership_layers/*.json"), ("Table D5", "lp/lifted_ladder/*.json"),
-             ("Table D6", "lp/per_split_triangles/*.json"), ("Section 8.4, odd cycles", "lp/odd_cycles/*.json"),
-             ("Table D10", "base_rows/*.json")]
+E1_GROUPS = [("Table E3", "lp/named_facets.json"),
+             ("Table E5", "lp/membership_layers/*.json"), ("Table E5", "lp/lifted_ladder/*.json"),
+             ("Table E6", "lp/per_split_triangles/*.json"), ("Section 8.4, odd cycles", "lp/odd_cycles/*.json"),
+             ("Table E10", "base_rows/*.json")]
 
 
 def e1_safe():
@@ -440,7 +440,7 @@ def e1_safe():
         lo = min(g["rel"]) if g["rel"] else None
         rows.append([name, str(g["lps"]) + (f" ({g['pending']} files pending)" if g["pending"] else ""),
                      "–" if lo is None else f"{lo:.0e}", str(g["cut"]), str(g["inf"])])
-    return ("**Table E1. Safe bounds and the exact check at the optimal tree.** For each group "
+    return ("**Table F1. Safe bounds and the exact check at the optimal tree.** For each group "
             "of LP bounds: the number of LPs, the most negative relative difference between the "
             "safe bound and the solver's LP value (negative: the floating-point value overstates "
             "the bound), the number of LP rows that cut off the certified optimal tree in exact "
@@ -465,10 +465,10 @@ def e2_enumeration():
                      str(sum(r[s].get("false_certificate", False) for r in Sz.values()
                              for s in ("distance", "compact")))])
     if not rows:
-        return "**Table E2.** pending"
-    # Title only: the paragraph before the table in Appendix E describes the square submatrices, the
+        return "**Table F2.** pending"
+    # Title only: the paragraph before the table in Appendix F describes the square submatrices, the
     # thread count, the time limit and the columns.
-    return ("**Table E2. Certificates against exhaustive enumeration.**\n\n"
+    return ("**Table F2. Certificates against exhaustive enumeration.**\n\n"
             + table(["instance", "submatrices", "distance-indexed", "compact", "runner-up gap",
                      "false certificates"], rows))
 
@@ -492,8 +492,8 @@ def e3_conditioning():
             rows.append(cells)
         out.append(f"*{p.stem}*\n\n" + table(["$n$", "compact", "distance-indexed"], rows))
     if not out:
-        return "**Table E3.** pending"
-    return ("**Table E3. Condition number of the optimal root basis**, first $n$ leaves: "
+        return "**Table F3.** pending"
+    return ("**Table F3. Condition number of the optimal root basis**, first $n$ leaves: "
             "Gurobi's `KappaExact`, and in parentheses our own 2-norm value after Ruiz "
             "equilibration where the basis is small enough for a dense decomposition. "
             "\"Compact\" is the root LP of the compact model without the manifold constraint; "
@@ -516,29 +516,29 @@ def e4_robustness():
             same = (d / "tau.txt").read_bytes() == (RES / "distance_solver" / inst / "seed1" / "tau.txt").read_bytes()
             rows.append([name, inst, "yes" if S.certified(r) else f"no ({float(r['final_gap_pct']):.2f}%)",
                          secs(float(r["time"])), "same" if same else "DIFFERENT"])
-    return ("**Table E4. The distance-indexed solver with one cut family switched off, or with "
+    return ("**Table F4. The distance-indexed solver with one cut family switched off, or with "
             "strict tolerances.** Seed 1, time limit 3600 s. Strict tolerances: Gurobi's numerical "
             "emphasis at its maximum (NumericFocus 3) and its feasibility, optimality and "
             "integrality tolerances at $10^{-9}$. Last column: the best tree found, compared "
-            "with the tree of the full configuration (Table D8).\n\n"
+            "with the tree of the full configuration (Table E8).\n\n"
             + table(["configuration", "instance", "certified", "time (s)", "tree"], rows))
 
 
 # The threads of each table (Section 7.1): runs that report a time use ten cores, the others one thread.
 TIMED, BOUND = "10 threads.", "One thread."
 TIMED_BOTH = "Ten cores."
-CLASS = {"D1": TIMED_BOTH, "D2": TIMED_BOTH, "D3": BOUND, "D4": BOUND, "D5": BOUND, "D6": BOUND,
-         "D7": BOUND, "D8": TIMED,
-         "D9": "10 threads, except the two root-LP rows (one thread).",
-         "D10": BOUND, "D11": BOUND, "D12": BOUND, "D13": BOUND, "E1": BOUND,
-         "E2": None,  # described in the text of Appendix E
-         "E3": BOUND, "E4": TIMED}
+CLASS = {"E1": TIMED_BOTH, "E2": TIMED_BOTH, "E3": BOUND, "E4": BOUND, "E5": BOUND, "E6": BOUND,
+         "E7": BOUND, "E8": TIMED,
+         "E9": "10 threads, except the two root-LP rows (one thread).",
+         "E10": BOUND, "E11": BOUND, "E12": BOUND, "E13": BOUND, "F1": BOUND,
+         "F2": None,  # described in the text of Appendix F
+         "F3": BOUND, "F4": TIMED}
 
 
 def with_threads(block):
     """Insert the table's thread count right after its bold title."""
     import re
-    m = re.match(r"\*\*Table ([DE]\d+)\.[^*]*\*\*( \(Section [^)]*\))?[.,:;]?", block)
+    m = re.match(r"\*\*Table ([EF]\d+)\.[^*]*\*\*( \(Section [^)]*\))?[.,:;]?", block)
     if not m:
         return block
     if m.group(1) not in CLASS:
@@ -557,7 +557,7 @@ def with_threads(block):
 def main():
     out = Path(sys.argv[1]) if len(sys.argv) > 1 else RES / "APPENDIX_TABLES.md"
     opt = S.collect_optima()
-    parts = ["# Tables of Appendices D and E",
+    parts = ["# Tables of Appendices E and F",
              "Generated by experiments/appendix_tables.py; do not edit by hand.",
              d1_compact(opt), d2_versus(opt), d3_facets(), d4_families(opt), d5_split_layer(),
              d6_cut_polytope(), d7_quartets(), d8_distance_solver(), d9_cut_families(opt), d10_lift(opt), d11_integrality(opt), d12_two_solvers(), d13_heuristics(),

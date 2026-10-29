@@ -1,4 +1,4 @@
-"""Table D10 with the manifold imposed exactly: which rows of the distance-indexed base
+"""Table E10 with the manifold imposed exactly: which rows of the distance-indexed base
 model close the compact model's root gap?
 
     BME_THREADS=1 python base_rows_in_compact.py INSTANCE SPLITS OUT.json
