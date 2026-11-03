@@ -1,26 +1,35 @@
 """Collect the results of the paper that are not in its appendix tables into one Markdown
 file, results/SUMMARY.md: the certified optima, the facets of P_6 (Section 7.1), the
 membership model (Section 7.2), the clique covers (Section 4.2 and Appendix D), the enumeration behind
-Theorem 7 (Appendix H). The tables of Appendices I and J
-come from appendix_tables.py, which uses the helpers of this file.
+Theorem 7 (Appendix H), the spurious points of the faces Q_T (Section 5.1, Appendix E), the
+evidence for Conjecture 8 (Section 11), and, last, every number of
+experiments/theory/published.json that a result file restates, recomputed from that file.
+The tables of Appendices I and J come from appendix_tables.py, which uses the helpers of
+this file.
 
     python experiments/summarize.py [OUT.md]
 
 Reads only: the run directories of the distance-indexed solver (results/distance_solver,
 results/distance_cut_families) and the JSON records under results/. Runs nothing. A file that does not exist yet is shown as "pending", so
 the script can be re-run while experiments are still going; anything else that is wrong
-with a file (unparseable, missing field, two certified optima that disagree) stops it.
+with a file (unparseable, missing field, two certified optima that disagree) stops it, and so
+does a recomputed number that disagrees with published.json, after the whole list of
+comparisons has been printed to stderr.
 """
 import json
 import re
 import statistics
 import sys
+from fractions import Fraction
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[1]
 RES = REPO / "results"
 sys.path.insert(0, str(REPO / "run"))
+sys.path.insert(0, str(REPO / "experiments/conjecture"))
+sys.path.insert(0, str(REPO / "experiments/theory"))
 from parse_report import CERT_GAP_PCT, read_run  # noqa: E402
+import rowtypes  # noqa: E402
 
 PENDING = "pending"
 SEEDS = (1, 2, 3)
@@ -426,6 +435,259 @@ def _safe_entries(node, where):
     return out
 
 
+# ------------------------------------------------- cross-checks against published.json
+
+PUBLISHED = json.loads((REPO / "experiments/theory/published.json").read_text())
+CHECKS = []      # (label, computed, expected, status), filled by the sections below
+
+
+def check(label, computed, expected):
+    """Record one comparison with a number stated in the paper; None means the result file
+    does not exist yet. A disagreement is collected and stops main() after every section
+    has run, so that the whole list is reported."""
+    status = PENDING if computed is None else "pass" if computed == expected else "FAIL"
+    CHECKS.append((label, computed, expected, status))
+    return status
+
+
+def published_checks():
+    """Every number of published.json that a result file under results/ restates."""
+    P = PUBLISHED
+    t5 = RES / "theorem5"
+    for n, v in P["canonical_survivors"].items():
+        r = load(t5 / f"canon_n{n}.json")
+        check(f"Table H1: canonical survivors, n = {n}", r and r["survivors"], v)
+    for n, v in P["row_types"].items():
+        r = load(t5 / (f"canon_n{n}.json" if int(n) <= 11 else f"fpviol_n{n}_t2.json"))
+        check(f"row types (enumerator), n = {n}", r and r["row_types"], v)
+        check(f"row types (rowtypes.py), n = {n}", len(rowtypes.row_types(int(n))), v)
+    r = load(t5 / "fpviol_n12_t2.json")
+    check("Appendix H (ii): witnesses with a cherry at {1,2}", r and r["survivors"], P["cherry_fixed_witnesses"])
+    check("Appendix H (ii): relabelling classes", r and r["classes"], P["cherry_fixed_classes"])
+    r = load(t5 / "weak_n6.json")
+    check("Appendix H (iii): weak-triangle 6-node matrices", r and r["survivors"], P["weak6_survivors"])
+    check("Appendix H (iii): of which non-trees", r and r["violating"], P["weak6_non_trees"])
+    check("Appendix H (iii): S_6-orbits of the non-trees", r and r["weak_orbits"], P["weak6_orbits"])
+    check("Appendix H (iii): stabiliser order of r", r and r["r_stabiliser"], P["weak6_stabiliser"])
+    r = load(t5 / "cherry_lift.json")
+    check("Section 8.3: quartets of the cherry lift violating (10)", r and r["violating_quartets"],
+          P["cherry_lift_violating_quartets"])
+    check("Section 8.3: pair sums of the quartet {1,2,3,5}", r and r["quartet_1235_pair_sums"],
+          P["cherry_lift_quartet_1235_pair_sums"])
+    r = load(RES / "p6_facets/summary.json")
+    check("Section 7.1: facets of P_6", r and r["facets"], P["p6_facets"])
+    for k, v in P["p6_family_matches"].items():
+        check(f"Section 7.1: facets matched by {k}", r and r["families"][k]["distinct_facets"], v)
+    check("Section 7.1: facets matched by a named family", r and r["named_distinct_facets"], P["p6_named_facets"])
+    check("Section 7.1: support histogram of the facets", r and r["support_histogram"], P["p6_support_histogram"])
+    for n, v in P["membership_systems"].items():
+        for lam in ("nested-disjoint", "quadrant"):
+            r = load(RES / "conjecture1" / f"n{n}_{lam}_tiebreak-on.json")
+            check(f"Section 7.2: split systems, n = {n}, {lam}", r and r["distinct_split_systems"], v)
+    for lam in ("nested-disjoint", "quadrant"):
+        r = load(RES / "conjecture1" / f"n8_{lam}_tiebreak-off.json")
+        check(f"Section 7.2: split systems, n = 8, {lam}, no tie-break", r and r["distinct_split_systems"],
+              P["membership_n8_no_tiebreak"])
+    for key, field, what in (("min_edge_clique_cover", "min_edge_clique_cover", "minimum edge clique cover"),
+                             ("fractional_edge_clique_cover", "fractional_edge_clique_cover", "fractional minimum"),
+                             ("pruned_clique_cover", "pruned_cliques", "cover of Appendix D")):
+        for n, v in P[key].items():
+            r = load(RES / "clique_cover" / f"n{n}.json")
+            check(f"Appendix D: {what}, n = {n}", r and r[field], v)
+    for n, v in P["splitohedron_vertices"].items():
+        r = load(RES / "splitohedron" / f"summary_n{n}.json")
+        check(f"Appendix E: vertices of Sp({n})", r and r["vertices"], v["vertices"])
+        check(f"Appendix E: tree vertices of Sp({n})", r and r["tree_vertices"], v["trees"])
+
+
+def sec_checks():
+    rows = [(label, "–" if c is None else c, e, st) for label, c, e, st in CHECKS]
+    n_fail = sum(1 for *_, st in CHECKS if st == "FAIL")
+    n_pend = sum(1 for *_, st in CHECKS if st == PENDING)
+    return "\n".join([
+        "## Cross-checks against the numbers stated in the paper", "",
+        f"Every number of experiments/theory/published.json that a result file restates, "
+        f"recomputed from that file: {len(CHECKS) - n_fail - n_pend} pass, {n_fail} fail, "
+        f"{n_pend} pending.", "",
+        table(["check", "computed", "stated in the paper", "status"], rows)])
+
+
+# ------------------------------------------------------------- the cherry conjecture
+
+def sec_cherry_conjecture():
+    import coverage  # experiments/conjecture
+    import plm       # experiments/theory
+    P = PUBLISHED["cherry_conjecture"]
+    base = RES / "conjecture/nocherry"
+    out = ["## Conjecture 8: a cherry always exists (Section 11)", ""]
+    bound = load(RES / "conjecture/cherry_bound.json")
+    if bound is None:
+        out += ["Manifold bound: pending", ""]
+    else:
+        forced = [r["n"] for r in bound if r["cherry_forced"]]
+        out += ["Manifold bound (cherry_bound.py): every row of a matrix without a cherry is a "
+                "no-cherry row type, so the manifold needs n times the smallest row manifold of "
+                f"those types to be at most 2n − 3. This forces a cherry for n = "
+                f"{', '.join(map(str, forced))} and not for the other n computed.", ""]
+    rows, max_n = [], P["exhaustive_max_n"]
+    dirs = sorted((int(d.name[1:]), d) for d in base.glob("n*") if d.is_dir())
+    for n, d in dirs:
+        rep = coverage.coverage(d, n)
+        status = ("covered" if rep["covered"] else
+                  "incomplete, missing " + "; ".join("_".join(map(str, m)) for m in rep["missing"]))
+        dup = "; ".join(f"{'_'.join(map(str, x['prefix'])) or 'whole search'} ({x['how']})"
+                        for x in rep["duplicates"]) or "–"
+        rows.append((n, rep["pieces_used"], rep["pieces_unfinished"], rep["pieces_outside"], dup,
+                     f"{rep['cpu_seconds'] / 3600:.1f}", rep["survivors"], status))
+        if n <= max_n:
+            check(f"Conjecture 8: the exhaustive search covers n = {n}", rep["covered"], True)
+            check(f"Conjecture 8: matrices without a cherry, n = {n}", rep["survivors"], 0)
+        else:
+            pend = P["pending"].get(str(n))
+            if pend is not None:
+                check(f"Conjecture 8: the pieces still missing at n = {n}", rep["missing"], pend)
+    covered_n = [n for n, d in dirs if n <= max_n]
+    # n = 4 is the smallest number of leaves with a quartet, so the claim starts there.
+    check(f"Conjecture 8: the exhaustive search has a result for every n from 4 to {max_n}",
+          covered_n, list(range(4, max_n + 1)))
+    out += [f"Exhaustive search without cherries (backtrack_wide8, cut into pieces by the first "
+            f"values of leaf 0's sorted row; coverage.py). The paper states n ≤ {max_n}. "
+            "\"Unfinished\" pieces were stopped and replaced by their split; \"outside\" pieces "
+            "fix a value that leaves no completion of row 0; a part covered twice must give the "
+            "same count both times (checked).", "",
+            table(["n", "pieces used", "unfinished", "outside", "covered twice", "core hours (all pieces)",
+                   "survivors", "coverage"],
+                  rows), ""]
+    r12 = load(RES / "theorem5/nocherry_n12.json")
+    if r12 is not None and (base / "n12/bt12.out").exists():
+        w8 = coverage.parse_out(base / "n12/bt12.out")
+        assert (w8["survivors"], w8["nodes"]) == (r12["survivors"], r12["nodes"]), (w8, r12)
+        out += [f"At n = 12 the search of backtrack_wide8 and the one of Appendix H "
+                f"(experiments/theory/backtrack.c --nocherry) visit the same {w8['nodes']} nodes "
+                "(asserted).", ""]
+    # simulated annealing
+    cex = plm.read_dump(REPO / "data/theory/cex_n12.txt")[0]
+    assert plm.is_counterexample(cex), "data/theory/cex_n12.txt: first matrix is not a counterexample"
+    red, _ = plm.reduce_cherries(cex)
+    assert plm.canon(red)[0] == plm.canon(plm.R6)[0], "first matrix of cex_n12.txt is not a lift of r"
+    sa = []
+    for f in sorted((RES / "conjecture/sa_n24").glob("cherry_free_running_n*_*.txt")):
+        tau = plm.read_matrix(f)
+        c = plm.conditions(tau)
+        n = len(tau)
+        kraft_off = sum(1 for i in range(n)
+                        if sum(Fraction(1, 2 ** tau[i][j]) for j in range(n) if j != i) != Fraction(1, 2))
+        ok49 = all(c[k] for k in ("(4)", "(5)", "(6)", "(7)", "(8)", "(9)"))
+        sa.append((f.name, n, f.read_text().splitlines()[0].lstrip("# "), len(plm.cherries(tau)),
+                   ", ".join(k for k in ("(6)", "(7)", "(8)", "(9)") if not c[k]) or "none", kraft_off,
+                   ok49 and not plm.cherries(tau)))
+    if sa:
+        check("Conjecture 8: annealing at n = 24, matrices without a cherry satisfying (4)-(9)",
+              sum(1 for *_, found in sa if found), P["annealing_counterexamples"])
+        check("Conjecture 8: annealing size n", sorted({x[1] for x in sa}), [P["annealing_n"]])
+        out += ["Simulated annealing at n = 24 from the doubled n = 12 counterexample "
+                "(data/theory/cex_n12.txt, whose first matrix is checked to satisfy (4)–(9), violate "
+                "(10) and reduce to r). The best matrix of each run, rechecked exactly:", "",
+                table(["file", "n", "V recorded", "cherries", "conditions failing", "rows off Kraft",
+                       "counterexample"], [x[:-1] + ("yes" if x[-1] else "no",) for x in sa])]
+    return "\n".join(out)
+
+
+# ------------------------------------------------------ faces Q_T of the splitohedron
+
+FACES = RES / "splitohedron/faces"
+# constraint set: (file-name suffix of lattice.py, --floor, double cherry kept)
+VARIANTS = {"no_floor": ("", False, True), "floor": ("_floor", True, True),
+            "floor_no_dc": ("_floor_nodc", True, False)}
+
+
+def n_cherries(splits, n):
+    """Cherries of a tree given by its nontrivial splits (the side without leaf 1)."""
+    return sum(1 for S in splits if len(S) in (2, n - 2))
+
+
+def sec_faces():
+    P = PUBLISHED
+    out = ["## Spurious points of the faces Q_T (Section 5.1, Appendix E)", "",
+           "Log-integral points of Q_T (lattice.py --shapes), one tree per shape; a shape fails "
+           "when Q_T has a log-integral point other than w_T.", ""]
+    rows, shapes = [], {}
+    for v, (suffix, floor, dc) in VARIANTS.items():
+        per_n = {}
+        for f in FACES.glob(f"points_n*_shapes{suffix}.json"):
+            m = re.fullmatch(rf"points_n(\d+)_shapes{suffix}\.json", f.name)
+            if not m:
+                continue
+            recs = load(f)
+            n = int(m.group(1))
+            for r in recs:
+                assert r["n"] == n and r["relaxation"] == "Q_T", f
+                # older records of lattice.py do not name the flags; their file name does
+                assert r.get("floor", floor) == floor and r.get("dc", dc) == dc, f
+                assert r["trees"] == 1 and r["points"] == r["trees"] + r["non_trees"], f
+            per_n[n] = sorted(r["non_trees"] for r in recs if r["non_trees"])
+            assert shapes.setdefault(n, len(recs)) == len(recs), f"{f}: shape count differs between constraint sets"
+            rows.append((v.replace("_", " "), n, len(recs), len(per_n[n]),
+                         ", ".join(map(str, per_n[n])) or "–"))
+        ns = sorted(per_n)
+        if not ns:
+            continue
+        assert ns == list(range(ns[0], ns[-1] + 1)), (v, ns)
+        first = next((n for n in ns if per_n[n]), None)
+        pub = P["qt_log_integral"][v]
+        check(f"Section 5.1: first n with a spurious log-integral point ({v.replace('_', ' ')}; "
+              f"checked from n = {ns[0]})", first, pub["first_failing_n"])
+        for n, counts in pub["failing"].items():
+            check(f"Section 5.1: spurious log-integral points per failing shape, {v.replace('_', ' ')}, n = {n}",
+                  per_n.get(int(n)), counts)
+    for n, k in P["tree_shapes"].items():
+        check(f"Section 5.1: tree shapes, n = {n}", shapes.get(int(n)), k)
+    out += [table(["constraints", "n", "shapes", "failing shapes", "spurious points per failing shape"],
+                  sorted(rows, key=lambda r: (r[0], r[1]))), "",
+            "Vertices of Q_T (qt_vertices.R, cddlib in exact arithmetic):", ""]
+    rows = []
+    for v in ("no_floor", "floor"):
+        for n in range(5, 14):
+            recs = load(FACES / f"qt_vertices_n{n}{VARIANTS[v][0]}.json")
+            if recs is None:
+                continue
+            not_vertex = sum(1 for r in recs if not r["tree_is_vertex"])
+            spurious = [r for r in recs if r["non_tree_vertices"]]
+            for r in recs:
+                rows.append((v.replace("_", " "), n, r["shape"], n_cherries(r["splits"], n), r["vertices"],
+                             "yes" if r["tree_is_vertex"] else "no", r["non_tree_vertices"]))
+            pub = P["qt_vertices"][v].get(str(n), {})
+            if "tree_not_vertex" in pub:
+                check(f"Section 5.1: shapes with w_T not a vertex of Q_T, {v.replace('_', ' ')}, n = {n}",
+                      not_vertex, pub["tree_not_vertex"])
+            if "with_spurious_vertex" in pub:
+                check(f"Section 5.1: shapes with a spurious vertex, {v.replace('_', ' ')}, n = {n}",
+                      len(spurious), pub["with_spurious_vertex"])
+            if "spurious_shape_cherries" in pub:
+                check(f"Section 5.1: the shape with a spurious vertex is the caterpillar (2 cherries), "
+                      f"{v.replace('_', ' ')}, n = {n}",
+                      [n_cherries(r["splits"], n) for r in spurious], pub["spurious_shape_cherries"])
+    out += [table(["constraints", "n", "shape", "cherries", "vertices", "w_T a vertex", "spurious vertices"],
+                  rows), "", "Hull of the log-integral points (hull_vertices.R):", ""]
+    rows = []
+    for f in sorted(FACES.glob("*_hull.json")):
+        for r in load(f):
+            if r["points"] > 1 or r["label"] == "Sp":
+                rows.append((f.name, r["label"], r["points"], r["vertices"], r["tree_vertices"],
+                             r["non_tree_vertices"], r["trees_not_vertices"]))
+    out += [table(["file", "relaxation", "log-integral points", "hull vertices", "trees",
+                   "non-trees", "trees not vertices"], rows), "",
+            "Log-integral points of Sp(n) itself (lattice.py without --shapes):", ""]
+    rows = []
+    for n in range(5, 14):
+        recs = load(FACES / f"points_n{n}.json")
+        if recs is not None:
+            r, = recs
+            rows.append((n, r["points"], r["trees"], r["non_trees"]))
+    out.append(table(["n", "log-integral points", "trees", "non-trees"], rows))
+    return "\n".join(out)
+
+
 def main():
     out = Path(sys.argv[1]) if len(sys.argv) > 1 else RES / "SUMMARY.md"
     opt = collect_optima()
@@ -442,7 +704,16 @@ def main():
         sec_conjecture1(),
         sec_clique(),
         sec_theorem5(),
+        sec_faces(),
+        sec_cherry_conjecture(),
     ]
+    published_checks()
+    parts.append(sec_checks())
+    for label, c, e, st in CHECKS:
+        print(f"{st:7s} {label}: computed {c}, paper {e}", file=sys.stderr)
+    failed = [label for label, _, _, st in CHECKS if st == "FAIL"]
+    if failed:
+        raise SystemExit("published.json cross-checks failed:\n  " + "\n  ".join(failed))
     out.write_text("\n\n".join(parts) + "\n")
     print(f"wrote {out}")
 

@@ -1,0 +1,38 @@
+Where the outputs of the no-cherry search come from (cherry conjecture, Section 11).
+
+n = 4..13   nocherry_search.py top N experiments/conjecture/build/backtrack_wide8 nN --depth 0,
+            run for this repository (each takes under a second; run.log is the driver's log).
+
+n = 14      Copied from the original runs of 1-2 July 2026, renamed:
+              bt14.out, bt14.err            was bt4_n14_nc.out/.err: the search with leaf 0's row
+                                            sorted, run with an earlier build of the
+                                            enumerator (128-bit row-type mask) whose source
+                                            was not kept; it reports the number of no-cherry row
+                                            types that coverage.py recomputes;
+              bt14_full.out, bt14_full.err  was nc14.out/.err: the same search without the
+                                            sorting of leaf 0's row, a second, larger
+                                            search reaching the same verdict.
+            To regenerate with the code here (a few minutes on one core):
+              nocherry_search.py top 14 BIN n14 --depth 0
+
+n = 15      Copied unchanged from the original runs of 1-5 July 2026 (backtrack_wide8 with the
+            logic of backtrack_wide8.c):
+              bt15_<t01>_..._<t05>.out      the pieces of depth 5 (t01 in {3, 4});
+              bt15_<t01>_..._<t07>.out      the pieces of depth 7 that replaced the four
+                                            slowest pieces of depth 5 (3_3_3_4_5, 3_3_3_4_6,
+                                            3_3_3_4_7, 3_3_3_5_5); that run also tried
+                                            t06 < t05, values that leave no completion of row 0
+                                            (coverage.py lists them as outside the required
+                                            ranges);
+              bt15_<7 values>_s<t08>.out    pieces of depth 8 (finish_n15.py, log
+                                            finish_n15.log) for the five pieces of depth 7 that
+                                            did not finish (their .out files are empty);
+              bt15_<7 values>_s<t08>_<t09>.out/.err  pieces of depth 9 (finish_n15_t09.py,
+                                            log finish_n15_t09.log) for the seven slowest
+                                            pieces of depth 8.
+            finish_n15.py did not run 3_3_3_5_5_5_6 with t08 = 8 (it split t08 = 6, which had
+            already finished, a second time instead): that slice, run as its seven pieces
+            t09 = 8..14 (bt15_3_3_3_5_5_5_6_s8_<t09>.out), is still to be added, and the
+            n = 15 search is not complete without it (coverage.py exits 1).
+            Equivalent command with the code here:
+              nocherry_search.py split 15 BIN n15 3_3_3_5_5_5_6_8 --workers 7

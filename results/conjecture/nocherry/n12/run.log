@@ -1,0 +1,3 @@
+2026-11-03 17:33:07 n=12: 1 pieces, 0 already finished, 1 to run on 1 worker(s) -> results/conjecture/nocherry/n12
+2026-11-03 17:33:07 [1/1] whole search: survivors=0 non-tree=0 nodes=2443 (0 s)
+2026-11-03 17:33:07 n=12: 1 pieces run, survivors=0, non-tree=0; check the coverage with coverage.py results/conjecture/nocherry/n12 12

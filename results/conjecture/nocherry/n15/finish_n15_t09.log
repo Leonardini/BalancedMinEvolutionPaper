@@ -1,0 +1,64 @@
+=== finish n=15 (t09 re-split of 7 heavy slices): 52 pieces, 10 workers, started 15:35:18 ===
+  ok cfg=3_3_3_4_5_7_7 t08=7 t09=7 survivors=0 [9 nodes, 0s]
+  ok cfg=3_3_3_5_5_5_6 t08=6 t09=6 survivors=0 [8 nodes, 0s]
+  ok cfg=3_3_3_5_5_5_6 t08=7 t09=7 survivors=0 [9 nodes, 0s]
+  ok cfg=3_3_3_4_5_6_9 t08=9 t09=10 survivors=0 [23 nodes, 0s]
+  ok cfg=3_3_3_4_5_8_8 t08=8 t09=9 survivors=0 [29 nodes, 0s]
+  ok cfg=3_3_3_4_5_7_8 t08=8 t09=9 survivors=0 [23 nodes, 0s]
+  ok cfg=3_3_3_5_5_5_6 t08=6 t09=7 survivors=0 [8 nodes, 0s]
+  ok cfg=3_3_3_4_5_6_9 t08=9 t09=11 survivors=0 [15 nodes, 0s]
+  ok cfg=3_3_3_4_5_7_7 t08=8 t09=10 survivors=0 [23 nodes, 0s]
+  ok cfg=3_3_3_4_5_7_8 t08=8 t09=10 survivors=0 [15 nodes, 0s]
+  ok cfg=3_3_3_5_5_5_6 t08=6 t09=8 survivors=0 [8 nodes, 0s]
+  ok cfg=3_3_3_4_5_8_8 t08=8 t09=10 survivors=0 [23 nodes, 0s]
+  ok cfg=3_3_3_4_5_6_9 t08=9 t09=12 survivors=0 [11 nodes, 0s]
+  ok cfg=3_3_3_4_5_7_7 t08=7 t09=10 survivors=0 [23 nodes, 0s]
+  ok cfg=3_3_3_4_5_7_7 t08=8 t09=11 survivors=0 [15 nodes, 0s]
+  ok cfg=3_3_3_4_5_7_8 t08=8 t09=11 survivors=0 [11 nodes, 0s]
+  ok cfg=3_3_3_4_5_8_8 t08=8 t09=11 survivors=0 [15 nodes, 0s]
+  ok cfg=3_3_3_5_5_5_6 t08=6 t09=9 survivors=0 [8 nodes, 0s]
+  ok cfg=3_3_3_5_5_5_6 t08=7 t09=10 survivors=0 [23 nodes, 0s]
+  ok cfg=3_3_3_4_5_6_9 t08=9 t09=13 survivors=0 [9 nodes, 0s]
+  ok cfg=3_3_3_4_5_7_7 t08=7 t09=11 survivors=0 [15 nodes, 0s]
+  ok cfg=3_3_3_4_5_7_7 t08=8 t09=12 survivors=0 [11 nodes, 0s]
+  ok cfg=3_3_3_4_5_7_8 t08=8 t09=12 survivors=0 [9 nodes, 0s]
+  ok cfg=3_3_3_4_5_8_8 t08=8 t09=12 survivors=0 [11 nodes, 0s]
+  ok cfg=3_3_3_5_5_5_6 t08=6 t09=10 survivors=0 [8 nodes, 0s]
+  ok cfg=3_3_3_5_5_5_6 t08=7 t09=11 survivors=0 [15 nodes, 0s]
+  ok cfg=3_3_3_4_5_6_9 t08=9 t09=14 survivors=0 [9 nodes, 0s]
+  ok cfg=3_3_3_4_5_7_7 t08=7 t09=12 survivors=0 [11 nodes, 0s]
+  ok cfg=3_3_3_4_5_7_7 t08=8 t09=13 survivors=0 [9 nodes, 0s]
+  ok cfg=3_3_3_4_5_7_8 t08=8 t09=13 survivors=0 [9 nodes, 0s]
+  ok cfg=3_3_3_4_5_8_8 t08=8 t09=13 survivors=0 [9 nodes, 0s]
+  ok cfg=3_3_3_5_5_5_6 t08=6 t09=11 survivors=0 [8 nodes, 0s]
+  ok cfg=3_3_3_5_5_5_6 t08=7 t09=12 survivors=0 [11 nodes, 0s]
+  ok cfg=3_3_3_4_5_7_7 t08=7 t09=13 survivors=0 [9 nodes, 0s]
+  ok cfg=3_3_3_4_5_7_7 t08=8 t09=14 survivors=0 [9 nodes, 0s]
+  ok cfg=3_3_3_4_5_7_8 t08=8 t09=14 survivors=0 [9 nodes, 0s]
+  ok cfg=3_3_3_4_5_8_8 t08=8 t09=14 survivors=0 [9 nodes, 0s]
+  ok cfg=3_3_3_5_5_5_6 t08=6 t09=12 survivors=0 [8 nodes, 0s]
+  ok cfg=3_3_3_5_5_5_6 t08=7 t09=13 survivors=0 [9 nodes, 0s]
+  ok cfg=3_3_3_4_5_7_7 t08=7 t09=14 survivors=0 [9 nodes, 0s]
+  ok cfg=3_3_3_5_5_5_6 t08=6 t09=13 survivors=0 [8 nodes, 0s]
+  ok cfg=3_3_3_5_5_5_6 t08=7 t09=14 survivors=0 [9 nodes, 0s]
+  ok cfg=3_3_3_5_5_5_6 t08=6 t09=14 survivors=0 [8 nodes, 0s]
+  ok cfg=3_3_3_5_5_5_6 t08=7 t09=8 survivors=0 [7854335045 nodes, 818s]
+  ok cfg=3_3_3_4_5_7_7 t08=7 t09=8 survivors=0 [23875203276 nodes, 2165s]
+  ok cfg=3_3_3_5_5_5_6 t08=7 t09=9 survivors=0 [47590971199 nodes, 4756s]
+  ok cfg=3_3_3_4_5_7_7 t08=7 t09=9 survivors=0 [59919494442 nodes, 5726s]
+  ok cfg=3_3_3_4_5_7_7 t08=8 t09=8 survivors=0 [295348752356 nodes, 33893s]
+  ok cfg=3_3_3_4_5_7_7 t08=8 t09=9 survivors=0 [602264741470 nodes, 67231s]
+  ok cfg=3_3_3_4_5_6_9 t08=9 t09=9 survivors=0 [825938682711 nodes, 90492s]
+  ok cfg=3_3_3_4_5_7_8 t08=8 t09=8 survivors=0 [1271106822275 nodes, 136506s]
+  ok cfg=3_3_3_4_5_8_8 t08=8 t09=8 survivors=0 [2389830832375 nodes, 247944s]
+
+=== per-config summary (heavy t09 pieces) ===
+  cfg    3_3_3_4_5_6_9: pieces 6/6 survivors=0 non-tree=0 errors=0 -> clean
+  cfg    3_3_3_4_5_7_7: pieces 15/15 survivors=0 non-tree=0 errors=0 -> clean
+  cfg    3_3_3_4_5_7_8: pieces 7/7 survivors=0 non-tree=0 errors=0 -> clean
+  cfg    3_3_3_4_5_8_8: pieces 7/7 survivors=0 non-tree=0 errors=0 -> clean
+  cfg    3_3_3_5_5_5_6: pieces 17/17 survivors=0 non-tree=0 errors=0 -> clean
+
+=== ALL heavy pieces clean. Combined with run-1's 30 clean t08-slices, all 5 configs are
+=== CONFIRMED survivors=0. n=15 Lemma-A search is now COMPLETE (no cherry-free matrix). ===
+=== done 12:27:43 ===

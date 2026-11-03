@@ -6,5 +6,6 @@ __pycache__/
 # Built from their C sources on first use
 experiments/theory/build/
 experiments/enumeration/build/
+experiments/conjecture/build/
 compact/solver/_face_enum.so
 compact/solver/_cut_enum.so
