@@ -1,0 +1,11 @@
+--- a/src/solver_gurobi.hpp
++++ b/src/solver_gurobi.hpp
+@@ -67,7 +67,7 @@
+         GRBLinExpr expr=0;
+         for(int i = 0; i < 4; i++) {
+             for(int j = i+1; j < 4; j++) {
+-                expr += _x.at({taxa[i], taxa[j], int(tau[i][j])});
++                expr += _x.at({taxa[i], taxa[j], int(std::lround(tau[taxa[i]][taxa[j]]))});
+             }
+         }
+         addLazy(expr, GRB_LESS_EQUAL, 5);

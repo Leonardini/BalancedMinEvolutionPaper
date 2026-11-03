@@ -13,7 +13,9 @@
 set -euo pipefail
 source "$(dirname "$0")/../run/config.sh"
 mode=$1
-OUT=$RESULTS/distance_cut_families
+OUT=${OUT:-$RESULTS/distance_cut_families}
+# ONLY="gki c" restricts the timed mode to those configurations.
+ONLY=${ONLY:-}
 HEU="-O B --heuk 4 --heuls"
 GKI="--gkiR 0.05 --gkiN 0.01"
 SPLIT2K="--2KR 0.001"
@@ -39,6 +41,7 @@ else
 fi
 for seed in $seeds; do
   echo "$CONFIGS" | while IFS='|' read -r cfg flags; do
+    if [ -n "$ONLY" ] && ! [[ " $ONLY " == *" $cfg "* ]]; then continue; fi
     echo "$INSTANCES" | while IFS='|' read -r label file lab; do
       dir=$OUT/$cfg/$label
       if [ "$seed" != 1 ] && ! certified "$dir/seed1"; then

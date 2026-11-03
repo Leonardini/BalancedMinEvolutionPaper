@@ -1,6 +1,7 @@
 # Third-party source (fetched, not redistributed) and its build
 external/catanzaro/upstream
 external/catanzaro/build
+external/catanzaro/build_nogoodfix
 __pycache__/
 # Built from their C sources on first use
 experiments/theory/build/

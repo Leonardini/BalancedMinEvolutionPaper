@@ -11,7 +11,7 @@ COUNT_THREADS=1
 COUNT_PARALLEL=10
 
 CATANZARO_SRC=$REPO/external/catanzaro/upstream
-CATANZARO_BIN=$REPO/external/catanzaro/build/bin/solver_bmep
+CATANZARO_BIN=${CATANZARO_BIN:-$REPO/external/catanzaro/build/bin/solver_bmep}
 INST=$CATANZARO_SRC/instances
 SUP=$INST/supplement
 RESULTS=$REPO/results
