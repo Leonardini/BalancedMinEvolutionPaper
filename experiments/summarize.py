@@ -152,19 +152,30 @@ def check_optima_against_records(opt):
     """Every JSON record that quotes an optimum must agree with the certified runs."""
     checks = []
     for path in sorted(RES.glob("lp/**/*.json")) + sorted(RES.glob("base_rows/*.json")):
-        rec = load(path)
-        if rec is None:
+        data = load(path)
+        if data is None:
             continue
-        L = rec.get("optimum", rec.get("L_star"))
-        if L is None:
-            continue
-        label = Path(rec["instance"]).stem
-        label = {"01-Primates12": "Primates12", "02-M17": "M17", "03-M18": "M18"}.get(label, label)
-        if label not in opt:
-            continue
-        ref = opt[label]["compact"]
-        assert abs(L - ref) <= OPT_REL_TOL * ref, f"{path}: optimum {L} != certified {ref}"
-        checks.append(path.relative_to(RES))
+        # A record is one JSON object; a few scripts (lp/tree_hull.py) write a list of them,
+        # one per configuration, and each is checked in the same way.
+        if isinstance(data, list):
+            recs = data
+        elif isinstance(data, dict):
+            recs = [data]
+        else:
+            raise TypeError(f"{path}: expected a JSON object or a list of them, got {type(data).__name__}")
+        for rec in recs:
+            if not isinstance(rec, dict):
+                raise TypeError(f"{path}: a list entry is a {type(rec).__name__}, not a JSON object")
+            L = rec.get("optimum", rec.get("L_star"))
+            if L is None:
+                continue
+            label = Path(rec["instance"]).stem
+            label = {"01-Primates12": "Primates12", "02-M17": "M17", "03-M18": "M18"}.get(label, label)
+            if label not in opt:
+                continue
+            ref = opt[label]["compact"]
+            assert abs(L - ref) <= OPT_REL_TOL * ref, f"{path}: optimum {L} != certified {ref}"
+            checks.append(path.relative_to(RES))
     return checks
 
 
