@@ -19,7 +19,8 @@ log=$OUT/run.log
 if [ "${1:-}" = --wait-for ]; then
   pattern=$2
   echo "$(date '+%F %T') waiting for: $pattern" >> "$log"
-  while pgrep -f "$pattern" > /dev/null; do sleep 60; done
+  # pgrep -f would also match this script, whose own command line holds the pattern.
+  while pgrep -f "$pattern" | grep -vqx "$$"; do sleep 60; done
   while [ "$(sysctl -n vm.loadavg | awk '{print int($2)}')" -ge 3 ]; do sleep 60; done
   echo "$(date '+%F %T') machine free; starting" >> "$log"
 fi
