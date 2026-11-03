@@ -3,17 +3,14 @@ Where the outputs of the no-cherry search come from (cherry conjecture, Section 
 n = 4..13   nocherry_search.py top N experiments/conjecture/build/backtrack_wide8 nN --depth 0,
             run for this repository (each takes under a second; run.log is the driver's log).
 
-n = 14      Copied from the original runs of 1-2 July 2026, renamed:
-              bt14.out, bt14.err            was bt4_n14_nc.out/.err: the search with leaf 0's row
-                                            sorted, run with an earlier build of the
-                                            enumerator (128-bit row-type mask) whose source
-                                            was not kept; it reports the number of no-cherry row
-                                            types that coverage.py recomputes;
-              bt14_full.out, bt14_full.err  was nc14.out/.err: the same search without the
-                                            sorting of leaf 0's row, a second, larger
-                                            search reaching the same verdict.
-            To regenerate with the code here (a few minutes on one core):
+n = 14      Rerun with the code here on 3 November 2026 (156 s, one core):
               nocherry_search.py top 14 BIN n14 --depth 0
+            bt14.out, bt14.err. It visits 1,940,419,052 nodes over 126 row types with 0
+            survivors, the same node count as the original run of 1-2 July 2026 (an earlier
+            build of the enumerator, whose source was not kept).
+              bt14_full.out, bt14_full.err  was nc14.out/.err from the original runs: the same
+                                            search without the sorting of leaf 0's row, a
+                                            second, larger search reaching the same verdict.
 
 n = 15      Copied unchanged from the original runs of 1-5 July 2026 (backtrack_wide8 with the
             logic of backtrack_wide8.c):

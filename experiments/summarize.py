@@ -565,31 +565,6 @@ def sec_cherry_conjecture():
         out += [f"At n = 12 the search of backtrack_wide8 and the one of Appendix H "
                 f"(experiments/theory/backtrack.c --nocherry) visit the same {w8['nodes']} nodes "
                 "(asserted).", ""]
-    # simulated annealing
-    cex = plm.read_dump(REPO / "data/theory/cex_n12.txt")[0]
-    assert plm.is_counterexample(cex), "data/theory/cex_n12.txt: first matrix is not a counterexample"
-    red, _ = plm.reduce_cherries(cex)
-    assert plm.canon(red)[0] == plm.canon(plm.R6)[0], "first matrix of cex_n12.txt is not a lift of r"
-    sa = []
-    for f in sorted((RES / "conjecture/sa_n24").glob("cherry_free_running_n*_*.txt")):
-        tau = plm.read_matrix(f)
-        c = plm.conditions(tau)
-        n = len(tau)
-        kraft_off = sum(1 for i in range(n)
-                        if sum(Fraction(1, 2 ** tau[i][j]) for j in range(n) if j != i) != Fraction(1, 2))
-        ok49 = all(c[k] for k in ("(4)", "(5)", "(6)", "(7)", "(8)", "(9)"))
-        sa.append((f.name, n, f.read_text().splitlines()[0].lstrip("# "), len(plm.cherries(tau)),
-                   ", ".join(k for k in ("(6)", "(7)", "(8)", "(9)") if not c[k]) or "none", kraft_off,
-                   ok49 and not plm.cherries(tau)))
-    if sa:
-        check("Conjecture 8: annealing at n = 24, matrices without a cherry satisfying (4)-(9)",
-              sum(1 for *_, found in sa if found), P["annealing_counterexamples"])
-        check("Conjecture 8: annealing size n", sorted({x[1] for x in sa}), [P["annealing_n"]])
-        out += ["Simulated annealing at n = 24 from the doubled n = 12 counterexample "
-                "(data/theory/cex_n12.txt, whose first matrix is checked to satisfy (4)–(9), violate "
-                "(10) and reduce to r). The best matrix of each run, rechecked exactly:", "",
-                table(["file", "n", "V recorded", "cherries", "conditions failing", "rows off Kraft",
-                       "counterexample"], [x[:-1] + ("yes" if x[-1] else "no",) for x in sa])]
     return "\n".join(out)
 
 

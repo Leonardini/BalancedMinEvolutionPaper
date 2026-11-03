@@ -123,7 +123,6 @@ an error if one of them disagrees.
 | Section 8.3: the cherry lift; the matrix of Catanzaro et al. (2026, p. 492) | `experiments/theory/cherry_lift.py`, `catanzaro_p492.py` | `theorem5/` |
 | Section 11, Conjecture 8: exhaustive search for matrices satisfying (4)–(9) without a cherry, n ≤ 14 (and n = 15, one slice still to run; see below) | `experiments/conjecture/nocherry_search.py` (enumerator `backtrack_wide8.c`; `coverage.py` checks that the pieces cover the search) | `conjecture/nocherry/` |
 | Section 11, Conjecture 8: the manifold alone forces a cherry for small n | `experiments/conjecture/cherry_bound.py` | `conjecture/cherry_bound.json` |
-| Section 11, Conjecture 8: simulated annealing at n = 24 from the doubled n = 12 counterexample | `experiments/conjecture/cherry_free_sa2.py`, then `cherry_free_descent.py` (start: `data/theory/cex_n12.txt`) | `conjecture/sa_n24/` |
 | Section 10.1, Tables I1 and I2: the compact solver | `experiments/compact_solver.sh` (one run: `compact_solver.py`) | `compact_solver/` |
 | Section 10.2, Table I3: facets F1 and F6 | `experiments/lp/named_facets.py` | `lp/named_facets.json` |
 | Section 10.3, Table I4: shares of the cut families | `experiments/lp/cut_family_shares.py` | `lp/cut_family_shares/` |
@@ -184,14 +183,6 @@ $PY experiments/conjecture/coverage.py $D 15        # exits 0 once n = 15 is cov
 and then set `exhaustive_max_n` to 15 and remove the pending entry in `published.json`, once
 the paper states n ≤ 15; `summarize.py` stops until the two agree.
 
-The annealing runs at n = 24 (`results/conjecture/sa_n24/`) are a search, not a proof: they
-record the best matrix of each run, none of which satisfies (4)–(9). Runs 6000, 7000 and 8000
-are `cherry_free_sa2.py data/theory/cex_n12.txt OUT 2 ITERS SEED`; runs 90001 to 95000 are
-`cherry_free_descent.py START OUT ITERS SEED`, where START is the doubled n = 12
-counterexample or the best matrix of an earlier run (the logs of 94000 and 95000 show the
-doubling as their start, and give their restarts and steps). The other arguments of these
-runs were not recorded.
-
 ## Reading the output
 
 - **A run of the distance-indexed solver** is a directory `.../<instance>/seed<k>/`. It
@@ -225,10 +216,7 @@ runs were not recorded.
   splits, written from a certified run of the distance-indexed solver by
   `experiments/tau_to_splits.py`. The bound experiments read these trees;
   `experiments/check_optima.py` checks that each is optimal.
-- `data/theory/`: the 12×12 matrix printed by Catanzaro et al. (2026, p. 492), and
-  `cex_n12.txt`, 12×12 counterexamples to (10) from an early enumeration; the first, a
-  relabelling of the cherry lift of Section 8.3 (checked by `summarize.py`), is the start of
-  the annealing runs.
+- `data/theory/`: the 12×12 matrix printed by Catanzaro et al. (2026, p. 492).
 - `experiments/`: one script per result (see the table above); `experiments/conjecture/`
   holds the scripts of Conjecture 8.
 - `run/`: the shared settings, the two run scripts and their task lists, the wrapper that

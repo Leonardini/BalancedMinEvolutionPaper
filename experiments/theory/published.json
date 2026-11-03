@@ -20,7 +20,7 @@
  "fractional_edge_clique_cover": {"4": "1", "5": "5", "6": "39/2", "7": "217/5", "8": "784/9"},
  "pruned_clique_cover": {"4": 1, "5": 5, "6": 21, "7": 49, "8": 116},
  "splitohedron_vertices": {"5": {"vertices": 27, "trees": 15}, "6": {"vertices": 2335, "trees": 105}},
- "cherry_conjecture": {"exhaustive_max_n": 14, "pending": {"15": [[3, 3, 3, 5, 5, 5, 6, 8]]}, "annealing_n": 24, "annealing_counterexamples": 0},
+ "cherry_conjecture": {"exhaustive_max_n": 14, "pending": {"15": [[3, 3, 3, 5, 5, 5, 6, 8]]}},
  "tree_shapes": {"6": 2, "7": 2, "8": 4, "12": 37, "13": 66},
  "qt_log_integral": {
   "no_floor": {"first_failing_n": 9, "failing": {"9": [32]}},
