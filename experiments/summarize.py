@@ -1,7 +1,7 @@
 """Collect the results of the paper that are not in its appendix tables into one Markdown
-file, results/SUMMARY.md: the certified optima, the facets of P_6 (Section 4), the
-membership model (Section 5.2), the clique covers (Section 5.1 and Appendix I), the enumeration behind
-Theorem 5 (Appendix D). The tables of Appendices E and F
+file, results/SUMMARY.md: the certified optima, the facets of P_6 (Section 7.1), the
+membership model (Section 7.2), the clique covers (Section 4.2 and Appendix D), the enumeration behind
+Theorem 7 (Appendix H). The tables of Appendices I and J
 come from appendix_tables.py, which uses the helpers of this file.
 
     python experiments/summarize.py [OUT.md]
@@ -118,15 +118,15 @@ def certified(rec):
     return float(rec["final_gap_pct"]) <= CERT_GAP_PCT
 
 
-# Table E9 configurations whose model is exact for BME: they separate the four-point
-# condition, without which (4)-(9) admit non-tree matrices (Theorem 5), so a "certified"
+# Table I9 configurations whose model is exact for BME: they separate the four-point
+# condition, without which (4)-(9) admit non-tree matrices (Theorem 7), so a "certified"
 # run of any other configuration certifies a relaxation, not a tree.
 EXACT_T8 = ("d", "full", "cooff")
 
 
 def collect_optima():
     """Certified optimum per instance label (solver scale), from every certified run of
-    Table E8 and of the exact Table E9 configurations; all of them must agree."""
+    Table I8 and of the exact Table I9 configurations; all of them must agree."""
     found = {}
     dirs = list(RES.glob("distance_solver/*/seed*"))
     for cfg in EXACT_T8:
@@ -176,7 +176,7 @@ def sec_optima(opt, checked):
     return "\n".join([
         "## Certified optima used throughout",
         "",
-        "Every certified run of the distance-indexed solver in Table E8, and in the Table E9 "
+        "Every certified run of the distance-indexed solver in Table I8, and in the Table I9 "
         f"configurations that separate the four-point condition ({', '.join(EXACT_T8)}), gives "
         "an optimum; for each instance all of them agree to a relative "
         f"{OPT_REL_TOL:g} (asserted). Solver scale is ours times 2^(n+1). The optimum quoted "
@@ -223,7 +223,7 @@ def timed_cells(runs):
         recs=recs)
 
 
-# Table E9 configurations, in the order of the cumulative ladder.
+# Table I9 configurations, in the order of the cumulative ladder.
 T8_INST = ["M17", "M18", "20_euros2", "20_rosids"]
 T8_CFG = [
     ("a", "(a) base: no separated cuts; root LP only"),
@@ -231,7 +231,7 @@ T8_CFG = [
     ("gki", "(gki) (b) + generalized Kraft (our min-cut family)"),
     ("c", "(c) (gki) + 2-K-split + circular order"),
     ("d", "(d) (c) + four-point"),
-    ("full", "(full) the Table E8 configuration: strong triangle and four-point on the "
+    ("full", "(full) the Table I8 configuration: strong triangle and four-point on the "
              "quartets containing leaf 1, generalized Kraft, weak four-point, 2-K-split, "
              "circular order"),
     ("cooff", "(cooff) (full) with circular-order cuts switched off"),
@@ -239,7 +239,7 @@ T8_CFG = [
 
 
 def synthetic_optimum(inst):
-    """L* of a synthetic instance test_nN, from the enumeration of all trees in the Table E3
+    """L* of a synthetic instance test_nN, from the enumeration of all trees in the Table I3
     record (results/lp/named_facets.json); None if it is not there."""
     r = load(RES / "lp/named_facets.json")
     if r is None or not inst.startswith("test_n"):
@@ -257,7 +257,7 @@ T6_NAME = {"manifold": "manifold", "pm": "perfect matching (PM)", "f6": "F6", "f
 
 
 def sec_theorem5():
-    out = ["## Theorem 5 and Table D1 (Section 6.3, Appendix D)", ""]
+    out = ["## Theorem 7 and Table H1 (Section 8.3, Appendix H)", ""]
     rows = []
     for n in range(5, 12):
         r = load(RES / "theorem5" / f"canon_n{n}.json")
@@ -313,8 +313,8 @@ def sec_theorem5():
 def sec_splitohedron():
     rs = [r for r in (load(RES / f"splitohedron/summary_n{n}.json") for n in (5, 6, 7)) if r is not None]
     if not rs:
-        return "## Vertices of the splitohedron (Appendix J)\n\npending"
-    return "\n".join(["## Vertices of the splitohedron (Appendix J)", ""] + [
+        return "## Vertices of the splitohedron (Appendix E)\n\npending"
+    return "\n".join(["## Vertices of the splitohedron (Appendix E)", ""] + [
         f"- n = {r['n']}: {r['vertices']} vertices, of which {r['tree_vertices']} are trees "
         f"(of {r['trees']}) and {r['other_vertices']} are not." for r in rs])
 
@@ -322,14 +322,14 @@ def sec_splitohedron():
 def sec_p6():
     r = load(RES / "p6_facets/summary.json")
     if r is None:
-        return "## Facets of P_6 (Section 4)\n\npending"
+        return "## Facets of P_6 (Section 7.1)\n\npending"
     fam = "; ".join(f"{k}: {v['matched']} of {v['size']}" for k, v in r["families"].items())
     cuts = "; ".join(f"{k}-cuts: {v['size']} inequalities, {v['matched']} are facets, "
                      f"{v['trivial']} are trivial (implied by the Kraft equalities)"
                      for k, v in r["cuts"].items())
     hist = ", ".join(f"{k}: {v}" for k, v in r["support_histogram"].items())
     return "\n".join([
-        "## Facets of P_6 (Section 4)", "",
+        "## Facets of P_6 (Section 7.1)", "",
         f"- Vertices: {r['vertices']}; facets: {r['facets']} (in the {r['coordinates_kept']} "
         f"coordinates left after eliminating the Kraft equalities).",
         f"- Named families matching a facet: {fam}; distinct facets matched "
@@ -352,7 +352,7 @@ def sec_conjecture1():
         rows.append((n, lam, tb, r["points"], r["distinct_split_systems"], r["tree_systems"],
                      r["non_tree_systems"]))
     return "\n".join([
-        "## Conjecture 1: integral points of the membership model (Section 5.2)", "",
+        "## Conjecture 6: integral points of the membership model (Section 7.2)", "",
         "Complete enumeration of the integral points of the membership model with "
         "symmetry breaking. \"Leaf-1 tie-break\" places leaf 1 outside every split of size "
         "n/2 (only matters for even n). An integral point is a full assignment of the "
@@ -369,9 +369,9 @@ def sec_clique():
                     (n, r["vertices"], r["edges"], r["maximal_cliques"],
                      r["fractional_edge_clique_cover"], r.get("min_edge_clique_cover", "not computed"),
                      r["pruned_cliques"], r["proposition4_cliques"]))
-    out = ["## Crossing graph: edge clique covers (Section 5.1 and Appendix I)", "",
+    out = ["## Crossing graph: edge clique covers (Section 4.2 and Appendix D)", "",
            table(["n", "nontrivial bipartitions", "crossing pairs", "maximal cliques",
-                  "fractional minimum", "minimum edge clique cover", "subfamily of Appendix I",
+                  "fractional minimum", "minimum edge clique cover", "subfamily of Appendix D",
                   "cliques of Proposition 4"], rows), ""]
     r = load(RES / "clique_cover/integrality.json")
     if r is None:

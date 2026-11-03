@@ -23,9 +23,9 @@ The paper compares two exact solvers for the Balanced Minimum Evolution (BME) pr
 | MOSEK Python API | 11.2.5 | the manifold constraint at every node of the compact solver |
 | Gurobi, with gurobipy | 12.0.1 | the distance-indexed solver, and most bound experiments |
 | CVXPY | 1.9.3 | the bound experiments that impose the manifold constraint exactly (with MOSEK) |
-| FastME | 2.1.6.3 | the starting tree of both solvers, and the NJ and FastME trees of Table E13 |
+| FastME | 2.1.6.3 | the starting tree of both solvers, and the NJ and FastME trees of Table I13 |
 | boost | Homebrew | building the distance-indexed solver |
-| R, with packages `rcdd` and `jsonlite` | 4.5.3 | the facets of the BME polytope for n = 6 (Section 4) |
+| R, with packages `rcdd` and `jsonlite` | 4.5.3 | the facets of the BME polytope for n = 6 (Section 7.1) |
 | a C compiler | Apple clang 16 | the enumerators and two small extensions of the compact solver |
 
 CPLEX, MOSEK and Gurobi need licences; all three offer free academic licences.
@@ -51,7 +51,7 @@ The scripts expect the Python interpreter at `~/venvs/bmepaper/bin/python`; set
 
 Our patch (`external/catanzaro/catanzaro_repro.patch`) leaves the algorithm unchanged. It
 links Gurobi 12 instead of Gurobi 10, finds boost under Homebrew, and adds an
-`--export FILE` option that writes the model before any cut is added (used for Table E12).
+`--export FILE` option that writes the model before any cut is added (used for Table I12).
 
 To check the installation, run the tests (a few minutes on one core):
 
@@ -75,7 +75,7 @@ run/counting_runs.sh    # everything else: bounds and counts, one thread each, 1
 - **Timed runs** are the runs of either solver that search for a certified optimum. Each
   uses 10 threads (the compact solver: 10 worker processes of one thread each) and stops
   after 3600 s. Each run uses random seed 1, and also seeds 2 and 3 if seed 1 certified the
-  optimum, so that times can be reported as a median and a range; the runs of Table F4
+  optimum, so that times can be reported as a median and a range; the runs of Table J4
   use seed 1 only. On our laptop (14 cores, 24 GB of memory) they take about a day.
 - **Counting runs** compute a bound, a count, or the result of an exhaustive search, and
   report no time. Each uses one thread, and ten run side by side. They are listed in
@@ -102,38 +102,38 @@ Then rebuild the summaries:
 ~/venvs/bmepaper/bin/python experiments/appendix_tables.py    # writes results/APPENDIX_TABLES.md
 ```
 
-`results/APPENDIX_TABLES.md` holds the tables of Appendices E and F of the paper, as
+`results/APPENDIX_TABLES.md` holds the tables of Appendices I and J of the paper, as
 printed there. `results/SUMMARY.md` holds the other computed results: the certified
-optima, and the results of Sections 4, 5.1, 5.2 and 6.3 and Appendices D and I.
+optima, and the results of Sections 4.2, 7.1, 7.2 and 8.3 and Appendices D and H.
 
 ## Where each result comes from
 
 | in the paper | script | output under `results/` |
 |---|---|---|
-| Section 4: facets of the BME polytope for n = 6 | `experiments/theory/p6_facets.R` | `p6_facets/` |
-| Appendix J: vertices of the splitohedron for n = 5, 6 | `experiments/theory/splitohedron.R` | `splitohedron/` |
-| Section 5.2, Conjecture 1: integral points of the membership model | `experiments/theory/membership_model.py` | `conjecture1/` |
-| Section 5.1 and Appendix I: edge clique covers (Proposition 4 and its subfamily, the minimum, the fractional minimum); fractional optima of the clique relaxation | `experiments/theory/clique_cover.py`, `clique_integrality.py` | `clique_cover/` |
-| Section 6.3, Theorem 5, Appendix D, Table D1 | `experiments/theory/theorem5.sh` (enumerator `backtrack.c`) | `theorem5/` |
-| Section 6.3: the cherry lift; the matrix of Catanzaro et al. (2026, p. 492) | `experiments/theory/cherry_lift.py`, `catanzaro_p492.py` | `theorem5/` |
-| Section 8.1, Tables E1 and E2: the compact solver | `experiments/compact_solver.sh` (one run: `compact_solver.py`) | `compact_solver/` |
-| Section 8.2, Table E3: facets F1 and F6 | `experiments/lp/named_facets.py` | `lp/named_facets.json` |
-| Section 8.3, Table E4: shares of the cut families | `experiments/lp/cut_family_shares.py` | `lp/cut_family_shares/` |
-| Section 8.4, Table E5: membership model; lifted ladder model, and its gap with the exact hull of the trees for n ≤ 7 | `experiments/lp/membership_layers.py`, `lifted_ladder.py`, `tree_hull.py` | `lp/membership_layers/`, `lp/lifted_ladder/` |
-| Section 8.4, Table E6: per-split triangles; odd cycles | `experiments/lp/per_split_triangles.py`, `odd_cycles.py` | `lp/per_split_triangles/`, `lp/odd_cycles/` |
-| Section 8.5, Table E7: local fixes of the quartets violated at the root | `experiments/lp/quartet_fixes.py` | `lp/quartet_fixes/` |
-| Section 8.6, Tables E8 and E2: the distance-indexed solver | `experiments/distance_solver.sh` | `distance_solver/` |
-| Section 8.7, Table E9: the distance-indexed solver by cut family | `experiments/distance_cut_families.sh` | `distance_cut_families/` |
-| Section 8.7: the non-tree optima | `experiments/theory/nontree_optima.py` | `theorem5/nontree_optima.json` |
-| Section 8.7, Table E10: rows of the distance-indexed model added to the compact one | `experiments/base_rows/base_rows_in_compact.py` | `base_rows/` |
-| Section 8.7, Table E11: the distance-indexed root with Gurobi's cuts on and off | `experiments/distance_root_cuts.sh` | `distance_root_cuts/` |
-| Section 8.7, Table E12: the static root in Gurobi and CPLEX | `experiments/static_root_two_solvers.py` | `static_root_two_solvers/` |
-| Section 8.8, Table E13: NJ and FastME against the certified optimal trees | `experiments/heuristics_vs_optimum.py` | `heuristics_vs_optimum.json` |
-| Appendix F: the certified optima, checked exactly | `experiments/check_optima.py` | `check_optima.json` |
-| Appendix F, Table F1: safe bounds | inside every bound script (`experiments/lp/lib/safe_bound.py`) | in each JSON record |
-| Appendix F, Table F2: certificates against enumeration of all trees | `experiments/enumeration/certificates_vs_enumeration.py` | `enumeration/` |
-| Appendix F, Table F3: condition numbers | `experiments/conditioning.py` | `conditioning/` |
-| Appendix F, Table F4: one cut family off; strict tolerances | `experiments/distance_robustness.sh` | `robustness/` |
+| Section 7.1: facets of the BME polytope for n = 6 | `experiments/theory/p6_facets.R` | `p6_facets/` |
+| Appendix E: vertices of the splitohedron for n = 5, 6 | `experiments/theory/splitohedron.R` | `splitohedron/` |
+| Section 7.2, Conjecture 6: integral points of the membership model | `experiments/theory/membership_model.py` | `conjecture1/` |
+| Section 4.2 and Appendix D: edge clique covers (Proposition 4 and its subfamily, the minimum, the fractional minimum); fractional optima of the clique relaxation | `experiments/theory/clique_cover.py`, `clique_integrality.py` | `clique_cover/` |
+| Section 8.3, Theorem 7, Appendix H, Table H1 | `experiments/theory/theorem5.sh` (enumerator `backtrack.c`) | `theorem5/` |
+| Section 8.3: the cherry lift; the matrix of Catanzaro et al. (2026, p. 492) | `experiments/theory/cherry_lift.py`, `catanzaro_p492.py` | `theorem5/` |
+| Section 10.1, Tables I1 and I2: the compact solver | `experiments/compact_solver.sh` (one run: `compact_solver.py`) | `compact_solver/` |
+| Section 10.2, Table I3: facets F1 and F6 | `experiments/lp/named_facets.py` | `lp/named_facets.json` |
+| Section 10.3, Table I4: shares of the cut families | `experiments/lp/cut_family_shares.py` | `lp/cut_family_shares/` |
+| Section 10.4, Table I5: membership model; lifted ladder model, and its gap with the exact hull of the trees for n ≤ 7 | `experiments/lp/membership_layers.py`, `lifted_ladder.py`, `tree_hull.py` | `lp/membership_layers/`, `lp/lifted_ladder/` |
+| Section 10.4, Table I6: per-split triangles; odd cycles | `experiments/lp/per_split_triangles.py`, `odd_cycles.py` | `lp/per_split_triangles/`, `lp/odd_cycles/` |
+| Section 10.5, Table I7: local fixes of the quartets violated at the root | `experiments/lp/quartet_fixes.py` | `lp/quartet_fixes/` |
+| Section 10.6, Tables I8 and I2: the distance-indexed solver | `experiments/distance_solver.sh` | `distance_solver/` |
+| Section 10.7, Table I9: the distance-indexed solver by cut family | `experiments/distance_cut_families.sh` | `distance_cut_families/` |
+| Section 10.7: the non-tree optima | `experiments/theory/nontree_optima.py` | `theorem5/nontree_optima.json` |
+| Section 10.7, Table I10: rows of the distance-indexed model added to the compact one | `experiments/base_rows/base_rows_in_compact.py` | `base_rows/` |
+| Section 10.7, Table I11: the distance-indexed root with Gurobi's cuts on and off | `experiments/distance_root_cuts.sh` | `distance_root_cuts/` |
+| Section 10.7, Table I12: the static root in Gurobi and CPLEX | `experiments/static_root_two_solvers.py` | `static_root_two_solvers/` |
+| Section 10.8, Table I13: NJ and FastME against the certified optimal trees | `experiments/heuristics_vs_optimum.py` | `heuristics_vs_optimum.json` |
+| Appendix J: the certified optima, checked exactly | `experiments/check_optima.py` | `check_optima.json` |
+| Appendix J, Table J1: safe bounds | inside every bound script (`experiments/lp/lib/safe_bound.py`) | in each JSON record |
+| Appendix J, Table J2: certificates against enumeration of all trees | `experiments/enumeration/certificates_vs_enumeration.py` | `enumeration/` |
+| Appendix J, Table J3: condition numbers | `experiments/conditioning.py` | `conditioning/` |
+| Appendix J, Table J4: one cut family off; strict tolerances | `experiments/distance_robustness.sh` | `robustness/` |
 
 ## Reading the output
 
