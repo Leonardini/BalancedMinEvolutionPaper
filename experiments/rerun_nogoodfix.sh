@@ -1,5 +1,5 @@
 #!/bin/bash
-# Rerun the lazy-mode configurations (gki, c) of distance_cut_families.sh with the fixed
+# Rerun the lazy-mode configurations (gki, c, ubtbc) of distance_cut_families.sh with the fixed
 # no-good cut (external/catanzaro/build.sh --fix-nogood), into a separate results folder,
 # so the published results stay as they are.
 #   rerun_nogoodfix.sh [--wait-for PATTERN]
@@ -12,7 +12,7 @@ here=$(cd "$(dirname "$0")" && pwd)
 source "$here/../run/config.sh"
 export CATANZARO_BIN=$REPO/external/catanzaro/build_nogoodfix/bin/solver_bmep
 export OUT=$RESULTS/distance_cut_families_nogoodfix
-export ONLY="gki c"
+export ONLY="gki c ubtbc"
 [ -x "$CATANZARO_BIN" ] || { echo "build first: external/catanzaro/build.sh --fix-nogood" >&2; exit 1; }
 mkdir -p "$OUT"
 log=$OUT/run.log
@@ -39,4 +39,9 @@ watchdog & wd=$!
 trap 'kill $wd 2>/dev/null' EXIT
 echo "$(date '+%F %T') binary $CATANZARO_BIN" >> "$log"
 "$here/distance_cut_families.sh" timed >> "$log" 2>&1
+# The published UBT-BC configuration with the ORIGINAL binary, for the before/after comparison
+# (gki and c with the original binary are already in results/distance_cut_families).
+echo "$(date '+%F %T') ubtbc with the original binary" >> "$log"
+CATANZARO_BIN=$REPO/external/catanzaro/build/bin/solver_bmep OUT=$RESULTS/distance_cut_families_ubtbc_original \
+  ONLY=ubtbc "$here/distance_cut_families.sh" timed >> "$log" 2>&1
 echo "$(date '+%F %T') all done" >> "$log"

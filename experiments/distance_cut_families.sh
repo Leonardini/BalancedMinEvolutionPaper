@@ -10,6 +10,9 @@
 # Columns: (a) base; (b) + parity rows on all triples; (gki) + generalized Kraft;
 # (c) + 2-K-split and circular order; (d) + four-point. "full" is the Section 7.1
 # configuration (Table E8) and "cooff" the same with circular-order cuts switched off.
+# "ubtbc" is "full" without four-point (--buneman N, the solver's default), which is the
+# published UBT-BC (Formulation 2 of Catanzaro et al. 2026): non-tree integer solutions are
+# rejected only by the lazy no-good cut. Not part of the published tables; run with ONLY.
 set -euo pipefail
 source "$(dirname "$0")/../run/config.sh"
 mode=$1
@@ -34,7 +37,8 @@ elif [ "$mode" = timed ]; then
 c|--str A $GKI $SPLIT2K $CO
 d|--str A $GKI $SPLIT2K $CO $FOURPT
 full|--str O --buneman O $GKI --wbR 0.125 $SPLIT2K $CO
-cooff|--str O --buneman O $GKI --wbR 0.125 $SPLIT2K --co N --coR -1 --coN -1"
+cooff|--str O --buneman O $GKI --wbR 0.125 $SPLIT2K --co N --coR -1 --coN -1
+ubtbc|--str O $GKI --wbR 0.125 $SPLIT2K $CO"
   threads=$TIMED_THREADS; seeds=$SEEDS
 else
   echo "usage: $0 timed|counts" >&2; exit 1
