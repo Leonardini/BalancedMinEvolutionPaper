@@ -1,0 +1,62 @@
+[
+  {
+    "shape": "(((()())(()()))((()())())())",
+    "splits": [
+      [2, 3, 4, 5, 6, 8],
+      [2, 3, 5, 6],
+      [2, 3, 5, 6, 8],
+      [2, 5],
+      [3, 6]
+    ],
+    "vertices": 2,
+    "tree_is_vertex": false,
+    "non_tree_vertices": 2,
+    "log_integral_non_tree_vertices": 0,
+    "seconds": 27.7
+  },
+  {
+    "shape": "((()())(()()))((()())(()()))",
+    "splits": [
+      [2, 3, 4, 5, 6, 8],
+      [2, 3, 5, 6],
+      [2, 5],
+      [3, 6],
+      [4, 8]
+    ],
+    "vertices": 1,
+    "tree_is_vertex": true,
+    "non_tree_vertices": 0,
+    "log_integral_non_tree_vertices": 0,
+    "seconds": 15.6
+  },
+  {
+    "shape": "(((()())())((()())())(()()))",
+    "splits": [
+      [2, 3, 4, 5, 6, 8],
+      [2, 3, 5, 6, 8],
+      [2, 5, 8],
+      [2, 8],
+      [3, 6]
+    ],
+    "vertices": 2,
+    "tree_is_vertex": false,
+    "non_tree_vertices": 2,
+    "log_integral_non_tree_vertices": 0,
+    "seconds": 18.5
+  },
+  {
+    "shape": "(((()())())())(((()())())())",
+    "splits": [
+      [2, 3, 4, 5, 7, 8],
+      [2, 3, 5, 7, 8],
+      [2, 3, 5, 8],
+      [2, 5, 8],
+      [2, 8]
+    ],
+    "vertices": 4,
+    "tree_is_vertex": false,
+    "non_tree_vertices": 4,
+    "log_integral_non_tree_vertices": 0,
+    "seconds": 41
+  }
+]

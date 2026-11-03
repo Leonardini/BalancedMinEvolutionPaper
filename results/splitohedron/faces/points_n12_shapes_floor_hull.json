@@ -1,0 +1,298 @@
+[
+  {
+    "label": "Q_T ((((()())(()()))())(((()())(()()))())(()()))",
+    "points": 1,
+    "vertices": 1,
+    "tree_vertices": 1,
+    "non_tree_vertices": 0,
+    "trees_not_vertices": 0
+  },
+  {
+    "label": "Q_T ((((()())(()()))())(((()())())())((()())()))",
+    "points": 1,
+    "vertices": 1,
+    "tree_vertices": 1,
+    "non_tree_vertices": 0,
+    "trees_not_vertices": 0
+  },
+  {
+    "label": "Q_T ((((()())())(()()))())((((()())())())(()()))",
+    "points": 1,
+    "vertices": 1,
+    "tree_vertices": 1,
+    "non_tree_vertices": 0,
+    "trees_not_vertices": 0
+  },
+  {
+    "label": "Q_T ((((()())(()()))())())((((()())())())(()()))",
+    "points": 1,
+    "vertices": 1,
+    "tree_vertices": 1,
+    "non_tree_vertices": 0,
+    "trees_not_vertices": 0
+  },
+  {
+    "label": "Q_T ((((()())(()()))(()()))(((()())())())(()()))",
+    "points": 1,
+    "vertices": 1,
+    "tree_vertices": 1,
+    "non_tree_vertices": 0,
+    "trees_not_vertices": 0
+  },
+  {
+    "label": "Q_T ((((()())(()()))())(()()))((((()())())())())",
+    "points": 1,
+    "vertices": 1,
+    "tree_vertices": 1,
+    "non_tree_vertices": 0,
+    "trees_not_vertices": 0
+  },
+  {
+    "label": "Q_T ((((()())(()()))())(((()())())(()()))(()()))",
+    "points": 1,
+    "vertices": 1,
+    "tree_vertices": 1,
+    "non_tree_vertices": 0,
+    "trees_not_vertices": 0
+  },
+  {
+    "label": "Q_T (((()())(()()))((()())()))(((()())(()()))())",
+    "points": 1,
+    "vertices": 1,
+    "tree_vertices": 1,
+    "non_tree_vertices": 0,
+    "trees_not_vertices": 0
+  },
+  {
+    "label": "Q_T ((((()())(()()))(()()))(((()())())(()()))())",
+    "points": 1,
+    "vertices": 1,
+    "tree_vertices": 1,
+    "non_tree_vertices": 0,
+    "trees_not_vertices": 0
+  },
+  {
+    "label": "Q_T ((((()())(()()))(()()))(((()())(()()))())())",
+    "points": 1,
+    "vertices": 1,
+    "tree_vertices": 1,
+    "non_tree_vertices": 0,
+    "trees_not_vertices": 0
+  },
+  {
+    "label": "Q_T (((()())(()()))(()()))(((()())(()()))(()()))",
+    "points": 1,
+    "vertices": 1,
+    "tree_vertices": 1,
+    "non_tree_vertices": 0,
+    "trees_not_vertices": 0
+  },
+  {
+    "label": "Q_T ((((()())())((()())()))(((()())())(()()))())",
+    "points": 1,
+    "vertices": 1,
+    "tree_vertices": 1,
+    "non_tree_vertices": 0,
+    "trees_not_vertices": 0
+  },
+  {
+    "label": "Q_T ((((()())(()()))())(((()())())((()())()))())",
+    "points": 1,
+    "vertices": 1,
+    "tree_vertices": 1,
+    "non_tree_vertices": 0,
+    "trees_not_vertices": 0
+  },
+  {
+    "label": "Q_T (((()())(()()))(()()))(((()())())((()())()))",
+    "points": 1,
+    "vertices": 1,
+    "tree_vertices": 1,
+    "non_tree_vertices": 0,
+    "trees_not_vertices": 0
+  },
+  {
+    "label": "Q_T ((((()())())(()()))())((((()())())(()()))())",
+    "points": 1,
+    "vertices": 1,
+    "tree_vertices": 1,
+    "non_tree_vertices": 0,
+    "trees_not_vertices": 0
+  },
+  {
+    "label": "Q_T ((((()())())(()()))(((()())())(()()))(()()))",
+    "points": 1,
+    "vertices": 1,
+    "tree_vertices": 1,
+    "non_tree_vertices": 0,
+    "trees_not_vertices": 0
+  },
+  {
+    "label": "Q_T ((((()())(()()))())())((((()())())(()()))())",
+    "points": 1,
+    "vertices": 1,
+    "tree_vertices": 1,
+    "non_tree_vertices": 0,
+    "trees_not_vertices": 0
+  },
+  {
+    "label": "Q_T (((()())(()()))((()())()))(((()())())(()()))",
+    "points": 1,
+    "vertices": 1,
+    "tree_vertices": 1,
+    "non_tree_vertices": 0,
+    "trees_not_vertices": 0
+  },
+  {
+    "label": "Q_T ((((()())(()()))())())((((()())(()()))())())",
+    "points": 1,
+    "vertices": 1,
+    "tree_vertices": 1,
+    "non_tree_vertices": 0,
+    "trees_not_vertices": 0
+  },
+  {
+    "label": "Q_T (((()())(()()))((()())(()())))(((()())())())",
+    "points": 1,
+    "vertices": 1,
+    "tree_vertices": 1,
+    "non_tree_vertices": 0,
+    "trees_not_vertices": 0
+  },
+  {
+    "label": "Q_T (((()())(()()))((()())(()()))((()())(()())))",
+    "points": 1,
+    "vertices": 1,
+    "tree_vertices": 1,
+    "non_tree_vertices": 0,
+    "trees_not_vertices": 0
+  },
+  {
+    "label": "Q_T ((((()())())())(((()())())())(((()())())()))",
+    "points": 369,
+    "vertices": 360,
+    "tree_vertices": 0,
+    "non_tree_vertices": 360,
+    "trees_not_vertices": 1
+  },
+  {
+    "label": "Q_T ((((()())())())(((()())())())((()())(()())))",
+    "points": 1,
+    "vertices": 1,
+    "tree_vertices": 1,
+    "non_tree_vertices": 0,
+    "trees_not_vertices": 0
+  },
+  {
+    "label": "Q_T ((((()())())())((()())()))((((()())())())())",
+    "points": 1,
+    "vertices": 1,
+    "tree_vertices": 1,
+    "non_tree_vertices": 0,
+    "trees_not_vertices": 0
+  },
+  {
+    "label": "Q_T ((((()())())(()()))(((()())())())((()())()))",
+    "points": 1,
+    "vertices": 1,
+    "tree_vertices": 1,
+    "non_tree_vertices": 0,
+    "trees_not_vertices": 0
+  },
+  {
+    "label": "Q_T (((((()())())())(()()))((((()())())())())())",
+    "points": 1,
+    "vertices": 1,
+    "tree_vertices": 1,
+    "non_tree_vertices": 0,
+    "trees_not_vertices": 0
+  },
+  {
+    "label": "Q_T ((((()())())())(()()))((((()())())())(()()))",
+    "points": 1,
+    "vertices": 1,
+    "tree_vertices": 1,
+    "non_tree_vertices": 0,
+    "trees_not_vertices": 0
+  },
+  {
+    "label": "Q_T (((((()())())())())((((()())())())())(()()))",
+    "points": 1,
+    "vertices": 1,
+    "tree_vertices": 1,
+    "non_tree_vertices": 0,
+    "trees_not_vertices": 0
+  },
+  {
+    "label": "Q_T ((((()())())(()()))(()()))((((()())())())())",
+    "points": 1,
+    "vertices": 1,
+    "tree_vertices": 1,
+    "non_tree_vertices": 0,
+    "trees_not_vertices": 0
+  },
+  {
+    "label": "Q_T ((((()())())((()())()))(((()())())())(()()))",
+    "points": 1,
+    "vertices": 1,
+    "tree_vertices": 1,
+    "non_tree_vertices": 0,
+    "trees_not_vertices": 0
+  },
+  {
+    "label": "Q_T ((((()())(()()))((()())()))(((()())())())())",
+    "points": 1,
+    "vertices": 1,
+    "tree_vertices": 1,
+    "non_tree_vertices": 0,
+    "trees_not_vertices": 0
+  },
+  {
+    "label": "Q_T ((((()())(()()))(()()))())((((()())())())())",
+    "points": 1,
+    "vertices": 1,
+    "tree_vertices": 1,
+    "non_tree_vertices": 0,
+    "trees_not_vertices": 0
+  },
+  {
+    "label": "Q_T ((((()())())((()())()))())((((()())())())())",
+    "points": 1,
+    "vertices": 1,
+    "tree_vertices": 1,
+    "non_tree_vertices": 0,
+    "trees_not_vertices": 0
+  },
+  {
+    "label": "Q_T (((()())())((()())()))(((()())())((()())()))",
+    "points": 113,
+    "vertices": 112,
+    "tree_vertices": 0,
+    "non_tree_vertices": 112,
+    "trees_not_vertices": 1
+  },
+  {
+    "label": "Q_T (((((()())())(()()))())((((()())())())())())",
+    "points": 1,
+    "vertices": 1,
+    "tree_vertices": 1,
+    "non_tree_vertices": 0,
+    "trees_not_vertices": 0
+  },
+  {
+    "label": "Q_T (((((()())(()()))())())((((()())())())())())",
+    "points": 1,
+    "vertices": 1,
+    "tree_vertices": 1,
+    "non_tree_vertices": 0,
+    "trees_not_vertices": 0
+  },
+  {
+    "label": "Q_T (((((()())())())())())(((((()())())())())())",
+    "points": 1,
+    "vertices": 1,
+    "tree_vertices": 1,
+    "non_tree_vertices": 0,
+    "trees_not_vertices": 0
+  }
+]

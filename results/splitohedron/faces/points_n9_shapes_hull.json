@@ -1,0 +1,50 @@
+[
+  {
+    "label": "Q_T (((()())(()()))((()())(()()))())",
+    "points": 1,
+    "vertices": 1,
+    "tree_vertices": 1,
+    "non_tree_vertices": 0,
+    "trees_not_vertices": 0
+  },
+  {
+    "label": "Q_T (((()())())(()()))(((()())())())",
+    "points": 1,
+    "vertices": 1,
+    "tree_vertices": 1,
+    "non_tree_vertices": 0,
+    "trees_not_vertices": 0
+  },
+  {
+    "label": "Q_T (((()())(()()))())(((()())())())",
+    "points": 1,
+    "vertices": 1,
+    "tree_vertices": 1,
+    "non_tree_vertices": 0,
+    "trees_not_vertices": 0
+  },
+  {
+    "label": "Q_T (((()())(()()))((()())())(()()))",
+    "points": 1,
+    "vertices": 1,
+    "tree_vertices": 1,
+    "non_tree_vertices": 0,
+    "trees_not_vertices": 0
+  },
+  {
+    "label": "Q_T (((()())())((()())())((()())()))",
+    "points": 33,
+    "vertices": 32,
+    "tree_vertices": 0,
+    "non_tree_vertices": 32,
+    "trees_not_vertices": 1
+  },
+  {
+    "label": "Q_T ((((()())())())(((()())())())())",
+    "points": 1,
+    "vertices": 1,
+    "tree_vertices": 1,
+    "non_tree_vertices": 0,
+    "trees_not_vertices": 0
+  }
+]

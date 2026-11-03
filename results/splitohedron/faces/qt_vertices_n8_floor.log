@@ -1,0 +1,5 @@
+15:57:13 n = 8, shape (((()())(()()))((()())())()): 2 vertices; x_T a vertex: FALSE; 2 non-tree vertices (0 log-integral)
+15:57:28 n = 8, shape ((()())(()()))((()())(()())): 1 vertices; x_T a vertex: TRUE; 0 non-tree vertices (0 log-integral)
+15:57:47 n = 8, shape (((()())())((()())())(()())): 2 vertices; x_T a vertex: FALSE; 2 non-tree vertices (0 log-integral)
+15:58:28 n = 8, shape (((()())())())(((()())())()): 4 vertices; x_T a vertex: FALSE; 4 non-tree vertices (0 log-integral)
+exit 0
