@@ -1,0 +1,2 @@
+Instance | N | Best Sol | Time (s) | Node Best Sol | First Root DB | Last Root BD | Best Dual Bound | Final Gap (%) | Nodes | INF | CO@Root | CO@Search | GKI@Root | GKI@Search | EHC@Root | EHC@Search | 2K@Root | 2K@Search | 4PT@Root | 4PT@Search | Overall Cuts
+20_rosids.txt | 20 | 1036298.57864 | 68.2632945 | 0 | 999500.642154 | 1035263.84893 | 1036298.57864 | 1.12337625687e-14 | 878 | 0 | 0 | 116 | 6 | 3 | 136 | 0 | 19 | 0 | 0 | 0 | 280

@@ -131,6 +131,8 @@ an error if one of them disagrees.
 | Section 10.5, Table I7: local fixes of the quartets violated at the root | `experiments/lp/quartet_fixes.py` | `lp/quartet_fixes/` |
 | Section 10.6, Tables I8 and I2: the distance-indexed solver | `experiments/distance_solver.sh` | `distance_solver/` |
 | Section 10.7, Table I9: the distance-indexed solver by cut family | `experiments/distance_cut_families.sh` | `distance_cut_families/` |
+| Section 10.7, Tables I9 and I10: the configurations without four-point separation with the corrected no-good cut (`external/catanzaro/nogood_index_fix.patch`, built by `external/catanzaro/build.sh --fix-nogood`), and the published UBT-BC configuration with both builds | `experiments/rerun_nogoodfix.sh` | `distance_cut_families_nogoodfix/`, `distance_cut_families_ubtbc_original/` |
+| Section 10.7: whether each of those runs ends at a tree (four-point condition on every quartet, tree rebuilt, objective recomputed) | `experiments/nogood_endpoints.py` | `nogood_endpoints.json` |
 | Section 10.7: the non-tree optima | `experiments/theory/nontree_optima.py` | `theorem5/nontree_optima.json` |
 | Section 10.7, Table I10: rows of the distance-indexed model added to the compact one | `experiments/base_rows/base_rows_in_compact.py` | `base_rows/` |
 | Section 10.7, Table I11: the distance-indexed root with Gurobi's cuts on and off | `experiments/distance_root_cuts.sh` | `distance_root_cuts/` |

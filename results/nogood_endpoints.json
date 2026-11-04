@@ -1,0 +1,605 @@
+{
+ "released/c/20_euros2/seed1": {
+  "reported": 716214.753004,
+  "recomputed": 716214.7530035202,
+  "matches": true,
+  "quartets": 4845,
+  "four_point_violated": 0,
+  "tree": true,
+  "rejected": 0
+ },
+ "released/c/20_euros2/seed2": {
+  "reported": 716214.753004,
+  "recomputed": 716214.7530035202,
+  "matches": true,
+  "quartets": 4845,
+  "four_point_violated": 0,
+  "tree": true,
+  "rejected": 0
+ },
+ "released/c/20_euros2/seed3": {
+  "reported": 716214.753004,
+  "recomputed": 716214.7530035202,
+  "matches": true,
+  "quartets": 4845,
+  "four_point_violated": 0,
+  "tree": true,
+  "rejected": 0
+ },
+ "released/c/20_rosids/seed1": {
+  "reported": 1036298.57864,
+  "recomputed": 1036298.5786368003,
+  "matches": true,
+  "quartets": 4845,
+  "four_point_violated": 0,
+  "tree": true,
+  "rejected": 0
+ },
+ "released/c/M17/seed1": {
+  "reported": 20788.1120461,
+  "recomputed": 20788.11204608001,
+  "matches": true,
+  "quartets": 2380,
+  "four_point_violated": 0,
+  "tree": true,
+  "rejected": 0
+ },
+ "released/c/M17/seed2": {
+  "reported": 20788.1120461,
+  "recomputed": 20788.11204608001,
+  "matches": true,
+  "quartets": 2380,
+  "four_point_violated": 0,
+  "tree": true,
+  "rejected": 0
+ },
+ "released/c/M17/seed3": {
+  "reported": 20788.1120461,
+  "recomputed": 20788.11204608001,
+  "matches": true,
+  "quartets": 2380,
+  "four_point_violated": 0,
+  "tree": true,
+  "rejected": 0
+ },
+ "released/c/M18/seed1": {
+  "reported": 66029.1121357,
+  "recomputed": 66029.11213567997,
+  "matches": true,
+  "quartets": 3060,
+  "four_point_violated": 0,
+  "tree": true,
+  "rejected": 1
+ },
+ "released/c/M18/seed2": {
+  "reported": 66029.1121357,
+  "recomputed": 66029.11213567997,
+  "matches": true,
+  "quartets": 3060,
+  "four_point_violated": 0,
+  "tree": true,
+  "rejected": 2
+ },
+ "released/c/M18/seed3": {
+  "reported": 66029.1121357,
+  "recomputed": 66029.11213567997,
+  "matches": true,
+  "quartets": 3060,
+  "four_point_violated": 0,
+  "tree": true,
+  "rejected": 1
+ },
+ "released/gki/20_euros2/seed1": {
+  "reported": 716214.753004,
+  "recomputed": 716214.7530035202,
+  "matches": true,
+  "quartets": 4845,
+  "four_point_violated": 0,
+  "tree": true,
+  "rejected": 0
+ },
+ "released/gki/20_euros2/seed2": {
+  "reported": 716214.753004,
+  "recomputed": 716214.7530035202,
+  "matches": true,
+  "quartets": 4845,
+  "four_point_violated": 0,
+  "tree": true,
+  "rejected": 0
+ },
+ "released/gki/20_euros2/seed3": {
+  "reported": 716214.753004,
+  "recomputed": 716214.7530035202,
+  "matches": true,
+  "quartets": 4845,
+  "four_point_violated": 0,
+  "tree": true,
+  "rejected": 0
+ },
+ "released/gki/20_rosids/seed1": {
+  "reported": 1034368.75375,
+  "recomputed": 1034368.7537459201,
+  "matches": true,
+  "quartets": 4845,
+  "four_point_violated": 1306,
+  "tree": false,
+  "rejected": 1
+ },
+ "released/gki/20_rosids/seed2": {
+  "reported": 1034368.75375,
+  "recomputed": 1034368.7537459201,
+  "matches": true,
+  "quartets": 4845,
+  "four_point_violated": 1306,
+  "tree": false,
+  "rejected": 2
+ },
+ "released/gki/20_rosids/seed3": {
+  "reported": 1034368.75375,
+  "recomputed": 1034368.7537459201,
+  "matches": true,
+  "quartets": 4845,
+  "four_point_violated": 1306,
+  "tree": false,
+  "rejected": 1
+ },
+ "released/gki/M17/seed1": {
+  "reported": 20788.1120461,
+  "recomputed": 20788.11204608001,
+  "matches": true,
+  "quartets": 2380,
+  "four_point_violated": 0,
+  "tree": true,
+  "rejected": 0
+ },
+ "released/gki/M17/seed2": {
+  "reported": 20788.1120461,
+  "recomputed": 20788.11204608001,
+  "matches": true,
+  "quartets": 2380,
+  "four_point_violated": 0,
+  "tree": true,
+  "rejected": 0
+ },
+ "released/gki/M17/seed3": {
+  "reported": 20788.1120461,
+  "recomputed": 20788.11204608001,
+  "matches": true,
+  "quartets": 2380,
+  "four_point_violated": 0,
+  "tree": true,
+  "rejected": 0
+ },
+ "released/gki/M18/seed1": {
+  "reported": 65824.223657,
+  "recomputed": 65824.22365696,
+  "matches": true,
+  "quartets": 3060,
+  "four_point_violated": 800,
+  "tree": false,
+  "rejected": 1
+ },
+ "released/gki/M18/seed3": {
+  "reported": 65824.223657,
+  "recomputed": 65824.22365696,
+  "matches": true,
+  "quartets": 3060,
+  "four_point_violated": 800,
+  "tree": false,
+  "rejected": 1
+ },
+ "released/ubtbc/20_euros2/seed1": {
+  "reported": 716214.753004,
+  "recomputed": 716214.7530035202,
+  "matches": true,
+  "quartets": 4845,
+  "four_point_violated": 0,
+  "tree": true,
+  "rejected": 0
+ },
+ "released/ubtbc/20_euros2/seed2": {
+  "reported": 716214.753004,
+  "recomputed": 716214.7530035202,
+  "matches": true,
+  "quartets": 4845,
+  "four_point_violated": 0,
+  "tree": true,
+  "rejected": 0
+ },
+ "released/ubtbc/20_euros2/seed3": {
+  "reported": 716214.753004,
+  "recomputed": 716214.7530035202,
+  "matches": true,
+  "quartets": 4845,
+  "four_point_violated": 0,
+  "tree": true,
+  "rejected": 0
+ },
+ "released/ubtbc/20_rosids/seed1": {
+  "reported": 1036298.57864,
+  "recomputed": 1036298.5786368003,
+  "matches": true,
+  "quartets": 4845,
+  "four_point_violated": 0,
+  "tree": true,
+  "rejected": 0
+ },
+ "released/ubtbc/20_rosids/seed2": {
+  "reported": 1036298.57864,
+  "recomputed": 1036298.5786368003,
+  "matches": true,
+  "quartets": 4845,
+  "four_point_violated": 0,
+  "tree": true,
+  "rejected": 0
+ },
+ "released/ubtbc/20_rosids/seed3": {
+  "reported": 1036298.57864,
+  "recomputed": 1036298.5786368003,
+  "matches": true,
+  "quartets": 4845,
+  "four_point_violated": 0,
+  "tree": true,
+  "rejected": 0
+ },
+ "released/ubtbc/M17/seed1": {
+  "reported": 20788.1120461,
+  "recomputed": 20788.11204608001,
+  "matches": true,
+  "quartets": 2380,
+  "four_point_violated": 0,
+  "tree": true,
+  "rejected": 0
+ },
+ "released/ubtbc/M17/seed2": {
+  "reported": 20788.1120461,
+  "recomputed": 20788.11204608001,
+  "matches": true,
+  "quartets": 2380,
+  "four_point_violated": 0,
+  "tree": true,
+  "rejected": 0
+ },
+ "released/ubtbc/M17/seed3": {
+  "reported": 20788.1120461,
+  "recomputed": 20788.11204608001,
+  "matches": true,
+  "quartets": 2380,
+  "four_point_violated": 0,
+  "tree": true,
+  "rejected": 0
+ },
+ "released/ubtbc/M18/seed1": {
+  "reported": 66029.1121357,
+  "recomputed": 66029.11213567997,
+  "matches": true,
+  "quartets": 3060,
+  "four_point_violated": 0,
+  "tree": true,
+  "rejected": 0
+ },
+ "released/ubtbc/M18/seed2": {
+  "reported": 66029.1121357,
+  "recomputed": 66029.11213567997,
+  "matches": true,
+  "quartets": 3060,
+  "four_point_violated": 0,
+  "tree": true,
+  "rejected": 0
+ },
+ "released/ubtbc/M18/seed3": {
+  "reported": 66029.1121357,
+  "recomputed": 66029.11213567997,
+  "matches": true,
+  "quartets": 3060,
+  "four_point_violated": 0,
+  "tree": true,
+  "rejected": 1
+ },
+ "corrected/c/20_euros2/seed1": {
+  "reported": 716214.753004,
+  "recomputed": 716214.7530035202,
+  "matches": true,
+  "quartets": 4845,
+  "four_point_violated": 0,
+  "tree": true,
+  "rejected": 0
+ },
+ "corrected/c/20_euros2/seed2": {
+  "reported": 716214.753004,
+  "recomputed": 716214.7530035202,
+  "matches": true,
+  "quartets": 4845,
+  "four_point_violated": 0,
+  "tree": true,
+  "rejected": 0
+ },
+ "corrected/c/20_euros2/seed3": {
+  "reported": 716214.753004,
+  "recomputed": 716214.7530035202,
+  "matches": true,
+  "quartets": 4845,
+  "four_point_violated": 0,
+  "tree": true,
+  "rejected": 0
+ },
+ "corrected/c/20_rosids/seed1": {
+  "reported": 1036298.57864,
+  "recomputed": 1036298.5786368003,
+  "matches": true,
+  "quartets": 4845,
+  "four_point_violated": 0,
+  "tree": true,
+  "rejected": 0
+ },
+ "corrected/c/M17/seed1": {
+  "reported": 20788.1120461,
+  "recomputed": 20788.11204608001,
+  "matches": true,
+  "quartets": 2380,
+  "four_point_violated": 0,
+  "tree": true,
+  "rejected": 0
+ },
+ "corrected/c/M17/seed2": {
+  "reported": 20788.1120461,
+  "recomputed": 20788.11204608001,
+  "matches": true,
+  "quartets": 2380,
+  "four_point_violated": 0,
+  "tree": true,
+  "rejected": 0
+ },
+ "corrected/c/M17/seed3": {
+  "reported": 20788.1120461,
+  "recomputed": 20788.11204608001,
+  "matches": true,
+  "quartets": 2380,
+  "four_point_violated": 0,
+  "tree": true,
+  "rejected": 0
+ },
+ "corrected/c/M18/seed1": {
+  "reported": 66029.1121357,
+  "recomputed": 66029.11213567997,
+  "matches": true,
+  "quartets": 3060,
+  "four_point_violated": 0,
+  "tree": true,
+  "rejected": 1
+ },
+ "corrected/c/M18/seed2": {
+  "reported": 66029.1121357,
+  "recomputed": 66029.11213567997,
+  "matches": true,
+  "quartets": 3060,
+  "four_point_violated": 0,
+  "tree": true,
+  "rejected": 2
+ },
+ "corrected/c/M18/seed3": {
+  "reported": 66029.1121357,
+  "recomputed": 66029.11213567997,
+  "matches": true,
+  "quartets": 3060,
+  "four_point_violated": 0,
+  "tree": true,
+  "rejected": 1
+ },
+ "corrected/gki/20_euros2/seed1": {
+  "reported": 716214.753004,
+  "recomputed": 716214.7530035202,
+  "matches": true,
+  "quartets": 4845,
+  "four_point_violated": 0,
+  "tree": true,
+  "rejected": 0
+ },
+ "corrected/gki/20_euros2/seed2": {
+  "reported": 716214.753004,
+  "recomputed": 716214.7530035202,
+  "matches": true,
+  "quartets": 4845,
+  "four_point_violated": 0,
+  "tree": true,
+  "rejected": 0
+ },
+ "corrected/gki/20_euros2/seed3": {
+  "reported": 716214.753004,
+  "recomputed": 716214.7530035202,
+  "matches": true,
+  "quartets": 4845,
+  "four_point_violated": 0,
+  "tree": true,
+  "rejected": 0
+ },
+ "corrected/gki/20_rosids/seed1": {
+  "reported": 1036298.57864,
+  "recomputed": 1036298.5786368003,
+  "matches": true,
+  "quartets": 4845,
+  "four_point_violated": 0,
+  "tree": true,
+  "rejected": 50
+ },
+ "corrected/gki/20_rosids/seed2": {
+  "reported": 1036298.57864,
+  "recomputed": 1036298.5786368003,
+  "matches": true,
+  "quartets": 4845,
+  "four_point_violated": 0,
+  "tree": true,
+  "rejected": 51
+ },
+ "corrected/gki/20_rosids/seed3": {
+  "reported": 1036298.57864,
+  "recomputed": 1036298.5786368003,
+  "matches": true,
+  "quartets": 4845,
+  "four_point_violated": 0,
+  "tree": true,
+  "rejected": 37
+ },
+ "corrected/gki/M17/seed1": {
+  "reported": 20788.1120461,
+  "recomputed": 20788.11204608001,
+  "matches": true,
+  "quartets": 2380,
+  "four_point_violated": 0,
+  "tree": true,
+  "rejected": 0
+ },
+ "corrected/gki/M17/seed2": {
+  "reported": 20788.1120461,
+  "recomputed": 20788.11204608001,
+  "matches": true,
+  "quartets": 2380,
+  "four_point_violated": 0,
+  "tree": true,
+  "rejected": 0
+ },
+ "corrected/gki/M17/seed3": {
+  "reported": 20788.1120461,
+  "recomputed": 20788.11204608001,
+  "matches": true,
+  "quartets": 2380,
+  "four_point_violated": 0,
+  "tree": true,
+  "rejected": 0
+ },
+ "corrected/gki/M18/seed1": {
+  "reported": 66029.1121357,
+  "recomputed": 66029.11213567997,
+  "matches": true,
+  "quartets": 3060,
+  "four_point_violated": 0,
+  "tree": true,
+  "rejected": 11
+ },
+ "corrected/gki/M18/seed2": {
+  "reported": 66029.1121357,
+  "recomputed": 66029.11213567997,
+  "matches": true,
+  "quartets": 3060,
+  "four_point_violated": 0,
+  "tree": true,
+  "rejected": 11
+ },
+ "corrected/gki/M18/seed3": {
+  "reported": 66029.1121357,
+  "recomputed": 66029.11213567997,
+  "matches": true,
+  "quartets": 3060,
+  "four_point_violated": 0,
+  "tree": true,
+  "rejected": 11
+ },
+ "corrected/ubtbc/20_euros2/seed1": {
+  "reported": 716214.753004,
+  "recomputed": 716214.7530035202,
+  "matches": true,
+  "quartets": 4845,
+  "four_point_violated": 0,
+  "tree": true,
+  "rejected": 0
+ },
+ "corrected/ubtbc/20_euros2/seed2": {
+  "reported": 716214.753004,
+  "recomputed": 716214.7530035202,
+  "matches": true,
+  "quartets": 4845,
+  "four_point_violated": 0,
+  "tree": true,
+  "rejected": 0
+ },
+ "corrected/ubtbc/20_euros2/seed3": {
+  "reported": 716214.753004,
+  "recomputed": 716214.7530035202,
+  "matches": true,
+  "quartets": 4845,
+  "four_point_violated": 0,
+  "tree": true,
+  "rejected": 0
+ },
+ "corrected/ubtbc/20_rosids/seed1": {
+  "reported": 1036298.57864,
+  "recomputed": 1036298.5786368003,
+  "matches": true,
+  "quartets": 4845,
+  "four_point_violated": 0,
+  "tree": true,
+  "rejected": 0
+ },
+ "corrected/ubtbc/20_rosids/seed2": {
+  "reported": 1036298.57864,
+  "recomputed": 1036298.5786368003,
+  "matches": true,
+  "quartets": 4845,
+  "four_point_violated": 0,
+  "tree": true,
+  "rejected": 0
+ },
+ "corrected/ubtbc/20_rosids/seed3": {
+  "reported": 1036298.57864,
+  "recomputed": 1036298.5786368003,
+  "matches": true,
+  "quartets": 4845,
+  "four_point_violated": 0,
+  "tree": true,
+  "rejected": 0
+ },
+ "corrected/ubtbc/M17/seed1": {
+  "reported": 20788.1120461,
+  "recomputed": 20788.11204608001,
+  "matches": true,
+  "quartets": 2380,
+  "four_point_violated": 0,
+  "tree": true,
+  "rejected": 0
+ },
+ "corrected/ubtbc/M17/seed2": {
+  "reported": 20788.1120461,
+  "recomputed": 20788.11204608001,
+  "matches": true,
+  "quartets": 2380,
+  "four_point_violated": 0,
+  "tree": true,
+  "rejected": 0
+ },
+ "corrected/ubtbc/M17/seed3": {
+  "reported": 20788.1120461,
+  "recomputed": 20788.11204608001,
+  "matches": true,
+  "quartets": 2380,
+  "four_point_violated": 0,
+  "tree": true,
+  "rejected": 0
+ },
+ "corrected/ubtbc/M18/seed1": {
+  "reported": 66029.1121357,
+  "recomputed": 66029.11213567997,
+  "matches": true,
+  "quartets": 3060,
+  "four_point_violated": 0,
+  "tree": true,
+  "rejected": 0
+ },
+ "corrected/ubtbc/M18/seed2": {
+  "reported": 66029.1121357,
+  "recomputed": 66029.11213567997,
+  "matches": true,
+  "quartets": 3060,
+  "four_point_violated": 0,
+  "tree": true,
+  "rejected": 0
+ },
+ "corrected/ubtbc/M18/seed3": {
+  "reported": 66029.1121357,
+  "recomputed": 66029.11213567997,
+  "matches": true,
+  "quartets": 3060,
+  "four_point_violated": 0,
+  "tree": true,
+  "rejected": 1
+ }
+}

@@ -1,0 +1,104 @@
+2026-11-03 15:54:26 waiting for: mikkonen_gurobi.py|m44_nonadjacent_followup|stop_after_68
+2026-11-03 15:54:39 waiting for: mikkonen_gurobi.py|m44_nonadjacent_followup|stop_after_68
+2026-11-03 15:57:53 waiting for: mikkonen_gurobi.py|m44_nonadjacent_followup|stop_after_68
+2026-11-03 17:05:33 waiting for: mikkonen_|m44_nonadjacent_followup|stop_after_68
+2026-11-03 17:55:19 waiting for: mikkonen_|m44_nonadjacent_followup|stop_after_68|slice_n15_t08_8|backtrack_wide8 15
+2026-11-03 20:20:09 waiting for: mikkonen_|m44_nonadjacent_followup|stop_after_68
+2026-11-03 20:20:09 machine free; starting
+2026-11-03 20:20:09 binary /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/external/catanzaro/build_nogoodfix/bin/solver_bmep
+2026-11-03 20:20:10 start /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_nogoodfix/gki/M17/seed1
+2026-11-03 20:20:25 end   /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_nogoodfix/gki/M17/seed1
+2026-11-03 20:20:25 start /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_nogoodfix/gki/M18/seed1
+2026-11-03 20:22:37 end   /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_nogoodfix/gki/M18/seed1
+2026-11-03 20:22:38 start /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_nogoodfix/gki/20_euros2/seed1
+2026-11-03 20:22:54 end   /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_nogoodfix/gki/20_euros2/seed1
+2026-11-03 20:22:55 start /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_nogoodfix/gki/20_rosids/seed1
+2026-11-03 21:01:48 end   /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_nogoodfix/gki/20_rosids/seed1
+2026-11-03 21:01:48 start /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_nogoodfix/c/M17/seed1
+2026-11-03 21:02:03 end   /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_nogoodfix/c/M17/seed1
+2026-11-03 21:02:03 start /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_nogoodfix/c/M18/seed1
+2026-11-03 21:06:09 end   /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_nogoodfix/c/M18/seed1
+2026-11-03 21:06:09 start /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_nogoodfix/c/20_euros2/seed1
+2026-11-03 21:06:25 end   /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_nogoodfix/c/20_euros2/seed1
+2026-11-03 21:06:25 start /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_nogoodfix/c/20_rosids/seed1
+2026-11-03 22:06:26 end   /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_nogoodfix/c/20_rosids/seed1
+2026-11-03 22:06:26 start /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_nogoodfix/ubtbc/M17/seed1
+2026-11-03 22:06:32 end   /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_nogoodfix/ubtbc/M17/seed1
+2026-11-03 22:06:32 start /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_nogoodfix/ubtbc/M18/seed1
+2026-11-03 22:07:14 end   /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_nogoodfix/ubtbc/M18/seed1
+2026-11-03 22:07:14 start /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_nogoodfix/ubtbc/20_euros2/seed1
+2026-11-03 22:07:19 end   /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_nogoodfix/ubtbc/20_euros2/seed1
+2026-11-03 22:07:19 start /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_nogoodfix/ubtbc/20_rosids/seed1
+2026-11-03 22:08:17 end   /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_nogoodfix/ubtbc/20_rosids/seed1
+2026-11-03 22:08:17 start /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_nogoodfix/gki/M17/seed2
+2026-11-03 22:08:32 end   /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_nogoodfix/gki/M17/seed2
+2026-11-03 22:08:33 start /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_nogoodfix/gki/M18/seed2
+2026-11-03 22:10:38 end   /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_nogoodfix/gki/M18/seed2
+2026-11-03 22:10:38 start /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_nogoodfix/gki/20_euros2/seed2
+2026-11-03 22:10:53 end   /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_nogoodfix/gki/20_euros2/seed2
+2026-11-03 22:10:53 start /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_nogoodfix/gki/20_rosids/seed2
+2026-11-03 22:56:32 end   /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_nogoodfix/gki/20_rosids/seed2
+2026-11-03 22:56:32 start /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_nogoodfix/c/M17/seed2
+2026-11-03 22:56:47 end   /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_nogoodfix/c/M17/seed2
+2026-11-03 22:56:47 start /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_nogoodfix/c/M18/seed2
+2026-11-03 22:59:12 end   /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_nogoodfix/c/M18/seed2
+2026-11-03 22:59:12 start /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_nogoodfix/c/20_euros2/seed2
+2026-11-03 22:59:26 end   /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_nogoodfix/c/20_euros2/seed2
+skip c/20_rosids seed 2: seed 1 did not certify
+2026-11-03 22:59:26 start /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_nogoodfix/ubtbc/M17/seed2
+2026-11-03 22:59:31 end   /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_nogoodfix/ubtbc/M17/seed2
+2026-11-03 22:59:31 start /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_nogoodfix/ubtbc/M18/seed2
+2026-11-03 23:00:11 end   /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_nogoodfix/ubtbc/M18/seed2
+2026-11-03 23:00:11 start /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_nogoodfix/ubtbc/20_euros2/seed2
+2026-11-03 23:00:16 end   /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_nogoodfix/ubtbc/20_euros2/seed2
+2026-11-03 23:00:16 start /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_nogoodfix/ubtbc/20_rosids/seed2
+2026-11-03 23:01:25 end   /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_nogoodfix/ubtbc/20_rosids/seed2
+2026-11-03 23:01:25 start /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_nogoodfix/gki/M17/seed3
+2026-11-03 23:01:39 end   /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_nogoodfix/gki/M17/seed3
+2026-11-03 23:01:39 start /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_nogoodfix/gki/M18/seed3
+2026-11-03 23:03:37 end   /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_nogoodfix/gki/M18/seed3
+2026-11-03 23:03:38 start /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_nogoodfix/gki/20_euros2/seed3
+2026-11-03 23:03:54 end   /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_nogoodfix/gki/20_euros2/seed3
+2026-11-03 23:03:54 start /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_nogoodfix/gki/20_rosids/seed3
+2026-11-04 00:03:55 end   /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_nogoodfix/gki/20_rosids/seed3
+2026-11-04 00:03:55 start /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_nogoodfix/c/M17/seed3
+2026-11-04 00:04:09 end   /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_nogoodfix/c/M17/seed3
+2026-11-04 00:04:09 start /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_nogoodfix/c/M18/seed3
+2026-11-04 00:05:57 end   /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_nogoodfix/c/M18/seed3
+2026-11-04 00:05:57 start /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_nogoodfix/c/20_euros2/seed3
+2026-11-04 00:06:11 end   /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_nogoodfix/c/20_euros2/seed3
+skip c/20_rosids seed 3: seed 1 did not certify
+2026-11-04 00:06:11 start /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_nogoodfix/ubtbc/M17/seed3
+2026-11-04 00:06:16 end   /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_nogoodfix/ubtbc/M17/seed3
+2026-11-04 00:06:16 start /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_nogoodfix/ubtbc/M18/seed3
+2026-11-04 00:07:24 end   /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_nogoodfix/ubtbc/M18/seed3
+2026-11-04 00:07:24 start /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_nogoodfix/ubtbc/20_euros2/seed3
+2026-11-04 00:07:30 end   /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_nogoodfix/ubtbc/20_euros2/seed3
+2026-11-04 00:07:30 start /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_nogoodfix/ubtbc/20_rosids/seed3
+2026-11-04 00:08:26 end   /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_nogoodfix/ubtbc/20_rosids/seed3
+2026-11-04 00:08:26 ubtbc with the original binary
+2026-11-04 00:08:26 start /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_ubtbc_original/ubtbc/M17/seed1
+2026-11-04 00:08:32 end   /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_ubtbc_original/ubtbc/M17/seed1
+2026-11-04 00:08:32 start /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_ubtbc_original/ubtbc/M18/seed1
+2026-11-04 00:09:14 end   /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_ubtbc_original/ubtbc/M18/seed1
+2026-11-04 00:09:14 start /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_ubtbc_original/ubtbc/20_euros2/seed1
+2026-11-04 00:09:19 end   /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_ubtbc_original/ubtbc/20_euros2/seed1
+2026-11-04 00:09:19 start /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_ubtbc_original/ubtbc/20_rosids/seed1
+2026-11-04 00:10:17 end   /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_ubtbc_original/ubtbc/20_rosids/seed1
+2026-11-04 00:10:17 start /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_ubtbc_original/ubtbc/M17/seed2
+2026-11-04 00:10:21 end   /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_ubtbc_original/ubtbc/M17/seed2
+2026-11-04 00:10:22 start /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_ubtbc_original/ubtbc/M18/seed2
+2026-11-04 00:11:02 end   /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_ubtbc_original/ubtbc/M18/seed2
+2026-11-04 00:11:02 start /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_ubtbc_original/ubtbc/20_euros2/seed2
+2026-11-04 00:11:07 end   /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_ubtbc_original/ubtbc/20_euros2/seed2
+2026-11-04 00:11:07 start /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_ubtbc_original/ubtbc/20_rosids/seed2
+2026-11-04 00:12:16 end   /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_ubtbc_original/ubtbc/20_rosids/seed2
+2026-11-04 00:12:16 start /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_ubtbc_original/ubtbc/M17/seed3
+2026-11-04 00:12:20 end   /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_ubtbc_original/ubtbc/M17/seed3
+2026-11-04 00:12:20 start /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_ubtbc_original/ubtbc/M18/seed3
+2026-11-04 00:13:29 end   /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_ubtbc_original/ubtbc/M18/seed3
+2026-11-04 00:13:29 start /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_ubtbc_original/ubtbc/20_euros2/seed3
+2026-11-04 00:13:35 end   /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_ubtbc_original/ubtbc/20_euros2/seed3
+2026-11-04 00:13:35 start /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_ubtbc_original/ubtbc/20_rosids/seed3
+2026-11-04 00:14:31 end   /Users/lchindelevitch/Downloads/Phylogenetics/BalancedMinEvolutionPaper_public/results/distance_cut_families_ubtbc_original/ubtbc/20_rosids/seed3
+2026-11-04 00:14:31 all done

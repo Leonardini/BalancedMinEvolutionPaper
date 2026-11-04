@@ -275,7 +275,8 @@ def d9_cut_families(opt):
         g, nd = [labels[cfg]], [labels[cfg]]
         for inst in S.T8_INST:
             L = opt.get(inst, {}).get("scaled")
-            c = S.timed_cells(S.seed_runs(RES / "distance_cut_families" / cfg / inst))
+            c = S.timed_cells(S.seed_runs(lazy_dir(cfg, "corrected") / inst if cfg in LAZY
+                                          else RES / "distance_cut_families" / cfg / inst))
             if c is None:
                 g.append(PENDING), nd.append(PENDING)
                 continue
@@ -298,12 +299,58 @@ def d9_cut_families(opt):
             "(2K, CO), and four-point (4pt); full is the configuration of Section @sec:hardware, and "
             "full − CO the same without circular order. (a) and (b) are root LPs; the other rows "
             "are full solves (time limit 3600 s, three seeds where the first certifies), of which we report the converged root bound. "
-            "On M18, the + GK run with seed 2 ended early, in each of three attempts, with an internal error of the "
-            "solver after it rejected a heuristic solution; we report seeds 1 and 3 for that cell. Top: root gap to $L^*$ "
+            "The rows + GK and + 2K, CO, which have no four-point separation and reject non-tree solutions only "
+            "through the solver's no-good cut, use the solver with that cut corrected (Table @tbl:nogood-fix). Top: root gap to $L^*$ "
             "(%). Bottom: nodes to certification; \"non-tree\" marks runs that end at a matrix "
             "below $L^*$ that is not a tree.\n\n"
             + table(["configuration"] + S.T8_INST, grow) + "\n\n"
             + table(["configuration"] + S.T8_INST, nrow))
+
+
+LAZY = ("gki", "c", "ubtbc")  # configurations without four-point: trees only through the no-good cut
+
+
+def lazy_dir(cfg, build):
+    """Results of a lazy-mode configuration with the released solver or the one whose no-good
+    cut is corrected (external/catanzaro/nogood_index_fix.patch)."""
+    if build == "corrected":
+        return RES / "distance_cut_families_nogoodfix" / cfg
+    return RES / ("distance_cut_families_ubtbc_original" if cfg == "ubtbc" else "distance_cut_families") / cfg
+
+
+def d9b_nogood(opt):
+    labels = {"gki": "+ GK", "c": "+ 2K, CO", "ubtbc": "UBT-BC"}
+    rows = []
+    for cfg in LAZY:
+        for build in ("released", "corrected"):
+            row = [labels[cfg], build]
+            for inst in S.T8_INST:
+                L = opt.get(inst, {}).get("scaled")
+                base = lazy_dir(cfg, build) / inst
+                c = S.timed_cells(S.seed_runs(base))
+                if c is None:
+                    row.append(PENDING)
+                    continue
+                rej = sorted((base / f"seed{s}" / "log.txt").read_text().count("SOL REJECTED")
+                             for s in S.SEEDS if (base / f"seed{s}" / "log.txt").exists())
+                r = f" ({rej[len(rej) // 2]})"
+                below = [x for x in c["recs"] if S.certified(x) and float(x["best_sol"]) < L * (1 - S.OPT_REL_TOL)]
+                if below:
+                    row.append("non-tree" + r)
+                elif c["cert"] == c["seeds"]:
+                    row.append(spread([int(x["nodes"]) for x in c["recs"]], lambda x: f"{x:.0f}") + r)
+                else:
+                    row.append(f"{c['cert']} of {c['seeds']} certified" + r)
+            rows.append(row)
+    return ("**Table []{#tbl:nogood-fix}. The lazy-mode configurations with the released and the corrected "
+            "no-good cut** (Section @sec:res-distance-root). Time limit 3600 s, three seeds where the first "
+            "certifies. Without four-point separation, the solver rejects a non-tree "
+            "integer solution only through its no-good cut; the released code builds that cut from the wrong entries "
+            "of $\\tau$, and the corrected build changes one line (external/catanzaro/nogood_index_fix.patch in the "
+            "reproduction repository). UBT-BC is the configuration of the published UBT-BC results. Cells: nodes to "
+            "certification, or \"non-tree\" for runs that end at a matrix below $L^*$ that is not a tree; in brackets, "
+            "the solutions the no-good cut rejected (median over seeds).\n\n"
+            + table(["configuration", "build"] + S.T8_INST, rows))
 
 
 def d10_lift(opt):
@@ -542,7 +589,7 @@ CLASS = {"tbl:compact-solver": COMPACT, "tbl:two-solvers": BOTH, "tbl:named-face
          "tbl:gap-shares": BOUND, "tbl:membership-gap": BOUND, "tbl:level-gap": BOUND,
          "tbl:quartet-fixes": BOUND, "tbl:distance-solver": DISTANCE,
          "tbl:distance-configs": "Ten cores: Gurobi on 10 threads, except the two root-LP rows (one thread).",
-         "tbl:distance-rows": BOUND, "tbl:distance-root-source": BOUND, "tbl:static-root": BOUND,
+         "tbl:nogood-fix": DISTANCE, "tbl:distance-rows": BOUND, "tbl:distance-root-source": BOUND, "tbl:static-root": BOUND,
          "tbl:nj-fastme": BOUND, "tbl:safe-bounds": BOUND,
          "tbl:enumeration-check": None,  # described in the paragraph before the table
          "tbl:condition-numbers": BOUND, "tbl:one-family-off": DISTANCE}
@@ -573,7 +620,7 @@ def main():
     parts = ["# Tables of Appendices @app:result-tables and @app:numerics",
              "Generated by experiments/appendix_tables.py; do not edit by hand.",
              d1_compact(opt), d2_versus(opt), d3_facets(), d4_families(opt), d5_split_layer(),
-             d6_cut_polytope(), d7_quartets(), d8_distance_solver(), d9_cut_families(opt), d10_lift(opt), d11_integrality(opt), d12_two_solvers(), d13_heuristics(),
+             d6_cut_polytope(), d7_quartets(), d8_distance_solver(), d9_cut_families(opt), d9b_nogood(opt), d10_lift(opt), d11_integrality(opt), d12_two_solvers(), d13_heuristics(),
              e1_safe(), e2_enumeration(), e3_conditioning(), e4_robustness()]
     out.write_text("\n\n".join(with_threads(x) for x in parts) + "\n")
     print(f"wrote {out}")

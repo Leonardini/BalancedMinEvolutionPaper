@@ -1,0 +1,154 @@
+Input permutation applied (2.03305) 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19
+--- CUTTING PLANES ----
+GKI      0.0500 | 0.0100
+CO(G)    0.0500 | 0.0050
+WB       0.1250 | ------
+2Ksplits 0.0010 | ------
+-----------------------
+Set parameter Username
+Set parameter LicenseID to value 2789566
+Set parameter Threads to value 10
+Set parameter Seed to value 3
+Read parameters from file gurobi.env
+Academic license - for non-commercial use only - expires 2027-03-10
+Set parameter MIPGap to value 1e-08
+Set parameter TimeLimit to value 3600
+Set parameter LazyConstraints to value 1
+Set parameter MIPFocus to value 3
+Set parameter Heuristics to value 0
+Set parameter PreCrush to value 1
+Gurobi Optimizer version 12.0.1 build v12.0.1rc0 (mac64[arm] - Darwin 27.0.0 26A434)
+
+CPU model: Apple M4 Pro
+Thread count: 14 physical cores, 14 logical processors, using up to 10 threads
+
+Non-default parameters:
+TimeLimit  3600
+MIPGap  1e-08
+Heuristics  0
+MIPFocus  3
+PreCrush  1
+Seed  3
+Threads  10
+LazyConstraints  1
+
+Optimize a model with 3631 rows, 3933 columns and 198873 nonzeros
+Model fingerprint: 0xe404086e
+Variable types: 0 continuous, 3933 integer (3420 binary)
+Coefficient statistics:
+  Matrix range     [2e-06, 2e+01]
+  Objective range  [8e-02, 6e+04]
+  Bounds range     [1e+00, 2e+01]
+  RHS range        [5e-01, 4e+01]
+Presolve time: 0.12s
+Presolved: 3631 rows, 3933 columns, 188594 nonzeros
+Variable types: 0 continuous, 3933 integer (3420 binary)
+Root relaxation presolved: 3631 rows, 3933 columns, 188594 nonzeros
+
+
+Root relaxation: objective 7.100445e+05, 1677 iterations, 0.09 seconds (0.46 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 710044.548    0  660          - 710044.548      -     -    0s
+fastme --input_data=/var/folders/dt/8b65fqjn2l756qpj_c7_jmfr0000gq/T//fi16807.inst --output_tree=/var/folders/dt/8b65fqjn2l756qpj_c7_jmfr0000gq/T//fi16807_sol.nw --method=U --user_tree=/var/folders/dt/8b65fqjn2l756qpj_c7_jmfr0000gq/T//fi16807.nw --nni=balME --spr
+
+ . This analysis will run on 1 threads.
+
+#  Analysing dataset 1
+
+ . Warning: Triangular inequality violation.
+
+ . You may ask for triangular inequality correction using the '-q' option.
+
+ . Reading input tree...
+
+ . Tree length is 37.000000.
+
+ . Performing NNI...
+
+ . Performing SPR...
+
+ . SPR did not improve tree length.
+
+ . Time used 0h00m00s
+H    0     0                    716214.75300 712546.319  0.51%     -    1s
+     0     0 712546.319    0  665 716214.753 712546.319  0.51%     -    1s
+fastme --input_data=/var/folders/dt/8b65fqjn2l756qpj_c7_jmfr0000gq/T//fi282475249.inst --output_tree=/var/folders/dt/8b65fqjn2l756qpj_c7_jmfr0000gq/T//fi282475249_sol.nw --method=U --user_tree=/var/folders/dt/8b65fqjn2l756qpj_c7_jmfr0000gq/T//fi282475249.nw --nni=balME --spr
+
+ . This analysis will run on 1 threads.
+
+#  Analysing dataset 1
+
+ . Warning: Triangular inequality violation.
+
+ . You may ask for triangular inequality correction using the '-q' option.
+
+ . Reading input tree...
+
+ . Tree length is 37.000000.
+
+ . Performing NNI...
+
+ . Performing SPR...
+
+ . SPR did not improve tree length.
+
+ . Time used 0h00m00s
+     0     0 713050.623    0  733 716214.753 713050.623  0.44%     -    1s
+     0     0 713950.399    0  702 716214.753 713950.399  0.32%     -    1s
+     0     0 714494.260    0  649 716214.753 714494.260  0.24%     -    1s
+     0     0 714574.685    0  693 716214.753 714574.685  0.23%     -    1s
+     0     0 714599.714    0  732 716214.753 714599.714  0.23%     -    1s
+     0     0 714611.501    0  774 716214.753 714611.501  0.22%     -    1s
+     0     0 714650.292    0  801 716214.753 714650.292  0.22%     -    1s
+     0     0 714672.811    0  809 716214.753 714672.811  0.22%     -    1s
+     0     0 714689.867    0  811 716214.753 714689.867  0.21%     -    1s
+     0     0 714691.970    0  818 716214.753 714691.970  0.21%     -    1s
+     0     0 714692.055    0  822 716214.753 714692.055  0.21%     -    1s
+     0     0 715571.825    0  893 716214.753 715571.825  0.09%     -    2s
+     0     0 715612.280    0  894 716214.753 715612.280  0.08%     -    3s
+     0     0 715613.227    0  885 716214.753 715613.227  0.08%     -    3s
+     0     0 715790.614    0  910 716214.753 715790.614  0.06%     -    3s
+     0     0 715851.828    0  939 716214.753 715851.828  0.05%     -    3s
+     0     0 715851.969    0  939 716214.753 715851.969  0.05%     -    3s
+     0     0 715863.266    0  951 716214.753 715863.266  0.05%     -    3s
+     0     0 715865.118    0  949 716214.753 715865.118  0.05%     -    3s
+     0     0 715866.849    0  967 716214.753 715866.849  0.05%     -    3s
+     0     0 715867.382    0  972 716214.753 715867.382  0.05%     -    3s
+     0     0 716061.900    0 1000 716214.753 716061.900  0.02%     -    4s
+     0     0 716061.900    0  338 716214.753 716061.900  0.02%     -    4s
+     0     0 716083.371    0  422 716214.753 716083.371  0.02%     -    4s
+     0     0 716096.316    0  396 716214.753 716096.316  0.02%     -    4s
+     0     0 716097.842    0  389 716214.753 716097.842  0.02%     -    4s
+     0     0 716106.355    0  390 716214.753 716106.355  0.02%     -    4s
+     0     0 716111.602    0  400 716214.753 716111.602  0.01%     -    4s
+     0     0 716114.272    0  395 716214.753 716114.272  0.01%     -    4s
+     0     0     cutoff    0      716214.753 716214.753  0.00%     -    5s
+
+Cutting planes:
+  User: 17
+  Gomory: 6
+  Lift-and-project: 1
+  Cover: 58
+  Implied bound: 3
+  Clique: 19
+  MIR: 90
+  Mixing: 2
+  StrongCG: 19
+  Flow cover: 46
+  GUB cover: 85
+  Zero half: 326
+  RLT: 20
+  Relax-and-lift: 3
+
+Explored 1 nodes (11729 simplex iterations) in 5.06 seconds (13.83 work units)
+Thread count was 10 (of 14 available processors)
+
+Solution count 1: 716215 
+
+Optimal solution found (tolerance 1.00e-08)
+Best objective 7.162147530035e+05, best bound 7.162147530035e+05, gap 0.0000%
+
+User-callback calls 1917, time in user-callback 0.34 sec
