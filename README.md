@@ -121,7 +121,7 @@ an error if one of them disagrees.
 | Section 4.2 and Appendix D: edge clique covers (Proposition 4 and its subfamily, the minimum, the fractional minimum); fractional optima of the clique relaxation | `experiments/theory/clique_cover.py`, `clique_integrality.py` | `clique_cover/` |
 | Section 8.3, Theorem 7, Appendix H, Table H1 | `experiments/theory/theorem5.sh` (enumerator `backtrack.c`) | `theorem5/` |
 | Section 8.3: the cherry lift; the matrix of Catanzaro et al. (2026, p. 492) | `experiments/theory/cherry_lift.py`, `catanzaro_p492.py` | `theorem5/` |
-| Section 11, Conjecture 8: exhaustive search for matrices satisfying (4)–(9) without a cherry, n ≤ 14 (and n = 15, one slice still to run; see below) | `experiments/conjecture/nocherry_search.py` (enumerator `backtrack_wide8.c`; `coverage.py` checks that the pieces cover the search) | `conjecture/nocherry/` |
+| Section 11, Conjecture 8: exhaustive search for matrices satisfying (4)–(9) without a cherry, n ≤ 15 | `experiments/conjecture/nocherry_search.py` (enumerator `backtrack_wide8.c`; `coverage.py` checks that the pieces cover the search) | `conjecture/nocherry/` |
 | Section 11, Conjecture 8: the manifold alone forces a cherry for small n | `experiments/conjecture/cherry_bound.py` | `conjecture/cherry_bound.json` |
 | Section 10.1, Tables I1 and I2: the compact solver | `experiments/compact_solver.sh` (one run: `compact_solver.py`) | `compact_solver/` |
 | Section 10.2, Table I3: facets F1 and F6 | `experiments/lp/named_facets.py` | `lp/named_facets.json` |
@@ -171,19 +171,14 @@ $PY experiments/conjecture/nocherry_search.py split 15 $B $D 3_3_3_4_5 3_3_3_4_6
 $PY experiments/conjecture/coverage.py $D 15
 ```
 
-`results/conjecture/nocherry/provenance.txt` lists which original run wrote which file. One
-slice was never run: 3_3_3_5_5_5_6 with t08 = 8 (the original driver split t08 = 6 a second
-time instead). Until its seven pieces are in `results/conjecture/nocherry/n15/`,
-`coverage.py` reports n = 15 as not covered, and `published.json` (`cherry_conjecture`)
-records the paper's claim as n ≤ 14 with that slice pending. To finish it:
+`results/conjecture/nocherry/provenance.txt` lists which run wrote which file. The original
+driver missed one slice, 3_3_3_5_5_5_6 with t08 = 8 (it split t08 = 6 a second time instead);
+its seven pieces t09 = 8..14 were run in November 2026, and with them `coverage.py` reports
+n = 15 as covered with no survivor. The equivalent command is
 
 ```bash
 $PY experiments/conjecture/nocherry_search.py split 15 $B $D 3_3_3_5_5_5_6_8 --workers 7
-$PY experiments/conjecture/coverage.py $D 15        # exits 0 once n = 15 is covered
 ```
-
-and then set `exhaustive_max_n` to 15 and remove the pending entry in `published.json`, once
-the paper states n ≤ 15; `summarize.py` stops until the two agree.
 
 ## Reading the output
 

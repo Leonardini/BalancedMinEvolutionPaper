@@ -28,8 +28,10 @@ n = 15      Copied unchanged from the original runs of 1-5 July 2026 (backtrack_
                                             log finish_n15_t09.log) for the seven slowest
                                             pieces of depth 8.
             finish_n15.py did not run 3_3_3_5_5_5_6 with t08 = 8 (it split t08 = 6, which had
-            already finished, a second time instead): that slice, run as its seven pieces
-            t09 = 8..14 (bt15_3_3_3_5_5_5_6_s8_<t09>.out), is still to be added, and the
-            n = 15 search is not complete without it (coverage.py exits 1).
+            already finished, a second time instead). That slice ran on 3-4 November 2026 as
+            its seven pieces t09 = 8..14 (bt15_3_3_3_5_5_5_6_s8_<t09>.out/.err; backtrack_wide8
+            with the logic of backtrack_wide8.c, one core per piece): 0 survivors, the slowest
+            piece t09 = 9 taking 1,067,366,211,921 nodes in 102,188 s. With it coverage.py
+            reports n = 15 as covered with no survivor (exit 0).
             Equivalent command with the code here:
               nocherry_search.py split 15 BIN n15 3_3_3_5_5_5_6_8 --workers 7

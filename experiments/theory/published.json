@@ -1,5 +1,5 @@
 {
- "_comment": "Numbers stated in the paper, used only in asserted cross-checks after the computed value has been written out. Read by published.py, p6_facets.R, splitohedron.R and summarize.py (which rechecks every entry it can from the result files). cherry_conjecture.pending lists the leaf-0 prefixes of the n = 15 search still to run; qt_log_integral lists, per failing n, the spurious log-integral points of each failing shape in increasing order.",
+ "_comment": "Numbers stated in the paper, used only in asserted cross-checks after the computed value has been written out. Read by published.py, p6_facets.R, splitohedron.R and summarize.py (which rechecks every entry it can from the result files). cherry_conjecture.pending lists, per n, the leaf-0 prefixes of a search still to run (empty when every search up to exhaustive_max_n is covered); qt_log_integral lists, per failing n, the spurious log-integral points of each failing shape in increasing order.",
  "canonical_survivors": {"5": 4, "6": 7, "7": 19, "8": 85, "9": 502, "10": 1252, "11": 5008},
  "row_types": {"8": 9, "9": 16, "10": 28, "11": 50, "12": 89},
  "cherry_fixed_witnesses": 84,
@@ -20,7 +20,7 @@
  "fractional_edge_clique_cover": {"4": "1", "5": "5", "6": "39/2", "7": "217/5", "8": "784/9"},
  "pruned_clique_cover": {"4": 1, "5": 5, "6": 21, "7": 49, "8": 116},
  "splitohedron_vertices": {"5": {"vertices": 27, "trees": 15}, "6": {"vertices": 2335, "trees": 105}},
- "cherry_conjecture": {"exhaustive_max_n": 14, "pending": {"15": [[3, 3, 3, 5, 5, 5, 6, 8]]}},
+ "cherry_conjecture": {"exhaustive_max_n": 15, "pending": {}},
  "tree_shapes": {"6": 2, "7": 2, "8": 4, "12": 37, "13": 66},
  "qt_log_integral": {
   "no_floor": {"first_failing_n": 9, "failing": {"9": [32]}},
