@@ -14,10 +14,6 @@ $PY experiments/lp/cut_family_shares.py external/catanzaro/upstream/instances/02
 $PY experiments/lp/cut_family_shares.py external/catanzaro/upstream/instances/03-M18.txt $RESULTS/lp/cut_family_shares/M18.json 1800
 $PY experiments/lp/cut_family_shares.py external/catanzaro/upstream/instances/supplement/20_B-HA-573-585-BMGE.txt $RESULTS/lp/cut_family_shares/20_B-HA-573-585.json 1800
 
-# Section 8.4, Table E5: the membership model, layer by layer, with each laminarity encoding.
-$PY experiments/lp/membership_layers.py external/catanzaro/upstream/instances/01-Primates12.txt data/ground_truth/Primates12.splits $RESULTS/lp/membership_layers/quadrant.json quadrant
-$PY experiments/lp/membership_layers.py external/catanzaro/upstream/instances/01-Primates12.txt data/ground_truth/Primates12.splits $RESULTS/lp/membership_layers/nested.json nested
-
 # Section 8.4, Table E5: the lifted cut-value-ladder model, every combination of the 3/4
 # rung, the clique cover and the manifold.
 $PY experiments/lp/lifted_ladder.py external/catanzaro/upstream/instances/01-Primates12.txt data/ground_truth/Primates12.splits $RESULTS/lp/lifted_ladder/ladder.json
@@ -28,15 +24,6 @@ $PY experiments/lp/lifted_ladder.py external/catanzaro/upstream/instances/01-Pri
 $PY experiments/lp/lifted_ladder.py external/catanzaro/upstream/instances/01-Primates12.txt data/ground_truth/Primates12.splits $RESULTS/lp/lifted_ladder/rung_manifold.json --rung --manifold
 $PY experiments/lp/lifted_ladder.py external/catanzaro/upstream/instances/01-Primates12.txt data/ground_truth/Primates12.splits $RESULTS/lp/lifted_ladder/rung_prop4.json --rung --cliques
 $PY experiments/lp/lifted_ladder.py external/catanzaro/upstream/instances/01-Primates12.txt data/ground_truth/Primates12.splits $RESULTS/lp/lifted_ladder/rung_prop4_manifold.json --rung --cliques --manifold
-
-# Sections 5.3 and 8.4, Table E6: per-split cut-polytope triangles against the strong triangle.
-$PY experiments/lp/per_split_triangles.py external/catanzaro/upstream/instances/01-Primates12.txt data/ground_truth/Primates12.splits $RESULTS/lp/per_split_triangles/Primates12.json
-
-# Section 8.4: odd-cycle inequalities, exact separation, tolerance 1e-6.
-$PY experiments/lp/odd_cycles.py external/catanzaro/upstream/instances/01-Primates12.txt $RESULTS/lp/odd_cycles/Primates12_membership.json membership data/ground_truth/Primates12.splits
-$PY experiments/lp/odd_cycles.py external/catanzaro/upstream/instances/01-Primates12.txt $RESULTS/lp/odd_cycles/Primates12_xlevel.json xlevel data/ground_truth/Primates12.splits
-$PY experiments/lp/odd_cycles.py data/synthetic/test_n8.txt $RESULTS/lp/odd_cycles/test_n8_membership.json membership
-$PY experiments/lp/odd_cycles.py data/synthetic/test_n8.txt $RESULTS/lp/odd_cycles/test_n8_xlevel.json xlevel
 
 # Section 8.5, Table E7: local fixes of the quartets violated at the compact model's root.
 $PY experiments/lp/quartet_fixes.py external/catanzaro/upstream/instances/02-M17.txt data/ground_truth/M17.splits $RESULTS/lp/quartet_fixes/M17.json

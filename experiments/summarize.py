@@ -1,6 +1,6 @@
 """Collect the results of the paper that are not in its appendix tables into one Markdown
-file, results/SUMMARY.md: the certified optima, the facets of P_6 (Section 7.1), the
-membership model (Section 7.2), the clique covers (Section 4.2 and Appendix D), the enumeration behind
+file, results/SUMMARY.md: the certified optima, the facets of P_6,
+the clique covers (Section 4.2 and Appendix D), the enumeration behind
 Theorem 7 (Appendix H), the spurious points of the faces Q_T (Section 5.1, Appendix E), the
 evidence for Conjecture 8 (Section 11), and, last, every number of
 experiments/theory/published.json that a result file restates, recomputed from that file.
@@ -359,28 +359,6 @@ def sec_p6():
         f"- Cut inequalities W[S] ≥ 1/2: {cuts}."])
 
 
-def sec_conjecture1():
-    rows = []
-    for n, lam, tb in [(6, "nested-disjoint", "on"), (6, "quadrant", "on"),
-                       (7, "nested-disjoint", "on"), (7, "quadrant", "on"),
-                       (8, "nested-disjoint", "on"), (8, "quadrant", "on"),
-                       (8, "nested-disjoint", "off"), (8, "quadrant", "off")]:
-        r = load(RES / "conjecture1" / f"n{n}_{lam}_tiebreak-{tb}.json")
-        if r is None:
-            rows.append((n, lam, tb, PENDING, "", "", ""))
-            continue
-        rows.append((n, lam, tb, r["points"], r["distinct_split_systems"], r["tree_systems"],
-                     r["non_tree_systems"]))
-    return "\n".join([
-        "## Conjecture 6: integral points of the membership model (Section 7.2)", "",
-        "Complete enumeration of the integral points of the membership model with "
-        "symmetry breaking. \"Leaf-1 tie-break\" places leaf 1 outside every split of size "
-        "n/2 (only matters for even n). An integral point is a full assignment of the "
-        "membership variables; its split system is the set of splits it encodes.", "",
-        table(["n", "laminarity encoding", "leaf-1 tie-break", "integral points",
-               "distinct split systems", "of which trees", "non-trees"], rows)])
-
-
 def sec_clique():
     rows = []
     for n in range(4, 9):
@@ -480,14 +458,6 @@ def published_checks():
         check(f"Section 7.1: facets matched by {k}", r and r["families"][k]["distinct_facets"], v)
     check("Section 7.1: facets matched by a named family", r and r["named_distinct_facets"], P["p6_named_facets"])
     check("Section 7.1: support histogram of the facets", r and r["support_histogram"], P["p6_support_histogram"])
-    for n, v in P["membership_systems"].items():
-        for lam in ("nested-disjoint", "quadrant"):
-            r = load(RES / "conjecture1" / f"n{n}_{lam}_tiebreak-on.json")
-            check(f"Section 7.2: split systems, n = {n}, {lam}", r and r["distinct_split_systems"], v)
-    for lam in ("nested-disjoint", "quadrant"):
-        r = load(RES / "conjecture1" / f"n8_{lam}_tiebreak-off.json")
-        check(f"Section 7.2: split systems, n = 8, {lam}, no tie-break", r and r["distinct_split_systems"],
-              P["membership_n8_no_tiebreak"])
     for key, field, what in (("min_edge_clique_cover", "min_edge_clique_cover", "minimum edge clique cover"),
                              ("fractional_edge_clique_cover", "fractional_edge_clique_cover", "fractional minimum"),
                              ("pruned_clique_cover", "pruned_cliques", "cover of Appendix D")):
@@ -676,7 +646,6 @@ def main():
         sec_optima(opt, checked),
         sec_p6(),
         sec_splitohedron(),
-        sec_conjecture1(),
         sec_clique(),
         sec_theorem5(),
         sec_faces(),

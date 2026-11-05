@@ -117,7 +117,6 @@ an error if one of them disagrees.
 | Section 7.1: facets of the BME polytope for n = 6 | `experiments/theory/p6_facets.R` | `p6_facets/` |
 | Appendix E: vertices of the splitohedron for n = 5, 6 | `experiments/theory/splitohedron.R` | `splitohedron/` |
 | Section 5.1 and Appendix E: spurious points of the faces Q_T of the splitohedron (log-integral points without and with the ladder floor, and without the double cherry; vertices of Q_T; hull of the log-integral points) | `experiments/theory/lattice.py`, `qt_vertices.R`, `hull_vertices.R` (and `outside_trees.py`, which tests whether a log-integral point lies outside the BME polytope) | `splitohedron/faces/` |
-| Section 7.2, Conjecture 6: integral points of the membership model | `experiments/theory/membership_model.py` | `conjecture1/` |
 | Section 4.2 and Appendix D: edge clique covers (Proposition 4 and its subfamily, the minimum, the fractional minimum); fractional optima of the clique relaxation | `experiments/theory/clique_cover.py`, `clique_integrality.py` | `clique_cover/` |
 | Section 8.3, Theorem 7, Appendix H, Table H1 | `experiments/theory/theorem5.sh` (enumerator `backtrack.c`) | `theorem5/` |
 | Section 8.3: the cherry lift; the matrix of Catanzaro et al. (2026, p. 492) | `experiments/theory/cherry_lift.py`, `catanzaro_p492.py` | `theorem5/` |
@@ -126,8 +125,7 @@ an error if one of them disagrees.
 | Section 10.1, Tables I1 and I2: the compact solver | `experiments/compact_solver.sh` (one run: `compact_solver.py`) | `compact_solver/` |
 | Section 10.2, Table I3: facets F1 and F6 | `experiments/lp/named_facets.py` | `lp/named_facets.json` |
 | Section 10.3, Table I4: shares of the cut families | `experiments/lp/cut_family_shares.py` | `lp/cut_family_shares/` |
-| Section 10.4, Table I5: membership model; lifted ladder model, and its gap with the exact hull of the trees for n ≤ 7 | `experiments/lp/membership_layers.py`, `lifted_ladder.py`, `tree_hull.py` | `lp/membership_layers/`, `lp/lifted_ladder/` |
-| Section 10.4, Table I6: per-split triangles; odd cycles | `experiments/lp/per_split_triangles.py`, `odd_cycles.py` | `lp/per_split_triangles/`, `lp/odd_cycles/` |
+| Results, "The minimum-cut family accounts for most of the root bound": the lifted ladder model (table "Root gap on Primates12 of the lifted ladder model"), and its gap with the exact hull of the trees for n ≤ 7 | `experiments/lp/lifted_ladder.py`, `tree_hull.py` | `lp/lifted_ladder/` |
 | Section 10.5, Table I7: local fixes of the quartets violated at the root | `experiments/lp/quartet_fixes.py` | `lp/quartet_fixes/` |
 | Section 10.6, Tables I8 and I2: the distance-indexed solver | `experiments/distance_solver.sh` | `distance_solver/` |
 | Section 10.7, Table I9: the distance-indexed solver by cut family | `experiments/distance_cut_families.sh` | `distance_cut_families/` |

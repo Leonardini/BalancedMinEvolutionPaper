@@ -112,7 +112,7 @@ def d2_versus(opt):
                      if all(S.certified(r) for r in theirs) else f"{c['cert']} of {c['seeds']} certified",
                      spread([int(r["nodes"]) for r in theirs], lambda x: f"{x:.0f}")])
     return ("**Table []{#tbl:two-solvers}. The two solvers on the instances of Table @tbl:compact-solver with $n\\ge12$** "
-            "(Section @sec:res-two-solvers): the compact solver as in Table @tbl:compact-solver, the distance-indexed solver in the "
+            "(Section @sec:res-solver-speed): the compact solver as in Table @tbl:compact-solver, the distance-indexed solver in the "
             "configuration of Section @sec:hardware (Table @tbl:distance-solver). Time in seconds to certify, and nodes, for each solver.\n\n"
             + table(["instance", "compact (s)", "nodes", "distance-indexed (s)", "nodes"], rows))
 
@@ -123,7 +123,7 @@ def d3_facets():
         return "**Table []{#tbl:named-facets}.** pending"
     rows = [[x["n"], f"{x['opt']:.4f}", f"{x['base']:.4f}", f"{x['f1']:.4f}", f"{x['f1_f6']:.4f}",
              gap(x["closed"], 0)] for x in r["rows"]]
-    return ("**Table []{#tbl:named-facets}. Root bound with F1 and F6 on test_n6 to test_n10** (Section @sec:res-named-facets). "
+    return ("**Table []{#tbl:named-facets}. Root bound with F1 and F6 on test_n6 to test_n10** (Section @sec:res-min-cut). "
             "Base: Kraft, $0\\le w_{ij}\\le\\tfrac14$, every cut $W[S]\\ge\\tfrac12$, the double "
             "cherry and every crossing cut; F1 adds $w_{ij}\\ge2^{-(n-1)}$. "
             "$L^*$ by enumeration of all trees.\n\n"
@@ -161,21 +161,9 @@ def d4_families(opt):
                      "other incr.", "other marg."], rows))
 
 
-def d5_split_layer():
-    names = [("kraft", "Kraft"), ("mincut", "+ min-cut"), ("manifold", "+ manifold"),
-             ("split_coupling", "+ split layer and coupling"), ("laminarity", "+ laminarity")]
-    recs = {lam: load(RES / "lp/membership_layers" / f"{lam}.json") for lam in ("quadrant", "nested")}
-    rows = []
-    for key, label in names:
-        cells = [label]
-        for lam in ("quadrant", "nested"):
-            r = recs[lam]
-            cells.append(PENDING if r is None or key not in r["arms"] else gap(r["arms"][key]["gap"]))
-        rows.append(cells)
-    out = ["**Table []{#tbl:membership-gap}. Root gap on Primates12 of the membership model and the lifted ladder "
-           "model** (Section @sec:res-split-layer). Left: membership model, layers added cumulatively, with the "
-           "two laminarity encodings. Right: lifted ladder model.", "",
-           table(["membership model", "quadrant", "nested/disjoint"], rows), ""]
+def d5_lifted_ladder():
+    base = load(RES / "lp/lifted_ladder/ladder.json")
+    mincut = PENDING if base is None else gap(base["mincut"]["gap"])
     rows = []
     for rung in (False, True):
         for cl in (None, "prop4"):
@@ -185,27 +173,9 @@ def d5_split_layer():
                 rows.append(["yes" if rung else "no",
                              {None: "none", "prop4": "Prop. @prop:laminarity"}[cl],
                              "yes" if man else "no", PENDING if r is None else gap(r["ladder"]["gap"])])
-    out += [table(["$\\tfrac34$-rung indicator", "cliques", "manifold", "root gap"], rows)]
-    return "\n".join(out)
-
-
-def d6_cut_polytope():
-    r = load(RES / "lp/per_split_triangles/Primates12.json")
-    if r is None:
-        return "**Table []{#tbl:level-gap}.** pending"
-    rows = []
-    for mc in (0, 1):
-        cells = ["on" if mc else "off"]
-        for st, cp in ((0, 0), (1, 0), (0, 1), (1, 1)):
-            cells.append(gap(r["arms"][f"mincut={mc} strongtri={st} cutpoly={cp}"]["gap"], 3))
-        diff = r[f"mincut={mc}"]
-        cells.append(f"{max(abs(diff['cutpoly_minus_strongtri']), abs(diff['both_minus_strongtri'])):.0e}")
-        rows.append(cells)
-    return ("**Table []{#tbl:level-gap}. Root gap on Primates12 of the level-indicator model with per-split "
-            "triangles** (Section @sec:res-split-layer). The last column is the largest difference between the "
-            "bound with per-split triangles (alone or with the strong triangle) and the bound "
-            "with the strong triangle alone.\n\n"
-            + table(["min-cut", "neither", "strong triangle", "per-split", "both", "difference"], rows))
+    return ("**Table []{#tbl:ladder-gap}. Root gap on Primates12 of the lifted ladder model** (Section @sec:res-min-cut). "
+            f"The min-cut relaxation (Kraft, the lower half of the box and every cut row) has a root gap of {mincut}.\n\n"
+            + table(["$\\tfrac34$-rung indicator", "cliques", "manifold", "root gap"], rows))
 
 
 def d7_quartets():
@@ -228,7 +198,7 @@ def d7_quartets():
                      f"{100 * no_strong / len(strong):.0f}%" if strong else "–",
                      f"{sm['weights_differing_from_tree']}/{sm['pairs']}"])
     return ("**Table []{#tbl:quartet-fixes}. Local fixes of the quartets violated at the compact model's root** "
-            "(Section @sec:res-quartet-fixes). At the root optimum $w^*$ (manifold exact): quartets whose "
+            "(Section @sec:res-min-cut). At the root optimum $w^*$ (manifold exact): quartets whose "
             "optimal-tree resolution $w^*$ violates; the share of them with no local fix "
             "(a change of the quartet's six weights that keeps Kraft and satisfies the tree's "
             "four-point inequalities) within the box $2^{-(n-1)}\\le w\\le\\tfrac14$; with a "
@@ -260,7 +230,7 @@ def d8_distance_solver():
                      spread([int(r["nodes"]) for r in recs], lambda x: f"{x:.0f}"),
                      spread([float(r["final_gap_pct"]) for r in uncert], lambda x: f"{x:.3f}%")
                      if uncert else "–"])
-    return ("**Table []{#tbl:distance-solver}. The distance-indexed solver** (Section @sec:res-distance-certifies), configuration of "
+    return ("**Table []{#tbl:distance-solver}. The distance-indexed solver** (Section @sec:res-solver-speed), configuration of "
             "Section @sec:hardware, time limit 3600 s (20_rosids from the configuration full of Table @tbl:distance-configs, "
             "which is the same). Time in seconds. Last column: final gap of the runs that did "
             "not certify.\n\n"
@@ -343,7 +313,7 @@ def d9b_nogood(opt):
                     row.append(f"{c['cert']} of {c['seeds']} certified" + r)
             rows.append(row)
     return ("**Table []{#tbl:nogood-fix}. The lazy-mode configurations with the released and the corrected "
-            "no-good cut** (Section @sec:res-distance-root). Time limit 3600 s, three seeds where the first "
+            "no-good cut** (Section @sec:res-four-point). Time limit 3600 s, three seeds where the first "
             "certifies. Without four-point separation, the solver rejects a non-tree "
             "integer solution only through its no-good cut; the released code builds that cut from the wrong entries "
             "of $\\tau$, and the corrected build changes one line (external/catanzaro/nogood_index_fix.patch in the "
@@ -470,8 +440,7 @@ def d13_heuristics():
 # ------------------------------------------ Appendix J (app:numerics): numerical reliability
 
 E1_GROUPS = [("Table @tbl:named-facets", "lp/named_facets.json"),
-             ("Table @tbl:membership-gap", "lp/membership_layers/*.json"), ("Table @tbl:membership-gap", "lp/lifted_ladder/*.json"),
-             ("Table @tbl:level-gap", "lp/per_split_triangles/*.json"), ("Section @sec:res-split-layer, odd cycles", "lp/odd_cycles/*.json"),
+             ("Table @tbl:ladder-gap", "lp/lifted_ladder/*.json"),
              ("Table @tbl:distance-rows", "base_rows/*.json")]
 
 
@@ -586,7 +555,7 @@ DISTANCE = "Ten cores: Gurobi on 10 threads."
 COMPACT = "Ten cores: ten worker processes of one thread each."
 BOTH, BOUND = "Ten cores.", "One thread."
 CLASS = {"tbl:compact-solver": COMPACT, "tbl:two-solvers": BOTH, "tbl:named-facets": BOUND,
-         "tbl:gap-shares": BOUND, "tbl:membership-gap": BOUND, "tbl:level-gap": BOUND,
+         "tbl:gap-shares": BOUND, "tbl:ladder-gap": BOUND,
          "tbl:quartet-fixes": BOUND, "tbl:distance-solver": DISTANCE,
          "tbl:distance-configs": "Ten cores: Gurobi on 10 threads, except the two root-LP rows (one thread).",
          "tbl:nogood-fix": DISTANCE, "tbl:distance-rows": BOUND, "tbl:distance-root-source": BOUND, "tbl:static-root": BOUND,
@@ -619,8 +588,8 @@ def main():
     opt = S.collect_optima()
     parts = ["# Tables of Appendices @app:result-tables and @app:numerics",
              "Generated by experiments/appendix_tables.py; do not edit by hand.",
-             d1_compact(opt), d2_versus(opt), d3_facets(), d4_families(opt), d5_split_layer(),
-             d6_cut_polytope(), d7_quartets(), d8_distance_solver(), d9_cut_families(opt), d9b_nogood(opt), d10_lift(opt), d11_integrality(opt), d12_two_solvers(), d13_heuristics(),
+             d1_compact(opt), d2_versus(opt), d3_facets(), d4_families(opt), d5_lifted_ladder(),
+             d7_quartets(), d8_distance_solver(), d9_cut_families(opt), d9b_nogood(opt), d10_lift(opt), d11_integrality(opt), d12_two_solvers(), d13_heuristics(),
              e1_safe(), e2_enumeration(), e3_conditioning(), e4_robustness()]
     out.write_text("\n\n".join(with_threads(x) for x in parts) + "\n")
     print(f"wrote {out}")
