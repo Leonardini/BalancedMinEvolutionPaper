@@ -139,7 +139,6 @@ an error if one of them disagrees.
 | Appendix J: the certified optima, checked exactly | `experiments/check_optima.py` | `check_optima.json` |
 | Numerical reliability, table "Safe bounds and the exact check at the optimal tree" | inside every bound script (`experiments/lp/lib/safe_bound.py`) | in each JSON record |
 | Numerical reliability, table "Certificates against exhaustive enumeration" | `experiments/enumeration/certificates_vs_enumeration.py` | `enumeration/` |
-| Numerical reliability, table "Condition number of the optimal root basis" | `experiments/conditioning.py` | `conditioning/` |
 | Numerical reliability, table "The distance-indexed solver with one cut family switched off, or with strict tolerances" | `experiments/distance_robustness.sh` | `robustness/` |
 
 ## The search without cherries (the cherry conjecture)
