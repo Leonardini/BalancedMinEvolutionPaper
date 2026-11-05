@@ -1,4 +1,4 @@
-"""Section 8.5: can a quartet violated at the compact model's root point be repaired locally?
+"""Results, "The minimum-cut family accounts for most of the root bound": can a quartet violated at the compact model's root point be repaired locally?
 
     BME_THREADS=1 python quartet_fixes.py INSTANCE SPLITS OUT.json
 

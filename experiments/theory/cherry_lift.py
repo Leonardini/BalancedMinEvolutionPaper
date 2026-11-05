@@ -1,4 +1,4 @@
-"""The counterexample of Section 6.3: the cherry lift of the 6-node matrix r.
+"""The counterexample of "Sufficiency of the path-length conditions": the cherry lift of the 6-node matrix r.
 
     python cherry_lift.py OUT.json
 

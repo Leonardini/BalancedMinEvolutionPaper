@@ -1,8 +1,7 @@
 """Collect the results of the paper that are not in its appendix tables into one Markdown
 file, results/SUMMARY.md: the certified optima, the facets of P_6,
-the clique covers (Section 4.2 and Appendix D), the enumeration behind
-Theorem 7 (Appendix H), the spurious points of the faces Q_T (Section 5.1, Appendix E), the
-evidence for Conjecture 8 (Section 11), and, last, every number of
+the clique covers, the enumeration behind the sufficiency theorem, the spurious points of
+the faces Q_T, the evidence for the cherry conjecture, and, last, every number of
 experiments/theory/published.json that a result file restates, recomputed from that file.
 The tables of Appendices I and J come from appendix_tables.py, which uses the helpers of
 this file.
@@ -127,15 +126,15 @@ def certified(rec):
     return float(rec["final_gap_pct"]) <= CERT_GAP_PCT
 
 
-# Table I9 configurations whose model is exact for BME: they separate the four-point
-# condition, without which (4)-(9) admit non-tree matrices (Theorem 7), so a "certified"
+# Configurations of table "The distance-indexed model by cut configuration" whose model is exact for BME: they separate the four-point
+# condition, without which (4)-(9) admit non-tree matrices (the sufficiency theorem), so a "certified"
 # run of any other configuration certifies a relaxation, not a tree.
 EXACT_T8 = ("d", "full", "cooff")
 
 
 def collect_optima():
     """Certified optimum per instance label (solver scale), from every certified run of
-    Table I8 and of the exact Table I9 configurations; all of them must agree."""
+    table "The distance-indexed solver" and of the exact configurations of table "The distance-indexed model by cut configuration"; all of them must agree."""
     found = {}
     dirs = list(RES.glob("distance_solver/*/seed*"))
     for cfg in EXACT_T8:
@@ -196,7 +195,8 @@ def sec_optima(opt, checked):
     return "\n".join([
         "## Certified optima used throughout",
         "",
-        "Every certified run of the distance-indexed solver in Table I8, and in the Table I9 "
+        "Every certified run of the distance-indexed solver in table \"The distance-indexed solver\", and in the "
+        "configurations of table \"The distance-indexed model by cut configuration\" "
         f"configurations that separate the four-point condition ({', '.join(EXACT_T8)}), gives "
         "an optimum; for each instance all of them agree to a relative "
         f"{OPT_REL_TOL:g} (asserted). Solver scale is ours times 2^(n+1). The optimum quoted "
@@ -243,7 +243,7 @@ def timed_cells(runs):
         recs=recs)
 
 
-# Table I9 configurations, in the order of the cumulative ladder.
+# Configurations of table "The distance-indexed model by cut configuration", in the order of the cumulative ladder.
 T8_INST = ["M17", "M18", "20_euros2", "20_rosids"]
 T8_CFG = [
     ("a", "(a) base: no separated cuts; root LP only"),
@@ -251,7 +251,7 @@ T8_CFG = [
     ("gki", "(gki) (b) + generalized Kraft (our min-cut family)"),
     ("c", "(c) (gki) + 2-K-split + circular order"),
     ("d", "(d) (c) + four-point"),
-    ("full", "(full) the Table I8 configuration: strong triangle and four-point on the "
+    ("full", "(full) the configuration of the experimental setup: strong triangle and four-point on the "
              "quartets containing leaf 1, generalized Kraft, weak four-point, 2-K-split, "
              "circular order"),
     ("cooff", "(cooff) (full) with circular-order cuts switched off"),
@@ -259,8 +259,8 @@ T8_CFG = [
 
 
 def synthetic_optimum(inst):
-    """L* of a synthetic instance test_nN, from the enumeration of all trees in the Table I3
-    record (results/lp/named_facets.json); None if it is not there."""
+    """L* of a synthetic instance test_nN, from the enumeration of all trees in the
+    table "Root bound with F1 and F6" record (results/lp/named_facets.json); None if it is not there."""
     r = load(RES / "lp/named_facets.json")
     if r is None or not inst.startswith("test_n"):
         return None
@@ -277,7 +277,7 @@ T6_NAME = {"manifold": "manifold", "pm": "perfect matching (PM)", "f6": "F6", "f
 
 
 def sec_theorem5():
-    out = ["## Theorem 7 and Table H1 (Section 8.3, Appendix H)", ""]
+    out = ["## The sufficiency theorem and its computer-assisted proof", ""]
     rows = []
     for n in range(5, 12):
         r = load(RES / "theorem5" / f"canon_n{n}.json")
@@ -342,14 +342,14 @@ def sec_splitohedron():
 def sec_p6():
     r = load(RES / "p6_facets/summary.json")
     if r is None:
-        return "## Facets of P_6 (Section 7.1)\n\npending"
+        return "## Facets of P_6\n\npending"
     fam = "; ".join(f"{k}: {v['matched']} of {v['size']}" for k, v in r["families"].items())
     cuts = "; ".join(f"{k}-cuts: {v['size']} inequalities, {v['matched']} are facets, "
                      f"{v['trivial']} are trivial (implied by the Kraft equalities)"
                      for k, v in r["cuts"].items())
     hist = ", ".join(f"{k}: {v}" for k, v in r["support_histogram"].items())
     return "\n".join([
-        "## Facets of P_6 (Section 7.1)", "",
+        "## Facets of P_6", "",
         f"- Vertices: {r['vertices']}; facets: {r['facets']} (in the {r['coordinates_kept']} "
         f"coordinates left after eliminating the Kraft equalities).",
         f"- Named families matching a facet: {fam}; distinct facets matched "
@@ -367,10 +367,10 @@ def sec_clique():
                     (n, r["vertices"], r["edges"], r["maximal_cliques"],
                      r["fractional_edge_clique_cover"], r.get("min_edge_clique_cover", "not computed"),
                      r["pruned_cliques"], r["proposition4_cliques"]))
-    out = ["## Crossing graph: edge clique covers (Section 4.2 and Appendix D)", "",
+    out = ["## Crossing graph: edge clique covers", "",
            table(["n", "nontrivial bipartitions", "crossing pairs", "maximal cliques",
                   "fractional minimum", "minimum edge clique cover", "subfamily of Appendix D",
-                  "cliques of Proposition 4"], rows), ""]
+                  "cliques of the polynomial-laminarity proposition"], rows), ""]
     r = load(RES / "clique_cover/integrality.json")
     if r is None:
         return "\n".join(out + ["Integrality: pending"])
@@ -378,7 +378,7 @@ def sec_clique():
     out += [f"Induced 5-cycle at n = {fc['n']}: consecutive pairs cross: "
             f"{fc['consecutive_cross']}; non-consecutive pairs compatible: "
             f"{fc['non_consecutive_compatible']}.", "",
-            f"LPs over the clique inequalities of Proposition 4 with random objectives "
+            f"LPs over the clique inequalities of the polynomial-laminarity proposition with random objectives "
             f"(seed {r['seed']}):", "",
             table(["n", "splits", "cliques", "trials", "fractional optima",
                    "optima with every coordinate 1/2", "distinct fractional values (first few)"],
@@ -434,7 +434,7 @@ def published_checks():
     t5 = RES / "theorem5"
     for n, v in P["canonical_survivors"].items():
         r = load(t5 / f"canon_n{n}.json")
-        check(f"Table H1: canonical survivors, n = {n}", r and r["survivors"], v)
+        check(f"Canonical survivors, n = {n}", r and r["survivors"], v)
     for n, v in P["row_types"].items():
         r = load(t5 / (f"canon_n{n}.json" if int(n) <= 11 else f"fpviol_n{n}_t2.json"))
         check(f"row types (enumerator), n = {n}", r and r["row_types"], v)
@@ -448,16 +448,16 @@ def published_checks():
     check("Appendix H (iii): S_6-orbits of the non-trees", r and r["weak_orbits"], P["weak6_orbits"])
     check("Appendix H (iii): stabiliser order of r", r and r["r_stabiliser"], P["weak6_stabiliser"])
     r = load(t5 / "cherry_lift.json")
-    check("Section 8.3: quartets of the cherry lift violating (10)", r and r["violating_quartets"],
+    check("Cherry lift: quartets violating (10)", r and r["violating_quartets"],
           P["cherry_lift_violating_quartets"])
-    check("Section 8.3: pair sums of the quartet {1,2,3,5}", r and r["quartet_1235_pair_sums"],
+    check("Cherry lift: pair sums of the quartet {1,2,3,5}", r and r["quartet_1235_pair_sums"],
           P["cherry_lift_quartet_1235_pair_sums"])
     r = load(RES / "p6_facets/summary.json")
-    check("Section 7.1: facets of P_6", r and r["facets"], P["p6_facets"])
+    check("Facets of P_6", r and r["facets"], P["p6_facets"])
     for k, v in P["p6_family_matches"].items():
-        check(f"Section 7.1: facets matched by {k}", r and r["families"][k]["distinct_facets"], v)
-    check("Section 7.1: facets matched by a named family", r and r["named_distinct_facets"], P["p6_named_facets"])
-    check("Section 7.1: support histogram of the facets", r and r["support_histogram"], P["p6_support_histogram"])
+        check(f"Facets of P_6 matched by {k}", r and r["families"][k]["distinct_facets"], v)
+    check("Facets of P_6 matched by a named family", r and r["named_distinct_facets"], P["p6_named_facets"])
+    check("Support histogram of the facets of P_6", r and r["support_histogram"], P["p6_support_histogram"])
     for key, field, what in (("min_edge_clique_cover", "min_edge_clique_cover", "minimum edge clique cover"),
                              ("fractional_edge_clique_cover", "fractional_edge_clique_cover", "fractional minimum"),
                              ("pruned_clique_cover", "pruned_cliques", "cover of Appendix D")):
@@ -489,7 +489,7 @@ def sec_cherry_conjecture():
     import plm       # experiments/theory
     P = PUBLISHED["cherry_conjecture"]
     base = RES / "conjecture/nocherry"
-    out = ["## Conjecture 8: a cherry always exists (Section 11)", ""]
+    out = ["## The cherry conjecture: a cherry always exists", ""]
     bound = load(RES / "conjecture/cherry_bound.json")
     if bound is None:
         out += ["Manifold bound: pending", ""]
@@ -510,15 +510,15 @@ def sec_cherry_conjecture():
         rows.append((n, rep["pieces_used"], rep["pieces_unfinished"], rep["pieces_outside"], dup,
                      f"{rep['cpu_seconds'] / 3600:.1f}", rep["survivors"], status))
         if n <= max_n:
-            check(f"Conjecture 8: the exhaustive search covers n = {n}", rep["covered"], True)
-            check(f"Conjecture 8: matrices without a cherry, n = {n}", rep["survivors"], 0)
+            check(f"Cherry conjecture: the exhaustive search covers n = {n}", rep["covered"], True)
+            check(f"Cherry conjecture: matrices without a cherry, n = {n}", rep["survivors"], 0)
         else:
             pend = P["pending"].get(str(n))
             if pend is not None:
-                check(f"Conjecture 8: the pieces still missing at n = {n}", rep["missing"], pend)
+                check(f"Cherry conjecture: the pieces still missing at n = {n}", rep["missing"], pend)
     covered_n = [n for n, d in dirs if n <= max_n]
     # n = 4 is the smallest number of leaves with a quartet, so the claim starts there.
-    check(f"Conjecture 8: the exhaustive search has a result for every n from 4 to {max_n}",
+    check(f"Cherry conjecture: the exhaustive search has a result for every n from 4 to {max_n}",
           covered_n, list(range(4, max_n + 1)))
     out += [f"Exhaustive search without cherries (backtrack_wide8, cut into pieces by the first "
             f"values of leaf 0's sorted row; coverage.py). The paper states n ≤ {max_n}. "
@@ -553,7 +553,7 @@ def n_cherries(splits, n):
 
 def sec_faces():
     P = PUBLISHED
-    out = ["## Spurious points of the faces Q_T (Section 5.1, Appendix E)", "",
+    out = ["## Spurious points of the faces Q_T", "",
            "Log-integral points of Q_T (lattice.py --shapes), one tree per shape; a shape fails "
            "when Q_T has a log-integral point other than w_T.", ""]
     rows, shapes = [], {}
@@ -580,13 +580,13 @@ def sec_faces():
         assert ns == list(range(ns[0], ns[-1] + 1)), (v, ns)
         first = next((n for n in ns if per_n[n]), None)
         pub = P["qt_log_integral"][v]
-        check(f"Section 5.1: first n with a spurious log-integral point ({v.replace('_', ' ')}; "
+        check(f"Spurious points: first n with a spurious log-integral point ({v.replace('_', ' ')}; "
               f"checked from n = {ns[0]})", first, pub["first_failing_n"])
         for n, counts in pub["failing"].items():
-            check(f"Section 5.1: spurious log-integral points per failing shape, {v.replace('_', ' ')}, n = {n}",
+            check(f"Spurious points: log-integral points per failing shape, {v.replace('_', ' ')}, n = {n}",
                   per_n.get(int(n)), counts)
     for n, k in P["tree_shapes"].items():
-        check(f"Section 5.1: tree shapes, n = {n}", shapes.get(int(n)), k)
+        check(f"Spurious points: tree shapes, n = {n}", shapes.get(int(n)), k)
     out += [table(["constraints", "n", "shapes", "failing shapes", "spurious points per failing shape"],
                   sorted(rows, key=lambda r: (r[0], r[1]))), "",
             "Vertices of Q_T (qt_vertices.R, cddlib in exact arithmetic):", ""]
@@ -603,13 +603,13 @@ def sec_faces():
                              "yes" if r["tree_is_vertex"] else "no", r["non_tree_vertices"]))
             pub = P["qt_vertices"][v].get(str(n), {})
             if "tree_not_vertex" in pub:
-                check(f"Section 5.1: shapes with w_T not a vertex of Q_T, {v.replace('_', ' ')}, n = {n}",
+                check(f"Spurious points: shapes with w_T not a vertex of Q_T, {v.replace('_', ' ')}, n = {n}",
                       not_vertex, pub["tree_not_vertex"])
             if "with_spurious_vertex" in pub:
-                check(f"Section 5.1: shapes with a spurious vertex, {v.replace('_', ' ')}, n = {n}",
+                check(f"Spurious points: shapes with a spurious vertex, {v.replace('_', ' ')}, n = {n}",
                       len(spurious), pub["with_spurious_vertex"])
             if "spurious_shape_cherries" in pub:
-                check(f"Section 5.1: the shape with a spurious vertex is the caterpillar (2 cherries), "
+                check(f"Spurious points: the shape with a spurious vertex is the caterpillar (2 cherries), "
                       f"{v.replace('_', ' ')}, n = {n}",
                       [n_cherries(r["splits"], n) for r in spurious], pub["spurious_shape_cherries"])
     out += [table(["constraints", "n", "shape", "cherries", "vertices", "w_T a vertex", "spurious vertices"],

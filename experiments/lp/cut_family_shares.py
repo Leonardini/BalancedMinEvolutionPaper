@@ -1,10 +1,10 @@
-"""Table I4 (Section 10.3) with the manifold imposed exactly: which cut families carry the
+"""Table "Shares of the root cut-closeable gap" (Results, "The minimum-cut family accounts for most of the root bound"), with the manifold imposed exactly: which cut families carry the
 compact model's root bound.
 
     BME_THREADS=1 python cut_family_shares.py INSTANCE OUT.json [CAP]
 
 Arms: base, full, default, mincut, only_F and without_F for every optional family F and
-for the manifold (definitions in Section 9.4). An arm with the manifold carries it as the
+for the manifold (definitions in the setup's "Metrics"). An arm with the manifold carries it as the
 one convex constraint sum_{i<j} entr(w_ij) >= (n - 3/2) ln 2, and every relaxation is
 solved by MOSEK through CVXPY (conic_manifold.py).
 
@@ -16,7 +16,7 @@ violated cut. For the families separated exactly (min-cut, PM, F4-F7, (50)) and 
 manifold, the converged bound does not depend on the order of separation. It can for the
 crossing cut, separated only for pairs of half-cuts of the current optimum, and for (53) and
 (54), separated heuristically: at convergence the relaxation may still violate rows of these
-families, and which rows it holds depends on the sequence of optima (Section 9.4).
+families, and which rows it holds depends on the sequence of optima (the setup's "Metrics").
 The bound of an arm is the rigorous Lagrangian bound of its last solve
 (conic_manifold.rigorous_bound); every row of the final relaxation is evaluated exactly at
 the certified optimal tree (lib/safe_bound.tree_check), and so is the manifold.

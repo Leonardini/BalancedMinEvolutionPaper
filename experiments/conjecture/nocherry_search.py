@@ -1,4 +1,4 @@
-"""Run the no-cherry search of the cherry conjecture (Section 11) in independent pieces.
+"""Run the no-cherry search of the cherry conjecture (Discussion and open problems) in independent pieces.
 
     python nocherry_search.py top   N BIN OUTDIR [--depth K] [--workers W] [--with-cherries]
     python nocherry_search.py split N BIN OUTDIR PREFIX [PREFIX ...] [--workers W] [--with-cherries]
@@ -23,7 +23,7 @@ Pieces with a finished .out are skipped, so the command can be stopped and resta
 One timestamped line per start and end of a piece, and a line every --heartbeat seconds
 (default 600) naming the pieces still running, go to stderr. --with-cherries drops
 --nocherry, for the known-answer tests (tests/test_partition.py), where the survivors are
-the trees of Table H1.
+the trees of table "Canonical survivors of the enumeration".
 
 The n = 15 search of the paper was run as `top 15 BIN DIR --depth 5`, then, for the pieces
 too slow to finish, `split` on 3_3_3_4_5, 3_3_3_4_6, 3_3_3_4_7 and 3_3_3_5_5 twice (to

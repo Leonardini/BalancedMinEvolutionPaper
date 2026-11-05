@@ -1,5 +1,5 @@
 """Exact checks of conditions (4)-(10) on integer path-length matrices, and the
-relabelling canonical form used to compare counterexamples (Section 6.3, Appendix D).
+relabelling canonical form used to compare counterexamples ("Sufficiency of the path-length conditions" and its computer-assisted proof).
 
 Conditions, for an n x n integer matrix tau (Catanzaro, Pesenti and Wolsey 2020):
   (4) zero diagonal; (5) symmetry; (6) triangle tau_ik + tau_kj - tau_ij >= slack
@@ -12,7 +12,7 @@ All arithmetic is exact (integers and Fractions).
 import itertools
 from fractions import Fraction
 
-# The 6-node matrix r of Section 6.3 (the reduced form of the counterexample).
+# The 6-node matrix r of "Sufficiency of the path-length conditions" (the reduced form of the counterexample).
 R6 = [[0, 2, 3, 4, 5, 5],
       [2, 0, 4, 3, 5, 5],
       [3, 4, 0, 3, 3, 4],

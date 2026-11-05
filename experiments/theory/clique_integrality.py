@@ -1,11 +1,11 @@
-"""Section 5.1: the clique relaxation over the cover of Proposition 4 is not integral.
+""""Incompatibility and a polynomial clique cover": the clique relaxation over the polynomial-laminarity cover is not integral.
 
     python clique_integrality.py OUT.json [TRIALS] [SEED] [N_MAX]
 
 (a) The induced 5-cycle of the text at n = 6: consecutive bipartitions cross,
     non-consecutive ones are compatible.
 (b) For n = 5..N_MAX (default 8), maximise a random objective c ~ U[0,1)^splits over
-        { y in [0,1]^splits : sum_{S in Q} y_S <= 1 for every clique Q of Proposition 4 }
+        { y in [0,1]^splits : sum_{S in Q} y_S <= 1 for every clique Q of the cover }
     by dual simplex (so the optimum returned is a vertex), TRIALS times, and record which
     optima are fractional and the distinct values of their fractional coordinates.
 

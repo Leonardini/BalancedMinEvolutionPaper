@@ -1,6 +1,6 @@
-"""Section 8.4: where the root gap of the lifted ladder model lies, on the synthetic
+"""Results, "The minimum-cut family accounts for most of the root bound": where the root gap of the lifted ladder model lies, on the synthetic
 instances n = 4..7. Compatibility constraints sum_{S in K} y_S <= 1 over: none, the cover of
-Proposition 4, and every maximal clique of the crossing graph; and, as the strongest possible
+the polynomial-laminarity proposition, and every maximal clique of the crossing graph; and, as the strongest possible
   compatibility description, the convex hull of the trees: (y, t) = sum_T lambda_T (y^T, t^T)
   over all (2n-5)!! trees, lambda >= 0, sum lambda = 1; with the rung, also the hull of y alone.
 Each with and without the 3/4-rung indicator, always with the manifold imposed exactly.

@@ -1,5 +1,5 @@
 /* Exhaustive search for integer matrices tau satisfying conditions (4)-(9) with no cherry
- * (no entry tau_ij = 2), for the cherry conjecture (Section 11). Same search as
+ * (no entry tau_ij = 2), for the cherry conjecture (Discussion and open problems). Same search as
  * experiments/theory/backtrack.c (see its header for the pruning rules), with two changes:
  *   - the set of row types still compatible with a partial row is an array of WORDS 64-bit
  *     words instead of one 128-bit integer, so --nocherry runs at n = 15 (225 row types);

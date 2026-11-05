@@ -4,7 +4,7 @@
                                       [--ref VALUE]
 
 The model is the one the distance-indexed solver builds for the generalized-Kraft
-configuration of Table E9 (--str A: level indicators, convexity, Kraft, the linear
+configuration of table "The distance-indexed model by cut configuration" (--str A: level indicators, convexity, Kraft, the linear
 manifold equality, and the triangle inequalities with integer parity variables),
 exported before any callback cut (our --export option), so generalized Kraft itself is
 not in it. Each solver, on one thread, then solves:

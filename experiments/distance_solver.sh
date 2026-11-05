@@ -1,7 +1,7 @@
 #!/bin/bash
-# Section 8.6, Table E8 and the distance-indexed column of Table E2: the distance-indexed
-# solver of Catanzaro et al., configuration of Section 7.1, on every instance.
-# 20_rosids is not run here: Table E8 reads its runs from distance_cut_families.sh,
+# Results, "The distance-indexed solver is faster on four of the six instances both certify", table "The distance-indexed solver" and the distance-indexed column of table "The two solvers": the distance-indexed
+# solver of Catanzaro et al., configuration of the experimental setup, on every instance.
+# 20_rosids is not run here: Table "The distance-indexed solver" reads its runs from distance_cut_families.sh,
 # whose configuration full is this configuration.
 # TIMED: 10 threads, 3600 s cap, one instance at a time. Seed 1 runs everywhere; seeds 2
 # and 3 run only where seed 1 certified, because only those runs report a time and node

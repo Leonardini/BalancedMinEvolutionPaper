@@ -1,11 +1,11 @@
-## Section 5.1 and Appendix E: vertices of the faces Q_T of the splitohedron, Sp(n) with the
+## "Spurious points with the splits held at 1/2" and appendix "The splitohedron": vertices of the faces Q_T of the splitohedron, Sp(n) with the
 ## cut of every nontrivial split of a tree T held at 1/2. Only T displays all its splits, so
 ## w_T is the only tree in Q_T.
 ##
 ##   Rscript qt_vertices.R N DIR [floor]
 ##
 ## With "floor", every nontrivial bipartition that is not a split of T is also held at
-## W[S] >= 3/4, the ladder's floor for non-splits (Theorem 2): every cut is then at least
+## W[S] >= 3/4, the ladder's floor for non-splits (the cut-value ladder theorem): every cut is then at least
 ## its lowest possible rung. The output file gets the suffix _floor.
 ##
 ## Reads one tree per shape from DIR/points_n<N>_shapes.json (written by lattice.py),

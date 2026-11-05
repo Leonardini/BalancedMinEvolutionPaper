@@ -1,10 +1,10 @@
-"""Section 5.1 and Appendix I: edge clique covers of the crossing graph G on the nontrivial
+""""Incompatibility and a polynomial clique cover" and appendix "Clique covers of the crossing graph": edge clique covers of the crossing graph G on the nontrivial
 bipartitions of [n].
 
     python clique_cover.py N OUT.json [--no-ilp]
 
 Records, for G:
-- the number of distinct cliques in the cover of Proposition 4 and in its subfamily of
+- the number of distinct cliques in the cover of the polynomial-laminarity proposition and in its subfamily of
   Appendix I, each checked to be a cover (crossing.covers);
 - the fractional edge clique cover number, computed by symmetry: relabelling the leaves
   maps the covering LP to itself, so averaging an optimal solution over the relabellings
@@ -91,7 +91,7 @@ say(f"n={n}: {V} bipartitions, {G.number_of_edges()} crossing pairs in {K} class
 prop4 = crossing.prop4_cliques(n, splits)
 pruned = crossing.pruned_cliques(n, splits)
 assert crossing.covers(n, splits, prop4) and crossing.covers(n, splits, pruned)
-say(f"Proposition 4: {len(prop4)} cliques; Appendix I subfamily: {len(pruned)} cliques; both covers")
+say(f"Polynomial-laminarity cover: {len(prop4)} cliques; smaller subfamily: {len(pruned)} cliques; both covers")
 
 cliques, vecs, last, n_maximal = [], set(), time.time(), 0
 for C in nx.find_cliques(G):

@@ -16,7 +16,7 @@ INST=$CATANZARO_SRC/instances
 SUP=$INST/supplement
 RESULTS=$REPO/results
 
-# The configuration of Section 7.1: every separation family at the implementation's
+# The configuration of the experimental setup: every separation family at the implementation's
 # default thresholds, LP-NJ incumbent with FastME local search.
 CAT_FULL="-O B --heuk 4 --heuls --str O --buneman O --co G --coR 0.05 --coN 0.005 --gkiR 0.05 --gkiN 0.01 --wbR 0.125 --2KR 0.001"
 

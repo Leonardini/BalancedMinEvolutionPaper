@@ -1,4 +1,4 @@
-"""The crossing graph of Section 5.1, the cliques of Proposition 4 and the smaller cover of
+"""The crossing graph of "Incompatibility and a polynomial clique cover", the cliques of the polynomial-laminarity proposition and the smaller cover of
 Appendix I.
 
 Leaves are 0..n-1 (leaf x here is leaf x+1 in the paper). A nontrivial bipartition is

@@ -1,10 +1,10 @@
 #!/bin/bash
-# Appendix F, Table F4. Is the distance-indexed solver's certificate robust at n = 29 and 30, where its objective
+# Numerical reliability, table "The distance-indexed solver with one cut family switched off, or with strict tolerances". Is the distance-indexed solver's certificate robust at n = 29 and 30, where its objective
 # coefficients span about 2^29? On 29_B-NS1 and 30_B-NS1 (seed 1, timed settings):
-#   no_gki, no_2k, no_co, no_wb   the Section 7.1 configuration with one separated cut family
+#   no_gki, no_2k, no_co, no_wb   the configuration of the experimental setup with one separated cut family
 #                                 switched off (the strong triangle and four-point rows stay,
 #                                 since without them the model admits non-trees);
-#   strict                        the Section 7.1 configuration with Gurobi's numerical
+#   strict                        the configuration of the experimental setup with Gurobi's numerical
 #                                 emphasis at its maximum (NumericFocus 3) and its
 #                                 feasibility, optimality and integrality tolerances at their
 #                                 minimum, 1e-9.

@@ -1,5 +1,5 @@
 #!/bin/bash
-# Section 8.1, Tables E1 and E2: the compact solver, timed. Ten workers of one thread each,
+# Results, "The compact solver certifies every instance up to n = 20", table "The compact solver" and table "The two solvers": the compact solver, timed. Ten workers of one thread each,
 # TIMED_CAP seconds, one run at a time. Seed 1 runs everywhere; seeds 2 and 3 run only where
 # seed 1 certified, because only those runs report a time and node count that a median and
 # range describe. 20_rosids certifies within a few minutes of the time limit, so it also runs

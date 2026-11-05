@@ -2,8 +2,8 @@
 
 Both inequalities are asymmetric 3-leaf cuts with an apex leaf i1:
 
-F4 (Table 1, row 4): 2^{n-5}*(w_{i1,i2}+w_{i1,i3}) + w_{i2,i3} >= 5/16
-F5 (Table 1, row 5): 2^{n-4}*(w_{i1,i2}+w_{i1,i3}) + w_{i2,i3} >= 1/2
+F4 (Catanzaro et al. 2022, Table 1, row 4): 2^{n-5}*(w_{i1,i2}+w_{i1,i3}) + w_{i2,i3} >= 5/16
+F5 (Catanzaro et al. 2022, Table 1, row 5): 2^{n-4}*(w_{i1,i2}+w_{i1,i3}) + w_{i2,i3} >= 1/2
 
 Both are claimed facet-defining for n=6 by Catanzaro et al. [28].
 Validity for general n >= 6 is checked empirically; if invalid they cut off

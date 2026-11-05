@@ -1,4 +1,4 @@
-"""The cherry conjecture for small n from the manifold alone (Section 11).
+"""The cherry conjecture for small n from the manifold alone (Discussion and open problems).
 
     python cherry_bound.py OUT.json [N ...]          (default N = 4..15)
 

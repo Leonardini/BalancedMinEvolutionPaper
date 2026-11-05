@@ -9,7 +9,7 @@ are built:
     compact_without_manifold   the same with no manifold tangent cuts (Kelley's tangents
               approach one smooth constraint by many nearly parallel planes);
     distance  the static model of the distance-indexed solver of Catanzaro et al. (its
-              Section 7.1 configuration), exported before any callback cut and solved as
+              configuration of the experimental setup), exported before any callback cut and solved as
               an LP (integrality dropped).
 For each LP we record, after solving it with Gurobi:
     kappa_exact      Gurobi's KappaExact for the optimal basis (Gurobi does not document

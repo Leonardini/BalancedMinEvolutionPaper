@@ -1,7 +1,7 @@
-# Section 11, Conjecture 8 (a cherry always exists), and the faces Q_T of the splitohedron
-# (Section 5.1, Appendix E). One thread each.
+# The cherry conjecture (a cherry always exists), and the faces Q_T of the splitohedron
+# ("Spurious points with the splits held at 1/2"). One thread each.
 
-# Conjecture 8: the exhaustive search without cherries, one whole search per n (n = 14 takes
+# Cherry conjecture: the exhaustive search without cherries, one whole search per n (n = 14 takes
 # a few minutes; n = 15 is a campaign of its own, see README.md).
 make -s -C experiments/conjecture && $PY experiments/conjecture/nocherry_search.py top 14 experiments/conjecture/build/backtrack_wide8 $RESULTS/conjecture/nocherry/n14 --depth 0
 make -s -C experiments/conjecture && $PY experiments/conjecture/nocherry_search.py top 13 experiments/conjecture/build/backtrack_wide8 $RESULTS/conjecture/nocherry/n13 --depth 0
@@ -14,10 +14,10 @@ make -s -C experiments/conjecture && $PY experiments/conjecture/nocherry_search.
 make -s -C experiments/conjecture && $PY experiments/conjecture/nocherry_search.py top 6 experiments/conjecture/build/backtrack_wide8 $RESULTS/conjecture/nocherry/n6 --depth 0
 make -s -C experiments/conjecture && $PY experiments/conjecture/nocherry_search.py top 5 experiments/conjecture/build/backtrack_wide8 $RESULTS/conjecture/nocherry/n5 --depth 0
 make -s -C experiments/conjecture && $PY experiments/conjecture/nocherry_search.py top 4 experiments/conjecture/build/backtrack_wide8 $RESULTS/conjecture/nocherry/n4 --depth 0
-# Conjecture 8: for which n the manifold alone forces a cherry.
+# Cherry conjecture: for which n the manifold alone forces a cherry.
 $PY experiments/conjecture/cherry_bound.py $RESULTS/conjecture/cherry_bound.json
 
-# Section 5.1: log-integral points of Q_T with the ladder floor (n = 13 is the longest task here).
+# "Spurious points with the splits held at 1/2": log-integral points of Q_T with the ladder floor (n = 13 is the longest task here).
 $PY experiments/theory/lattice.py 13 $RESULTS/splitohedron/faces --shapes --floor
 $PY experiments/theory/lattice.py 12 $RESULTS/splitohedron/faces --shapes --floor && Rscript experiments/theory/hull_vertices.R $RESULTS/splitohedron/faces/points_n12_shapes_floor.json
 $PY experiments/theory/lattice.py 11 $RESULTS/splitohedron/faces --shapes --floor
@@ -35,7 +35,7 @@ $PY experiments/theory/lattice.py 9 $RESULTS/splitohedron/faces --shapes --floor
 $PY experiments/theory/lattice.py 7 $RESULTS/splitohedron/faces --shapes --floor --no-dc
 $PY experiments/theory/lattice.py 6 $RESULTS/splitohedron/faces --shapes --floor --no-dc
 $PY experiments/theory/lattice.py 8 $RESULTS/splitohedron/faces --shapes --floor --no-dc && Rscript experiments/theory/hull_vertices.R $RESULTS/splitohedron/faces/points_n8_shapes_floor_nodc.json
-# Section 5.1: vertices of Q_T, without and with the floor (each reads the shapes written just before).
+# "Spurious points with the splits held at 1/2": vertices of Q_T, without and with the floor (each reads the shapes written just before).
 $PY experiments/theory/lattice.py 8 $RESULTS/splitohedron/faces --shapes && Rscript experiments/theory/qt_vertices.R 8 $RESULTS/splitohedron/faces floor
 $PY experiments/theory/lattice.py 7 $RESULTS/splitohedron/faces --shapes && Rscript experiments/theory/qt_vertices.R 7 $RESULTS/splitohedron/faces && Rscript experiments/theory/qt_vertices.R 7 $RESULTS/splitohedron/faces floor
 $PY experiments/theory/lattice.py 6 $RESULTS/splitohedron/faces --shapes && Rscript experiments/theory/qt_vertices.R 6 $RESULTS/splitohedron/faces && Rscript experiments/theory/qt_vertices.R 6 $RESULTS/splitohedron/faces floor

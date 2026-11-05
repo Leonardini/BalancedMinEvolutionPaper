@@ -1,4 +1,4 @@
-"""Section 5.1 and Appendix E: log-integral points of the splitohedron Sp(n), and of its
+""""Spurious points with the splits held at 1/2" and appendix "The splitohedron": log-integral points of the splitohedron Sp(n), and of its
 faces Q_T for one tree T of each shape.
 
     BME_THREADS=1 python lattice.py N OUTDIR [--shapes] [--floor] [--no-dc] [--rung]
@@ -15,7 +15,7 @@ Without --shapes: every log-integral point of Sp(n). With --shapes: for one tree
 shape, every log-integral point of Q_T. Gurobi enumerates the points (binary level
 indicators, solution pool, zero objective); each one is re-checked in integer arithmetic and
 classified as a tree or not. --floor also holds every other cut at 3/4 or more (the next rung
-of the cut-value ladder, Theorem 2), --no-dc drops the intersecting-cherry rows, and --rung
+of the cut-value ladder theorem), --no-dc drops the intersecting-cherry rows, and --rung
 (with --shapes) holds the 2(n-3) cuts that are 3/4 at w_T at exactly 3/4. Writes
 OUTDIR/points_n<N>[_shapes][_floor][_nodc][_rung].json; progress to stderr.
 """

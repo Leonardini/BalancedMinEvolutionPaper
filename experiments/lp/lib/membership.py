@@ -1,5 +1,5 @@
-"""The side-membership model of Section 5.1 as an LP (all variables continuous), and
-the cut loop shared by the w-space relaxations of Section 8.4.
+"""The side-membership model as an LP (all variables continuous; not reported in the
+paper), and the cut loop solve_with_cuts that the lifted ladder model shares.
 
 Variables: w_ij in [2^-(n-1), 1/4]; for each internal split k = 0..n-4, side
 memberships s_ik, separation indicators B_ijk (the XOR of s_ik and s_jk, by its four
@@ -7,7 +7,7 @@ facets) and P_ijk = B_ijk w_ij (McCormick). Layers, each switched on by an argum
     Kraft         sum_j w_ij = 1/2                                   (always)
     mincut        W[S] >= 1/2 for every nontrivial bipartition S, written out in full
     split         s, B, P, the coupling sum_{i<j} P_ijk = 1/2, and the symmetry
-                  breaking of Section 5.2: minority reference side (|A_k| <= n/2),
+                  breaking: minority reference side (|A_k| <= n/2),
                   splits ordered by size, the first two of size 2 and disjoint, and
                   for even n leaf 1 outside every split of size n/2
     laminarity    pairwise compatibility of the splits, by one of two encodings:

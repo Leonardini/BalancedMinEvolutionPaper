@@ -1,4 +1,4 @@
-"""Section 8.4: root LP of the lifted cut-value-ladder model.
+"""Results, "The minimum-cut family accounts for most of the root bound": root LP of the lifted cut-value-ladder model.
 
     BME_THREADS=1 python lifted_ladder.py INSTANCE SPLITS OUT.json \
         [--rung] [--cliques] [--manifold]
@@ -11,7 +11,7 @@ sum_S y_S = n - 3 and U = (n - 1) / 4:
                           y_S + t_S <= 1, W[S] >= 7/8 - 3/8 y_S - 1/8 t_S,
                           W[S] <= U - (U - 1/2) y_S - (U - 3/4) t_S
     --cliques             sum_{S in Q} y_S <= 1 for the cliques Q^{j,k}_{x,y} of
-                          Proposition 4 (j <= k, j + k <= n)
+                          the polynomial-laminarity proposition (j <= k, j + k <= n)
     --manifold            manifold tangent cuts until no cut is violated or the bound
                           stalls (lib/membership.py, solve_with_cuts)
 The record also has the min-cut relaxation (Kraft, w >= 2^-(n-1), all W[S] >= 1/2).

@@ -1,4 +1,4 @@
-"""Table E3 (Section 8.2): root-LP gap closed by F1 and F6 on the synthetic instances.
+"""Table "Root bound with F1 and F6" (Results, "The minimum-cut family accounts for most of the root bound"): root-LP gap closed by F1 and F6 on the synthetic instances.
 
     BME_THREADS=1 python named_facets.py OUT.json [L10]
 

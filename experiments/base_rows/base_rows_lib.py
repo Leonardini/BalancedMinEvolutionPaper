@@ -1,4 +1,4 @@
-"""The level variables, rows and arms used by base_rows_in_compact.py (Table E10), which
+"""The level variables, rows and arms used by base_rows_in_compact.py (table "Rows of the distance-indexed base model added to the compact root relaxation"), which
 imposes the manifold exactly; run alone, this file solves the same arms with the manifold
 imposed by tangent cuts.
 

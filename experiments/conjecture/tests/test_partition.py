@@ -3,7 +3,7 @@
     python experiments/conjecture/tests/test_partition.py
 
 1. With cherries allowed, the survivors of the canonical search are the trees counted in
-   Table H1 (published.json, canonical_survivors). Cut into the pieces of depth 1 to 3 that
+   table "Canonical survivors of the enumeration" (published.json, canonical_survivors). Cut into the pieces of depth 1 to 3 that
    nocherry_search.py runs, the pieces must add up to the same count for n = 8, 9, 10, and
    coverage.py must report the pieces as covering the search.
 2. Negative control: with one piece that has survivors deleted, coverage.py must report that
@@ -52,7 +52,7 @@ def main():
             assert rep["covered"] and not rep["missing"], rep
             assert rep["survivors"] == CANON[n], (n, depth, rep["survivors"], CANON[n])
             assert rep["nontree"] == 0, rep
-        print(f"n={n}: pieces of depth 1-3 add up to {CANON[n]} survivors (Table H1)")
+        print(f"n={n}: pieces of depth 1-3 add up to {CANON[n]} survivors (table \"Canonical survivors of the enumeration\")")
         # negative control: remove the piece with the most survivors
         d = tmp / f"cherries_n{n}_d3"
         recs = [(coverage.parse_out(f)["survivors"], f) for f in d.glob(f"bt{n}_*.out")]

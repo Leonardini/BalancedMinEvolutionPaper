@@ -13,7 +13,7 @@ n leaves can be closely related; random subsets are the other regime). Then:
      to the best non-optimal tree. The double-precision values of the best and the TOP-th
      kept tree must differ by more than MARGIN (relative), so that rounding cannot have
      pushed the true optimum out of the kept set;
-  2. the distance-indexed solver of Catanzaro et al. (Section 7.1 configuration, one
+  2. the distance-indexed solver of Catanzaro et al. (configuration of the experimental setup, one
      thread, 3600 s cap) and the compact solver of this paper (experiments/compact_solver.py,
      sequential search, one thread, 3600 s cap) are run on the crop;
   3. each solver's answer is compared with the enumeration: whether it claims a certificate,

@@ -1,2 +1,2 @@
-# Section 8.8, Table E13: the trees of NJ and FastME against the certified optimal trees of data/ground_truth.
+# Results, "NJ and FastME miss the optimal tree on 9 and 4 of 16 real instances", table "NJ and FastME against the certified optimum": the trees of NJ and FastME against the certified optimal trees of data/ground_truth.
 $PY experiments/heuristics_vs_optimum.py results/heuristics_vs_optimum.json

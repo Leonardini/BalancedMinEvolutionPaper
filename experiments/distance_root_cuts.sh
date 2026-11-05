@@ -1,7 +1,7 @@
 #!/bin/bash
-# Section 8.7, Table E11. How much of the distance-indexed model's root bound comes from Gurobi's general-purpose
+# Results, "The root bound needs separated families and solver cuts together", table "Where the distance-indexed model's root bound comes from". How much of the distance-indexed model's root bound comes from Gurobi's general-purpose
 # MIP cuts, which use the integrality of the level indicators? The generalized-Kraft
-# configuration of Table E9 (--str A, generalized Kraft), stopped at the root node
+# configuration of table "The distance-indexed model by cut configuration" (--str A, generalized Kraft), stopped at the root node
 # (NodeLimit 1), with Gurobi's cuts on (default) and off (Cuts 0). One thread: the result
 # is a bound, not a time.
 set -euo pipefail

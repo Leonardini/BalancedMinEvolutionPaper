@@ -1,15 +1,15 @@
 #!/bin/bash
-# Section 8.7, Table E9: root gap of the distance-indexed model as cut families are switched
+# Results, "The root bound needs separated families and solver cuts together", table "The distance-indexed model by cut configuration": root gap of the distance-indexed model as cut families are switched
 # on, plus the circular-order leave-one-out.
 #   distance_cut_families.sh timed   configurations with separated cuts: full MIP runs, whose
 #                            converged root bound ("Last Root BD") and node count we
 #                            report. 10 threads, 3600 s cap; seeds 2-3 only where seed 1
-#                            certified (as for Table E8).
+#                            certified (as for table "The distance-indexed solver").
 #   distance_cut_families.sh counts  configurations without separated cuts: the root LP alone
 #                            (--relax), one thread. A bound, not a timing.
 # Columns: (a) base; (b) + parity rows on all triples; (gki) + generalized Kraft;
-# (c) + 2-K-split and circular order; (d) + four-point. "full" is the Section 7.1
-# configuration (Table E8) and "cooff" the same with circular-order cuts switched off.
+# (c) + 2-K-split and circular order; (d) + four-point. "full" is the configuration of
+# the experimental setup (table "The distance-indexed solver") and "cooff" the same with circular-order cuts switched off.
 # "ubtbc" is "full" without four-point (--buneman N, the solver's default), which is the
 # published UBT-BC (Formulation 2 of Catanzaro et al. 2026): non-tree integer solutions are
 # rejected only by the lazy no-good cut. Not part of the published tables; run with ONLY.

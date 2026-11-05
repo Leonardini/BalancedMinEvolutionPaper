@@ -1,4 +1,4 @@
-## Section 4: the facets of the BME polytope P_6 in w-space.
+## Results, "The minimum-cut family accounts for most of the root bound": the facets of the BME polytope P_6 in w-space.
 ##
 ##   Rscript p6_facets.R OUTDIR
 ##

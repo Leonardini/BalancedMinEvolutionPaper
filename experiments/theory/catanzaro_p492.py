@@ -1,5 +1,5 @@
 """The 12 x 12 matrix of Catanzaro et al. (2026, p. 492) is a relabelling of the cherry
-lift of Section 6.3.
+lift of "Sufficiency of the path-length conditions".
 
     python catanzaro_p492.py MATRIX.txt OUT.json
 

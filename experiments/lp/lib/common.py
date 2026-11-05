@@ -22,7 +22,7 @@ from solver.w_space import true_weights  # noqa: E402
 from .trees import brute_force_optimum, brute_force_tree, splits_of_edges  # noqa: E402
 
 # Objective values printed by the distance-indexed solver are ours times 2^(n+1)
-# (Section 7.2). The one the manuscript quotes is cross-checked here.
+# (the setup's "Instances"). The one the manuscript quotes is cross-checked here.
 PUBLISHED_SCALED_OPTIMUM = {"Primates12": 802.5893536}
 
 

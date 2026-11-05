@@ -23,9 +23,9 @@ The paper compares two exact solvers for the Balanced Minimum Evolution (BME) pr
 | MOSEK Python API | 11.2.5 | the manifold constraint at every node of the compact solver |
 | Gurobi, with gurobipy | 12.0.1 | the distance-indexed solver, and most bound experiments |
 | CVXPY | 1.9.3 | the bound experiments that impose the manifold constraint exactly (with MOSEK) |
-| FastME | 2.1.6.3 | the starting tree of both solvers, and the NJ and FastME trees of Table I13 |
+| FastME | 2.1.6.3 | the starting tree of both solvers, and the NJ and FastME trees of table "NJ and FastME against the certified optimum" |
 | boost | Homebrew | building the distance-indexed solver |
-| R, with packages `rcdd` and `jsonlite` | 4.5.3 | the facets of the BME polytope for n = 6 (Section 7.1) |
+| R, with packages `rcdd` and `jsonlite` | 4.5.3 | the facets of the BME polytope for n = 6 (Results, "The minimum-cut family accounts for most of the root bound") |
 | a C compiler | Apple clang 16 | the enumerators and two small extensions of the compact solver |
 
 CPLEX, MOSEK and Gurobi need licences; all three offer free academic licences.
@@ -51,7 +51,7 @@ The scripts expect the Python interpreter at `~/venvs/bmepaper/bin/python`; set
 
 Our patch (`external/catanzaro/catanzaro_repro.patch`) leaves the algorithm unchanged. It
 links Gurobi 12 instead of Gurobi 10, finds boost under Homebrew, and adds an
-`--export FILE` option that writes the model before any cut is added (used for Table I12).
+`--export FILE` option that writes the model before any cut is added (used for table "The distance-indexed model's static root in two MIP solvers").
 
 To check the installation, run the tests (a few minutes on one core):
 
@@ -76,7 +76,7 @@ run/counting_runs.sh    # everything else: bounds and counts, one thread each, 1
 - **Timed runs** are the runs of either solver that search for a certified optimum. Each
   uses 10 threads (the compact solver: 10 worker processes of one thread each) and stops
   after 3600 s. Each run uses random seed 1, and also seeds 2 and 3 if seed 1 certified the
-  optimum, so that times can be reported as a median and a range; the runs of Table J4
+  optimum, so that times can be reported as a median and a range; the runs of table "The distance-indexed solver with one cut family switched off, or with strict tolerances"
   use seed 1 only. On our laptop (14 cores, 24 GB of memory) they take about a day.
 - **Counting runs** compute a bound, a count, or the result of an exhaustive search, and
   report no time. Each uses one thread, and ten run side by side. They are listed in
@@ -103,10 +103,10 @@ Then rebuild the summaries:
 ~/venvs/bmepaper/bin/python experiments/appendix_tables.py    # writes results/APPENDIX_TABLES.md
 ```
 
-`results/APPENDIX_TABLES.md` holds the tables of Appendices I and J of the paper, as
-printed there. `results/SUMMARY.md` holds the other computed results: the certified
-optima, and the results of Sections 4.2, 5.1, 7.1, 7.2, 8.3 and 11 and Appendices D, E and
-H. It ends with every number of `experiments/theory/published.json` (the numbers stated in
+`results/APPENDIX_TABLES.md` holds the tables of the appendices "Tables of results" and
+"Numerical reliability" of the paper, as printed there. `results/SUMMARY.md` holds the other computed results: the certified
+optima, the clique covers, the spurious points of the faces Q_T, the facets of P_6, the
+enumeration behind the sufficiency theorem and the evidence for the cherry conjecture (Discussion and open problems). It ends with every number of `experiments/theory/published.json` (the numbers stated in
 the paper) that a result file restates, recomputed from that file; `summarize.py` stops with
 an error if one of them disagrees.
 
@@ -114,35 +114,35 @@ an error if one of them disagrees.
 
 | in the paper | script | output under `results/` |
 |---|---|---|
-| Section 7.1: facets of the BME polytope for n = 6 | `experiments/theory/p6_facets.R` | `p6_facets/` |
+| Results, "The minimum-cut family accounts for most of the root bound": facets of the BME polytope for n = 6 | `experiments/theory/p6_facets.R` | `p6_facets/` |
 | Appendix E: vertices of the splitohedron for n = 5, 6 | `experiments/theory/splitohedron.R` | `splitohedron/` |
-| Section 5.1 and Appendix E: spurious points of the faces Q_T of the splitohedron (log-integral points without and with the ladder floor, and without the double cherry; vertices of Q_T; hull of the log-integral points) | `experiments/theory/lattice.py`, `qt_vertices.R`, `hull_vertices.R` (and `outside_trees.py`, which tests whether a log-integral point lies outside the BME polytope) | `splitohedron/faces/` |
-| Section 4.2 and Appendix D: edge clique covers (Proposition 4 and its subfamily, the minimum, the fractional minimum); fractional optima of the clique relaxation | `experiments/theory/clique_cover.py`, `clique_integrality.py` | `clique_cover/` |
-| Section 8.3, Theorem 7, Appendix H, Table H1 | `experiments/theory/theorem5.sh` (enumerator `backtrack.c`) | `theorem5/` |
-| Section 8.3: the cherry lift; the matrix of Catanzaro et al. (2026, p. 492) | `experiments/theory/cherry_lift.py`, `catanzaro_p492.py` | `theorem5/` |
-| Section 11, Conjecture 8: exhaustive search for matrices satisfying (4)–(9) without a cherry, n ≤ 15 | `experiments/conjecture/nocherry_search.py` (enumerator `backtrack_wide8.c`; `coverage.py` checks that the pieces cover the search) | `conjecture/nocherry/` |
-| Section 11, Conjecture 8: the manifold alone forces a cherry for small n | `experiments/conjecture/cherry_bound.py` | `conjecture/cherry_bound.json` |
-| Section 10.1, Tables I1 and I2: the compact solver | `experiments/compact_solver.sh` (one run: `compact_solver.py`) | `compact_solver/` |
-| Section 10.2, Table I3: facets F1 and F6 | `experiments/lp/named_facets.py` | `lp/named_facets.json` |
-| Section 10.3, Table I4: shares of the cut families | `experiments/lp/cut_family_shares.py` | `lp/cut_family_shares/` |
+| "Spurious points with the splits held at 1/2" and appendix "The splitohedron": spurious points of the faces Q_T of the splitohedron (log-integral points without and with the ladder floor, and without the double cherry; vertices of Q_T; hull of the log-integral points) | `experiments/theory/lattice.py`, `qt_vertices.R`, `hull_vertices.R` (and `outside_trees.py`, which tests whether a log-integral point lies outside the BME polytope) | `splitohedron/faces/` |
+| "Incompatibility and a polynomial clique cover" and appendix "Clique covers of the crossing graph": edge clique covers (the polynomial-laminarity proposition and its subfamily, the minimum, the fractional minimum); fractional optima of the clique relaxation | `experiments/theory/clique_cover.py`, `clique_integrality.py` | `clique_cover/` |
+| "Sufficiency of the path-length conditions": the sufficiency theorem, its computer-assisted proof (appendix "Proofs") and table "Canonical survivors of the enumeration" | `experiments/theory/theorem5.sh` (enumerator `backtrack.c`) | `theorem5/` |
+| "Sufficiency of the path-length conditions": the cherry lift; the matrix of Catanzaro et al. (2026, p. 492) | `experiments/theory/cherry_lift.py`, `catanzaro_p492.py` | `theorem5/` |
+| Discussion and open problems, the cherry conjecture: exhaustive search for matrices satisfying (4)–(9) without a cherry, n ≤ 15 | `experiments/conjecture/nocherry_search.py` (enumerator `backtrack_wide8.c`; `coverage.py` checks that the pieces cover the search) | `conjecture/nocherry/` |
+| Discussion and open problems, the cherry conjecture: the manifold alone forces a cherry for small n | `experiments/conjecture/cherry_bound.py` | `conjecture/cherry_bound.json` |
+| Results, "The compact solver certifies every instance up to n = 20", table "The compact solver" and table "The two solvers": the compact solver | `experiments/compact_solver.sh` (one run: `compact_solver.py`) | `compact_solver/` |
+| Results, "The minimum-cut family accounts for most of the root bound", table "Root bound with F1 and F6" | `experiments/lp/named_facets.py` | `lp/named_facets.json` |
+| Results, "The minimum-cut family accounts for most of the root bound", table "Shares of the root cut-closeable gap" | `experiments/lp/cut_family_shares.py` | `lp/cut_family_shares/` |
 | Results, "The minimum-cut family accounts for most of the root bound": the lifted ladder model (table "Root gap on Primates12 of the lifted ladder model"), and its gap with the exact hull of the trees for n ≤ 7 | `experiments/lp/lifted_ladder.py`, `tree_hull.py` | `lp/lifted_ladder/` |
-| Section 10.5, Table I7: local fixes of the quartets violated at the root | `experiments/lp/quartet_fixes.py` | `lp/quartet_fixes/` |
-| Section 10.6, Tables I8 and I2: the distance-indexed solver | `experiments/distance_solver.sh` | `distance_solver/` |
-| Section 10.7, Table I9: the distance-indexed solver by cut family | `experiments/distance_cut_families.sh` | `distance_cut_families/` |
-| Section 10.7, Tables I9 and I10: the configurations without four-point separation with the corrected no-good cut (`external/catanzaro/nogood_index_fix.patch`, built by `external/catanzaro/build.sh --fix-nogood`), and the published UBT-BC configuration with both builds | `experiments/rerun_nogoodfix.sh` | `distance_cut_families_nogoodfix/`, `distance_cut_families_ubtbc_original/` |
-| Section 10.7: whether each of those runs ends at a tree (four-point condition on every quartet, tree rebuilt, objective recomputed) | `experiments/nogood_endpoints.py` | `nogood_endpoints.json` |
-| Section 10.7: the non-tree optima | `experiments/theory/nontree_optima.py` | `theorem5/nontree_optima.json` |
-| Section 10.7, Table I10: rows of the distance-indexed model added to the compact one | `experiments/base_rows/base_rows_in_compact.py` | `base_rows/` |
-| Section 10.7, Table I11: the distance-indexed root with Gurobi's cuts on and off | `experiments/distance_root_cuts.sh` | `distance_root_cuts/` |
-| Section 10.7, Table I12: the static root in Gurobi and CPLEX | `experiments/static_root_two_solvers.py` | `static_root_two_solvers/` |
-| Section 10.8, Table I13: NJ and FastME against the certified optimal trees | `experiments/heuristics_vs_optimum.py` | `heuristics_vs_optimum.json` |
+| Results, "The minimum-cut family accounts for most of the root bound", table "Local fixes of the quartets violated at the compact model's root" | `experiments/lp/quartet_fixes.py` | `lp/quartet_fixes/` |
+| Results, "The distance-indexed solver is faster on four of the six instances both certify", table "The distance-indexed solver" and table "The two solvers": the distance-indexed solver | `experiments/distance_solver.sh` | `distance_solver/` |
+| Results, "The root bound needs separated families and solver cuts together", table "The distance-indexed model by cut configuration" | `experiments/distance_cut_families.sh` | `distance_cut_families/` |
+| Results, "Four-point separation speeds certification", table "The distance-indexed model by cut configuration" and table "The lazy-mode configurations with the released and the corrected no-good cut": the configurations without four-point separation with the corrected no-good cut (`external/catanzaro/nogood_index_fix.patch`, built by `external/catanzaro/build.sh --fix-nogood`), and the published UBT-BC configuration with both builds | `experiments/rerun_nogoodfix.sh` | `distance_cut_families_nogoodfix/`, `distance_cut_families_ubtbc_original/` |
+| Results, "Four-point separation speeds certification": whether each of those runs ends at a tree (four-point condition on every quartet, tree rebuilt, objective recomputed) | `experiments/nogood_endpoints.py` | `nogood_endpoints.json` |
+| Results, "Four-point separation speeds certification": the non-tree optima | `experiments/theory/nontree_optima.py` | `theorem5/nontree_optima.json` |
+| Results, "The root bound needs separated families and solver cuts together", table "Rows of the distance-indexed base model added to the compact root relaxation" | `experiments/base_rows/base_rows_in_compact.py` | `base_rows/` |
+| Results, "The root bound needs separated families and solver cuts together", table "Where the distance-indexed model's root bound comes from": Gurobi's cuts on and off | `experiments/distance_root_cuts.sh` | `distance_root_cuts/` |
+| Results, "The root bound needs separated families and solver cuts together", table "The distance-indexed model's static root in two MIP solvers" | `experiments/static_root_two_solvers.py` | `static_root_two_solvers/` |
+| Results, "NJ and FastME miss the optimal tree on 9 and 4 of 16 real instances", table "NJ and FastME against the certified optimum" | `experiments/heuristics_vs_optimum.py` | `heuristics_vs_optimum.json` |
 | Appendix J: the certified optima, checked exactly | `experiments/check_optima.py` | `check_optima.json` |
-| Appendix J, Table J1: safe bounds | inside every bound script (`experiments/lp/lib/safe_bound.py`) | in each JSON record |
-| Appendix J, Table J2: certificates against enumeration of all trees | `experiments/enumeration/certificates_vs_enumeration.py` | `enumeration/` |
-| Appendix J, Table J3: condition numbers | `experiments/conditioning.py` | `conditioning/` |
-| Appendix J, Table J4: one cut family off; strict tolerances | `experiments/distance_robustness.sh` | `robustness/` |
+| Numerical reliability, table "Safe bounds and the exact check at the optimal tree" | inside every bound script (`experiments/lp/lib/safe_bound.py`) | in each JSON record |
+| Numerical reliability, table "Certificates against exhaustive enumeration" | `experiments/enumeration/certificates_vs_enumeration.py` | `enumeration/` |
+| Numerical reliability, table "Condition number of the optimal root basis" | `experiments/conditioning.py` | `conditioning/` |
+| Numerical reliability, table "The distance-indexed solver with one cut family switched off, or with strict tolerances" | `experiments/distance_robustness.sh` | `robustness/` |
 
-## The search without cherries (Conjecture 8)
+## The search without cherries (the cherry conjecture)
 
 `backtrack_wide8.c` enumerates the matrices satisfying (4)–(9) with no entry 2, with leaf 0's
 row in non-decreasing order. Fixing the first values of that row, tau[0][1..k] = v1 ≤ … ≤ vk,
@@ -213,7 +213,7 @@ $PY experiments/conjecture/nocherry_search.py split 15 $B $D 3_3_3_5_5_5_6_8 --w
   `experiments/check_optima.py` checks that each is optimal.
 - `data/theory/`: the 12×12 matrix printed by Catanzaro et al. (2026, p. 492).
 - `experiments/`: one script per result (see the table above); `experiments/conjecture/`
-  holds the scripts of Conjecture 8.
+  holds the scripts of the cherry conjecture.
 - `run/`: the shared settings, the two run scripts and their task lists, the wrapper that
   runs the distance-indexed solver once (`catanzaro_one.sh`) and the memory watchdog.
 - `results/`: the output of our runs, in the layout above.

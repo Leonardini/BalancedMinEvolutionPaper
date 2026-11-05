@@ -1,6 +1,6 @@
 /* Exhaustive enumeration of integer matrices tau satisfying conditions (4)-(9) of
  * Catanzaro, Pesenti and Wolsey (2020), each then tested against the strong four-point
- * condition (10). Used for Theorem 5 and Appendix C.
+ * condition (10). Used for the sufficiency theorem and its computer-assisted proof.
  *
  * The upper triangle is filled row by row. A branch is cut only when it violates a
  * condition:
